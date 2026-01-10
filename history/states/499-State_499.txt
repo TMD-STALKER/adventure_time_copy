@@ -1,0 +1,14 @@
+state={
+	id=499
+	name="STATE_499"
+	provinces={
+		487 820 1214 1265 1812 
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	
+	history={
+		owner = OBW
+		add_core_of = OBW
+	}
+}

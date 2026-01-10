@@ -1,0 +1,17 @@
+state={
+	id=362
+	name="STATE_362"
+	provinces={
+		83 1651 
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = MCL
+		add_core_of = MCL
+		
+		victory_points = {
+			83 5 
+		}
+	}
+}

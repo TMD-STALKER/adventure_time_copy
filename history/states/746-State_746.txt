@@ -1,0 +1,17 @@
+state={
+	id=746
+	name="STATE_746"
+	provinces={
+		52 771 
+	}
+	resources={
+		steel = 6
+		coal = 7
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = DPF
+		add_core_of = DPF
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=676
+	name="STATE_676"
+	provinces={
+		567 2405 2413 
+	}
+	resources={
+		steel = 5
+		chromium = 14
+	}
+	manpower = 45000
+	state_category = town local_supplies=1.0 
+	history={
+		owner = DCT
+		add_core_of = DCT
+		buildings = {
+			industrial_complex = 1
+			arms_factory = 3
+		}
+		victory_points = {
+			2413 5
+		}
+	}
+}

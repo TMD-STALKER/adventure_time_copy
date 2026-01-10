@@ -1,0 +1,431 @@
+focus_tree = {
+	id = PBB_focus_tree_two
+	country = {
+		factor = 0
+		modifier = {
+			add = 25
+			tag = PBB
+			is_debug = yes
+		}
+	}
+	default = no
+	shared_focus = SHARED_homeland_industry
+	shared_focus = SHARED_expansion_industry
+	shared_focus = SHARED_bananguard
+	shared_focus = SHARED_naval_candy_forces
+	shared_focus = SHARED_air_candy_forces
+	shared_focus = SHARED_dangerous_situation
+	focus = {
+		id = PBB_inside_policy
+		icon = GFX_goal_unknown
+		cost = 2
+		x = 2
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+		}
+
+	}
+	focus = {
+		id = PBB_global_policy
+		icon = GFX_goal_unknown
+		cost = 2
+		x = 9
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.01
+		}
+
+	}
+	focus = {
+		id = PBB_tea_tseremony
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_inside_policy
+		}
+		available = {
+			country_exists = PPK
+			country_exists = FAJ
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			upgrade_agility = yes
+			upgrade_agility = yes
+			country_event = pbb.67
+			FAJ = { country_event = pbb.67 }
+		}
+
+	}
+	focus = {
+		id = PBB_work_for_science
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_inside_policy
+		}
+		x = 2
+		y = 2
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+			add_timed_idea = {
+				idea = PBB_work_for_science
+				days = 365
+			}
+		}
+
+	}
+	focus = {
+		id = PBB_explain_our_territory
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_work_for_science
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+			country_event = pbb.69
+		}
+
+	}
+	focus = {
+		id = PBB_dont_flow_boat
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_explain_our_territory
+		}
+		mutually_exclusive = {
+			focus = PBB_full_control
+		}
+		available = { has_global_flag = finn_complete_recon }
+		x = 1
+		y = 4
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = PBB_system_opposition
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_dont_flow_boat
+		}
+		x = 0
+		y = 5
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = PBB_full_control
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_explain_our_territory
+		}
+		mutually_exclusive = {
+			focus = PBB_dont_flow_boat
+		}
+		available = { has_global_flag = finn_complete_recon }
+		will_lead_to_war_with = RCM
+		will_lead_to_war_with = FHL
+		x = 3
+		y = 4
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = RCM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GLK
+			}
+		}
+
+	}
+	focus = {
+		id = PBB_contine_researches
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_dont_flow_boat
+			focus = PBB_full_control
+		}
+		x = 2
+		y = 5
+
+	}
+	focus = {
+		id = PBB_diplomacy_with_puppets
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_inside_policy
+		}
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = PBB_scrike_not_loyal
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_full_control
+		}
+		x = 4
+		y = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.15
+			}
+		}
+
+	}
+	focus = {
+		id = PBB_our_enemy
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = PBB_global_policy
+			focus = PBB_inside_policy
+		}
+		x = 6
+		y = 1
+		completion_reward = {
+			no_fire_danger = yes
+			no_ice_danger = yes
+			no_mage_danger = yes
+		}
+
+	}
+	focus = {
+		id = PBB_anti_fire_plan
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_our_enemy
+		}
+		x = 5
+		y = 2
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = PBB_anti_iceking_plan
+				}
+				custom_effect_tooltip = stability_fire_tt
+				hidden_effect = {
+					set_temp_variable = { stability_var = party_popularity@fire }
+				}
+				add_stability = var:stability_var
+				hidden_effect = {
+					multiply_temp_variable = { stability_var = -1 }
+				}
+				add_popularity = {
+					ideology = fire
+					popularity = var:stability_var
+				}
+			}
+			else = {
+				add_ideas = PBB_anti_fire_plan
+				custom_effect_tooltip = PBB_anti_fire_plan_tt
+			}
+		}
+
+	}
+	focus = {
+		id = PBB_main_meeting
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = PBB_our_enemy
+		}
+		cancelable = no
+		x = 6
+		y = 3
+		completion_reward = {
+			set_country_flag = PBB_main_meeting_flag
+			news_event = ooonews.7
+		}
+
+	}
+	focus = {
+		id = PBB_second_meeting
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = PBB_main_meeting
+		}
+		available = {
+			has_country_flag = {
+				flag = PBB_main_meeting_flag
+				days > 175
+			}
+			custom_trigger_tooltip = {
+				tooltip = PBB_main_meeting_flag_tt
+				has_country_flag = {
+					flag = PBB_main_meeting_flag
+					days > 175
+				}
+			}
+		}
+		x = 6
+		y = 4
+		completion_reward = {
+			country_event = ooonews.9
+		}
+
+	}
+	focus = {
+		id = PBB_anti_iceking_plan
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_our_enemy
+		}
+		x = 7
+		y = 2
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = PBB_anti_fire_plan
+				}
+				custom_effect_tooltip = stability_ice_tt
+				hidden_effect = {
+					set_temp_variable = { stability_var = party_popularity@ice }
+				}
+				add_stability = var:stability_var
+				hidden_effect = {
+					multiply_temp_variable = { stability_var = -1 }
+				}
+				add_popularity = {
+					ideology = ice
+					popularity = var:stability_var
+				}
+			}
+			else = {
+				add_ideas = PBB_anti_iceking_plan
+				custom_effect_tooltip = PBB_anti_iceking_plan_tt
+			}
+		}
+
+	}
+	focus = {
+		id = PBB_explain_dungeon
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_global_policy
+		}
+		x = 8
+		y = 1
+
+	}
+	focus = {
+		id = PBB_our_look
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_global_policy
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = PBB_marselin
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_our_look
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = PBB_work_together_with_doctor_princess
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_our_look
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = PBB_deal_to_finn
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_work_together_with_doctor_princess
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = PBB_berry_diplomacy
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_global_policy
+		}
+		x = 10
+		y = 1
+
+	}
+	focus = {
+		id = PBB_mage_king
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_our_look
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = PBB_main_evil
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = PBB_contine_researches
+		}
+		prerequisite = {
+			focus = PBB_deal_to_finn
+		}
+		x = 6
+		y = 6
+
+	}
+	focus = {
+		id = PBB_emerald_diplomacy
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = PBB_berry_diplomacy
+		}
+		x = 11
+		y = 2
+
+	}
+}

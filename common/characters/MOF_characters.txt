@@ -1,0 +1,202 @@
+characters = {
+    MOF_MO = {
+        name = MOF_MO
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/MOF/Mo.dds"
+            }
+        }
+        country_leader = {
+            ideology = technocracy
+            expire = "3040.1.1.1"            
+        }
+    }
+    MOF_MO2 = {
+        name = MOF_MO
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/MOF/Mo.dds"
+            }
+        }
+        country_leader = {
+            ideology = independed_candy
+            expire = "3040.1.1.1"
+            
+        }
+    }
+    MOF_MO3 = {
+        name = MOF_MO
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/MOF/Mo.dds"
+            }
+        }
+        country_leader = {
+            ideology = harmony
+            expire = "3040.1.1.1"
+			traits = { mo_millytary_puppet }
+            
+        }
+    }
+	MOF_lifemo = {
+        name = MOF_lifemo
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/MOF/huntist.dds"
+                small = "GFX_idea_MOF_life_mo"
+            }
+        }
+        advisor={
+			slot = political_advisor
+			idea_token = MOF_lifemo
+			cost = 50
+			allowed = {
+				original_tag = MOF	
+			}
+			available = {
+				
+			}
+			traits = {
+				MOF_lifemo_trait
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+    }
+	MOF_lifemo2 = {
+        name = MOF_lifemo2
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/MOF/huntist.dds"
+                small = "GFX_idea_MOF_life_mo2"
+            }
+        }
+        advisor={
+			slot = political_advisor
+			idea_token = MOF_lifemo2
+			cost = 50
+			allowed = {
+				original_tag = MOF	
+			}
+			available = {
+				
+			}
+			traits = {
+				MOF_lifemo_trait2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+    }
+	MOF_mmo = {
+        name = MOF_mmo
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/MOF/huntist.dds"
+                small = "GFX_idea_MOF_MMO"
+            }
+        }
+        advisor={
+			slot = political_advisor
+			idea_token = MOF_mmo
+			cost = 165
+			allowed = {
+				original_tag = MOF	
+			}
+			available = {
+				
+			}
+			traits = {
+				MOF_mmo_trait
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+    }
+	MOF_huntist = {
+        name = MOF_huntist
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/MOF/huntist.dds"
+                small = "GFX_idea_MOF_huntist_sovet"
+            }
+        }
+        country_leader = {
+            ideology = military_mo
+            expire = "3040.1.1.1"
+        }
+        advisor={
+			slot = army_chief
+			idea_token = MOF_huntist
+			cost = 100
+			allowed = {
+				original_tag = MOF	
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = MOF_huntist
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				MOF_army_chief
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+        field_marshal = {
+			traits = { }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1 
+		}
+    }
+    MOF_MO4 = {
+        name = MOF_MO
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/MOF/Mo.dds"
+            }
+        }
+        country_leader = {
+            ideology = peaseful_ice
+            expire = "3040.1.1.1"
+            
+        }
+    }
+	MOF_MO6 = {
+        name = MOF_MO
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/MOF/Mo.dds"
+            }
+        }
+        country_leader = {
+            ideology = opposition_slime
+            expire = "3040.1.1.1"
+            
+        }
+    }
+    
+    MOF_MO5 = {
+        name = MOF_MO
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/MOF/Mo.dds"
+            }
+        }
+        country_leader = {
+            ideology = peaseful_slime
+            expire = "3040.1.1.1"         
+        }
+    }
+}

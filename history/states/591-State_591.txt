@@ -1,0 +1,13 @@
+state={
+	id=591
+	name="STATE_591"
+	provinces={
+		1601 2336 
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = BRK
+		add_core_of = BRK
+	}
+}

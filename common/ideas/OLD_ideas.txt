@@ -1,0 +1,19 @@
+ideas = {
+    country = {
+		
+		OLD_education_with_princess = {
+			picture = jap_supremacy_of_technology
+			
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+			targeted_modifier = {
+				tag = PBB
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+		}
+	}
+}

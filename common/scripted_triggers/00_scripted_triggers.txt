@@ -1,0 +1,1295 @@
+#	Example:
+#
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+my_scripted_trigger_ROOT = {
+	TAG = ROOT
+}
+opposition_winning = {
+	custom_trigger_tooltip = {
+		tooltip = opposition_winning_tt
+		OR = {
+			AND = {
+				NOT = { has_government = neutral }
+				neutral > 0.5
+			}
+			AND = {
+				NOT = { has_government = ice }
+				ice > 0.5
+			}
+			AND = {
+				NOT = { has_government = candy }
+				candy > 0.5
+			}
+			AND = {
+				NOT = { has_government = slime }
+				slime > 0.5
+			}
+			AND = {
+				NOT = { has_government = fire }
+				fire > 0.5
+			}
+		}
+	}
+}
+not_commune = {
+				custom_trigger_tooltip = {
+					tooltip = not_commune_trigger_tt
+					hidden_trigger = {
+						NOT = {
+							has_country_leader = {
+								name = "Братство алчности"
+								ruling_only = yes
+							}
+							has_country_leader = {
+								name = "Преступная шайка"
+								ruling_only = yes
+							}
+							has_country_leader = {
+								name = "Совет города"
+								ruling_only = yes
+							}
+							has_country_leader = {
+								name = "Деревенская коммуна"
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = DWC_sovet
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = RIV_river_chel
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = BOV_commune
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = TMT_market
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = GOP_god_of_partyes
+								ruling_only = yes
+							}
+						}
+					}
+				}
+	
+}
+is_desert = {
+	custom_trigger_tooltip = {
+		tooltip = is_desert_tt
+			OR = {
+				state = 581 #ZOVTRAK
+				state = 599
+				state = 610
+				state = 611
+				state = 643
+				state = 651
+				state = 657
+				state = 674
+				state = 675
+				state = 658
+				state = 669
+				state = 670
+				state = 644
+				state = 615
+				state = 631
+				state = 614
+				state = 585
+				state = 571
+				state = 556
+				state = 545
+				state = 572
+				state = 591
+				state = 624
+				state = 635
+				state = 642
+				state = 630
+				state = 623
+				state = 662
+				state = 668
+				state = 619 #QARANTIN
+				state = 650
+				state = 634
+				state = 632
+				state = 608
+				state = 594
+				state = 596
+				state = 589
+				state = 747 #RIF
+				state = 757
+				state = 752 #bereg
+				state = 748
+				state = 735
+				state = 715
+				state = 746
+				state = 733 #GOFFS
+				state = 745
+				state = 728
+				state = 727
+				state = 742
+				state = 713
+				state = 711
+				state = 697
+				state = 700
+				state = 699
+				state = 685
+				state = 667
+				state = 692
+				state = 704
+				state = 720
+						state = 694
+							state = 705
+							state = 716
+							state = 724
+							state = 721
+							state = 731
+							state = 729
+							state = 737
+							state = 736
+							state = 740
+							state = 722
+							state = 706
+							state = 684
+							state = 710
+							state = 719
+							state = 709
+							state = 714
+							state = 701
+							state = 691
+							state = 682
+							state = 698
+							state = 683 #betburg
+							state = 677 #mof
+							state = 676 #nectabis
+							state = 690
+							state = 687
+							state = 666
+							state = 656 #KOLUCHEE
+							state = 655
+							state = 621
+							state = 590
+							state = 633
+							state = 601
+							state = 607 #GRIMBI
+							state = 603
+							state = 582
+							state = 567
+							state = 566
+							state = 578
+							state = 559
+							state = 543
+							state = 552
+							state = 564
+							state = 544
+							state = 542
+							state = 533
+							state = 531
+							state = 526
+							state = 554 #satan
+							state = 530
+							state = 504
+							state = 503
+							state = 497
+							state = 586 #PART OF POLANA
+							state = 602
+							state = 636
+							state = 681 #MASTER ARENS
+							state = 480 ##tryapka
+							state = 506
+							state = 481
+							state = 461
+							state = 432
+							state = 447 ###lihtshtein
+							state = 432
+							state = 455
+							state = 477
+							state = 478
+							state = 454
+							state = 465
+							state = 476 
+							state = 514 #BILLY
+							state = 487 #FEI
+							state = 479
+							state = 471
+							state = 549 #SKAFANDRIA
+							state = 515
+							state = 535
+							state = 493
+							state = 498
+							state = 507
+							state = 520
+			}
+	}
+}
+is_south_desert = {
+	OR = {
+		state = 747 #RIF
+		state = 757
+		state = 752 #bereg
+		state = 748
+		state = 735
+		state = 715
+		state = 746
+		state = 733 #GOFFS
+		state = 745
+		state = 728
+		state = 727
+		state = 742
+		state = 713
+		state = 711
+		state = 697
+		state = 700
+		state = 699
+		state = 685
+		state = 667
+		state = 692
+		state = 704
+		state = 720
+		state = 694
+		state = 705
+		state = 716
+		state = 724
+		state = 721
+		state = 731
+		state = 729
+		state = 737
+		state = 736
+		state = 740
+		state = 722
+		state = 706
+		state = 684
+		state = 710
+		state = 719
+		state = 709
+		state = 714
+		state = 701
+		state = 691
+		state = 682
+		state = 698
+		state = 683 #betburg
+		state = 677 #mof
+		state = 676 #nectabis
+		state = 690
+		state = 687
+		state = 666
+	}
+}
+desert_control = {
+	custom_trigger_tooltip = { #Если для формирования нужны все первоначальные территории какой-то страны на карте, то вместо перечисления проще сделать вот так и в локализации тултипа написать "Все изначальные территории вот этого хуя"
+				tooltip = zavrak_terki_tt
+				controls_state = 581 
+				controls_state = 599
+				controls_state = 610
+				controls_state = 611
+				controls_state = 643
+				controls_state = 651
+				controls_state = 657
+				controls_state = 674
+				controls_state = 675
+				controls_state = 658
+				controls_state = 669
+				controls_state = 670
+				controls_state = 644
+				controls_state = 615
+				controls_state = 631
+				controls_state = 614
+				controls_state = 585
+				controls_state = 571
+				controls_state = 556
+				controls_state = 545
+				controls_state = 572
+				controls_state = 591
+				controls_state = 624
+				controls_state = 635
+				controls_state = 642
+				controls_state = 630
+				controls_state = 623
+				controls_state = 662
+			}
+			custom_trigger_tooltip = {
+				tooltip = qarantin_terki_tt
+				controls_state = 619 
+				controls_state = 650
+				controls_state = 634
+				controls_state = 632
+				controls_state = 608
+				controls_state = 594
+				controls_state = 596
+				controls_state = 589
+			}
+			custom_trigger_tooltip = {
+				tooltip = bereg_terki_tt
+				controls_state = 752 
+				controls_state = 748
+				controls_state = 735
+				controls_state = 715
+				controls_state = 746
+			}
+			custom_trigger_tooltip = {
+				tooltip = nectabis_terki_tt
+				controls_state = 676 
+				controls_state = 690
+				controls_state = 687
+				controls_state = 666
+			}
+			custom_trigger_tooltip = {
+				tooltip = koluchee_terki_tt
+				controls_state = 656
+				controls_state = 655
+				controls_state = 621
+				controls_state = 590
+				controls_state = 633
+				controls_state = 601
+			}
+			custom_trigger_tooltip = {
+				tooltip = grimbi_terki_tt
+				controls_state = 607
+				controls_state = 603
+				controls_state = 582
+				controls_state = 567
+				controls_state = 566
+				controls_state = 578
+				controls_state = 559
+				controls_state = 543
+				controls_state = 552
+				controls_state = 564
+				controls_state = 544
+				controls_state = 542
+				controls_state = 533
+				controls_state = 531
+				controls_state = 526
+			}
+			custom_trigger_tooltip = {
+				tooltip = satan_terki_tt
+				controls_state = 554 #satan
+				controls_state = 530
+				controls_state = 504
+				controls_state = 503
+				controls_state = 497
+			}
+			custom_trigger_tooltip = {
+				tooltip = part_of_polana_terki_tt
+				controls_state = 586
+				controls_state = 602
+				controls_state = 636
+			}
+			custom_trigger_tooltip = {
+				tooltip = fei_terki_tt
+				controls_state = 487
+				controls_state = 479
+				controls_state = 471
+			}
+			custom_trigger_tooltip = {
+				tooltip = skafandria_terki_tt
+				controls_state = 549
+				controls_state = 515
+				controls_state = 535
+				controls_state = 493
+				controls_state = 498
+				controls_state = 507
+				controls_state = 520
+			}
+			custom_trigger_tooltip = {
+				tooltip = central_tryapka_terki_tt
+				controls_state = 476
+				controls_state = 481
+				controls_state = 506
+				controls_state = 480
+				controls_state = 461
+				controls_state = 432
+			}
+			custom_trigger_tooltip = {
+				tooltip = lihtshtein_terki_tt
+				controls_state = 478
+				controls_state = 465
+				controls_state = 454
+				controls_state = 447
+				controls_state = 455
+				controls_state = 477
+			}
+			custom_trigger_tooltip = {
+				tooltip = slime_terki_tt
+				controls_state = 682
+				controls_state = 691
+				controls_state = 698
+				controls_state = 701
+				controls_state = 714
+				controls_state = 709
+				controls_state = 719
+				controls_state = 710
+				controls_state = 684
+			}
+			custom_trigger_tooltip = {
+				tooltip = gof_terki_tt
+				controls_state = 705
+				controls_state = 721
+				controls_state = 731
+				controls_state = 729
+				controls_state = 737
+				controls_state = 716
+				controls_state = 724
+				controls_state = 742
+				controls_state = 728
+				controls_state = 727
+				controls_state = 733
+				controls_state = 745
+			}
+			custom_trigger_tooltip = {
+				tooltip = pesk_terki_tt
+				controls_state = 704
+				controls_state = 713
+				controls_state = 711
+				controls_state = 700
+				controls_state = 699
+				controls_state = 692
+				controls_state = 685
+				controls_state = 667
+				controls_state = 697
+			}
+			custom_trigger_tooltip = {
+				tooltip = suns_terki_tt
+				controls_state = 736
+				controls_state = 740
+				controls_state = 722
+				controls_state = 706
+			}
+			controls_state = 694
+			controls_state = 747 
+			controls_state = 720
+			controls_state = 757
+			controls_state = 683 
+			controls_state = 677
+			controls_state = 681
+			controls_state = 514
+}
+desert_pirat_control = {
+	custom_trigger_tooltip = { #Если для формирования нужны все первоначальные территории какой-то страны на карте, то вместо перечисления проще сделать вот так и в локализации тултипа написать "Все изначальные территории вот этого хуя"
+		tooltip = veter_terki_tt
+		controls_state = 769 
+		controls_state = 767
+		controls_state = 765
+		controls_state = 766
+		controls_state = 758
+		controls_state = 764
+		controls_state = 762
+		controls_state = 756
+		controls_state = 754
+	}
+	custom_trigger_tooltip = {
+		tooltip = pushkari_terki_tt
+		controls_state = 744
+		controls_state = 751
+		controls_state = 739
+		controls_state = 726
+	}
+	custom_trigger_tooltip = {
+		tooltip = podriv_terki_tt
+		controls_state = 749
+		controls_state = 730
+		controls_state = 718
+		controls_state = 723
+		controls_state = 703
+	}
+	custom_trigger_tooltip = {
+		tooltip = GRENA_terki_tt
+		controls_state = 660
+		controls_state = 598
+	}
+	controls_state = 712
+}
+
+is_pirate_desert = {
+	custom_trigger_tooltip = {
+		tooltip = is_pirate_desert_tt
+		OR = {
+		state = 769
+		state = 767
+		state = 765
+		state = 766
+		state = 758
+		state = 764
+		state = 762
+		state = 756
+		state = 754
+		state = 744
+		state = 751
+		state = 739
+		state = 726
+		state = 749 
+		state = 730
+		state = 718
+		state = 723
+		state = 703
+		state = 712 
+		state = 660 
+		state = 598	
+		}
+	}
+}
+
+has_hands = {
+	custom_trigger_tooltip = {
+		tooltip = has_hands_tt
+		hidden_trigger = {
+			NOT = {
+				has_country_leader = {
+					character = GOP_god_of_partyes
+					ruling_only = yes
+				}
+			}
+			NOT = { TAG = WOI }
+			NOT = { TAG = DAF }
+			NOT = { TAG = STW }
+			NOT = { TAG = WST }
+			NOT = { TAG = SOK }
+			NOT = { TAG = MMO }
+			NOT = { TAG = DGT }
+			NOT = { TAG = DRG }
+			NOT = { TAG = DGH }
+			NOT = { TAG = SKL }
+			NOT = { TAG = NWZ }
+			NOT = { TAG = NWD }
+			NOT = { TAG = MSH }
+			NOT = { TAG = GFR }
+			NOT = { TAG = IFI }
+			NOT = { TAG = WLT }
+			NOT = { TAG = WLR }
+			NOT = { TAG = WOL }
+			NOT = { TAG = FWL }
+			NOT = { TAG = CBK }
+			NOT = { TAG = TGA }
+			NOT = { TAG = BHP }
+			NOT = { TAG = GSN }
+			NOT = { TAG = FDG }
+			NOT = { TAG = BRZ }
+			NOT = { TAG = RCM }
+		}
+	}
+}
+south_desert_control = {
+	custom_trigger_tooltip = {
+				tooltip = bereg_terki_tt
+				controls_state = 752 
+				controls_state = 748
+				controls_state = 735
+				controls_state = 715
+				controls_state = 746
+			}
+			custom_trigger_tooltip = {
+				tooltip = nectabis_terki_tt
+				controls_state = 676 
+				controls_state = 690
+				controls_state = 687
+				controls_state = 666
+			}
+			custom_trigger_tooltip = {
+				tooltip = slime_terki_tt
+				controls_state = 682
+				controls_state = 691
+				controls_state = 698
+				controls_state = 701
+				controls_state = 714
+				controls_state = 709
+				controls_state = 719
+				controls_state = 710
+				controls_state = 684
+			}
+			custom_trigger_tooltip = {
+				tooltip = gof_terki_tt
+				controls_state = 705
+				controls_state = 721
+				controls_state = 731
+				controls_state = 729
+				controls_state = 737
+				controls_state = 716
+				controls_state = 724
+				controls_state = 742
+				controls_state = 728
+				controls_state = 727
+				controls_state = 733
+				controls_state = 745
+			}
+			custom_trigger_tooltip = {
+				tooltip = pesk_terki_tt
+				controls_state = 704
+				controls_state = 713
+				controls_state = 711
+				controls_state = 700
+				controls_state = 699
+				controls_state = 692
+				controls_state = 685
+				controls_state = 667
+				controls_state = 697
+			}
+			custom_trigger_tooltip = {
+				tooltip = suns_terki_tt
+				controls_state = 736
+				controls_state = 740
+				controls_state = 722
+				controls_state = 706
+			}
+			controls_state = 694
+			controls_state = 747 
+			controls_state = 720
+			controls_state = 757
+}
+has_head = {
+	custom_trigger_tooltip = {
+		tooltip = has_head_tt
+		hidden_trigger = {
+			NOT = { TAG = EMP }
+			NOT = { TAG = WOI }
+			NOT = { TAG = BOV }
+			NOT = { TAG = DAF }
+			NOT = { TAG = STW }
+			NOT = { TAG = WST }
+			NOT = { TAG = SOK }
+			NOT = { TAG = MMO }
+			NOT = { TAG = FGS }
+			NOT = { TAG = DEM }
+			NOT = { TAG = MOF }
+			NOT = { TAG = DTF }
+			NOT = { TAG = THV }
+			NOT = { TAG = SEK }
+			NOT = { TAG = DGT }
+			NOT = { TAG = DRG }
+			NOT = { TAG = DGH }
+			NOT = { TAG = SKL }
+			NOT = { TAG = NWZ }
+			NOT = { TAG = NWD }
+			NOT = { TAG = MSH }
+			NOT = { TAG = GFR }
+			NOT = { TAG = IFI }
+			NOT = { TAG = WLT }
+			NOT = { TAG = WLR }
+			NOT = { TAG = WOL }
+			NOT = { TAG = FWL }
+			NOT = { TAG = CBK }
+			NOT = { TAG = TGA }
+			NOT = { TAG = BHP }
+			NOT = { TAG = GSN }
+			NOT = { TAG = FDG }
+			NOT = { TAG = BRZ }
+			NOT = { TAG = RCM }
+		}
+	}
+}
+has_body = {
+	custom_trigger_tooltip = {
+		tooltip = has_body_tt
+		hidden_trigger = {
+			NOT = {
+				has_country_leader = {
+					character = GOP_god_of_partyes
+					ruling_only = yes
+				}
+			}
+			NOT = { TAG = MFT }
+			NOT = { TAG = SLO }
+			NOT = { TAG = BEK }
+			NOT = { TAG = WOI }
+			NOT = { TAG = OAK }
+			NOT = { TAG = BOV }
+			NOT = { TAG = DED }
+			NOT = { TAG = DAF }
+			NOT = { TAG = CRP }
+			NOT = { TAG = STW }
+			NOT = { TAG = HDL }
+			NOT = { TAG = WST }
+			NOT = { TAG = SOK }
+			NOT = { TAG = MMO }
+			NOT = { TAG = FGS }
+			NOT = { TAG = DEM }
+			NOT = { TAG = MOF }
+			NOT = { TAG = DTF }
+			NOT = { TAG = THV }
+			NOT = { TAG = SEK }
+			NOT = { TAG = DGT }
+			NOT = { TAG = DRG }
+			NOT = { TAG = DGH }
+			NOT = { TAG = SKL }
+			NOT = { TAG = NWZ }
+			NOT = { TAG = NWD }
+			NOT = { TAG = MSH }
+			NOT = { TAG = GFR }
+			NOT = { TAG = IFI }
+			NOT = { TAG = WLT }
+			NOT = { TAG = WLR }
+			NOT = { TAG = WOL }
+			NOT = { TAG = FWL }
+			NOT = { TAG = CBK }
+			NOT = { TAG = TGA }
+			NOT = { TAG = BHP }
+			NOT = { TAG = GSN }
+			NOT = { TAG = FDG }
+			NOT = { TAG = BRZ }
+			NOT = { TAG = RCM }
+		}
+	}
+}
+can_ROOT_get_wargoal_on_THIS = {
+	exists = yes
+	NOT = { is_in_faction_with = ROOT }
+	NOT = { is_subject_of = ROOT }
+}
+
+#Country scope
+thirty_popularity = {
+	custom_trigger_tooltip = {
+		tooltip = thirty_popularity_tt
+		hidden_trigger = {
+			OR = {
+				AND = {
+					has_government = slime
+					slime > 0.34
+				}
+				AND = {
+					has_government = candy
+					candy > 0.34
+				}
+				AND = {
+					has_government = fire
+					fire > 0.34
+				}
+				AND = {
+					has_government = ice
+					ice > 0.34
+				}
+				AND = {
+					has_government = neutral
+					neutral > 0.34
+				}
+			}
+		}
+	}
+}
+has_union_food_idea = {
+ OR = {
+	has_idea = union_food
+	has_idea = union_food2
+	has_idea = union_food3
+	has_idea = union_food4
+	has_idea = union_food5
+	has_idea = union_food6
+	has_idea = union_food7
+	has_idea = union_food8
+	has_idea = union_food9
+	has_idea = union_food10
+	has_idea = union_food11
+	has_idea = union_food12
+	has_idea = union_food13
+	has_idea = union_food14
+	has_idea = union_food15
+	has_idea = union_food16
+	has_idea = union_food17
+	has_idea = union_food18
+	has_idea = union_food19
+	has_idea = union_food20
+	has_idea = union_food21
+	has_idea = union_food22
+	has_idea = union_food23
+	has_idea = union_food24
+	has_idea = union_food25
+ }
+}
+
+is_border_conflict_defender_vs_FROM = {
+	has_variable = ROOT.defender_state_vs_@FROM
+}
+
+has_not_initiated_border_incident_with_FROM = {
+	custom_trigger_tooltip = {
+		tooltip = not_initiated_border_incident_with_FROM
+		NOT = {
+			any_state = {
+				check_variable = { FROM.defender_state_vs_@PREV = id }
+			}
+		}
+	}
+}
+
+has_not_initiated_border_incident_with_ROOT = {
+	custom_trigger_tooltip = {
+		tooltip = not_initiated_border_incident_with_ROOT
+		NOT = {
+			any_state = {
+				check_variable = { ROOT.defender_state_vs_@PREV = id }
+			}
+		}
+	}
+}
+
+#State scope
+has_ROOT_at_least_1_div_in_current_state_scope = {
+	custom_trigger_tooltip = {
+		tooltip = at_least_one_division_in_state
+		ROOT = { divisions_in_state = { state = PREV size > 0 } }
+	}
+}
+
+#State scope
+is_controlled_by_ROOT_or_subject = {
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_ROOT_or_subject
+		CONTROLLER = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+}
+
+is_not_controlled_by_ROOT_or_subject = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_controlled_by_ROOT_or_subject
+		CONTROLLER = {
+			NOT = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+	}
+}
+
+#Country scope
+is_free_or_subject_of_root = {
+	OR = {
+		is_subject = no
+		is_subject_of = ROOT
+	}
+}
+
+#State scope
+is_controlled_by_ROOT_or_ally = {
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_ROOT_or_ally
+		CONTROLLER = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+}
+
+#State scope
+is_not_controlled_by_ROOT_or_ally = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_controlled_by_ROOT_or_ally
+		CONTROLLER = {
+			NOT = {
+				tag = ROOT
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+}
+
+ai_air_doctrine_tier_1_trigger = {
+	OR = {
+		has_tech = naval_strike_tactics
+		has_tech = direct_ground_support
+		has_tech = low_echelon_support
+	}
+}
+
+ai_air_doctrine_tier_2_trigger = {
+	OR = {
+		has_tech = multialtitude_flying
+		has_tech = hunt_and_destroy
+		has_tech = operational_destruction
+	}
+}
+ai_air_doctrine_tier_3_trigger = {
+	OR = {
+		has_tech = flying_fortress
+		has_tech = naval_strike_torpedo_tactics
+		has_tech = infiltration_bombing
+	}
+}
+
+ai_land_doctrine_tier_1_trigger = {
+	OR = {
+		has_tech = elastic_defence
+		has_tech = mobile_defence
+		has_tech = grand_assault
+		has_tech = defence_in_depth
+	}
+}
+
+ai_land_doctrine_tier_2_trigger = {
+	OR = {
+		has_tech = kampfgruppe
+		has_tech = mechanised_offensive
+		has_tech = branch_interoperation
+		has_tech = infiltration_assault
+		has_tech = vast_offensives
+		has_tech = large_front_offensive
+	}
+}
+
+anti_submarine_strategy_required_trigger = {
+		AND = {
+			has_war = yes
+			any_enemy_country = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		convoy_threat > 0.3
+}
+
+enemy_has_equal_or_better_radar_tech_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = enemy_has_equal_or_better_radar_tech_trigger_tt
+		if = {
+			limit = {
+				ROOT = {
+					has_tech = radio_detection
+					NOT = {
+						has_tech = cavity_magnatron
+					}
+				}
+			}
+			FROM = {
+				OR = {
+					has_tech = radio_detection
+					has_tech = cavity_magnatron
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					has_tech = cavity_magnatron
+
+				}
+			}
+			FROM = {
+				has_tech = cavity_magnatron
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					NOT = {
+						has_tech = centimetric_radar
+					}
+				}
+			}
+			FROM = {
+				has_tech = centimetric_radar
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					has_tech = centimetric_radar
+					NOT = {
+						has_tech = phased_array
+					}
+				}
+			}
+			FROM = {
+				OR = {
+					has_tech = centimetric_radar
+					has_tech = phased_array
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					has_tech = phased_array
+					NOT = {
+						has_tech = monopulse_radar
+					}
+				}
+			}
+			FROM = {
+				OR = {
+					has_tech = phased_array
+					has_tech = monopulse_radar
+				}
+			}
+		}
+		#no more steps needed because end of research tree is reached
+	}
+}
+
+is_available_to_collaboration_government = { # occupied_countries.1 should be updated along with this
+	is_subject = no
+	
+	NOT = {
+		any_country_with_original_tag = {
+			original_tag_to_check = FROM
+			is_puppet_of = PREV # if already created one do not create another
+			has_autonomy_state = autonomy_collaboration_government
+		}
+	}
+}
+
+has_large_ally_not_pick_closed_economy = {
+	any_of_scopes = {
+		array = faction_members
+
+		NOT = { tag = PREV }
+		num_of_military_factories > 30
+	}
+}
+
+owns_or_subject_of = {
+	custom_trigger_tooltip = {
+		tooltip = owns_or_subject_of_tt
+		owner = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+}
+
+controls_or_subject_of = {
+	custom_trigger_tooltip = {
+		tooltip = controls_or_subject_of_tt
+		controller = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+}
+
+is_core_or_compliance_60 = {
+	custom_trigger_tooltip = {
+		tooltip = is_core_or_compliance_60_tt
+		OR = {
+			controller = {
+				PREV = { is_core_of = PREV }
+			}
+			compliance > 60
+		}
+	}
+}
+
+has_same_ideology = {
+	custom_trigger_tooltip = {
+		tooltip = has_same_ideology_tt
+		OR = {
+			AND = {
+				has_government = candy
+				ROOT = { has_government = candy }
+			}
+			AND = {
+				has_government = fire
+				ROOT = { has_government = fire }
+			}
+			AND = {
+				has_government = ice
+				ROOT = { has_government = ice }
+			}
+			AND = {
+				has_government = slime
+				ROOT = { has_government = slime }
+			}
+		}
+	}
+}
+
+has_specialist_level_trigger = {
+	skill > 5
+	skill < 6
+}
+
+has_expert_level_trigger = {
+	skill > 6
+	skill < 7
+}
+
+has_genius_level_trigger = {
+	skill > 7
+}
+
+is_league_of_nations_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_league_of_nations_member_tt
+		has_idea = league_of_nations_member_idea
+	}
+}
+
+is_major_not_original_tag_root = {
+	is_major = yes
+	hidden_trigger = {
+		NOT = { original_tag = ROOT }
+	}
+}
+
+has_subject_autonomy_feature = {
+	has_dlc = "Together for Victory"
+}
+
+is_organization_of_african_unity_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_league_of_nations_member_tt
+		has_idea = organization_of_african_unity_member_idea
+	}
+}
+
+has_tech_sharing_feature = {
+	OR = {
+		has_dlc = "Together for Victory"
+		has_dlc = "Death or Dishonor"
+		has_dlc = "Waking the Tiger"
+		has_dlc = "La Resistance"
+	}
+}
+
+has_war_with_non_exiled_country = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_with_non_exiled_country_tt
+		has_war = yes
+		any_enemy_country = {
+			is_government_in_exile = no
+		}
+	}
+
+}
+
+is_at_peace_exiled_countries_excluded = {
+	custom_trigger_tooltip = {
+		tooltip = is_at_peace_exiled_countries_excluded_tt
+		NOT = {
+			any_enemy_country = {
+				is_government_in_exile = no
+			}
+		}
+	}
+}
+
+#State scope
+state_is_fully_controlled_by_ROOT_or_subject = {
+	custom_trigger_tooltip = {
+		tooltip = state_is_fully_controlled_by_ROOT_or_subject_tt
+		OR = {
+			is_fully_controlled_by = ROOT
+			controller = {
+				is_subject_of = ROOT
+				has_full_control_of_state = PREV
+			}
+		}
+	}
+}
+
+#State scope
+state_is_fully_controlled_by_ROOT_subject_or_faction_member = {
+	custom_trigger_tooltip = {
+		tooltip = state_is_fully_controlled_by_ROOT_subject_or_faction_member_tt
+		OR = {
+			is_fully_controlled_by = ROOT
+			controller = {
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				has_full_control_of_state = PREV
+			}
+		}
+	}
+}
+
+state_has_any_resource = {
+	OR = {
+		has_resources_amount = {
+			resource = oil
+			amount > 0
+		}
+		has_resources_amount = {
+			resource = aluminium
+			amount > 0
+		}
+		has_resources_amount = {
+			resource = rubber
+			amount > 0
+		}
+		has_resources_amount = {
+			resource = tungsten
+			amount > 0
+		}
+		has_resources_amount = {
+			resource = steel
+			amount > 0
+		}
+		has_resources_amount = {
+			resource = chromium
+			amount > 0
+		}
+	}
+}
+
+country_can_be_reasonable_target_of_wargoal = { #Expected scopes: Target country is THIS, country getting wargoal is PREV
+	NOT = {
+		has_war_with = ROOT
+		is_in_faction_with = PREV
+		has_guaranteed = PREV
+		is_guaranteed_by = PREV
+		has_non_aggression_pact_with = PREV
+		is_subject_of = PREV
+	}
+}
+
+big_communist_exists = {
+	any_other_country = {
+		is_major = yes 
+		has_government = ice
+		has_capitulated = no 
+		exists = yes 
+	}
+}
+
+big_fascist_exists = {
+	any_other_country = {
+		is_major = yes 
+		has_government = fire
+		has_capitulated = no 
+		exists = yes 
+	}
+}
+
+has_lar = {
+	has_dlc = "La Resistance"
+}
+
+has_mtg = {
+	has_dlc = "Man the Guns"
+}
+
+has_hide_rule = {
+	has_game_rule = {
+		rule = obsolete_focus_branches_visibility
+		option = HIDE
+	}
+}
+

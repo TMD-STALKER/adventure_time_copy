@@ -1,0 +1,27 @@
+state={
+	id=514
+	name="STATE_514"
+	provinces={
+		1278 
+	}
+	resources={
+		steel = 10
+		tungsten = 6
+		chromium = 10
+	}
+	manpower = 45000
+	state_category = town local_supplies=1.0 
+	history={
+		owner = BIL
+		add_core_of = BIL
+		
+		victory_points = {
+			1278 10 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 2
+		}
+	}
+}

@@ -1,0 +1,7 @@
+war_on_south = {
+	priority = 100
+	allowed = { TAG = MOF }
+	visible = {
+		has_completed_focus = mfm_purge
+	}
+}

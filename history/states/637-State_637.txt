@@ -1,0 +1,17 @@
+state={
+	id=637
+	name="STATE_637"
+	provinces={
+		540 
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = DRG
+		add_core_of = DRG
+		
+		victory_points = {
+			540 5
+		}
+	}
+}

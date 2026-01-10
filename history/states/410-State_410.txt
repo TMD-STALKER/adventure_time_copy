@@ -1,0 +1,24 @@
+state={
+	id=410
+	name="STATE_410"
+	provinces={
+		350 713 
+	}
+	resources={
+		steel = 12
+	}
+	manpower = 5555
+	state_category = town local_supplies=1.0 
+	history={
+		owner = CWM
+		add_core_of = CWM
+		victory_points = {
+			350 10 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 3
+		}
+	}
+}

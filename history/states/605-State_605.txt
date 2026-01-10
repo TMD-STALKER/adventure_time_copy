@@ -1,0 +1,17 @@
+state={
+	id=605
+	name="STATE_605"
+	provinces={
+		780 2341 2344 2355 
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = SEK
+		add_core_of = SEK
+		
+		victory_points = {
+			1356 5 
+		}
+	}
+}

@@ -1,0 +1,17 @@
+state={
+	id=434
+	name="STATE_434"
+	provinces={
+		398 2223 
+	}
+	resources={
+		tungsten = 3
+	}
+	#impassable = yes
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = GFR
+		add_core_of = GFR
+	}
+}

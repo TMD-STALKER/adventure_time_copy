@@ -1,0 +1,17 @@
+state={
+	id=543
+	name="STATE_543"
+	provinces={
+		1553 
+	}
+	resources={
+		aluminium = 12
+		steel = 5
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = GLA
+		add_core_of = GLA
+	}
+}

@@ -1,0 +1,6 @@
+﻿l_russian:
+ #####MOD
+ PBB_more_bandit_tt: "§RПреступность возрастёт!§!"
+ PBB_low_bandit_tt: "§GПреступность отступит!§!"
+ upgrade_agility_tt: "§Y[ROOT.GetLeader]§! получит новый уровнень §Yловкости§!"
+ upgrade_charisma_tt: "§Y[ROOT.GetLeader]§! получит новый уровнень §Yхаризмы§!"

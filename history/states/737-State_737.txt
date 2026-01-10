@@ -1,0 +1,17 @@
+state={
+	id=737
+	name="STATE_737"
+	provinces={
+		405 916 955 2470 
+	}
+	resources={
+		rubber = 5
+		oil = 13
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = DTT
+		add_core_of = DTT
+	}
+}

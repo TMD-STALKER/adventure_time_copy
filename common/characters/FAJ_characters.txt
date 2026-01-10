@@ -1,0 +1,99 @@
+characters = {
+	FAJ_finn = {
+		name = FAJ_finn
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FAJ/finn.dds"
+			}
+		}
+		country_leader = {
+			ideology = adventure
+			expire = "1940.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = bonnibelle
+			expire = "1940.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = neutral_slime
+			expire = "1940.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = peaseful_ice
+			expire = "1940.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = harmony
+			expire = "1940.1.1.1"
+			id = -1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FAJ_finn
+			allowed  = {
+				original_tag = FAJ
+			}
+			traits  = {
+				warrior_code
+			}
+			ai_will_do = {
+				factor = 4.000
+			}
+		}
+		corps_commander = {
+				traits = { politically_connected harsh_leader }
+				skill = 5
+				attack_skill = 6
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 3
+				legacy_id = -1 
+			visible = {
+				NOT = {
+					has_government = ice
+				}
+			}
+		}
+	}
+	FAJ_jake = {
+		name = FAJ_jake
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FAJ/jake.dds"
+			}
+		}
+		country_leader = {
+			ideology = adventure
+			expire = "1944.1.1.1"
+			id = -1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FAJ_jake
+			allowed  = {
+				original_tag = FAJ
+			}
+			traits  = {
+				warrior_code
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected harsh_leader }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 5
+				legacy_id = -1 
+			visible = {
+				NOT = {
+					has_government = candy
+				}
+			}
+		}
+	}
+}

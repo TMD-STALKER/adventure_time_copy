@@ -1,0 +1,291 @@
+add_namespace = mof
+
+country_event = {
+    id = mof.1
+	title = mof.1.t
+	desc = mof.1.d
+	picture = GFX_report_event_MOF_factory
+    is_triggered_only = yes
+
+    option = { 
+		name = mof.1.a
+		ai_chance = {
+			base = 1	
+		}
+        add_stability = 0.1
+        capital_scope = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+            }
+        }
+        set_country_flag = {
+            flag = mo_politic
+            value = 0
+        }
+	}
+    option = { 
+		name = mof.1.b
+        ai_chance = {
+			base = 1
+		}
+		add_war_support = 0.1
+        capital_scope = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+            }
+        }
+        set_country_flag = {
+            flag = military_politic
+            value = 0
+        }
+	}
+}
+
+country_event = {
+    id = mof.2
+	title = mof.2.t
+	desc = mof.2.d
+	
+	picture = GFX_report_event_MOF_our_past
+
+    is_triggered_only = yes
+
+    option = { 
+		name = mof.2.a
+		ai_chance = {
+			base = 3
+		}
+        add_stability = 0.2
+        set_country_flag = peace_flag
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = mo_politic
+                }
+            }
+            set_country_flag = {
+                flag = mo_politic
+                value = 0
+            }
+        }
+        modify_country_flag = {
+            flag = mo_politic
+            value = 1
+        }
+	}
+    option = { 
+		name = mof.2.b
+        ai_chance = {
+			base = 1
+		}
+		add_war_support = 0.2
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = military_politic
+                }
+            }
+            set_country_flag = {
+                flag = military_politic
+                value = 0
+            }
+        }
+        set_country_flag = war_flag
+        modify_country_flag = {
+            flag = military_politic
+            value = 1
+        }
+	}
+}
+
+country_event = {
+    id = mof.3
+	title = mof.3.t
+	desc = mof.3.d
+	
+	picture = GFX_report_event_MOF_civillife_and_mmo
+
+    is_triggered_only = yes
+
+    option = { 
+		name = mof.3.a
+		ai_chance = {
+			base = 1
+		}
+        add_stability = 0.2
+        modify_country_flag = {
+            flag = military_politic
+            value = 1
+        }
+	}
+}
+
+country_event = {
+    id = mof.4
+	title = mof.4.t
+	desc = mof.4.d
+	
+	picture = GFX_report_event_MOF_good_moment
+
+    is_triggered_only = yes
+    
+    option = { 
+		name = mof.4.a
+		ai_chance = {
+			base = 3
+		}
+        add_stability = 0.2
+        set_country_flag = peace_flag
+        modify_country_flag = {
+            flag = mo_politic
+            value = 1
+        }
+	}
+}
+
+country_event = {
+    id = mof.5
+	title = mof.5.t
+	desc = mof.5.d
+	
+	picture = GFX_report_event_MOF_world_of_mo
+
+    is_triggered_only = yes
+    
+    option = { 
+		name = mof.5.a
+		ai_chance = {
+			base = 3
+		}
+        trigger = {
+            has_country_flag = {
+                flag = military_politic
+                value > 0
+            }
+        }
+        load_focus_tree = mfm_focus
+        set_politics = {
+            ruling_party = fire
+        }
+        add_popularity = {
+            ideology = fire
+            popularity = 0.25
+        }
+	}
+
+    option = { 
+		name = mof.5.b
+		ai_chance = {
+			base = 3
+		}
+        trigger = {
+            has_country_flag = {
+                flag = mo_politic
+                value > 0
+            }
+        }
+	}
+}
+
+country_event = {
+    id = mof.6
+	title = mof.6.t
+	desc = mof.6.d
+	
+	picture = GFX_report_event_MOF_work_for_robots
+
+    is_triggered_only = yes
+    
+    option = { 
+		name = mof.6.a
+		ai_chance = {
+			base = 3
+		}
+        trigger = {
+            has_country_flag = {
+                flag = military_politic
+                value > 0
+            }
+        }
+        load_focus_tree = mfm_focus
+        set_politics = {
+            ruling_party = fire
+        }
+        add_popularity = {
+            ideology = fire
+            popularity = 0.25
+        }
+	}
+}
+
+country_event = {
+    id = mof.7
+	title = mof.7.t
+	desc = mof.7.d
+	
+	picture = GFX_report_event_MOF_Mmo_attack
+
+    is_triggered_only = yes
+    
+    option = { 
+		name = mof.7.a
+		ai_chance = {
+			base = 3
+		}
+        every_owned_state = {
+          limit = {
+            OR = {
+                is_core_of = DTF
+                is_core_of = DCT
+            }
+          }
+          add_core_of = MOF
+        }
+	}
+}
+
+#УБИЙСТВО МО
+country_event = {
+    id = mof.8
+	title = mof.8.t
+	desc = mof.8.d
+	
+	picture = GFX_report_event_MOF_death_of_mo
+
+    is_triggered_only = yes
+    
+    option = { 
+		name = mof.8.a
+		ai_chance = {
+			base = 3
+		}
+        set_cosmetic_tag = clyrly_protocol_ct
+        kill_country_leader = yes
+        #promote_character = MOF_huntist теперь это не нужно
+	}
+}
+
+#МО УСТРАИВАЕТ ПОПЫТКУ ПЕРЕВОРОТА ПОСЛЕ ГЕНАЦИДА МЕСТНОГО НАСЕЛЕНИЯ
+country_event = {
+    id = mof.9
+	title = mof.9.t
+	desc = mof.9.d
+	
+	picture = GFX_report_event_MOF_MO
+
+    is_triggered_only = yes
+    
+    option = { 
+		name = mof.9.a
+		ai_chance = {
+			base = 3
+		}
+        set_cosmetic_tag = clyrly_protocol_ct
+	}
+}

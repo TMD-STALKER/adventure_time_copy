@@ -1,0 +1,24 @@
+﻿PBB_MYD_01 = {
+	name = "Bananas Squad"
+
+	for_countries = { PBB }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d Bananas Squad"
+
+	ordered = {
+		1 = { "1 Bananas Squad" }
+		2 = { "2 Bananas Squad" }
+		3 = { "3 Bananas Squad" }
+		4 = { "4 Bananas Squad" }
+		5 = { "5 Bananas Squad" }
+		6 = { "6 Bananas Squad" }
+		7 = { "7 Bananas Squad" }
+		8 = { "8 Bananas Squad" }
+		9 = { "9 Bananas Squad" }
+		10 = { "10 Bananas Squad" }
+	}
+}

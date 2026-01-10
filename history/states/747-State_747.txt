@@ -1,0 +1,32 @@
+state={
+	id=747
+	name="STATE_747"
+	provinces={
+		592 
+	}
+	resources={
+		tungsten = 24
+		chromium = 7
+	}
+	manpower = 45000
+	state_category = town local_supplies=1.0 
+	history={
+		owner = DPH
+		add_core_of = DPH
+		buildings = {
+			dockyard = 1
+			industrial_complex = 1
+			arms_factory = 3
+			592 = {
+				coastal_bunker = 1
+				naval_base = 1
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				} 
+			}
+		}
+	}
+}

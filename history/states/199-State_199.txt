@@ -1,0 +1,17 @@
+state={
+	id=199
+	name="STATE_199"
+	provinces={
+		1304 1862 
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = PBB
+		add_core_of = PBB
+		
+		victory_points = {
+			1304 5 
+		}
+	}
+}

@@ -1,0 +1,13 @@
+state={
+	id=727
+	name="STATE_727"
+	provinces={
+		1219 
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = DTT
+		add_core_of = DTT
+	}
+}

@@ -1,0 +1,17 @@
+state={
+	id=292
+	name="STATE_292"
+	provinces={
+		608 798 
+	}
+	manpower = 45000
+	state_category = rural local_supplies=1.0 
+	history={
+		owner = GLK
+		add_core_of = GLK
+		
+		victory_points = {
+			608 5 
+		}
+	}
+}

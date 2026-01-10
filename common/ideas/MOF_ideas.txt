@@ -1,0 +1,140 @@
+ideas = {
+    country = {
+		
+		MOF_hunta_power_1 = {
+			
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}	
+		
+			picture = PBB_bananas
+			
+			modifier = {
+				neutral_drift = -0.01
+				ice_drift = -0.01
+				candy_drift = -0.01
+				slime_drift = -0.01
+			}
+		}
+		MOF_hunta_power_2 = {
+			
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}	
+		
+			picture = PBB_bananas
+			
+			modifier = {
+				political_power_factor = 0.15
+				neutral_drift = -0.02
+				ice_drift = -0.02
+				candy_drift = -0.02
+				slime_drift = -0.02
+			}
+		}
+		MOF_hunta_power_3 = {
+			
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}	
+		
+			picture = PBB_bananas
+			
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_factor = 0.15
+				neutral_drift = -0.03
+				ice_drift = -0.03
+				candy_drift = -0.03
+				slime_drift = -0.03
+			}
+		}
+		MOF_hunta_power_4 = {
+			
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}	
+		
+			picture = PBB_bananas
+			
+			modifier = {
+				political_power_factor = 0.15
+				neutral_drift = -0.03
+				ice_drift = -0.03
+				candy_drift = -0.03
+				slime_drift = -0.03
+				stability_factor = 0.15
+			}
+		}
+		MOF_hunta_power_5 = {
+			
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}	
+		
+			picture = PBB_bananas
+			
+			modifier = {
+				political_power_factor = 0.15
+				neutral_drift = -0.03
+				ice_drift = -0.03
+				candy_drift = -0.03
+				slime_drift = -0.03
+			}
+		}
+		MOF_zastoi = {
+
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}	
+		
+			picture = CHI_inefficient_economy
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.4
+				production_factory_max_efficiency_factor = -0.3
+				production_factory_start_efficiency_factor = -0.4
+			}
+		}
+		MOF_robot_people = {
+
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}	
+		
+			picture = ARG_construction_guilds
+			
+			modifier = {
+				monthly_population = -0.5
+			}
+		}
+	}
+}
