@@ -2743,7 +2743,7 @@
 			focus = SHARED_first_united_factory
 		}
 		available = {
-			is_puppet = yes
+			is_subject = yes
 		}
 		#relative_position_id = SHARED_create_army
 		x = 52
@@ -2759,7 +2759,18 @@
 				limit = {
 					has_completed_focus = SHARED_path_of_loyalty
 				}
-				
+				add_ideas = SHARED_civilian_industry
+				overlord = {
+					if = {
+						limit = {
+							has_idea = SHARED_civilian_industry
+						}
+						add_offsite_building = { type = industrial_complex level = 1 }
+					}
+					else = {
+						add_ideas = SHARED_civilian_industry
+					}
+				}
 			}
 			else = {
 				custom_effect_tooltip = SHARED_first_united_factory_tt
@@ -2773,6 +2784,9 @@
 		cost = 5
 		prerequisite = {
 			focus = SHARED_civilian_industry
+		}
+		available = {
+			is_subject = yes
 		}
 		#relative_position_id = SHARED_create_army
 		x = 52
@@ -2799,7 +2813,7 @@
 						amount = 2
 					}
 					add_resource = {
-						type = steel
+						type = chromium
 						amount = 2
 					}
 					add_resource = {
@@ -2832,6 +2846,9 @@
 		cost = 5
 		prerequisite = {
 			focus = SHARED_path_of_loyalty
+		}
+		available = {
+			is_subject = yes
 		}
 		#relative_position_id = SHARED_create_army
 		x = 54
@@ -2873,9 +2890,34 @@
 		prerequisite = {
 			focus = SHARED_create_union
 		}
+		available = {
+			is_subject = yes
+		}
 		#relative_position_id = SHARED_create_army
 		x = 54
 		y = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHARED_path_of_loyalty
+				add_idea = SHARED_path_of_loyalty2
+			}
+			add_autonomy_score = {
+				value = -200
+				localization = SHARED_explain_the_resourses
+			}
+			overlord = {
+				add_stability = 0.04
+				add_political_power = 35
+				ROOT = {
+					every_owned_state = {
+						limit = {
+							is_core_of = ROOT
+						}
+						add_core_of = PREV.PREV
+					}
+				}
+			}
+		}
 
 	}
 	shared_focus = {
@@ -2885,9 +2927,70 @@
 		prerequisite = {
 			focus = SHARED_home_for_metropoly
 		}
+		available = {
+			is_subject = yes
+		}
 		#relative_position_id = SHARED_create_army
 		x = 54
 		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SHARED_path_of_loyalty2
+				add_idea = SHARED_path_of_loyalty3
+			}
+			add_autonomy_score = {
+				value = -200
+				localization = SHARED_explain_the_resourses
+			}
+			division_template = {
+				name = "Squad of duty"
+				division_names_group = PBB_MYD_01
+				is_locked = no
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Guardsman\" division_template = \"Squad of duty\" start_manpower_factor = 1"
+					owner = PREV
+					count = 3
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			overlord = {
+				division_template = {
+					name = "Squad of duty"
+
+						division_names_group = PBB_MYD_01
+						is_locked = no
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+						}
+					}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Guardsman\" division_template = \"Squad of duty\" start_manpower_factor = 1"
+						owner = PREV
+						count = 4
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+		
 
 	}
 	shared_focus = {
@@ -2897,10 +3000,31 @@
 		prerequisite = {
 			focus = SHARED_path_of_loyalty
 		}
+		available = {
+			is_subject = yes
+		}
 		#relative_position_id = SHARED_create_army
 		x = 56
 		y = 1
 		completion_reward = {
+			random_owned_state = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+			random_owned_state = {
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+			}
+			random_owned_state = {
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+			}
 			add_autonomy_score = {
 				value = -200
 				localization = SHARED_explain_the_resourses
@@ -2922,8 +3046,56 @@
 		prerequisite = {
 			focus = SHARED_explain_the_resourses
 		}
+		available = {
+			is_subject = yes
+		}
 		x = 54
 		y = 4
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = SHARED_path_of_loyalty3
+				add_idea = SHARED_path_of_loyalty4
+			}
+			add_autonomy_score = {
+				value = -450
+				localization = SHARED_explain_the_resourses
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						any_neighbor_state = {
+							owner = {
+								ROOT = {
+									NOT = {
+										is_puppet_of = PREV
+										is_subject_of = PREV
+									}
+								}
+							}
+						}
+					}
+				}
+				overlord = {
+					ROOT = {
+						every_owned_state = {
+							limit = {
+								any_neighbor_state = {
+									owner = {
+										ROOT = {
+											OR = {
+												is_puppet_of = PREV
+												is_subject_of = PREV
+											}
+										}
+									}
+								}
+							}
+							transfer_state_to = PREV.PREV
+						}
+					}
+				}
+			}
+		}
 
 	}
 	shared_focus = {

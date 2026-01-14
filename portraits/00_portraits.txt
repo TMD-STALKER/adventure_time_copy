@@ -179,3 +179,269 @@ FAJ = {
 		}
 	}
 }
+BEK = {
+	army = {
+		male = {
+			"gfx/leaders/BEK/BEK_minorich10.dds"
+			"gfx/leaders/BEK/BEK_minorich11.dds"
+			"gfx/leaders/BEK/BEK_minorich12.dds"
+		}
+	}
+	navy = {
+		male = {
+			"gfx/leaders/BEK/BEK_minorich10.dds"
+			"gfx/leaders/BEK/BEK_minorich11.dds"
+			"gfx/leaders/BEK/BEK_minorich12.dds"
+		}
+	}
+	political = {
+		ice = {
+			male = { 
+				"gfx/leaders/BEK/BEK_minorich.dds"
+				"gfx/leaders/BEK/BEK_minorich2.dds"
+				"gfx/leaders/BEK/BEK_minorich3.dds"
+				"gfx/leaders/BEK/BEK_minorich4.dds"
+				"gfx/leaders/BEK/BEK_minorich5.dds"
+				"gfx/leaders/BEK/BEK_minorich6.dds"
+				"gfx/leaders/BEK/BEK_minorich7.dds"
+				"gfx/leaders/BEK/BEK_minorich8.dds"
+				"gfx/leaders/BEK/BEK_minorich9.dds"
+			}
+		}
+		candy = {
+			male = { 
+				"gfx/leaders/BEK/BEK_minorich.dds"
+				"gfx/leaders/BEK/BEK_minorich2.dds"
+				"gfx/leaders/BEK/BEK_minorich3.dds"
+				"gfx/leaders/BEK/BEK_minorich4.dds"
+				"gfx/leaders/BEK/BEK_minorich5.dds"
+				"gfx/leaders/BEK/BEK_minorich6.dds"
+				"gfx/leaders/BEK/BEK_minorich7.dds"
+				"gfx/leaders/BEK/BEK_minorich8.dds"
+				"gfx/leaders/BEK/BEK_minorich9.dds"
+			}
+		}
+		fire = {
+			male = { 
+				"gfx/leaders/BEK/BEK_minorich.dds"
+				"gfx/leaders/BEK/BEK_minorich2.dds"
+				"gfx/leaders/BEK/BEK_minorich3.dds"
+				"gfx/leaders/BEK/BEK_minorich4.dds"
+				"gfx/leaders/BEK/BEK_minorich5.dds"
+				"gfx/leaders/BEK/BEK_minorich6.dds"
+				"gfx/leaders/BEK/BEK_minorich7.dds"
+				"gfx/leaders/BEK/BEK_minorich8.dds"
+				"gfx/leaders/BEK/BEK_minorich9.dds"
+			}
+		}
+		slime = {
+			male = { 
+				"gfx/leaders/BEK/BEK_minorich.dds"
+				"gfx/leaders/BEK/BEK_minorich2.dds"
+				"gfx/leaders/BEK/BEK_minorich3.dds"
+				"gfx/leaders/BEK/BEK_minorich4.dds"
+				"gfx/leaders/BEK/BEK_minorich5.dds"
+				"gfx/leaders/BEK/BEK_minorich6.dds"
+				"gfx/leaders/BEK/BEK_minorich7.dds"
+				"gfx/leaders/BEK/BEK_minorich8.dds"
+				"gfx/leaders/BEK/BEK_minorich9.dds"
+			}
+		}
+		neutral = {
+			male = { 
+				"gfx/leaders/BEK/BEK_minorich.dds"
+				"gfx/leaders/BEK/BEK_minorich2.dds"
+				"gfx/leaders/BEK/BEK_minorich3.dds"
+				"gfx/leaders/BEK/BEK_minorich4.dds"
+				"gfx/leaders/BEK/BEK_minorich5.dds"
+				"gfx/leaders/BEK/BEK_minorich6.dds"
+				"gfx/leaders/BEK/BEK_minorich7.dds"
+				"gfx/leaders/BEK/BEK_minorich8.dds"
+				"gfx/leaders/BEK/BEK_minorich9.dds"
+			}
+		}
+	}
+}
+SLO = {
+	army = {
+		male = { 
+			"gfx/leaders/SLO/SLO_minor.dds"
+			"gfx/leaders/SLO/SLO_minor2.dds"
+			"gfx/leaders/SLO/SLO_minor3.dds"
+			"gfx/leaders/SLO/SLO_minor4.dds"
+			"gfx/leaders/SLO/SLO_minor5.dds"
+			"gfx/leaders/SLO/SLO_minor6.dds"
+		}
+	}
+	navy = {
+		male = { 
+			"gfx/leaders/SLO/SLO_minor.dds"
+			"gfx/leaders/SLO/SLO_minor2.dds"
+			"gfx/leaders/SLO/SLO_minor3.dds"
+			"gfx/leaders/SLO/SLO_minor4.dds"
+			"gfx/leaders/SLO/SLO_minor5.dds"
+			"gfx/leaders/SLO/SLO_minor6.dds"
+		}
+	}
+	political = {
+		ice = {
+			male = { 
+				"gfx/leaders/SLO/SLO_minor.dds"
+				"gfx/leaders/SLO/SLO_minor2.dds"
+				"gfx/leaders/SLO/SLO_minor3.dds"
+				"gfx/leaders/SLO/SLO_minor4.dds"
+				"gfx/leaders/SLO/SLO_minor5.dds"
+				"gfx/leaders/SLO/SLO_minor6.dds"
+			}
+		}
+		candy = {
+			male = { 
+				"gfx/leaders/SLO/SLO_minor.dds"
+				"gfx/leaders/SLO/SLO_minor2.dds"
+				"gfx/leaders/SLO/SLO_minor3.dds"
+				"gfx/leaders/SLO/SLO_minor4.dds"
+				"gfx/leaders/SLO/SLO_minor5.dds"
+				"gfx/leaders/SLO/SLO_minor6.dds"
+			}
+		}
+		fire = {
+			male = { 
+				"gfx/leaders/SLO/SLO_minor.dds"
+				"gfx/leaders/SLO/SLO_minor2.dds"
+				"gfx/leaders/SLO/SLO_minor3.dds"
+				"gfx/leaders/SLO/SLO_minor4.dds"
+				"gfx/leaders/SLO/SLO_minor5.dds"
+				"gfx/leaders/SLO/SLO_minor6.dds"
+			}
+		}
+		slime = {
+			male = { 
+				"gfx/leaders/SLO/SLO_minor.dds"
+				"gfx/leaders/SLO/SLO_minor2.dds"
+				"gfx/leaders/SLO/SLO_minor3.dds"
+				"gfx/leaders/SLO/SLO_minor4.dds"
+				"gfx/leaders/SLO/SLO_minor5.dds"
+				"gfx/leaders/SLO/SLO_minor6.dds"
+			}
+		}
+		neutral = {
+			male = { 
+				"gfx/leaders/SLO/SLO_minor.dds"
+				"gfx/leaders/SLO/SLO_minor2.dds"
+				"gfx/leaders/SLO/SLO_minor3.dds"
+				"gfx/leaders/SLO/SLO_minor4.dds"
+				"gfx/leaders/SLO/SLO_minor5.dds"
+				"gfx/leaders/SLO/SLO_minor6.dds"
+			}
+		}
+	}
+}
+PBB = {
+	army = {
+		male = { 
+			"gfx/leaders/PBB/PBB_minorich.dds"
+			"gfx/leaders/PBB/PBB_minorich2.dds"
+			"gfx/leaders/PBB/PBB_minorich3.dds"
+			"gfx/leaders/PBB/PBB_minorich4.dds"
+			"gfx/leaders/PBB/PBB_minorich5.dds"
+			"gfx/leaders/PBB/PBB_minorich6.dds"
+			"gfx/leaders/PBB/PBB_minorich7.dds"
+			"gfx/leaders/PBB/PBB_minorich8.dds"
+			"gfx/leaders/PBB/PBB_minorich9.dds"
+			"gfx/leaders/PBB/PBB_minorich10.dds"
+			"gfx/leaders/PBB/PBB_minorich11.dds"
+		}
+	}
+	navy = {
+		male = { 
+			"gfx/leaders/PBB/PBB_minorich.dds"
+			"gfx/leaders/PBB/PBB_minorich2.dds"
+			"gfx/leaders/PBB/PBB_minorich3.dds"
+			"gfx/leaders/PBB/PBB_minorich4.dds"
+			"gfx/leaders/PBB/PBB_minorich5.dds"
+			"gfx/leaders/PBB/PBB_minorich6.dds"
+			"gfx/leaders/PBB/PBB_minorich7.dds"
+			"gfx/leaders/PBB/PBB_minorich8.dds"
+			"gfx/leaders/PBB/PBB_minorich9.dds"
+			"gfx/leaders/PBB/PBB_minorich10.dds"
+			"gfx/leaders/PBB/PBB_minorich11.dds"
+		}
+	}
+	political = {
+		ice = {
+			male = { 
+				"gfx/leaders/PBB/PBB_minorich.dds"
+				"gfx/leaders/PBB/PBB_minorich2.dds"
+				"gfx/leaders/PBB/PBB_minorich3.dds"
+				"gfx/leaders/PBB/PBB_minorich4.dds"
+				"gfx/leaders/PBB/PBB_minorich5.dds"
+				"gfx/leaders/PBB/PBB_minorich6.dds"
+				"gfx/leaders/PBB/PBB_minorich7.dds"
+				"gfx/leaders/PBB/PBB_minorich8.dds"
+				"gfx/leaders/PBB/PBB_minorich9.dds"
+				"gfx/leaders/PBB/PBB_minorich10.dds"
+				"gfx/leaders/PBB/PBB_minorich11.dds"
+			}
+		}
+		candy = {
+			male = { 
+				"gfx/leaders/PBB/PBB_minorich.dds"
+				"gfx/leaders/PBB/PBB_minorich2.dds"
+				"gfx/leaders/PBB/PBB_minorich3.dds"
+				"gfx/leaders/PBB/PBB_minorich4.dds"
+				"gfx/leaders/PBB/PBB_minorich5.dds"
+				"gfx/leaders/PBB/PBB_minorich6.dds"
+				"gfx/leaders/PBB/PBB_minorich7.dds"
+				"gfx/leaders/PBB/PBB_minorich8.dds"
+				"gfx/leaders/PBB/PBB_minorich9.dds"
+				"gfx/leaders/PBB/PBB_minorich10.dds"
+				"gfx/leaders/PBB/PBB_minorich11.dds"
+			}
+		}
+		fire = {
+			male = { 
+				"gfx/leaders/PBB/PBB_minorich.dds"
+				"gfx/leaders/PBB/PBB_minorich2.dds"
+				"gfx/leaders/PBB/PBB_minorich3.dds"
+				"gfx/leaders/PBB/PBB_minorich4.dds"
+				"gfx/leaders/PBB/PBB_minorich5.dds"
+				"gfx/leaders/PBB/PBB_minorich6.dds"
+				"gfx/leaders/PBB/PBB_minorich7.dds"
+				"gfx/leaders/PBB/PBB_minorich8.dds"
+				"gfx/leaders/PBB/PBB_minorich9.dds"
+				"gfx/leaders/PBB/PBB_minorich10.dds"
+				"gfx/leaders/PBB/PBB_minorich11.dds"
+			}
+		}
+		slime = {
+			male = { 
+				"gfx/leaders/PBB/PBB_minorich.dds"
+				"gfx/leaders/PBB/PBB_minorich2.dds"
+				"gfx/leaders/PBB/PBB_minorich3.dds"
+				"gfx/leaders/PBB/PBB_minorich4.dds"
+				"gfx/leaders/PBB/PBB_minorich5.dds"
+				"gfx/leaders/PBB/PBB_minorich6.dds"
+				"gfx/leaders/PBB/PBB_minorich7.dds"
+				"gfx/leaders/PBB/PBB_minorich8.dds"
+				"gfx/leaders/PBB/PBB_minorich9.dds"
+				"gfx/leaders/PBB/PBB_minorich10.dds"
+				"gfx/leaders/PBB/PBB_minorich11.dds"
+			}
+		}
+		neutral = {
+			male = { 
+				"gfx/leaders/PBB/PBB_minorich.dds"
+				"gfx/leaders/PBB/PBB_minorich2.dds"
+				"gfx/leaders/PBB/PBB_minorich3.dds"
+				"gfx/leaders/PBB/PBB_minorich4.dds"
+				"gfx/leaders/PBB/PBB_minorich5.dds"
+				"gfx/leaders/PBB/PBB_minorich6.dds"
+				"gfx/leaders/PBB/PBB_minorich7.dds"
+				"gfx/leaders/PBB/PBB_minorich8.dds"
+				"gfx/leaders/PBB/PBB_minorich9.dds"
+				"gfx/leaders/PBB/PBB_minorich10.dds"
+				"gfx/leaders/PBB/PBB_minorich11.dds"
+			}
+		}
+	}
+}

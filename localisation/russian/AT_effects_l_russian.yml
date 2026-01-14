@@ -4,3 +4,5 @@
  PBB_low_bandit_tt: "§GПреступность отступит!§!"
  upgrade_agility_tt: "§Y[ROOT.GetLeader]§! получит новый уровнень §Yловкости§!"
  upgrade_charisma_tt: "§Y[ROOT.GetLeader]§! получит новый уровнень §Yхаризмы§!"
+ upgrade_intelligence_tt: "§Y[ROOT.GetLeader]§! получит новый уровнень §Yинтеллекта§!"
+ plus_pie_arteafct: "§YПирог§! будет получен как артефакт"

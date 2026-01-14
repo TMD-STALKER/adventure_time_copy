@@ -1096,20 +1096,36 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
+					NOT = {
+						original_tag = NWD
+						original_tag = NWZ
+					}
 					all_other_country = {
 						NOT = { has_completed_focus = GENERIC_slime_party }
 					}
 				}
-				add_political_power = 150
 				news_event = ooonews.1
+				add_political_power = 80
+				add_stability = 0.01
+				add_war_support = 0.01
 			}
-			else = {
+			else_if = {
+				limit = {
+					NOT = {
+						original_tag = NWD
+						original_tag = NWZ
+					}
+				}
+				add_political_power = 50
 				every_other_country = {
 					limit = {
 						has_completed_focus = GENERIC_slime_party
 					}
 					add_political_power = 15
 				}
+			}
+			else = {
+				add_manpower = 15000
 			}
 			if = {
 				limit = {

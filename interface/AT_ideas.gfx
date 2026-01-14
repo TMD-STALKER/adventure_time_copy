@@ -24,6 +24,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_idea_best_pie"
+		texturefile = "gfx/interface/ideas/idea_best_pie.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_ice_cloth"
 		texturefile = "gfx/interface/ideas/idea_ice_cloth.dds"
 	}

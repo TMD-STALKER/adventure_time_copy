@@ -2026,8 +2026,14 @@
 			focus = SHARED_gas_polks
 			focus = SHARED_artillery_polks
 		}
+		available = {
+			has_army_experience > 49
+		}
 		x = 34
 		y = 8
+		completion_reward = {
+			remove_ideas = PBB_peaseful_people
+		}
 
 	}
 	shared_focus = {

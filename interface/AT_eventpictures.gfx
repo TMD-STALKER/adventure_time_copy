@@ -391,6 +391,22 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_FAJ_smart_finn.dds"
 	}
 	spriteType = {
+		name = "GFX_report_event_FAJ_pie_quest"
+		texturefile = "gfx/event_pictures/report_event_FAJ_pie_quest.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_pie_quest2"
+		texturefile = "gfx/event_pictures/report_event_FAJ_pie_quest2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_pie_quest3"
+		texturefile = "gfx/event_pictures/report_event_FAJ_pie_quest3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_pie_tseremony"
+		texturefile = "gfx/event_pictures/report_event_FAJ_pie_tseremony.dds"
+	}
+	spriteType = {
 		name = "GFX_report_event_FAJ_we_on_meeting"
 		texturefile = "gfx/event_pictures/report_event_FAJ_we_on_meeting.dds"
 	}

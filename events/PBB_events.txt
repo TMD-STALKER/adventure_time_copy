@@ -603,11 +603,13 @@ country_event = {
 		custom_effect_tooltip = ricardo_advistor_tt
 		set_country_flag = ricardo_advistor_flag
 		hidden_effect = {
-			country_event = {
-				id = faj.2
-				days = 5
-				random_hours = 2
-				random_days = 2
+			FAJ = {
+				country_event = {
+					id = faj.2
+					days = 5
+					random_hours = 2
+					random_days = 2
+				}
 			}
 		}
 	}
@@ -2203,7 +2205,6 @@ country_event = {
 			}
 		}
 		add_political_power = -100
-		add_stability = -0.05
 		
 		FAJ = {
 			country_event = faj.10
@@ -3349,7 +3350,15 @@ country_event = {
 	title = pbb.84.t
 	desc = pbb.84.d
 	
-	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		TAG = PBB
+		focus_progress = {
+			focus = PBB_second_meeting
+			progress > 0.1
+		}
+		country_exists = BRK
+	}
 	picture = GFX_report_event_PBB_our_pies
     option = {
 		name = pbb.84.a
@@ -3363,12 +3372,34 @@ country_event = {
 		trigger = {
 			country_exists = FAJ
 		}
-		
+		add_stability = 0.15
+		FAJ = {
+			country_event = {
+				id = faj.11
+				days = 5
+				random_hours = 2
+				random_days = 2
+			}
+		}
 	}
 	option = {
 		name = pbb.84.b
 		ai_chance = {
 			base = 1
+		}
+		country_event = {
+			id = faj.12
+			days = 13
+			random_hours = 2
+			random_days = 2
+		}
+		BRK = {
+			country_event = {
+				id = faj.12
+				days = 14
+				random_hours = 2
+				random_days = 2
+			}
 		}
 	}
 }

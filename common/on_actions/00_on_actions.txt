@@ -1707,6 +1707,14 @@ on_actions = {
 					var = neutral_governments_var
 					value = 0
 				}
+				set_variable = {
+					var = minus_pies
+					value = 0
+				}
+				set_variable = {
+					var = plus_pies
+					value = 0
+				}
 			}
 			every_country = {
 				limit = {
@@ -1942,6 +1950,45 @@ on_actions = {
 			}
 			else = {
 				set_country_flag = pbb_its_bad_time
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = pies_done }
+					check_variable = {
+						plus_pies > var:minus_pies
+					}
+					is_historical_focus_on = no
+				}
+				country_event = faj.17
+				set_country_flag = pies_done
+			}
+			else_if = {
+				limit = {
+					OR = {
+						AND = {
+							NOT = { has_country_flag = pies_done }
+							check_variable = {
+								var = minus_pies
+								value = var:plus_pies
+								compare = greater_than_or_equals
+							}
+							is_historical_focus_on = no
+						}
+						AND = {
+							is_historical_focus_on = yes
+							check_variable = {
+								plus_pies > var:minus_pies
+							}
+							NOT = { has_country_flag = pies_done }
+						}
+					}
+				}
+				country_event = faj.18
+				set_country_flag = pies_done
 			}
 		}
 	}

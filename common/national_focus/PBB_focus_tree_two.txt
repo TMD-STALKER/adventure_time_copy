@@ -73,7 +73,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		completion_reward = {
-			add_political_power = 50
+			upgrade_intelligence = yes
 			add_popularity = {
 				ideology = ROOT
 				popularity = 0.05
@@ -272,10 +272,13 @@ focus_tree = {
 		prerequisite = {
 			focus = PBB_main_meeting
 		}
+		cancelable = no
 		available = {
+			hidden_trigger = {
 			has_country_flag = {
 				flag = PBB_main_meeting_flag
 				days > 175
+			}
 			}
 			custom_trigger_tooltip = {
 				tooltip = PBB_main_meeting_flag_tt

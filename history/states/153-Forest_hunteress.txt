@@ -6,7 +6,6 @@ state={
 	}
 	resources={
 		rubber = 4
-		steel = 5
 	}
 	manpower = 150
 	state_category = town local_supplies=1.0 

@@ -286,7 +286,7 @@ country_event = {
 	option = { 
 		name = faj.8.b
 		ai_chance = {
-			base = 2
+			base = 1
 		}
 		NUT = {
 			country_event = {
@@ -320,7 +320,7 @@ country_event = {
 								has_war_with = NUT
 								has_civil_war = yes
 							}
-							ROOT
+							ROOT = { puppet = PREV }
 						}
 					}
 				}
@@ -331,6 +331,16 @@ country_event = {
 						size = 0.5
 						keep_political_leader = yes
 						keep_political_party_members = yes
+					}
+					hidden_effect = {
+						random_other_country = {
+							limit = {
+								original_tag = NUT
+								has_war_with = NUT
+								has_civil_war = yes
+							}
+							ROOT = { puppet = PREV }
+						}
 					}
 				}
 			}
@@ -404,5 +414,309 @@ country_event = {
 
     option = { 
 		name = faj.10.a
+		add_political_power = -25
+	}
+
+}
+country_event = {
+    id = faj.11
+	title = faj.11.t
+	desc = faj.11.d
+	picture = GFX_report_event_PBB_our_pies
+	is_triggered_only = yes
+
+    option = { 
+		name = faj.11.a
+		ai_chance = {
+			base = 1
+		}
+		add_war_support = -0.04
+		add_stability = 0.1
+		BRK = {
+			country_event = {
+				id = faj.12
+				days = 10
+				random_hours = 2
+				random_days = 2
+			}
+		}
+		PBB = {
+			country_event = {
+				id = faj.12
+				days = 10
+				random_hours = 2
+				random_days = 2
+			}
+		}
+		
+	}
+	option = { 
+		name = faj.11.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		add_stability = -0.02
+		add_political_power = 90
+		add_war_support = 0.02
+		every_other_country = {
+			limit = {
+				OR = {
+					original_tag = DTH
+					original_tag = DTF
+					original_tag = DTV
+					original_tag = DTT
+					original_tag = PSG
+					original_tag = EVF
+					original_tag = MRO
+					original_tag = BAG
+				}
+			}
+			country_event = {
+				id = faj.13
+				days = 3
+				random_hours = 2
+				random_days = 2
+			}
+		}
+	}
+	option = { 
+		name = faj.11.c
+		ai_chance = {
+			base = 1
+		}
+		add_war_support = 0.01
+		add_political_power = 150
+		custom_effect_tooltip = plus_pie_arteafct
+		set_country_flag = have_pies
+		BRK = {
+			country_event = {
+				id = faj.14
+				days = 4
+				random_hours = 2
+				random_days = 2
+			}
+		}
+		PBB = {
+			country_event = {
+				id = faj.14
+				days = 4
+				random_hours = 2
+				random_days = 2
+			}
+		}
+	}
+
+}
+country_event = {
+    id = faj.12
+	title = faj.12.t
+	desc = faj.12.d
+	picture = GFX_report_event_FAJ_pie_tseremony
+	is_triggered_only = yes
+
+    option = { 
+		name = faj.12.a
+		add_political_power = 125
+	}
+}
+country_event = {
+    id = faj.13
+	title = faj.13.t
+	desc = faj.13.d
+	picture = GFX_report_event_FAJ_pie_quest
+	is_triggered_only = yes
+
+    option = { 
+		name = faj.13.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+				original_tag = DTH
+			}
+		}
+		add_political_power = 100
+		if = {
+			limit = {
+				is_historical_focus_on = yes
+				original_tag = DTH
+			}
+			country_event = faj.15
+			FROM = { country_event = faj.15 }
+		}
+		else = {
+			random_list = {
+				50 = {
+					country_event = faj.15
+					FROM = { country_event = faj.15 }
+				}
+				50 = {
+					country_event = faj.16
+					FROM = { country_event = faj.16 }
+				}
+			}
+		}
+	}
+	option = { 
+		name = faj.13.b
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				NOT = { original_tag = DTH }
+			}
+		}
+		add_stability = 0.02
+	}
+}
+country_event = {
+    id = faj.14
+	title = faj.14.t
+	desc = faj.14.d
+	picture = GFX_report_event_FAJ_pie_quest
+	is_triggered_only = yes
+
+    option = { 
+		name = faj.14.a
+		add_stability = -0.15
+		add_political_power = -150
+	}
+}
+country_event = {
+    id = faj.15
+	title = faj.15.t
+	desc = faj.15.d
+	picture = GFX_report_event_FAJ_pie_quest2
+	is_triggered_only = yes
+
+    option = { 
+		name = faj.15.a
+		trigger = {
+			TAG = FAJ 
+		}
+		add_political_power = -40
+		add_to_variable = {
+			var = minus_pies
+			value = 1
+		}
+	}
+	option = { 
+		name = faj.15.b
+		trigger = {
+			NOT = { TAG = FAJ }
+		}
+		add_political_power = 40
+		custom_effect_tooltip = plus_pie_arteafct
+		set_country_flag = have_pies
+	}
+}
+country_event = {
+    id = faj.16
+	title = faj.16.t
+	desc = faj.16.d
+	picture = GFX_report_event_FAJ_smash_bandits
+	is_triggered_only = yes
+
+    option = { 
+		name = faj.16.a
+		trigger = {
+			TAG = FAJ 
+		}
+		add_political_power = 30
+		add_to_variable = {
+			var = plus_pies
+			value = 1
+		}
+	}
+	option = { 
+		name = faj.16.b
+		trigger = {
+			NOT = { TAG = FAJ }
+		}
+		add_political_power = -30
+	}
+}
+country_event = {
+    id = faj.17
+	title = faj.17.t
+	desc = faj.17.d
+	picture = GFX_report_event_FAJ_pie_quest
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.17.a
+		add_stability = 0.1
+		BRK = {
+			country_event = {
+				id = faj.12
+				days = 3
+				random_hours = 2
+				random_days = 2
+			}
+		}
+		PBB = {
+			country_event = {
+				id = faj.12
+				days = 3
+				random_hours = 2
+				random_days = 2
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.18
+	title = faj.18.t
+	desc = faj.18.d
+	picture = GFX_report_event_FAJ_pie_quest3
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.18.a
+		add_stability = 0.1
+		country_event = {
+			id = faj.19
+			days = 3
+			random_hours = 2
+			random_days = 2
+		}
+		BRK = {
+			country_event = {
+				id = faj.19
+				days = 3
+				random_hours = 2
+				random_days = 2
+			}
+		}
+		PBB = {
+			country_event = {
+				id = faj.19
+				days = 3
+				random_hours = 2
+				random_days = 2
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.19
+	title = faj.19.t
+	desc = faj.19.d
+	picture = GFX_report_event_FAJ_pie_tseremony
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.19.a
+		add_war_support = 0.01
+		add_political_power = 25
 	}
 }

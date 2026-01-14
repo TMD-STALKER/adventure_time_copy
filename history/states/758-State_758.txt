@@ -5,8 +5,6 @@ state={
 		100 695 789 1490 2485 
 	}
 	resources={
-		steel = 12
-		rubber = 23
 		oil = 3
 	}
 	manpower = 45000

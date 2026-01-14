@@ -63,6 +63,16 @@ ideas = {
 				}
 			}
 		}
+		SHARED_civilian_industry = {
+			picture = SPR_the_maximum_concession
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				consumer_goods_factor = -0.1
+			}
+
+		}
 		
 		SHARED_naval_forces = {
 			picture = DEN_sovaernet_1
@@ -408,6 +418,67 @@ ideas = {
 				autonomy_gain_warscore_factor = 0.25
 				can_master_build_for_us = 1
 				master_ideology_drift = 0.1
+			}
+		}
+		SHARED_path_of_loyalty2 = {
+			picture = DEN_occupation_laws
+			available = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+			}
+			
+			modifier = {
+				autonomy_gain_trade_factor = 0.25
+				autonomy_gain_warscore_factor = 0.25
+				can_master_build_for_us = 1
+				master_ideology_drift = 0.1
+				cic_to_overlord_factor = 0.2
+				stability_factor = 0.13
+			}
+		}
+		SHARED_path_of_loyalty3 = {
+			picture = DEN_occupation_laws
+			available = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+			}
+			
+			modifier = {
+				autonomy_gain_trade_factor = 0.25
+				autonomy_gain_warscore_factor = 0.25
+				can_master_build_for_us = 1
+				master_ideology_drift = 0.1
+				cic_to_overlord_factor = 0.2
+				stability_factor = 0.13
+				war_support_factor = 0.13
+				mic_to_overlord_factor = 0.2
+				surrender_limit = 0.13
+			}
+		}
+		SHARED_path_of_loyalty4 = {
+			picture = DEN_occupation_laws
+			available = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+			}
+			
+			modifier = {
+				autonomy_gain_trade_factor = 0.25
+				autonomy_gain_warscore_factor = 0.25
+				can_master_build_for_us = 1
+				master_ideology_drift = 0.1
+				cic_to_overlord_factor = 0.2
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				mic_to_overlord_factor = 0.2
+				surrender_limit = 0.15
+				political_power_factor = 0.15
 			}
 		}
 		

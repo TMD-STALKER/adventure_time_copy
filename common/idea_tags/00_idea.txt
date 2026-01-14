@@ -179,6 +179,8 @@ idea_categories = {
         slot = body
 		slot = hands
 		slot = hands2
+		slot = artefacts
+		slot = artefacts2
 
 
         ledger = civilian

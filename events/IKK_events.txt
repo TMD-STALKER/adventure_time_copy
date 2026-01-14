@@ -508,7 +508,10 @@ country_event = {
 			country_event = net.1
 			add_war_support = 0.05
 		}
-		every_owned_state = { add_claim_by = FROM }
+		every_owned_state = { 
+			add_claim_by = FROM
+			add_claim_by = IKK
+		}
 		every_owned_state = {
 			limit = {
 				any_neighbor_state = { is_owned_by = FROM }

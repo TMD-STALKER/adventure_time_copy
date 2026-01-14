@@ -311,4 +311,96 @@ ideas = {
 			
 		}
 	}
+	artefacts = {
+		law = yes
+		use_list_view = yes
+		
+		no_item_artefacts2 = {
+			removal_cost = -1
+			default = yes
+			allowed = {
+				always = yes
+			}
+			allowed_to_remove = {
+                always = yes
+            }
+			picture = GFX_bop_FIN_bad_rubble_side
+			modifier = {
+				
+			}
+		}
+		
+		best_pie = {
+			removal_cost = -1
+			
+			visible = {
+				NOT = { has_idea = best_pie2 }
+				has_country_flag = have_pies
+			}
+			allowed_to_remove = {
+                always = yes #потом сюда надо OR прописать
+            }
+			available = { 
+				not_commune = yes
+			}
+			picture = best_pie
+			
+			modifier = {
+				drift_defence_factor = 0.03
+				stability_factor = 0.03
+				political_power_factor = 0.03
+				supply_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+			
+			
+		}
+		
+	}
+	artefacts2 = {
+		law = yes
+		use_list_view = yes
+		
+		no_item_artefacts = {
+			removal_cost = -1
+			default = yes
+			allowed = {
+				always = yes
+			}
+			allowed_to_remove = {
+                always = yes
+            }
+			picture = GFX_bop_FIN_bad_rubble_side
+			modifier = {
+				
+			}
+		}
+		
+		best_pie2 = {
+			removal_cost = -1
+			
+			visible = {
+				NOT = { has_idea = best_pie }
+				has_country_flag = have_pies
+			}
+			allowed_to_remove = {
+                always = yes #потом сюда надо OR прописать
+            }
+			available = { 
+				not_commune = yes
+			}
+			picture = best_pie
+			
+			modifier = {
+				drift_defence_factor = 0.03
+				stability_factor = 0.03
+				political_power_factor = 0.03
+				supply_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+			
+			
+		}
+		
+	}
 }

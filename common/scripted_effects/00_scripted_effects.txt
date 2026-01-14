@@ -276,10 +276,116 @@ upgrade_charisma = {
 			add_ideas = charisma_ten
 		}
 	}
+	else_if = {
+		limit = {
+			has_idea = charisma_ten
+		}
+		add_political_power = 50
+		add_stability = 0.01
+		add_war_support = 0.01
+	}
 	else = {
 		hidden_effect = {
 			add_offsite_building = { type = industrial_complex level = 1 }
 			add_ideas = charisma_one
+		}
+	}
+}
+upgrade_intelligence = {
+	custom_effect_tooltip = upgrade_intelligence_tt
+	if = {
+		limit = {
+			has_idea = intelligence_one
+		}
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = intelligence_two
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = intelligence_two
+		}
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = intelligence_three
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = intelligence_three
+		}
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = intelligence_forth
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = intelligence_forth
+		}
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = intelligence_five
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = intelligence_five
+		}
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = intelligence_six
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = intelligence_six
+		}
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = intelligence_seven
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = intelligence_seven
+		}
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = intelligence_eth
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = intelligence_eth
+		}
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = intelligence_nine
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = intelligence_nine
+		}
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = intelligence_ten
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = intelligence_ten
+		}
+		add_political_power = 50
+		add_stability = 0.01
+		add_war_support = 0.01
+	}
+	else = {
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_ideas = intelligence_one
 		}
 	}
 }
@@ -365,6 +471,14 @@ upgrade_agility = {
 			add_offsite_building = { type =dockyard level = 1 }
 			add_ideas = agility_ten
 		}
+	}
+	else_if = {
+		limit = {
+			has_idea = agility_ten
+		}
+		add_political_power = 50
+		add_stability = 0.01
+		add_war_support = 0.01
 	}
 	else = {
 		hidden_effect = {
