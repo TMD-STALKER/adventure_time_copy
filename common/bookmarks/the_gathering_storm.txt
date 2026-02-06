@@ -9,6 +9,10 @@ bookmarks = {
 		
 		"FAJ"={
 			history = "NON_GATHERING_STORM_DESC"
+			ideas = {
+				only_iam
+				PBB_member_of_tax_deal
+			}
 		}
 		"PBB"={
 			history = "PBB_GATHERING_STORM_DESC"
@@ -31,6 +35,9 @@ bookmarks = {
 			minor = yes
 			history = "NON_GATHERING_STORM_DESC"
 			ideology = neutral
+			ideas = {
+				only_iam
+			}
 		}
 		"COM"={
 			history = "NON_GATHERING_STORM_DESC"
@@ -50,10 +57,24 @@ bookmarks = {
 		"OLD"={
 			minor = yes
 			history = "OLD_GATHERING_STORM_DESC"
+			focuses = {
+				OLD_stay_away
+				OLD_helping_pb
+				OLD_try_to_stop
+			}
 		}
 		"MOF"={
 			minor = yes
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "MOF_GATHERING_STORM_DESC"
+			ideas = {
+				MOF_zastoi
+				MOF_robot_people
+			}
+			focuses = {
+				mof_what_we_safe
+				mof_politica
+				mof_ITOG
+			}
 		}
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !

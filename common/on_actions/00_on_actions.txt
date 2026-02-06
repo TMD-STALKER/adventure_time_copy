@@ -1056,17 +1056,17 @@ on_actions = {
 						add_ai_strategy = {
 							type = protect
 							id = PREV
-							value = 100
+							value = 200
 						}
 						add_ai_strategy = {
 							type = befriend
 							id = PREV
-							value = 15
+							value = 150
 						}
 						add_ai_strategy = {
 							type = alliance
 							id = PREV
-							value = 125
+							value = 225
 						}
 					}
 				}
@@ -1932,6 +1932,31 @@ on_actions = {
 			}
 		}
 	}
+	on_daily_FAJ = {
+		effect = {
+			if = {
+				limit = {
+					controls_state = 291
+					controls_state = 741
+					NOT = { 
+						has_country_flag = ANDR_FLAG
+						has_country_leader = {
+							character = FAJ_jake
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = FAJ_finn
+							ruling_only = yes
+						}
+					}
+					is_historical_focus_on = no
+				}
+				set_country_flag = ANDR_FLAG
+				country_event = debug.2
+			}
+		}
+	}
+
 	on_monthly_PBB = {
 		effect = {
 			if = {
@@ -1953,24 +1978,24 @@ on_actions = {
 			}
 		}
 	}
-	on_weekly = {
+	on_weekly_FAJ = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { has_country_flag = pies_done }
+					has_country_flag = pies_done
 					check_variable = {
 						plus_pies > var:minus_pies
 					}
 					is_historical_focus_on = no
 				}
 				country_event = faj.17
-				set_country_flag = pies_done
+				clr_country_flag = pies_done
 			}
 			else_if = {
 				limit = {
+					has_country_flag = pies_done
 					OR = {
 						AND = {
-							NOT = { has_country_flag = pies_done }
 							check_variable = {
 								var = minus_pies
 								value = var:plus_pies
@@ -1980,15 +2005,14 @@ on_actions = {
 						}
 						AND = {
 							is_historical_focus_on = yes
-							check_variable = {
+							check_ariable = {
 								plus_pies > var:minus_pies
 							}
-							NOT = { has_country_flag = pies_done }
 						}
 					}
 				}
 				country_event = faj.18
-				set_country_flag = pies_done
+				clr_country_flag = pies_done
 			}
 		}
 	}
@@ -2155,7 +2179,7 @@ on_actions = {
 					any_enemy_country = { has_cosmetic_tag = PBB_candy_zombie_tag }
 					#has_global_flag = experiment_is_end_flag
 					surrender_progress > 0.05
-					date < 3028.01.01
+					date < 3008.01.01
 				}
 				country_event = pbb.9
 			}
@@ -2165,7 +2189,7 @@ on_actions = {
 					any_enemy_country = { has_cosmetic_tag = PBB_candy_zombie_tag }
 					#has_global_flag = experiment_is_end_flag
 					surrender_progress > 0.1
-					date < 3028.01.01
+					date < 3008.01.01
 				}
 				country_event = pbb.10
 			}
@@ -2174,7 +2198,7 @@ on_actions = {
 					any_enemy_country = { has_cosmetic_tag = PBB_candy_zombie_tag }
 					#has_global_flag = experiment_is_end_flag
 					263 = { NOT = { is_controlled_by = PBB } }
-					date < 3028.01.01
+					date < 3008.01.01
 				}
 				country_event = pbb.11
 				news_event = {
@@ -2193,7 +2217,7 @@ on_actions = {
 						is_puppet_of = PBB
 						NOT = { has_country_flag = loyal_flag }
 					}
-					date < 3028.01.01
+					date < 3008.01.01
 				}
 				country_event = pbb.12
 			}
@@ -2206,7 +2230,7 @@ on_actions = {
 						is_puppet_of = PBB
 						NOT = { has_country_flag = loyal_flag }
 					}
-					date < 3028.01.01
+					date < 3008.01.01
 				}
 				country_event = pbb.13
 			}
@@ -2231,28 +2255,60 @@ on_actions = {
 			}
 		}
 	}
-	on_peace = {
+	on_daily_DPH = {
 		effect = {
 			if = {
 				limit = {
-					has_completed_focus = SHARED_candy_formula
+					has_war = yes
+					owns_state = 747
+					NOT = { controls_state = 747 }
+					NOT = { has_global_flag = pirat_port_capture_flag }
+					date < 3015.01.01
 				}
-			}
-			uncomplete_national_focus = {
-			  focus = SHARED_candy_formula
-			  uncomplete_children = yes
-			  refund_political_power = yes
+				country_event = dph.1
+				set_global_flag = pirat_port_capture_flag
 			}
 		}
-	}											
-	on_war = {
+	}		
+	on_daily = {
 		effect = {
+			if = {
+				limit = {
+					has_war = yes
+					any_enemy_country = { 
+						original_tag = LIC
+						OR = {
+							surrender_progress > 0.5
+							num_of_controlled_states < 2
+						}
+					}
+					NOT = { has_global_flag = already_final_fight }
+				}
+				country_event = pbb.113
+				set_global_flag = already_final_fight
+			}
+			else_if = {
+				limit = {
+					has_war = yes
+					any_enemy_country = { 
+						original_tag = LIC
+						OR = {
+							surrender_progress > 0.5
+							num_of_controlled_states < 2
+						}
+					}
+					NOT = { has_global_flag = already_final_fight3 }
+					has_global_flag = already_final_fight2
+				}
+				country_event = pbb.121
+				set_global_flag = already_final_fight2
+			}
 			if = {
 				limit = {
 					has_global_flag = great_attack_on_candy_kingdom
 					has_war_with = FHL
 					original_tag = PBB
-					surrender_progress > 0.05
+					any_owned_state = { is_controlled_by = FHL }
 				}
 				clr_global_flag = great_attack_on_candy_kingdom
 				country_event = pbb.77
@@ -2272,6 +2328,7 @@ on_actions = {
 			##############
 			if = {
 				limit = {
+					has_war = yes
 					any_controlled_state = { 
 						NOT = { is_owned_by = ROOT }
 						compliance > 49
@@ -2293,6 +2350,7 @@ on_actions = {
 			#####
 			if = {
 				limit = {
+					has_war = yes
 					has_idea = SHARED_culture_of_war
 					NOT = { has_country_flag = SHARED_culture_of_war_flag }
 				}
@@ -2304,6 +2362,7 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					has_war = yes
 					has_idea = PBB_member_of_tax_deal
 					has_defensive_war = yes
 					NOT = { 
@@ -2322,9 +2381,6 @@ on_actions = {
 						infantry = { x = 0 y = 2 }
 						infantry = { x = 1 y = 0 }
 						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
 					}
 				}
 				every_owned_state = {
@@ -2337,13 +2393,23 @@ on_actions = {
 						allow_spawning_on_enemy_provs = yes
 					}
 				}
-				add_offsite_building = { type = arms_factory level = 3 }
+				add_offsite_building = { type = arms_factory level = 1 }
 				set_country_flag = PBB_member_of_tax_deal_flag
 			}
 		}
 	}
 	on_peace = {
 		effect = {
+			if = {
+				limit = {
+					has_completed_focus = SHARED_candy_formula
+				}
+			}
+			uncomplete_national_focus = {
+			  focus = SHARED_candy_formula
+			  uncomplete_children = yes
+			  refund_political_power = yes
+			}
 			if = {
 				limit = {
 					has_idea = SHARED_culture_of_war
@@ -2372,125 +2438,13 @@ on_actions = {
 					has_idea = PBB_member_of_tax_deal
 					has_country_flag = PBB_member_of_tax_deal_flag
 				}
-				delete_unit_template_and_units = {
+				delete_unit = {
 					division_template = "PB squad"
-					disband = no #will refund equipment and manpower
 				}
-				add_offsite_building = { type = arms_factory level = -3 }
+				add_offsite_building = { type = arms_factory level = -1 }
 				clr_country_flag = PBB_member_of_tax_deal_flag
 			}
 		}
 	}
-	#on_ruling_party_change = {
-	#	effect = {
-	#		#every_country = {
-	#			if = {
-	#				limit = {
-	#					has_country_flag = GENERIC_snow_army_flag2
-	#					has_government = ice
-	#				}
-	#				add_country_leader_trait = snow_army_leader2
-	#				clr_country_flag = GENERIC_snow_army_flag2
-	#			}
-	#			if = {
-	#				limit = {
-	#					has_country_flag = GENERIC_snow_army_flag
-	#					has_government = ice
-	#				}
-	#				add_country_leader_trait = snow_army_leader
-	#				clr_country_flag = GENERIC_snow_army_flag
-	#			}
-	#			if = {
-	#				limit = {
-	#					has_country_flag = harmony_ideology_flag
-	#					has_government = fire
-	#				}
-	#				set_country_leader_ideology = harmony
-	#				clr_country_flag = harmony_ideology_flag
-	#			}
-	#			if = {
-	#				limit = {
-	#					has_country_flag = evil_ideology_flag
-	#					has_government = fire
-	#				}
-	#				set_country_leader_ideology = evil
-	#				clr_country_flag = evil_ideology_flag
-	#			}
-	#			if = {
-	#				limit = {
-	#					has_country_flag = opposition_slime_ideology_flag
-	#					has_government = slime
-	#				}
-	#				set_country_leader_ideology = opposition_slime
-	#				clr_country_flag = opposition_slime_ideology_flag
-	#			}
-	#			if = {
-	#				limit = {
-	#					has_country_flag = peaseful_slime_ideology_flag
-	#					has_government = slime
-	#				}
-	#				set_country_leader_ideology = peaseful_slime
-	#				clr_country_flag = peaseful_slime_ideology_flag
-	#			}
-	#			if = {
-	#				limit = {
-	#					has_country_flag = bonnibelle_ideology_flag
-	#					has_government = candy
-	#				}
-	#				random_list = {
-	#					50 = {
-	#						set_country_leader_ideology = bonnibelle
-	#					}
-	#					50 = {
-	#						set_country_leader_ideology = lemon
-	#					}
-	#				}
-	#				clr_country_flag = bonnibelle_ideology_flag
-	#			}
-	#			if = {
-	#				limit = {
-	#					has_country_flag = independed_candy_ideology_flag
-	#					has_government = candy
-	#				}
-	#				set_country_leader_ideology = independed_candy
-	#				clr_country_flag = independed_candy_ideology_flag
-	#			}
-	#			if = {
-	#				limit = {
-	#					has_country_flag = penguin_ideology_flag
-	#					has_government = ice
-	#				}
-	#				random_list = {
-	#					50 = {
-	#						set_country_leader_ideology = penguin
-	#					}
-	#					50 = {
-	#						set_country_leader_ideology = iceking
-	#					}
-	#				}
-	#				clr_country_flag = penguin_ideology_flag
-	#			}
-	#			if = {
-	#				limit = {
-	#					has_country_flag = peaseful_ice_ideology_flag
-	#					has_government = ice
-	#				}
-	#				set_country_leader_ideology = peaseful_ice
-	#				clr_country_flag = peaseful_ice_ideology_flag
-	#			}
-	#			if = {
-	#				limit = {
-	#					has_completed_focus = GENERIC_slime
-	#					has_government = slime
-	#						NOT = { 
-	#							has_country_leader_with_trait = slime_leader
-	#							has_country_flag = done_slime_leader_flag
-	#						}
-	#				}
-	#				add_country_leader_trait = slime_leader
-	#				set_country_flag = done_slime_leader_flag
-	#			}
-	#		#}
-	#	}
-	#}
+	
 }

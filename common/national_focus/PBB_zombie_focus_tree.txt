@@ -66,9 +66,11 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = PBB_absolute_power_after_death
 		}
-		any_other_country = {
-			original_tag = ROOT
-			any_owned_state = { is_core_of = ROOT }
+		available = {
+			any_other_country = {
+				original_tag = ROOT
+				any_owned_state = { is_core_of = ROOT }
+			}
 		}
 		x = 9
 		y = 0

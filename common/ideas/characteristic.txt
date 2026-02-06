@@ -3208,7 +3208,8 @@ ideas = {
 				ice_acceptance = 10
 				fire_acceptance = 10
 				slime_acceptance = 10
-				neutral_acceptance = 10				
+				neutral_acceptance = 10
+				political_power_gain = 0.1
 				civilian_factory_use = 1
 			}
 			
@@ -3289,7 +3290,8 @@ ideas = {
 				ice_acceptance = 20
 				fire_acceptance = 20
 				slime_acceptance = 20
-				neutral_acceptance = 20				
+				neutral_acceptance = 20
+				political_power_gain = 0.2				
 				civilian_factory_use = 2
 			}
 			
@@ -3369,7 +3371,8 @@ ideas = {
 				ice_acceptance = 30
 				fire_acceptance = 30
 				slime_acceptance = 30
-				neutral_acceptance = 30				
+				neutral_acceptance = 30
+				political_power_gain = 0.3
 				civilian_factory_use = 3
 			}
 			
@@ -3448,7 +3451,8 @@ ideas = {
 				ice_acceptance = 40
 				fire_acceptance = 40
 				slime_acceptance = 40
-				neutral_acceptance = 40				
+				neutral_acceptance = 40
+				political_power_gain = 0.4				
 				civilian_factory_use = 4
 			}
 			
@@ -3526,7 +3530,8 @@ ideas = {
 				ice_acceptance = 50
 				fire_acceptance = 50
 				slime_acceptance = 50
-				neutral_acceptance = 50				
+				neutral_acceptance = 50
+				political_power_gain = 0.5				
 				civilian_factory_use = 5
 			}
 			
@@ -3603,7 +3608,8 @@ ideas = {
 				ice_acceptance = 60
 				fire_acceptance = 60
 				slime_acceptance = 60
-				neutral_acceptance = 60				
+				neutral_acceptance = 60
+				political_power_gain = 0.6				
 				civilian_factory_use = 6
 			}
 			
@@ -3679,7 +3685,8 @@ ideas = {
 				ice_acceptance = 70
 				fire_acceptance = 70
 				slime_acceptance = 70
-				neutral_acceptance = 70				
+				neutral_acceptance = 70
+				political_power_gain = 0.7				
 				civilian_factory_use = 7
 			}
 			
@@ -3754,7 +3761,8 @@ ideas = {
 				ice_acceptance = 80
 				fire_acceptance = 80
 				slime_acceptance = 80
-				neutral_acceptance = 80				
+				neutral_acceptance = 80
+				political_power_gain = 0.8				
 				civilian_factory_use = 8
 			}
 			
@@ -3828,7 +3836,8 @@ ideas = {
 				ice_acceptance = 90
 				fire_acceptance = 90
 				slime_acceptance = 90
-				neutral_acceptance = 90				
+				neutral_acceptance = 90
+				political_power_gain = 0.9				
 				civilian_factory_use = 9
 			}
 			
@@ -3897,7 +3906,8 @@ ideas = {
 				ice_acceptance = 100
 				fire_acceptance = 100
 				slime_acceptance = 100
-				neutral_acceptance = 100				
+				neutral_acceptance = 100
+				political_power_gain = 1				
 				civilian_factory_use = 10
 			}
 			

@@ -17,7 +17,7 @@ technologies = {
 		
 		research_cost = 1.5
 
-		start_year = 1922
+		start_year = 2993
 		
 		folder = {
 			name = naval_folder
@@ -181,7 +181,7 @@ technologies = {
 			}
 		}
 
-		start_year = 1922
+		start_year = 2993
 		
 		folder = {
 			name = naval_folder
@@ -198,7 +198,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = JAP
+				tag = PEA
 			}
 		}
 		
@@ -247,7 +247,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = JAP
+				tag = PEA
 			}
 		}
 		
@@ -295,7 +295,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = JAP
+				tag = PEA
 			}
 		}
 		
@@ -339,7 +339,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = JAP
+				tag = PEA
 			}
 		}
 		
@@ -375,7 +375,7 @@ technologies = {
 		
 		research_cost = 1.5
 
-		start_year = 1922
+		start_year = 2993
 		
 		folder = {
 			name = naval_folder
@@ -527,7 +527,7 @@ technologies = {
 		
 		research_cost = 1.5
 
-		start_year = 1922
+		start_year = 2993
 		
 		folder = {
 			name = naval_folder
@@ -597,7 +597,7 @@ technologies = {
 		
 		
 		research_cost = 1.5
-		start_year = 1922
+		start_year = 2993
 		
 		on_research_complete = {
 			custom_effect_tooltip = {
@@ -829,7 +829,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 1922
+		start_year = 2993
 		
 		folder = {
 			name = naval_folder
@@ -851,7 +851,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = JAP
+				tag = PEA
 			}
 			
 			modifier = {
@@ -911,19 +911,19 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = JAP
+				tag = PEA
 			}
 
 			modifier = {
 				factor = 50
-				tag = JAP
+				tag = PEA
 				OR = {
 					has_war_with = PBB
 					MOF = {  
 						OR = { 
 							has_capitulated = yes 
 							exists = no
-		                    is_subject_of = JAP
+		                    is_subject_of = PEA
 						}
 					}
 				}
@@ -987,7 +987,7 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				tag = JAP
+				tag = PEA
 			}
 			
 			modifier = {
@@ -1020,7 +1020,7 @@ technologies = {
 		
 		research_cost = 1.5
 
-		start_year = 1922
+		start_year = 2993
 		
 		folder = {
 			name = naval_folder
@@ -1037,7 +1037,7 @@ technologies = {
 			
 			modifier = {
 				factor = 5
-				tag = JAP
+				tag = PEA
 			}
 		}
 		
@@ -1078,7 +1078,7 @@ technologies = {
 			
 			modifier = {
 				factor = 5
-				tag = JAP
+				tag = PEA
 			}
 		}
 		
@@ -1141,7 +1141,7 @@ technologies = {
 			
 			modifier = {
 				factor = 5
-				tag = JAP
+				tag = PEA
 			}
 		}
 		
@@ -1189,7 +1189,7 @@ technologies = {
 			
 			modifier = {
 				factor = 5
-				tag = JAP
+				tag = PEA
 			}
 		}
 		
@@ -1229,7 +1229,7 @@ technologies = {
 
 		research_cost = 1.5
 
-		start_year = 1922
+		start_year = 2993
 		
 		folder = {
 			name = naval_folder

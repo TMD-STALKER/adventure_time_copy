@@ -29,4 +29,3 @@ add_ideas = {
 	free_trade1
 }
 recruit_character = SKE_princess_skelet
-recruit_character = SKE_skeleton

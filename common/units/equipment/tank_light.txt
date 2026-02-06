@@ -3,7 +3,7 @@
 equipments = {
 
 #	light_tank_equipment = {
-#		year = 3025
+#		year = 3005
 #
 #		can_be_produced = {
 #			NOT = {
@@ -86,7 +86,7 @@ equipments = {
 #	}
 #
 #	light_tank_equipment_1 = {
-#		year = 3025
+#		year = 3005
 #		
 #		archetype = light_tank_equipment
 #		parent = gw_tank_equipment
@@ -96,7 +96,7 @@ equipments = {
 #	}
 #
 #	light_tank_equipment_2 = {
-#		year = 3027
+#		year = 3007
 #		
 #		archetype = light_tank_equipment
 #		parent = light_tank_equipment_1
@@ -126,7 +126,7 @@ equipments = {
 #	}
 #
 #	light_tank_equipment_3 = {
-#		year = 3032
+#		year = 3012
 #	
 #		archetype = light_tank_equipment
 #		parent = light_tank_equipment_2
@@ -156,7 +156,7 @@ equipments = {
 #	}
 
 #	light_tank_artillery_equipment = {
-#		year = 3025
+#		year = 3005
 #
 #		can_be_produced = {
 #			NOT = {
@@ -210,7 +210,7 @@ equipments = {
 #	}
 #
 #	light_tank_artillery_equipment_1 = {
-#		year = 3025
+#		year = 3005
 #
 #		archetype = light_tank_artillery_equipment
 #		family = light_tank_equipment_1
@@ -222,7 +222,7 @@ equipments = {
 #	}
 #
 #	light_tank_artillery_equipment_2 = {
-#		year = 3027
+#		year = 3007
 #
 #		archetype = light_tank_artillery_equipment
 #		parent = light_tank_artillery_equipment_1
@@ -255,7 +255,7 @@ equipments = {
 #	}
 #
 #	light_tank_artillery_equipment_3 = {
-#		year = 3032
+#		year = 3012
 #
 #		archetype = light_tank_artillery_equipment
 #		parent = light_tank_artillery_equipment_2
@@ -288,7 +288,7 @@ equipments = {
 #	}
 
 #	light_tank_destroyer_equipment = {
-#		year = 3025
+#		year = 3005
 #
 #		can_be_produced = {
 #			NOT = {
@@ -342,7 +342,7 @@ equipments = {
 #	}
 #
 #	light_tank_destroyer_equipment_1 = {
-#		year = 3025
+#		year = 3005
 #
 #		archetype = light_tank_destroyer_equipment
 #		family = light_tank_equipment_1
@@ -354,7 +354,7 @@ equipments = {
 #	}
 #
 #	light_tank_destroyer_equipment_2 = {
-#		year = 3027
+#		year = 3007
 #
 #		archetype = light_tank_destroyer_equipment
 #		parent = light_tank_destroyer_equipment_1
@@ -389,7 +389,7 @@ equipments = {
 #	}
 #
 #	light_tank_destroyer_equipment_3 = {
-#		year = 3032
+#		year = 3012
 #
 #		archetype = light_tank_destroyer_equipment
 #		parent = light_tank_destroyer_equipment_2
@@ -424,7 +424,7 @@ equipments = {
 
 
 #	light_tank_aa_equipment = {
-#		year = 3025
+#		year = 3005
 #
 #		can_be_produced = {
 #			NOT = {
@@ -477,7 +477,7 @@ equipments = {
 #	}
 #
 #	light_tank_aa_equipment_1 = {
-#		year = 3025
+#		year = 3005
 #
 #		archetype = light_tank_aa_equipment
 #		family = light_tank_equipment_1
@@ -489,7 +489,7 @@ equipments = {
 #	}
 #
 #	light_tank_aa_equipment_2 = {
-#		year = 3027
+#		year = 3007
 #
 #		archetype = light_tank_aa_equipment
 #		parent = light_tank_aa_equipment_1
@@ -523,7 +523,7 @@ equipments = {
 #	}
 #
 #	light_tank_aa_equipment_3 = {
-#		year = 3032
+#		year = 3012
 #
 #		archetype = light_tank_aa_equipment
 #		parent = light_tank_aa_equipment_2

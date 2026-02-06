@@ -9,7 +9,7 @@ state={
 		rubber = 1
 		oil = 2
 	}
-	manpower = 45000
+	manpower = 1
 	state_category = town local_supplies=1.0 
 	history={
 		owner = MFT

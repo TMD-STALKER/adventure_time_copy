@@ -12,7 +12,7 @@ state={
 		add_core_of = GLA
 		
 		victory_points = {
-			32 5
+			32 15
 		}
 	}
 }

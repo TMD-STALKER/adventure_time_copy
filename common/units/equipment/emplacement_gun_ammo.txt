@@ -1,7 +1,7 @@
 equipments = {
 	
 	explosive_ammo_equipment = {
-		year = 3027
+		year = 3007
 
 		allow_mission_type = {
 			barrage_mission
@@ -29,7 +29,7 @@ equipments = {
 	}
 	
 	explosive_ammo_equipment_1 = {
-		year = 3034
+		year = 3014
 
 		archetype = explosive_ammo_equipment
 		is_buildable = no

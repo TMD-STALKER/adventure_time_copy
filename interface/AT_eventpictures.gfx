@@ -187,10 +187,72 @@ spriteTypes = {
 		name = "GFX_report_event_PBB_our_pies"
 		texturefile = "gfx/event_pictures/report_event_PBB_our_pies.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_PBB_bonne_talk"
+		texturefile = "gfx/event_pictures/report_event_PBB_bonne_talk.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_lich"
+		texturefile = "gfx/event_pictures/report_event_PBB_lich.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_lich2"
+		texturefile = "gfx/event_pictures/report_event_PBB_lich2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_bad_feeling"
+		texturefile = "gfx/event_pictures/report_event_PBB_bad_feeling.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_bad_feeling2"
+		texturefile = "gfx/event_pictures/report_event_PBB_bad_feeling2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_bad_feeling3"
+		texturefile = "gfx/event_pictures/report_event_PBB_bad_feeling3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_bad_feeling4"
+		texturefile = "gfx/event_pictures/report_event_PBB_bad_feeling4.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_bad_feeling5"
+		texturefile = "gfx/event_pictures/report_event_PBB_bad_feeling5.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_bad_feeling6"
+		texturefile = "gfx/event_pictures/report_event_PBB_bad_feeling6.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_bad_feeling7"
+		texturefile = "gfx/event_pictures/report_event_PBB_bad_feeling7.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_bad_feeling8"
+		texturefile = "gfx/event_pictures/report_event_PBB_bad_feeling8.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_bad_feeling9"
+		texturefile = "gfx/event_pictures/report_event_PBB_bad_feeling9.dds"
+	}
 	####NUT
 	spriteType = {
 		name = "GFX_report_event_NUT_good_thinks"
 		texturefile = "gfx/event_pictures/report_event_NUT_good_thinks.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_NUT_scary"
+		texturefile = "gfx/event_pictures/report_event_NUT_scary.dds"
+	}
+	####MAR
+	spriteType = {
+		name = "GFX_report_event_MAR_logo"
+		texturefile = "gfx/event_pictures/report_event_MAR_logo.dds"
+	}
+	####MAR
+	spriteType = {
+		name = "GFX_report_event_HOS_princess"
+		texturefile = "gfx/event_pictures/report_event_HOS_princess.dds"
 	}
 	##PGM
 	spriteType = {
@@ -210,11 +272,27 @@ spriteTypes = {
 		name = "GFX_report_event_OLD_angry"
 		texturefile = "gfx/event_pictures/report_event_OLD_angry.dds"
 	}
-	
+	###BEK
+	spriteType = {
+		name = "GFX_report_event_BEK_angry"
+		texturefile = "gfx/event_pictures/report_event_BEK_angry.dds"
+	}
 	###IKK
 	spriteType = {
 		name = "GFX_report_event_IKK_capture_princess"
 		texturefile = "gfx/event_pictures/report_event_IKK_capture_princess.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_IKK_married"
+		texturefile = "gfx/event_pictures/report_event_IKK_married.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_IKK_escape_with_bonne"
+		texturefile = "gfx/event_pictures/report_event_IKK_escape_with_bonne.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_IKK_silly_king"
+		texturefile = "gfx/event_pictures/report_event_IKK_silly_king.dds"
 	}
 	spriteType = {
 		name = "GFX_report_event_IKK_kingdom"
@@ -361,12 +439,20 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_generic_soviet.dds"
 	}
 	spriteType = {
+		name = "GFX_report_event_generic_ruins"
+		texturefile = "gfx/event_pictures/report_event_generic_ruins.dds"
+	}
+	spriteType = {
 		name = "GFX_report_event_generic_money"
 		texturefile = "gfx/event_pictures/report_event_generic_money.dds"
 	}
 	spriteType = {
 		name = "GFX_report_event_generic_angry_people"
 		texturefile = "gfx/event_pictures/report_event_generic_angry_people.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_pirats"
+		texturefile = "gfx/event_pictures/report_event_generic_pirats.dds"
 	}
 	###glk 
 	spriteType = {
@@ -385,7 +471,83 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_FHL_scared2.dds"
 	}
 	
-	###faj 	
+	###faj 
+	spriteType = {
+		name = "GFX_report_event_FAJ_new_armor"
+		texturefile = "gfx/event_pictures/report_event_FAJ_new_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_new_armor2"
+		texturefile = "gfx/event_pictures/report_event_FAJ_new_armor2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_iceking"
+		texturefile = "gfx/event_pictures/report_event_FAJ_iceking.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_iceking2"
+		texturefile = "gfx/event_pictures/report_event_FAJ_iceking2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_iceking3"
+		texturefile = "gfx/event_pictures/report_event_FAJ_iceking3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_lich_coming"
+		texturefile = "gfx/event_pictures/report_event_FAJ_lich_coming.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_lich_coming2"
+		texturefile = "gfx/event_pictures/report_event_FAJ_lich_coming2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_lich_coming3"
+		texturefile = "gfx/event_pictures/report_event_FAJ_lich_coming3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_lich_coming4"
+		texturefile = "gfx/event_pictures/report_event_FAJ_lich_coming4.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_lich_coming5"
+		texturefile = "gfx/event_pictures/report_event_FAJ_lich_coming5.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_lich_coming6"
+		texturefile = "gfx/event_pictures/report_event_FAJ_lich_coming.dds"
+	}6
+	spriteType = {
+		name = "GFX_report_event_FAJ_dungeon"
+		texturefile = "gfx/event_pictures/report_event_FAJ_dungeon.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_dungeon2"
+		texturefile = "gfx/event_pictures/report_event_FAJ_dungeon2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_dungeon3"
+		texturefile = "gfx/event_pictures/report_event_FAJ_dungeon3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_dungeon4"
+		texturefile = "gfx/event_pictures/report_event_FAJ_dungeon4.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_dungeon5"
+		texturefile = "gfx/event_pictures/report_event_FAJ_dungeon5.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_dungeon6"
+		texturefile = "gfx/event_pictures/report_event_FAJ_dungeon6.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_dungeon7"
+		texturefile = "gfx/event_pictures/report_event_FAJ_dungeon7.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_dungeon8"
+		texturefile = "gfx/event_pictures/report_event_FAJ_dungeon8.dds"
+	}
 	spriteType = {
 		name = "GFX_report_event_FAJ_smart_finn"
 		texturefile = "gfx/event_pictures/report_event_FAJ_smart_finn.dds"
@@ -451,5 +613,58 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_SKE_our_legacy"
 		texturefile = "gfx/event_pictures/report_event_SKE_our_legacy.dds"
+	}
+	###BRK
+	spriteType = {
+		name = "GFX_report_event_BRK_angry_discussion"
+		texturefile = "gfx/event_pictures/report_event_BRK_angry_discussion.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_haile_sellasie"
+		texturefile = "gfx/event_pictures/report_event_BRK_haile_sellasie.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_military_equipment"
+		texturefile = "gfx/event_pictures/report_event_BRK_military_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_ppk_is_talking"
+		texturefile = "gfx/event_pictures/report_event_BRK_ppk_is_talking.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_proclamation"
+		texturefile = "gfx/event_pictures/report_event_BRK_proclamation.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_sad_guardsman"
+		texturefile = "gfx/event_pictures/report_event_BRK_sad_guardsman.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_solntse_svetit_negri_pashut"
+		texturefile = "gfx/event_pictures/report_event_BRK_solntse_svetit_negri_pashut.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_tribune"
+		texturefile = "gfx/event_pictures/report_event_BRK_tribune.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_sister_is_talking"
+		texturefile = "gfx/event_pictures/report_event_BRK_sister_is_talking.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_discussion"
+		texturefile = "gfx/event_pictures/report_event_BRK_discussion.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_all_happy"
+		texturefile = "gfx/event_pictures/report_event_BRK_all_happy.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_factory"
+		texturefile = "gfx/event_pictures/report_event_BRK_factory.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_BRK_kingdom"
+		texturefile = "gfx/event_pictures/report_event_BRK_kingdom.dds"
 	}
 }

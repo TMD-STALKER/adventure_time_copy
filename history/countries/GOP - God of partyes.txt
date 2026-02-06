@@ -11,7 +11,7 @@ set_technology = {
 	tech_trucks = 1
 	basic_train = 1
 		interwar_antiair = 1
-	mass_assault = 1
+	
 	
 	fuel_silos = 1
 	fuel_refining = 1

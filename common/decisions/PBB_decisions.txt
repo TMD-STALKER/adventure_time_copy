@@ -26,6 +26,56 @@ change_portrait = {
 		}
 	}
 }
+SHARED_policemans_of_war = {
+	world_arrest = {
+		priority = 70
+		icon = generic_arrest
+		cost = 175
+		target_array = global.countries
+		target_trigger = {
+			FROM = {
+				NOT = { 
+					has_war_with = ROOT
+					is_subject_of = ROOT
+					is_puppet_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_neighbor_of = ROOT }
+				}
+			}
+		}
+		visible = {
+			FROM = {
+				NOT = { 
+					has_war_with = ROOT
+					is_subject_of = ROOT
+					is_puppet_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_neighbor_of = ROOT }
+				}
+			}
+		}
+		available = {
+			has_idea = free_trade1
+			has_opinion = {
+				target = FROM
+				value < 30
+			}
+		}
+		complete_effect = {
+			FROM = { add_country_leader_trait = order_from_pb }
+		}
+		ai_will_do = {
+			base = 0
+			
+		}
+	}
+}
 SHARED_national_bank_okhranka = {
 	bank_upgrade = {
 		priority = 70
@@ -626,6 +676,7 @@ PBB_our_taxes = {
 						is_puppet_of = ROOT
 						is_subject_of = ROOT
 					}
+					has_idea = closed_economy1
 				}
 				OR = {
 					is_neighbor_of = ROOT
@@ -650,6 +701,7 @@ PBB_our_taxes = {
 						is_puppet_of = ROOT
 						is_subject_of = ROOT
 					}
+					has_idea = closed_economy1
 				}
 				OR = {
 					is_neighbor_of = ROOT
@@ -706,8 +758,8 @@ PBB_project_leader_forever = {
 		remove_effect = {
 			if = {
 				limit = {
-					date < 3028.01.01
-					NOT = { has_country_flag = first_great_achivment_flag }
+						date < 3028.01.01
+						NOT = { has_country_flag = first_great_achivment_flag }
 				}
 				random_list = {
 					10 = {
@@ -721,6 +773,30 @@ PBB_project_leader_forever = {
 						
 					}
 					50 = {
+						PBB_scientific_breakthrough = yes
+					}
+					5 = {
+						add_political_power = -100
+						add_stability = -0.01
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = PBB_contine_researches_flag
+				}
+				random_list = {
+					25 = {
+						add_political_power = -50
+					}
+					25 = {
+						add_political_power = -75
+					}
+					20 = {
+						add_political_power = -100
+						
+					}
+					25 = {
 						PBB_scientific_breakthrough = yes
 					}
 					5 = {
@@ -766,7 +842,7 @@ PBB_project_leader_forever = {
 		cost = 250
 		
 		available = {
-			political_power_gain > 0.5
+			political_power_daily > 0.5
 			has_country_flag = first_great_achivment_flag
 			has_country_flag = second_great_achivment_flag
 			has_country_flag = third_great_achivment_flag
@@ -949,9 +1025,9 @@ PBB_life_in_kingdom = {
 			if = {
 				limit = {
 					any_owned_state = {
-						NOT = { 
-							state = FROM
-							NOT = { has_state_flag = complete_dialoge_flag }
+							NOT = {
+								has_state_flag = complete_dialoge_flag
+							}
 							OR = {
 								is_capital = yes
 								AND = {
@@ -961,7 +1037,6 @@ PBB_life_in_kingdom = {
 									}
 								}
 							}
-						}
 					}
 				}
 				add_stability = 0.05

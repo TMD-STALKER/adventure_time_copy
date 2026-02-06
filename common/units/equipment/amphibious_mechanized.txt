@@ -1,7 +1,7 @@
 equipments = {
 
 	amphibious_mechanized_equipment = {
-		year = 3027
+		year = 3007
 
 		is_archetype = yes
 		picture = archetype_motorized_equipment		
@@ -42,7 +42,7 @@ equipments = {
 
 	# ~1941
 	amphibious_mechanized_equipment_1 = {
-		year = 3031
+		year = 3011
 
 		archetype = amphibious_mechanized_equipment
 		priority = 40
@@ -51,7 +51,7 @@ equipments = {
 
 	# ~1943
 	amphibious_mechanized_equipment_2 = {
-		year = 3033
+		year = 3013
 
 		archetype = amphibious_mechanized_equipment
 		parent = amphibious_mechanized_equipment_1

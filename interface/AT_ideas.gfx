@@ -5,12 +5,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_MOF_life_mo2.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_MOF_pushka"
+		texturefile = "gfx/interface/ideas/idea_MOF_pushka.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_MOF_life_mo"
 		texturefile = "gfx/interface/ideas/idea_MOF_life_mo.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_MOF_MMO"
 		texturefile = "gfx/interface/ideas/idea_MOF_MMO.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MOF_military_power"
+		texturefile = "gfx/interface/ideas/idea_MOF_military_power.dds"
 	}
 	####
 	spriteType = {
@@ -46,6 +54,22 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_FAJ_sword"
 		texturefile = "gfx/interface/ideas/idea_FAJ_sword.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FAJ_billy_armor"
+		texturefile = "gfx/interface/ideas/idea_FAJ_billy_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FAJ_billy_sweet"
+		texturefile = "gfx/interface/ideas/idea_FAJ_billy_sweet.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FAJ_finn"
+		texturefile = "gfx/interface/ideas/idea_FAJ_finn.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FAJ_jake"
+		texturefile = "gfx/interface/ideas/idea_FAJ_jake.dds"
 	}
 	#IKK
 	spriteType = {
@@ -88,6 +112,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_PBB_tomorow"
 		texturefile = "gfx/interface/ideas/idea_PBB_tomorow.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PBB_chistopher"
+		texturefile = "gfx/interface/ideas/idea_PBB_chistopher.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_PBB_sciencerat"
@@ -157,8 +185,25 @@ spriteTypes = {
 		name = "GFX_idea_PBB_bubleguard"
 		texturefile = "gfx/interface/ideas/idea_PBB_bubleguard.dds"
 	}
+	#####MOF#######
 	spriteType = {
 		name = "GFX_idea_MOF_huntist_sovet"
 		texturefile = "gfx/interface/ideas/idea_huntist_sovet.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MOF_military_advisor"
+		texturefile = "gfx/interface/ideas/idea_MOF_military_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MOF_military_advisor2"
+		texturefile = "gfx/interface/ideas/idea_MOF_military_advisor2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MOF_military_advisor3"
+		texturefile = "gfx/interface/ideas/idea_MOF_military_advisor3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MOF_military_advisor4"
+		texturefile = "gfx/interface/ideas/idea_MOF_military_advisor4.dds"
 	}
 }

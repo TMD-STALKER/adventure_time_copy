@@ -127,6 +127,13 @@ focus_tree = {
 			has_capitulated = no
 			num_of_controlled_states > 0
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0 
+				threat < 0.5
+			}
+		}
 		x = 1
 		y = 1
 		completion_reward = {
@@ -907,11 +914,11 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = 1000
+					amount = 500
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment
-					amount = 500
+					amount = 250
 				}
 			}
 		}
@@ -951,6 +958,15 @@ focus_tree = {
 			focus = GENERIC_constitution
 			focus = GENERIC_social_programm
 		}
+		available = {
+			any_neighbor_country = {
+				NOT = {
+					has_wargoal_against = ROOT
+					has_war_with = ROOT
+					is_puppet_of = ROOT
+				}
+			}
+		}
 		x = 9
 		y = 4
 		completion_reward = {
@@ -960,6 +976,36 @@ focus_tree = {
 					has_completed_focus = GENERIC_pease_and_love
 				}
 				add_ideas = GENERIC_declare_overfun_idea
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GENERIC_war_road
+					any_neighbor_country = {
+						strength_ratio = {
+							tag = ROOT
+							ratio < 1
+						}
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_neighbor_of = ROOT
+						NOT = {
+							has_wargoal_against = ROOT
+							has_war_with = ROOT
+							is_puppet_of = ROOT
+						}
+						strength_ratio = {
+							tag = ROOT
+							ratio < 1
+						}
+					}
+					country_event = gener.2
+					effect_tooltip = {
+						custom_effect_tooltip = effect_tooltip_agree
+						ROOT = { puppet = PREV }
+					}
+				}
 			}
 			else_if = {
 				limit = {
@@ -1532,23 +1578,23 @@ focus_tree = {
 				}
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = 2500
+					amount = 1250
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment
-					amount = 1500
+					amount = 750
 				}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment
-					amount = 1950
+					amount = 985
 				}
 				add_equipment_to_stockpile = {
 					type = anti_air_equipment
-					amount = 1950
+					amount = 985
 				}
 				add_equipment_to_stockpile = {
 					type = anti_tank_equipment
-					amount = 1950
+					amount = 985
 				}
 			}
 		}
@@ -1607,11 +1653,11 @@ focus_tree = {
 				add_war_support = 0.25
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = 550
+					amount = 275
 				}
 				add_equipment_to_stockpile = {
 					type = support_equipment
-					amount = 150
+					amount = 75
 				}
 				if = {
 					limit = {
@@ -1978,6 +2024,13 @@ focus_tree = {
 				has_completed_focus = GENERIC_ice
 				has_completed_focus = GENERIC_candy
 				has_completed_focus = GENERIC_fire
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0 
+				threat < 0.5
 			}
 		}
 		x = 21

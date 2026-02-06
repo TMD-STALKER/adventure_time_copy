@@ -187,12 +187,16 @@ worldmajors_category = {
 				add = 50
 			}
 			modifier = {
-				has_game_rule = {
-					rule = ai_agaist_player
-					option = AI_AGRESSIVE
-				}
+					has_game_rule = {
+						rule = ai_agaist_player
+						option = AI_AGRESSIVE
+					}
 				add = -100
 			}
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	kick_member = {
@@ -200,7 +204,7 @@ worldmajors_category = {
 		days_re_enable = 30
 		priority = 15
 		icon = SWI_dismiss_council
-		cost = 100
+		cost = 300
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -288,6 +292,10 @@ worldmajors_category = {
 				}
 				add = 50
 			}
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	volunters_decision = {
@@ -295,7 +303,7 @@ worldmajors_category = {
 		days_re_enable = 15
 		priority = 45
 		icon = generic_military
-		cost = 100
+		cost = 125
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -436,6 +444,10 @@ worldmajors_category = {
 				}
 				add = 15
 			}
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	pressure_decision = {
@@ -604,10 +616,10 @@ worldmajors_category = {
 	}
 	industrial_complex_decision = {
 		days_remove = 7
-		days_re_enable = 15
+		days_re_enable = 100
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 200
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -762,14 +774,18 @@ worldmajors_category = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	dockyard_decision = {
 		days_remove = 7
-		days_re_enable = 15
+		days_re_enable = 100
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 200
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -930,10 +946,10 @@ worldmajors_category = {
 	}
 	arms_factory_decision = {
 		days_remove = 7
-		days_re_enable = 15
+		days_re_enable = 100
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 200
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -1088,6 +1104,10 @@ worldmajors_category = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	embargo_decision = {
@@ -1095,7 +1115,7 @@ worldmajors_category = {
 		days_re_enable = 15
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 250
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -1255,6 +1275,10 @@ worldmajors_category = {
 				}
 				add = 15
 			}
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 }
@@ -1453,6 +1477,10 @@ worldmajors_category2 = {
 				}
 				add = -100
 			}
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	pressure_decision2 = {
@@ -1624,7 +1652,7 @@ worldmajors_category2 = {
 		days_re_enable = 30
 		priority = 15
 		icon = SWI_dismiss_council
-		cost = 100
+		cost = 300
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -1716,10 +1744,10 @@ worldmajors_category2 = {
 	}
 	industrial_complex_decision2 = {
 		days_remove = 7
-		days_re_enable = 15
+		days_re_enable = 100
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 200
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -1874,14 +1902,18 @@ worldmajors_category2 = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	dockyard_decision2 = {
 		days_remove = 7
-		days_re_enable = 15
+		days_re_enable = 100
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 200
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -2038,14 +2070,18 @@ worldmajors_category2 = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	arms_factory_decision2 = {
 		days_remove = 7
-		days_re_enable = 15
+		days_re_enable = 100
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 200
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -2200,6 +2236,10 @@ worldmajors_category2 = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	volunters_decision2 = {
@@ -2207,7 +2247,7 @@ worldmajors_category2 = {
 		days_re_enable = 15
 		priority = 45
 		icon = generic_military
-		cost = 100
+		cost = 125
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -2351,6 +2391,10 @@ worldmajors_category2 = {
 		ai_will_do = {
 			base = 1
 			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+			modifier = {
 				FROM = {
 					is_ai = no
 					NOT = {
@@ -2368,7 +2412,7 @@ worldmajors_category2 = {
 		days_re_enable = 15
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 250
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -2520,6 +2564,10 @@ worldmajors_category2 = {
 		ai_will_do = {
 			base = 1
 			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+			modifier = {
 				FROM = {
 					is_ai = no
 					any_enemy_country = {
@@ -2532,7 +2580,7 @@ worldmajors_category2 = {
 	}
 }
 worldmajors_category3 = {
-	change_policy_on_peaseful2 = {
+	change_policy_on_peaseful3 = {
 		days_re_enable = 150
 		priority = 100
 		#icon = generic_political_discourse
@@ -2585,7 +2633,7 @@ worldmajors_category3 = {
 			
 		}
 	}
-	change_policy_on_bad2 = {
+	change_policy_on_bad3 = {
 		days_re_enable = 150
 		priority = 100
 		#icon = generic_political_discourse
@@ -2716,6 +2764,10 @@ worldmajors_category3 = {
 		ai_will_do = {
 			base = 1
 			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+			modifier = {
 				FROM = { is_ai = no }
 				add = 50
 			}
@@ -2730,10 +2782,10 @@ worldmajors_category3 = {
 	}
 	industrial_complex_decision3 = {
 		days_remove = 7
-		days_re_enable = 15
+		days_re_enable = 100
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 200
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -2888,14 +2940,18 @@ worldmajors_category3 = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	dockyard_decision3 = {
 		days_remove = 7
-		days_re_enable = 15
+		days_re_enable = 100
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 200
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -3052,14 +3108,18 @@ worldmajors_category3 = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	arms_factory_decision3 = {
 		days_remove = 7
-		days_re_enable = 15
+		days_re_enable = 100
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 200
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -3214,6 +3274,10 @@ worldmajors_category3 = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 		}
 	}
 	pressure_decision3 = {
@@ -3385,7 +3449,7 @@ worldmajors_category3 = {
 		days_re_enable = 15
 		priority = 45
 		icon = generic_military
-		cost = 100
+		cost = 125
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -3529,6 +3593,10 @@ worldmajors_category3 = {
 		ai_will_do = {
 			base = 1
 			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
+			modifier = {
 				FROM = {
 					is_ai = no
 					NOT = {
@@ -3546,7 +3614,7 @@ worldmajors_category3 = {
 		days_re_enable = 30
 		priority = 15
 		icon = SWI_dismiss_council
-		cost = 100
+		cost = 300
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -3641,7 +3709,7 @@ worldmajors_category3 = {
 		days_re_enable = 15
 		priority = 45
 		icon = ger_mefo_bills
-		cost = 100
+		cost = 250
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
@@ -3792,6 +3860,10 @@ worldmajors_category3 = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+                factor = 0
+                is_historical_focus_on = yes
+            }
 			modifier = {
 				FROM = {
 					is_ai = no

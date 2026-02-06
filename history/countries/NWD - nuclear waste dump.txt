@@ -28,4 +28,3 @@ add_ideas = {
 	all_adults_serve1
 }
 recruit_character = NDW_oozers
-recruit_character = NDW_oozers2

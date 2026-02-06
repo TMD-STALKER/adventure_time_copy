@@ -1,7 +1,48 @@
+rangers_generic = {
+
+	role = rangers_role
+	
+	upgrade_prio = {
+		base = 2
+
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = rangers_tech
+			}
+		}
+	}
+
+	rangers_default = {
+	
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 1
+			}
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				recon = 1
+				logistics_company = 1
+			}
+			
+			regiments = {
+				ranger_battalion = 8
+				artillery_brigade = 2
+			}
+		}
+	}
+}
 armor_generic = {
 
 	blocked_for = {
-		
+		TAG = LIC
 	}
 
 	role = armor
@@ -244,7 +285,7 @@ armor_generic = {
 garrison_generic = {
 
 	blocked_for = {
-		
+		TAG = LIC
 	}
 	
 	role = garrison
@@ -287,7 +328,7 @@ suppression_generic = {
 	
 	role = suppression
 	blocked_for = {
-		
+		TAG = LIC
 	}
 	upgrade_prio = {
 		base = 0.5
@@ -325,7 +366,7 @@ suppression_generic = {
 infantry_generic = {
 
 	blocked_for = {
-		
+		TAG = LIC
 	}
 
 	role = infantry
@@ -394,7 +435,7 @@ infantry_generic = {
 mountaineers_generic = {
 
 	blocked_for = {
-		
+		TAG = LIC
 	}
 
 	role = mountaineers
@@ -440,7 +481,7 @@ mountaineers_generic = {
 marines_generic = {
 
 	blocked_for = {
-		
+		TAG = LIC
 	}
 
 	role = marines
@@ -526,7 +567,7 @@ marines_generic = {
 paratrooper_generic = {
 
 	blocked_for = {
-		
+		TAG = LIC
 	}
 
 	role = paratroopers

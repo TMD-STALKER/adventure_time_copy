@@ -26,6 +26,7 @@ set_popularities = {
 }
 add_ideas = {
 	all_adults_serve1
+	
 }
 recruit_character = FDG_diavolo
 recruit_character = FDG_sad_rock

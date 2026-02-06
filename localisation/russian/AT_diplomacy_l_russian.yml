@@ -1,3 +1,12 @@
 ﻿l_russian:
  ####
- volunters_action_key: "Возврат добровольцев"
+ volunters_action_key_TITLE: "Возврат добровольцев"
+ loc_key_send_vol: "Мы немедленно отзовём своих добовольцев из страны [THIS.GetName]"
+ 
+ PEACE_ACTION_KEY_TITLE: "Мир по нынешней границе"
+ loc_key_send_peace: "Мы предложим противнику - [THIS.GetName] или их альянсу - прекратить войну и остановится на текущей границе."
+ loc_key_receive_peace: "[FROM.GetName] предлагает заключить мир на текущей линии разграничения."
+ loc_key_accept_peace: "[FROM.GetName] идёт на встречу"
+ loc_key_accept_desc_peace: "[FROM.GetName] принимает наше предложение заключить мир на текущей линии разграничения."
+ loc_key_reject_peace: "[FROM.GetName] отказывается"
+ loc_key_reject_desc_peace: "[FROM.GetName] не готовы заключить мир на текущей линии разграничения."

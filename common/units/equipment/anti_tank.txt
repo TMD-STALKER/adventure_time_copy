@@ -1,7 +1,7 @@
 equipments = {
 
 	anti_tank_equipment = {
-		year = 3025
+		year = 3005
 
 		is_archetype = yes
 		picture = archetype_anti_tank_equipment		
@@ -39,7 +39,7 @@ equipments = {
 	}
 
 	anti_tank_equipment_1 = {
-		year = 3027
+		year = 3007
 
 		archetype = anti_tank_equipment
 		priority = 90
@@ -47,7 +47,7 @@ equipments = {
 	}
 	
 	anti_tank_equipment_2 = {
-		year = 3031
+		year = 3011
 
 		archetype = anti_tank_equipment
 		parent = anti_tank_equipment_1
@@ -66,7 +66,7 @@ equipments = {
 	}
 	
 	anti_tank_equipment_3 = {
-		year = 3034
+		year = 3014
 
 		archetype = anti_tank_equipment
 		parent = anti_tank_equipment_2

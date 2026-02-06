@@ -26,6 +26,7 @@ set_popularities = {
 }
 add_ideas = {
 	disarmed_nation1
+
 }
 recruit_character = PPK_princess
 recruit_character = PPK_princess2

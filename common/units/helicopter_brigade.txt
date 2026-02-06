@@ -28,7 +28,7 @@ sub_units = {
 		max_strength = 2
 		max_organisation = 20
 		default_morale = 0.3
-		manpower = 500
+		manpower = 25
 		training_time = 120
 
 		#Misc Abilities
@@ -56,7 +56,7 @@ sub_units = {
 		
 		need = {
 			helicopter_equipment = 15
-			support_equipment = 15
+			support_equipment = 25
 		}
 		
 		same_support_type = helicopter_recon

@@ -26,6 +26,7 @@ set_popularities = {
 }
 add_ideas = {
 	disarmed_nation1
+	only_iam
 }
 recruit_character = PGM_pogremushkin
 recruit_character = PGM_pogremushkin2

@@ -1,0 +1,7 @@
+﻿l_russian:
+ 
+ debug_decisions: "Отладка"
+ war_on_south: "Завоевание юга"
+ war: "Завоевать [FROM.GetName]"
+ war2: "Завоевать [FROM.GetName]"
+ unity: "Объединить регион"

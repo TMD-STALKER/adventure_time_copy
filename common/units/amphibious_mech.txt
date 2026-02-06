@@ -35,7 +35,7 @@ sub_units = {
 		max_strength = 30
 		max_organisation = 60
 		default_morale = 0.3
-		manpower = 1200
+		manpower = 60
 
 		#Misc Abilities
 		training_time = 120
@@ -55,7 +55,7 @@ sub_units = {
 
 		need = {
 			amphibious_mechanized_equipment = 50
-			infantry_equipment = 100
+			infantry_equipment = 60
 		}
 
 		forest = {

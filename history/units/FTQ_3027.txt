@@ -24,7 +24,7 @@ units = {
 	division = {
 		name = "Temple Division"
 		location = 1053
-		division_template = "Royal Guard"
+		division_template = "Temple Guard"
 		start_experience_factor = 1
 	}
 }

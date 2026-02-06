@@ -1,5 +1,5 @@
 ﻿
-capital = 594
+capital = 172
 
 oob = "BEK_3027"
 

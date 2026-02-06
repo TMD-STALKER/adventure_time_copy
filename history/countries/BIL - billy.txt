@@ -28,6 +28,7 @@ set_popularities = {
 add_ideas = {
 	disarmed_nation1
 	autarkic_economy1
+	only_iam
 	####
 	intelligence_five
 	strength_seven

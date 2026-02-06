@@ -28,9 +28,9 @@ sub_units = {
 		combat_width = 0
 
 		need = {
-			artillery_equipment = 12
+			artillery_equipment = 15
 		}
-		manpower = 300
+		manpower = 15
 		training_time = 120
 		max_organisation = 0
 		default_morale = 0.1
@@ -71,6 +71,7 @@ sub_units = {
 			category_army
 			category_artillery
 			category_support_artillery
+			category_rocket_artillery
 		}		
 
 		combat_width = 0
@@ -79,7 +80,7 @@ sub_units = {
 			rocket_artillery_equipment = 12
 		}
 
-		manpower = 300
+		manpower = 15
 		training_time = 120
 		max_organisation = 0
 		default_morale = 0.1
@@ -132,7 +133,7 @@ sub_units = {
 		need = {
 			super_heavy_artillery_equipment = 3
 		}
-		manpower = 1000
+		manpower = 50
 		training_time = 180
 		max_organisation = 0
 		default_morale = 0.1
@@ -181,7 +182,7 @@ sub_units = {
 			self_propelled_super_heavy_artillery_equipment = 3
 		}
 
-		manpower = 1000
+		manpower = 50
 		training_time = 180
 		max_organisation = 0
 		default_morale = 0.1

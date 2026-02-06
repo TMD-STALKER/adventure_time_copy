@@ -1,5 +1,5 @@
 ﻿
-capital = 376
+capital = 672
 
 oob = "SKL_3027"
 #set_naval_oob = "SKL_3027_Naval"

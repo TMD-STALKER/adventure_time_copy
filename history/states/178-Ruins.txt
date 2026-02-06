@@ -8,8 +8,9 @@ state={
 	state_category = town local_supplies=1.0 
 	
 	history={
-		owner = SOK
+		owner = EMP
 		add_core_of = SOK
+		add_core_of = EMP
 		
 		victory_points = {
 			1350 20 

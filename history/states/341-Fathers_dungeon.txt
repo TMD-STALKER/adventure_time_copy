@@ -9,7 +9,7 @@ state={
 		steel = 4
 		coal = 37 
 	}
-	manpower = 5555
+	manpower = 5005
 	state_category = rural local_supplies=1.0 
 	history={
 		owner = FDG

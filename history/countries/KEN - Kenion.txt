@@ -12,7 +12,7 @@ set_technology = {
 	
 	
 }
-
+add_manpower = 1000
 set_convoys = 150
 
 set_politics = {
@@ -28,6 +28,7 @@ set_popularities = {
 }
 add_ideas = {
 	disarmed_nation1
+	only_iam
 }
 recruit_character = KEN_kenion
 recruit_character = KEN_kenion2

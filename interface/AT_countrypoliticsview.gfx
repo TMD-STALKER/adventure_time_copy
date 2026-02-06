@@ -6,6 +6,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/adventure.dds"
 	}
 	spriteType = {
+		name = "GFX_ideology_mutant"
+		texturefile = "gfx/interface/ideologies/mutant.dds"
+	}	
+	spriteType = {
+		name = "GFX_ideology_junta"
+		texturefile = "gfx/interface/ideologies/junta.dds"
+	}
+	spriteType = {
 		name = "GFX_ideology_icecream"
 		texturefile = "gfx/interface/ideologies/icecream.dds"
 	}

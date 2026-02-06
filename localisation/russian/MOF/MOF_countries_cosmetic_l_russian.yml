@@ -1,0 +1,14 @@
+﻿l_russian:
+ #############mof##############
+ clyrly_protocol_ct_fire: "Протокол очищения"
+ clyrly_protocol_ct_candy: "Протокол дружба"
+ clyrly_protocol_ct_ice: "Протокол консервация"
+ clyrly_protocol_ct_neutral: "Протокол накопления"
+ clyrly_protocol_ct_slime: "Протокол созидания"
+ #############единый юг при хунте##############
+ attack_protocol_fire: "Протокол Нападения"
+ attack_protocol_candy: "Шоколадная Фабрика"
+ attack_protocol_ice: "Протокол Криогеника"
+ attack_protocol_neutral: "Мегафактория"
+ attack_protocol_slime: "Протокол Вечеринка"
+ 

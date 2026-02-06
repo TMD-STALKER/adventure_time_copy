@@ -1,6 +1,17 @@
 ideas = {
     country = {
 		
+		PBB_dont_flow_boat = {
+			picture = eng_steady_as_she_goes
+			
+			modifier = {
+				stability_factor = 0.05
+				opinion_gain_monthly_factor = 0.05
+				drift_defence_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		
 		PBB_new_army_law = {
 			picture = saf_history_of_segregation_2
 			
@@ -357,6 +368,53 @@ ideas = {
 				drift_defence_factor = 0.1
 				stability_factor = 0.05
 				foreign_subversive_activites = -0.3
+			}
+		}
+		
+		SHARED_gas_polks = {
+		
+			allowed = {
+				original_tag = PBB
+			}
+
+			allowed_civil_war = {
+				tag = PBB
+			}
+			
+			picture = ast_abandon_the_westminster_system
+			
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+				non_core_manpower = -0.15
+				resistance_damage_to_garrison = -0.35
+				army_morale_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		SHARED_artillery_polks = {
+		
+			allowed = {
+				original_tag = PBB
+			}
+
+			allowed_civil_war = {
+				tag = PBB
+			}
+			
+			picture = ast_abandon_the_westminster_system
+			
+			modifier = {
+				army_attack_speed_factor = 0.05
+				experience_gain_army_factor = 0.05
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					soft_attack = 0.1
+					breakthrough = 0.1
+					build_cost_ic = -0.05
+				}
 			}
 		}
 		

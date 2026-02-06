@@ -10,32 +10,22 @@ characters = {
             ideology = technocracy
             expire = "3040.1.1.1"            
         }
-    }
-    MOF_MO2 = {
-        name = MOF_MO
-        portraits = {
-            civilian = {
-                large = "gfx/leaders/MOF/Mo.dds"
-            }
-        }
-        country_leader = {
+		country_leader = {
             ideology = independed_candy
             expire = "3040.1.1.1"
-            
         }
-    }
-    MOF_MO3 = {
-        name = MOF_MO
-        portraits = {
-            civilian = {
-                large = "gfx/leaders/MOF/Mo.dds"
-            }
-        }
-        country_leader = {
+		country_leader = {
             ideology = harmony
             expire = "3040.1.1.1"
 			traits = { mo_millytary_puppet }
-            
+        }
+		country_leader = {
+            ideology = peaseful_ice
+            expire = "3040.1.1.1"  
+        }
+		country_leader = {
+            ideology = opposition_slime
+            expire = "3040.1.1.1"   
         }
     }
 	MOF_lifemo = {
@@ -50,11 +40,14 @@ characters = {
 			slot = political_advisor
 			idea_token = MOF_lifemo
 			cost = 50
+			visible = {
+				NOT = { has_country_flag = kill }
+			}
 			allowed = {
 				original_tag = MOF	
 			}
 			available = {
-				
+				NOT = { has_country_flag = kill }
 			}
 			traits = {
 				MOF_lifemo_trait
@@ -76,11 +69,14 @@ characters = {
 			slot = political_advisor
 			idea_token = MOF_lifemo2
 			cost = 50
+			visible = {
+				NOT = { has_country_flag = kill }
+			}
 			allowed = {
 				original_tag = MOF	
 			}
 			available = {
-				
+				NOT = { has_country_flag = kill }
 			}
 			traits = {
 				MOF_lifemo_trait2
@@ -104,9 +100,10 @@ characters = {
 			cost = 165
 			allowed = {
 				original_tag = MOF	
+				NOT = { has_country_flag = kill }
 			}
 			available = {
-				
+				NOT = { has_country_flag = kill }
 			}
 			traits = {
 				MOF_mmo_trait
@@ -127,6 +124,11 @@ characters = {
         country_leader = {
             ideology = military_mo
             expire = "3040.1.1.1"
+
+			traits = {
+				MOF_deviant
+				MOF_army_chief
+			}
         }
         advisor={
 			slot = army_chief
@@ -160,43 +162,96 @@ characters = {
 			legacy_id = -1 
 		}
     }
-    MOF_MO4 = {
-        name = MOF_MO
+	MOF_mo_mil_advisor_att = {
+        name = MOF_mo_mil_advisor_att
         portraits = {
             civilian = {
-                large = "gfx/leaders/MOF/Mo.dds"
+                small = "GFX_idea_MOF_military_advisor"
             }
         }
-        country_leader = {
-            ideology = peaseful_ice
-            expire = "3040.1.1.1"
-            
-        }
+        advisor={
+			slot = high_command
+			idea_token = MOF_mo_mil_advisor_att
+			cost = 75
+			allowed = {
+				original_tag = MOF	
+				has_country_flag = kill
+			}
+			traits = {
+				army_chief_offensive_1
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
     }
-	MOF_MO6 = {
-        name = MOF_MO
+	MOF_mo_mil_advisor_org = {
+        name = MOF_mo_mil_advisor_org
         portraits = {
             civilian = {
-                large = "gfx/leaders/MOF/Mo.dds"
+                small = "GFX_idea_MOF_military_advisor2"
             }
         }
-        country_leader = {
-            ideology = opposition_slime
-            expire = "3040.1.1.1"
-            
-        }
+        advisor={
+			slot = high_command
+			idea_token = MOF_mo_mil_advisor_org
+			cost = 150
+			allowed = {
+				original_tag = MOF	
+				has_country_flag = kill
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
     }
-    
-    MOF_MO5 = {
-        name = MOF_MO
+	MOF_mo_mil_advisor_moral = {
+        name = MOF_mo_mil_advisor_moral
         portraits = {
             civilian = {
-                large = "gfx/leaders/MOF/Mo.dds"
+                small = "GFX_idea_MOF_military_advisor3"
             }
         }
-        country_leader = {
-            ideology = peaseful_slime
-            expire = "3040.1.1.1"         
+        advisor={
+			slot = high_command
+			idea_token = MOF_mo_mil_advisor_moral
+			cost = 150
+			allowed = {
+				original_tag = MOF	
+				has_country_flag = kill
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+    }
+	MOF_mo_advisor_prop = {
+        name = MOF_mo_advisor_prop
+        portraits = {
+            civilian = {
+                small = "GFX_idea_MOF_military_advisor4"
+            }
         }
+        advisor={
+			slot = political_advisor
+			idea_token = MOF_mo_advisor_prop
+			cost = 250
+			allowed = {
+				original_tag = MOF	
+				has_country_flag = kill
+			}
+			traits = {
+				mo_propogondon
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
     }
 }

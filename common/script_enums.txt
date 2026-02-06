@@ -88,6 +88,9 @@ script_enum_equipment_stat = {
 	fuel_consumption_factor
 	strategic_attack
 	carrier_size
+	submarine_carrier_size
+	carrier_surface_detection
+	carrier_sub_detection
 	acclimatization_hot_climate_gain_factor			#Cannot be used with MIOS
 	acclimatization_cold_climate_gain_factor		#Cannot be used with MIOS
 	night_penalty				#Cannot be used with MIOS
@@ -130,6 +133,7 @@ script_enum_equipment_category = {
 	nuclear_missile
 	sam_missile
 	suicide
+	support_ship
 	scout_plane
 	maritime_patrol_plane
 	air_transport
@@ -240,6 +244,12 @@ script_enum_equipment_bonus_type = {
 	motorized_rocket_equipment
 	motorized_rocket_equipment_1
 	convoy_1
+	support_ship_hull
+	support_ship_1
+	support_ship_2
+	repair_ship_hull
+	repair_ship_1
+	repair_ship_2
 	floating_harbor_equipment
 	floating_harbor_equipment_1
 	guided_missile_equipment
@@ -309,12 +319,14 @@ script_enum_equipment_bonus_type = {
 	ship_hull_carrier_modern
 	ship_hull_carrier_conversion_bb
 	ship_hull_carrier_conversion_ca
+	ship_hull_escort_carrier
 	carrier_1
 	carrier_2
 	carrier_3
 	carrier_4
 	modern_carrier
 	mega_carrier
+	escort_carrier
 	ship_hull_cruiser
 	light_cruiser
 	ship_hull_cruiser_1
@@ -330,7 +342,9 @@ script_enum_equipment_bonus_type = {
 	heavy_cruiser_3
 	heavy_cruiser_4
 	torpedo_cruiser
+	escort_carrier
 	ship_hull_cruiser_modern_aa
+	ship_hull_carrier_submarine
 	ship_hull_torpedo_cruiser
 	ship_hull_cruiser_panzerschiff
 	ship_hull_cruiser_coastal_defense_ship

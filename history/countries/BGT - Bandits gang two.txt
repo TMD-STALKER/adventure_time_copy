@@ -1,5 +1,5 @@
 ﻿
-capital = 591
+capital = 553
 
 oob = "BGT_3027"
 

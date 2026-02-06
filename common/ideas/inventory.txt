@@ -175,6 +175,29 @@ ideas = {
 			}
 			
 		}
+		FAJ_sviter = {
+			removal_cost = -1
+			available = { 
+				has_body = yes
+				not_commune = yes
+			}
+			visible = {
+				has_country_flag = have_FAJ_sviter
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			picture = FAJ_billy_sweet
+			modifier = {
+				winter_attrition_factor = -0.15
+				army_defence_factor = 0.02
+				army_morale_factor = 0.02
+			}
+			targeted_modifier = {
+				tag = LIC
+				defense_bonus_against = 0.5
+			}
+		}
 	}
 	hands = {
 		law = yes
@@ -242,6 +265,55 @@ ideas = {
 			
 			
 		}
+		FAJ_billy_armor = {
+			removal_cost = -1
+			
+			visible = {
+				NOT = { has_idea = FAJ_billy_armor2 }
+				has_country_flag = have_FAJ_billy_armor
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = { 
+				has_hands = yes
+				not_commune = yes
+			}
+			picture = FAJ_billy_armor
+			
+			modifier = {
+				war_support_factor = 0.1
+				army_org_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = LIC
+				attack_bonus_against = 0.25
+				#defense_bonus_against = 0.55
+			}
+			
+		}
+		MOF_pushka = {
+			removal_cost = -1
+			
+			visible = {
+				NOT = { has_idea = MOF_pushka2 }
+				has_country_flag = have_MOF_pushka
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = { 
+				has_hands = yes
+				not_commune = yes
+			}
+			picture = idea_MOF_pushka
+			
+			modifier = {
+				drift_defence_factor = 0.05
+				breakthrough_factor = 0.1
+			}
+			
+		}
 	}
 	hands2 = {
 		law = yes
@@ -263,6 +335,28 @@ ideas = {
 			modifier = {
 				
 			}
+		}
+		MOF_pushka2 = {
+			removal_cost = -1
+			
+			visible = {
+				NOT = { has_idea = MOF_pushka }
+				has_country_flag = have_MOF_pushka
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = { 
+				has_hands = yes
+				not_commune = yes
+			}
+			picture = idea_MOF_pushka
+			
+			modifier = {
+				drift_defence_factor = 0.05
+				breakthrough_factor = 0.1
+			}
+			
 		}
 		
 		cup_sword2 = {
@@ -310,6 +404,33 @@ ideas = {
 			
 			
 		}
+		FAJ_billy_armor2 = {
+			removal_cost = -1
+			
+			visible = {
+				NOT = { has_idea = FAJ_billy_armor }
+				has_country_flag = have_FAJ_billy_armor
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = { 
+				has_hands = yes
+				not_commune = yes
+			}
+			picture = FAJ_billy_armor
+			
+			modifier = {
+				war_support_factor = 0.1
+				
+			}
+			targeted_modifier = {
+				tag = LIC
+				attack_bonus_against = 0.25
+				#defense_bonus_against = 0.55
+			}
+			
+		}
 	}
 	artefacts = {
 		law = yes
@@ -338,7 +459,7 @@ ideas = {
 				has_country_flag = have_pies
 			}
 			allowed_to_remove = {
-                always = yes #потом сюда надо OR прописать
+                always = yes 
             }
 			available = { 
 				not_commune = yes
@@ -351,6 +472,27 @@ ideas = {
 				political_power_factor = 0.03
 				supply_factor = 0.1
 				consumer_goods_factor = 0.05
+			}
+			
+			
+		}
+		bublik_of_bonne = {
+			removal_cost = -1
+			
+			visible = {
+				NOT = { has_idea = bublik_of_bonne2 }
+				has_country_flag = have_bublik_of_bonne
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = {
+				not_commune = yes
+			}
+			picture = PBB_bublik
+			
+			modifier = {
+				consumer_goods_factor = -0.02
 			}
 			
 			
@@ -397,6 +539,27 @@ ideas = {
 				political_power_factor = 0.03
 				supply_factor = 0.1
 				consumer_goods_factor = 0.05
+			}
+			
+			
+		}
+		bublik_of_bonne2 = {
+			removal_cost = -1
+			
+			visible = {
+				NOT = { has_idea = bublik_of_bonne }
+				has_country_flag = have_bublik_of_bonne
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = {
+				not_commune = yes
+			}
+			picture = PBB_bublik
+			
+			modifier = {
+				consumer_goods_factor = -0.02
 			}
 			
 			

@@ -1007,6 +1007,20 @@ country_event = {
 			}
 			PBB_bonne_good = yes
 		}
+		if = {
+			limit = {
+				TAG = HOS
+				FROM = { TAG = PBB }
+			}
+			set_politics = {
+				ruling_party = FROM
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = FROM
+				popularity = 0.45
+			}
+		}
 	}
 	option = { 
 		name = pbb.32.b
@@ -2052,7 +2066,7 @@ country_event = {
 	desc = pbb.50.d
 
     is_triggered_only = yes
-	picture = GFX_report_event_PBB_bonne_please
+	picture = GFX_report_event_PBB_bad_feeling
     option = {
 		name = pbb.50.a
 		ai_chance = {
@@ -2746,7 +2760,7 @@ country_event = {
     is_triggered_only = yes
 	picture = GFX_report_event_PBB_tea
     option = {
-		name = pbb.66.a
+		name = pbb.67.a
 		trigger = {
 			TAG = PBB
 		}
@@ -2781,7 +2795,7 @@ country_event = {
 		add_war_support = 0.02
 		add_ai_strategy = {
 			type = antagonize
-			id = PKK
+			id = PPK
 			value = 50
 		}
 		FAJ = { activate_mission_tooltip = FAJ_jake_need_healing }
@@ -3096,7 +3110,7 @@ country_event = {
 		FHL = {
 			every_controlled_state = {
 				limit = {
-					NOT = { is_owned_by = FHL }
+					is_owned_by = ROOT
 				}
 				transfer_state_to = PREV
 			}
@@ -3401,5 +3415,2186 @@ country_event = {
 				random_days = 2
 			}
 		}
+	}
+}
+country_event = {
+    id = pbb.85
+	title = pbb.85.t
+	desc = pbb.85.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_kingdom
+    option = {
+		name = pbb.85.a
+		ai_chance = {
+			base = 1
+		}
+		set_rule = { can_join_opposite_factions = no }
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 155
+		}
+		FROM = {
+			faction_leader = { add_to_faction = ROOT }
+			country_event = da.1
+			add_ai_strategy = {
+				type = alliance
+				id = ROOT
+				value = 155
+			}
+			PBB_bonne_good = yes
+		}
+	}
+	option = {
+		name = pbb.85.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 15
+				is_historical_focus_on = yes
+			}
+		}
+		random_other_country = {
+			limit = {
+				is_neighbor_of = ROOT
+				NOT = { TAG = FROM }
+				OR = {
+					is_in_faction_with = FROM
+					is_subject_of = FROM
+				}
+			}
+			ROOT = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							owner = {
+								NOT = { TAG = FROM }
+								OR = {
+									is_in_faction_with = FROM
+									is_subject_of = FROM
+								}
+								is_neighbor_of = ROOT
+							}
+						}
+					}
+					add_core_of = prev.prev
+					transfer_state_to = prev.prev
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				any_neighbor_state = { is_owned_by = FROM }
+			}
+			add_core_of = FROM
+			transfer_state_to = FROM
+		}
+		FROM = {
+			country_event = pbb.86
+		}
+	}
+	option = {
+		name = pbb.85.c
+		ai_chance = {
+			base = 1
+		}
+		every_controlled_state = { add_claim_by = FROM }
+		FROM = {
+			country_event = net.1
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROOT
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.86
+	title = pbb.86.t
+	desc = pbb.86.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_BEK_angry
+    option = {
+		name = pbb.86.a
+	}
+}
+country_event = {
+    id = pbb.87
+	title = pbb.87.t
+	desc = pbb.87.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_ruins
+    option = {
+		name = pbb.87.a
+		ai_chance = {
+			base = 1
+		}
+		country_event = {
+			id = faj.21
+			days = 5
+			random_hours = 2
+			random_days = 2
+		}
+		more_mage_danger = yes
+		more_ice_danger = yes
+		more_fire_danger = yes
+	}
+	option = {
+		name = pbb.87.b
+		ai_chance = {
+			base = 1
+		}
+		add_stability = 0.07
+		add_political_power = -185
+		more_mage_danger = yes
+		more_ice_danger = yes
+		more_fire_danger = yes
+	}
+	option = {
+		name = pbb.87.c
+		trigger = {
+			country_exists = FAJ
+			NOT = { has_war_with = FAJ }
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		FAJ = {
+			country_event = {
+				id = faj.20
+				days = 5
+				random_hours = 2
+				random_days = 2
+			}
+		}
+	}
+	option = {
+		name = pbb.87.e
+		trigger = {
+			country_exists = MAR
+			NOT = { has_war_with = MAR }
+		}
+		ai_chance = {
+			base = 1
+		}
+		MAR = {
+			country_event = {
+				id = faj.20
+				days = 5
+				random_hours = 2
+				random_days = 2
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.88
+	title = pbb.88.t
+	desc = pbb.88.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bonne_talk
+    option = {
+		name = pbb.88.a
+		ai_chance = {
+			base = 1
+		}
+		FROM = {
+			country_event = da.1
+			give_guarantee = ROOT
+			give_military_access = ROOT
+		}
+		give_guarantee = FROM
+		give_military_access = FROM
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+	}
+	option = {
+		name = pbb.88.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 3
+				is_historical_focus_on = yes
+			}
+		}
+		every_owned_state = { add_claim_by = FROM }
+		FROM = { country_event = net.1 }
+		if = {
+			limit = {
+				TAG = FIK
+			}
+			FROM = { more_fire_danger = yes }
+		}
+		else_if = {
+			limit = {
+				TAG = IKK
+			}
+			FROM = { more_ice_danger = yes }
+		}
+		else_if = {
+			limit = {
+				TAG = COM
+			}
+			FROM = { more_mage_danger = yes }
+		}
+	}
+}
+country_event = {
+    id = pbb.89
+	title = pbb.89.t
+	desc = pbb.89.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_MAR_logo
+    option = {
+		name = pbb.89.a
+		ai_chance = {
+			base = 1
+		}
+		trigger = { is_in_faction = yes }
+		MAR = {
+			country_event = pbb.32
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = effect_tooltip_agree
+			add_to_faction = MAR
+			PBB_bonne_good = yes
+		}
+	}
+	option = {
+		name = pbb.89.b
+		ai_chance = {
+			base = 1
+		}
+		MAR = {
+			country_event = pbb.33
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = effect_tooltip_agree
+			puppet = MAR
+			PBB_bonne_good = yes
+		}
+	}
+	option = {
+		name = pbb.89.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = 80
+		add_stability = 0.01
+		MAR = { add_stability = 0.01 }
+	}
+}
+country_event = {
+    id = pbb.90
+	title = pbb.90.t
+	desc = pbb.90.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_HOS_princess
+    option = {
+		name = pbb.90.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		HOS = {
+			country_event = pbb.32
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = effect_tooltip_agree
+			add_to_faction = HOS
+			PBB_bonne_good = yes
+			HOS = {
+				set_politics = {
+					ruling_party = ROOT
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = ROOT
+					popularity = 0.45
+				}
+			}
+		}
+	}
+	option = {
+		name = pbb.90.b
+		ai_chance = {
+			base = 1
+		}
+		HOS = {
+			country_event = pbb.33
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = effect_tooltip_agree
+			puppet = HOS
+			PBB_bonne_good = yes
+		}
+	}
+	option = {
+		name = pbb.90.c
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = 100
+		HOS = { add_stability = 0.04 }
+	}
+}
+country_event = {
+    id = pbb.91
+	title = pbb.91.t
+	desc = pbb.91.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_COM_kingdom
+    option = {
+		name = pbb.91.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		COM = {
+			country_event = pbb.93
+			effect_tooltip = {
+				custom_effect_tooltip = effect_tooltip_agree
+				dismantle_faction = yes
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							OR = {
+								owner = { is_subject_of = ROOT }
+								is_owned_by = ROOT
+							}
+						}
+					}
+					set_demilitarized_zone = yes
+				}
+				ROOT = { upgrade_eloquence = yes }
+			}
+		}
+	}
+	option = {
+		name = pbb.91.b
+		ai_chance = {
+			base = 1
+		}
+		COM = {
+			country_event = pbb.92
+			effect_tooltip = {
+				custom_effect_tooltip = effect_tooltip_agree
+				242 = { add_core_of = COM transfer_state_to = COM }
+				225 = { add_core_of = COM transfer_state_to = COM }
+				give_resource_rights = {
+					receiver = ROOT
+					state = 237
+				}
+				give_resource_rights = {
+					receiver = ROOT
+					state = 262
+				}
+				diplomatic_relation = {
+					country = ROOT
+					relation = non_aggression_pact
+					active = yes
+				}
+				upgrade_eloquence = yes
+				ROOT = { upgrade_eloquence = yes }
+			}
+		}
+	}
+	option = {
+		name = pbb.91.c
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = -275
+		COM = {
+			add_war_support = 0.05
+			every_owned_state = { 
+				add_core_of = ROOT
+				add_core_of = GLK
+			}
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = COM
+		}
+	}
+}
+country_event = {
+    id = pbb.92
+	title = pbb.92.t
+	desc = pbb.92.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bonne_talk
+    option = {
+		name = pbb.92.a
+		ai_chance = {
+			base = 3
+		}
+		242 = { add_core_of = ROOT transfer_state_to = ROOT }
+		225 = { add_core_of = ROOT transfer_state_to = ROOT }
+		give_resource_rights = {
+			receiver = FROM
+			state = 237
+		}
+		give_resource_rights = {
+			receiver = FROM
+			state = 262
+		}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		upgrade_eloquence = yes
+		FROM = { 
+			country_event = da.1
+			upgrade_eloquence = yes
+		}
+	}
+	option = {
+		name = pbb.92.b
+		ai_chance = {
+			base = 1
+		}
+		add_war_support = 0.05
+		every_owned_state = { 
+			add_claim_by = FROM
+			add_claim_by = GLK
+		}
+		FROM = { 
+			country_event = net.1
+			more_mage_danger = yes
+		}
+	}
+}
+country_event = {
+    id = pbb.93
+	title = pbb.93.t
+	desc = pbb.93.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_angry_bonne
+    option = {
+		name = pbb.93.a
+		ai_chance = {
+			base = 1
+		}
+		dismantle_faction = yes
+		every_owned_state = {
+			limit = {
+				any_neighbor_state = {
+					OR = {
+						owner = { is_subject_of = FROM }
+						is_owned_by = FROM
+					}
+				}
+			}
+			set_demilitarized_zone = yes
+		}
+		FROM = { 
+			country_event = da.1
+			upgrade_eloquence = yes
+		}
+	}
+	option = {
+		name = pbb.93.b
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		add_war_support = 0.05
+		every_owned_state = { 
+			add_claim_by = FROM
+			add_claim_by = GLK
+		}
+		FROM = { 
+			country_event = net.1
+			more_mage_danger = yes
+		}
+	}
+}
+country_event = {
+    id = pbb.94
+	title = pbb.94.t
+	desc = pbb.94.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_without_leader
+    option = {
+		name = pbb.94.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		if = {
+			limit = {
+				has_guaranteed = FROM
+			}
+			FROM = { add_to_faction = ROOT }
+		}
+		else = {
+			give_guarantee = FROM
+			give_military_access = FROM
+		}
+		FROM = {
+			set_country_flag = finn_with_us_flag
+			custom_effect_tooltip = finn_with_us_tt
+			country_event = da.1
+			PBB_bonne_good = yes
+		}
+	}
+	option = {
+		name = pbb.94.b
+		ai_chance = {
+			base = 1
+		}
+		FROM = {
+			country_event = net.1
+			PBB_bonne_bad = yes
+		}
+	}
+}
+country_event = {
+    id = pbb.95
+	title = pbb.95.t
+	desc = pbb.95.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bananguard_waithing
+    option = {
+		name = pbb.95.a
+		add_political_power = 100
+	}
+}
+country_event = {
+    id = pbb.96
+	title = pbb.96.t
+	desc = pbb.96.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_without_leader
+    option = {
+		name = pbb.96.a
+		ai_chance = {
+			base = 1
+		}
+		FROM = {
+			country_event = da.1
+			add_political_power = 150
+			add_war_support = 0.05
+			add_to_faction = ROOT
+			PBB_bonne_good = yes
+		}
+	}
+	option = {
+		name = pbb.96.b
+		ai_chance = {
+			base = 1
+		}
+		trigger = {
+			BEK = {
+				OR = {
+					is_in_faction_with = FROM
+					is_subject_of = FROM
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+				BEK = { is_ai = yes }
+			}
+			BEK = { every_owned_state = { add_core_of = ROOT } }
+			hidden_effect = { set_cosmetic_tag = berry_emerald_unite }
+				annex_country = {
+					target = BEK
+					transfer_troops = yes
+				}
+			FROM = {
+				add_to_faction = ROOT
+				country_event = da.1
+			}
+		}
+		else = {
+			every_owned_state = { add_core_of = BEK }
+			BEK = {
+				hidden_effect = { set_cosmetic_tag = berry_emerald_unite }
+				country_event = bek.1
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				}
+			}
+			FROM = {
+				add_to_faction = BEK
+				country_event = da.1
+			}
+		}
+	}
+	option = {
+		name = pbb.96.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		every_owned_state = { 
+			add_claim_by = FROM
+			add_claim_by = BEK
+			add_claim_by = BIP
+		}
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+				state = 131
+				num_provinces = 1
+				on_win = at_border.1
+				on_lose = at_border.2
+				on_cancel = at_border.2
+				modifier = 0.1
+				dig_in_factor = 0
+				terrain_factor = 0
+			}	
+			defender = {
+				state = 143
+				num_provinces = 1
+				on_win = at_border.3
+				on_lose = at_border.4
+				on_cancel = at_border.4
+			}
+		}
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+				state = 168
+				num_provinces = 2
+				on_win = at_border.1
+				on_lose = at_border.2
+				on_cancel = at_border.2
+				modifier = 0.1
+				dig_in_factor = 0
+				terrain_factor = 0
+			}	
+			defender = {
+				state = 166
+				num_provinces = 1
+				on_win = at_border.3
+				on_lose = at_border.4
+				on_cancel = at_border.4
+			}
+		}
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+				state = 178
+				num_provinces = 1
+				on_win = at_border.1
+				on_lose = at_border.2
+				on_cancel = at_border.2
+				modifier = 0.1
+				dig_in_factor = 0
+				terrain_factor = 0
+			}	
+			defender = {
+				state = 186
+				num_provinces = 1
+				on_win = at_border.3
+				on_lose = at_border.4
+				on_cancel = at_border.4
+			}
+		}
+		FROM = {
+			country_event = net.1
+			PBB_bonne_bad = yes
+		}
+	}
+}
+country_event = {
+    id = pbb.97
+	title = pbb.97.t
+	desc = pbb.97.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_lich
+    option = {
+		name = pbb.97.a
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = {
+				id = pbb.98
+				days = 5
+				random_hours = 2
+				random_days = 2
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.98
+	title = pbb.98.t
+	desc = pbb.98.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_lich2
+    option = {
+		name = pbb.98.a
+		trigger = {
+			country_exists = FAJ
+			NOT = { has_war_with = FAJ }
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		add_stability = -0.15
+		add_war_support = -0.02
+		add_political_power = -15
+		add_command_power = 15
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { TAG = FAJ }
+				}
+				country_event = {
+					id = pbb.99
+					days = 2
+					random_hours = 2
+					random_days = 2
+				}
+				FAJ = {
+					country_event = {
+						id = pbb.99
+						days = 2
+						random_hours = 2
+						random_days = 2
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = pbb.98.b
+		ai_chance = {
+			base = 1
+		}
+		trigger = {
+			TAG = PBB
+		}
+		add_stability = -0.15
+		add_command_power = 15
+		custom_effect_tooltip = billy_armor
+		set_country_flag = have_FAJ_billy_armor
+		create_dynamic_country = {
+			original_tag = LIC
+				division_template = {
+					name = "death division"
+
+					division_names_group = PBB_MYD_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 2 }
+						#artillery_brigade = { x = 2 y = 3 }
+						#infantry = { x = 3 y = 0 }
+					}
+					priority = 2
+				}
+				create_country_leader = {
+					name = LIC_lich
+					picture = GFX_portrait_LIC_lich
+					ideology = undead
+					traits = {
+						LIC_death
+					}
+				}
+				# Starting tech
+					set_technology = {
+						infantry_weapons = 1
+						infantry_weapons1 = 1
+						tech_recon = 1
+						tech_support = 1		
+						tech_engineers = 1
+						tech_military_police = 1
+						tech_trucks = 1
+						motorised_infantry = 1
+						gw_artillery = 1
+						interwar_antiair = 1
+						
+						fuel_silos = 1
+						fuel_refining = 1
+						basic_train = 1
+					}
+
+
+					set_politics = {
+						ruling_party = neutral
+						elections_allowed = no
+					}
+					set_popularities = {
+						candy = 0
+						neutral = 100
+						fire = 0
+						ice = 0
+						slime = 0
+					}
+					add_ideas = {
+						all_adults_serve1
+						########
+						survivability_ten
+						agility_seven
+						strength_ten
+						intelligence_three
+					}
+					add_offsite_building = { type = arms_factory level = 20 }
+					add_offsite_building = { type = industrial_complex level = 3 }
+					add_offsite_building = { type = dockyard level = 7 }
+				random_state = {
+					limit = {
+						is_owned_by = ROOT
+						is_capital = yes
+					}
+					add_core_of = PREV
+					transfer_state_to = PREV
+				}
+				random_state = {
+					limit = {
+						is_owned_by = ROOT
+					}
+					add_core_of = PREV
+					transfer_state_to = PREV
+				}
+				random_state = {
+					limit = {
+						is_owned_by = ROOT
+					}
+					add_core_of = PREV
+					transfer_state_to = PREV
+				}
+				random_state = {
+					limit = {
+						is_owned_by = ROOT
+					}
+					add_core_of = PREV
+					transfer_state_to = PREV
+				}
+				random_state = {
+					limit = {
+						is_owned_by = ROOT
+					}
+					add_core_of = PREV
+					transfer_state_to = PREV
+				}
+				add_offsite_building = { type = arms_factory level = 30 }
+				every_controlled_state = {
+					create_unit = {
+						division = "name = \"lich Division\" division_template = \"death division\" start_experience_factor = 1.5"
+						owner = PREV
+						count = 5
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			declare_war_on = {
+				target = ROOT
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.99
+	title = pbb.99.t
+	desc = pbb.99.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_new_armor
+    option = {
+		name = pbb.99.a
+		if = {
+			limit = {
+				TAG = FAJ
+			}
+			custom_effect_tooltip = billy_armor
+			set_country_flag = have_FAJ_billy_armor
+		}
+		else = {
+			add_political_power = 50
+		}
+		hidden_effect = {
+			country_event = {
+				id = pbb.100
+				days = 1
+				random_hours = 2
+				random_days = 2
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.100
+	title = pbb.100.t
+	desc = pbb.100.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_new_armor2
+    option = {
+		name = pbb.100.a
+		if = {
+			limit = {
+				TAG = FAJ
+			}
+			custom_effect_tooltip = sweet_armor
+			set_country_flag = have_FAJ_sviter
+		}
+		else = {
+			add_war_support = 0.05
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					country_exists = IKK
+					TAG = PBB
+				}
+				country_event = {
+					id = pbb.101
+					days = 1
+					random_hours = 2
+					random_days = 2
+				}
+				IKK = {
+					country_event = {
+						id = pbb.101
+						days = 1
+						random_hours = 2
+						random_days = 2
+					}
+				}
+				FAJ = {
+					country_event = {
+						id = pbb.101
+						days = 1
+						random_hours = 2
+						random_days = 2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					TAG = FAJ
+				}
+				country_event = {
+					id = pbb.106
+					days = 4
+					random_hours = 2
+					random_days = 2
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.101
+	title = pbb.101.t
+	desc = pbb.101.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_IKK_silly_king
+    option = {
+		name = pbb.101.a
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		trigger = {
+			TAG = IKK
+			PBB = {
+				has_country_leader = {
+					character = PBB_bonne
+					ruling_only = yes
+				}
+			}
+		}
+		country_event = pbb.102
+		FAJ = {
+			country_event = pbb.102
+		}
+	}
+	option = {
+		name = pbb.101.b
+		trigger = {
+			NOT = { TAG = IKK }
+		}
+		add_political_power = -5
+	}
+	option = {
+		name = pbb.101.с
+		trigger = {
+			TAG = IKK
+		}
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = -30
+		add_stability = 0.01
+		FAJ = {
+			country_event = {
+				id = pbb.106
+				days = 4
+				random_hours = 2
+				random_days = 2
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.102
+	title = pbb.102.t
+	desc = pbb.102.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_iceking
+    option = {
+		name = pbb.102.a
+		trigger = {
+			TAG = IKK
+		}
+		add_war_support = 0.01
+		FAJ = {
+			country_event = pbb.103
+		}
+	}
+	option = {
+		name = pbb.102.b
+		trigger = {
+			NOT = { TAG = IKK }
+		}
+		add_political_power = -5
+	}
+}
+country_event = {
+    id = pbb.103
+	title = pbb.103.t
+	desc = pbb.103.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_iceking2
+    option = {
+		name = pbb.103.a
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		IKK = {
+			country_event = pbb.104
+		}
+	}
+	option = {
+		name = pbb.103.b
+		IKK = {
+			country_event = {
+				id = pbb.105
+				days = 1
+				random_hours = 2
+				random_days = 2
+			}
+		}
+		PBB = {
+			country_event = {
+				id = pbb.105 #report_event_IKK_married
+				days = 1
+				random_hours = 2
+				random_days = 2
+			}
+			every_core_state = {
+				add_core_of = IKK
+			}
+		}
+		add_political_power = -55
+	}
+}
+country_event = {
+    id = pbb.104
+	title = pbb.104.t
+	desc = pbb.104.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_iceking2
+    option = {
+		name = pbb.104.a
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		country_event = pbb.111
+		PBB = {
+			country_event = pbb.111
+		}
+	}
+	option = {
+		name = pbb.104.b
+		ai_chance = {
+			base = 1	
+		}
+		add_political_power = -40
+		FROM = { every_owned_state = { add_claim_by = ROOT } }
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+country_event = { 
+    id = pbb.105
+	title = pbb.105.t
+	desc = pbb.105.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_IKK_married
+    option = {
+		name = pbb.105.a
+		trigger = {
+			TAG = PBB
+		}
+		effect_tooltip = {
+			every_core_state = {
+				add_core_of = IKK
+			}
+		}
+	}
+	option = {
+		name = pbb.105.b
+		trigger = {
+			NOT = { TAG = PBB }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					TAG = IKK
+				}
+				FAJ = {
+					country_event = {
+						id = pbb.106
+						days = 2
+						random_hours = 2
+						random_days = 2
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.106
+	title = pbb.106.t
+	desc = pbb.106.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_iceking3
+    option = {
+		name = pbb.106.a
+		add_political_power = -25
+		country_event = {
+			id = pbb.107
+			days = 2
+			random_hours = 2
+			random_days = 2
+		}
+		PBB = {
+			country_event = {
+				id = pbb.107
+				days = 2
+				random_hours = 2
+				random_days = 2
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.107
+	title = pbb.107.t
+	desc = pbb.107.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_lich_coming
+    option = {
+		name = pbb.107.a
+		add_political_power = -25
+		country_event = {
+			id = pbb.108
+			days = 2
+			random_hours = 2
+			random_days = 2
+		}
+	}
+}
+country_event = {
+    id = pbb.108
+	title = pbb.108.t
+	desc = pbb.108.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_lich_coming2
+    option = {
+		name = pbb.108.a
+		add_political_power = -25
+		country_event = {
+			id = pbb.109
+			days = 1
+			random_hours = 2
+			random_days = 2
+		}
+		if = {
+			limit = {
+				TAG = FAJ
+			}
+			news_event = ooonews.10
+			create_dynamic_country = {
+				original_tag = LIC
+				hidden_effect = {
+					division_template = {
+						name = "death division"
+
+						division_names_group = PBB_MYD_01
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							artillery_brigade = { x = 2 y = 1 }
+							artillery_brigade = { x = 2 y = 2 }
+							#artillery_brigade = { x = 2 y = 3 }
+							#infantry = { x = 3 y = 0 }
+						}
+						priority = 2
+					}
+					create_country_leader = {
+						name = LIC_lich
+						picture = GFX_portrait_LIC_lich
+						ideology = undead
+						traits = {
+							LIC_death
+						}
+					}
+					# Starting tech
+						set_technology = {
+							infantry_weapons = 1
+							infantry_weapons1 = 1
+							tech_recon = 1
+							tech_support = 1		
+							tech_engineers = 1
+							tech_military_police = 1
+							tech_trucks = 1
+							motorised_infantry = 1
+							gw_artillery = 1
+							interwar_antiair = 1
+							
+							fuel_silos = 1
+							fuel_refining = 1
+							basic_train = 1
+						}
+
+						set_convoys = 15
+
+						set_politics = {
+							ruling_party = neutral
+							elections_allowed = no
+						}
+						set_popularities = {
+							candy = 0
+							neutral = 100
+							fire = 0
+							ice = 0
+							slime = 0
+						}
+						add_ideas = {
+							all_adults_serve1
+							########
+							survivability_ten
+							agility_seven
+							strength_ten
+							intelligence_three
+						}
+						add_offsite_building = { type = arms_factory level = 50 }
+						add_offsite_building = { type = industrial_complex level = 3 }
+						add_offsite_building = { type = dockyard level = 7 }
+
+					16 = {
+						add_core_of = PREV
+						transfer_state_to = PREV
+						
+					}
+					26 = {
+						add_core_of = PREV
+						transfer_state_to = PREV
+						
+					}
+					27 = {
+						add_core_of = PREV
+						transfer_state_to = PREV
+						
+					}
+					28 = {
+						add_core_of = PREV
+						transfer_state_to = PREV
+						
+					}
+					every_controlled_state = {
+						create_unit = {
+							division = "name = \"lich Division\" division_template = \"death division\" start_experience_factor = 1.5"
+							owner = PREV
+							count = 6
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				declare_war_on = {
+					target = IKK
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = FAJ
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = PBB
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.109
+	title = pbb.109.t
+	desc = pbb.109.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_lich_coming3
+    option = {
+		name = pbb.108.a
+		add_political_power = -50
+		if = {
+			limit = {
+				has_country_flag = have_FAJ_billy_armor
+			}
+			clr_country_flag = have_FAJ_billy_armor
+			add_war_support = -0.05
+		}
+		country_event = {
+			id = pbb.110
+			days = 1
+			random_hours = 2
+			random_days = 2
+		}
+	}
+}
+country_event = {
+    id = pbb.110
+	title = pbb.110.t
+	desc = pbb.110.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_lich_coming4
+    option = {
+		name = pbb.110.a
+		add_political_power = -75
+		add_war_support = -0.2
+		custom_effect_tooltip = defeat_lich_tooltip
+	}
+}
+country_event = { ######################################################
+    id = pbb.111
+	title = pbb.111.t
+	desc = pbb.111.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_IKK_escape_with_bonne
+    option = {
+		name = pbb.111.a
+		if = {
+			limit = {
+				TAG = PBB
+			}
+			country_event = pbb.112
+			FAJ = {
+				country_event = pbb.112
+			}
+			IKK = {
+				country_event = pbb.112
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.112
+	title = pbb.112.t
+	desc = pbb.112.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_iceking3
+    option = {
+		name = pbb.112.a
+		set_global_flag = snezhni_mudak
+		country_event = {
+			id = pbb.107
+			days = 1
+			random_hours = 2
+			random_days = 2
+		}
+	}
+} #########################################
+country_event = {
+    id = pbb.113
+	title = pbb.113.t
+	desc = pbb.113.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_lich_coming5
+    option = {
+		name = pbb.113.a
+		add_stability = 0.01
+		if = {
+			limit = {
+				TAG = FAJ
+			}
+			country_event = pbb.114
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = snezhni_mudak
+				}
+				country_event = {
+					id = pbb.115
+					days = 8
+					random_hours = 2
+					random_days = 2
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.114
+	title = pbb.114.t
+	desc = pbb.114.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_FAJ_lich_coming6
+    option = {
+		name = pbb.114.a
+		add_stability = 0.01
+		news_event = ooonews.10
+		hidden_effect = {
+			random_country = {
+				limit = {
+					original_tag = LIC
+				}
+				every_owned_state = { transfer_state_to = IKK }
+			}
+			
+		}
+	}
+}
+country_event = {
+    id = pbb.115
+	title = pbb.115.t
+	desc = pbb.115.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bad_feeling
+    option = {
+		name = pbb.115.a
+		if = {
+			limit = {
+				TAG = PBB
+			}
+			add_political_power = -100
+			set_country_leader_portrait = {
+				ideology = candy
+				portrait = GFX_portrait_PBB_bb_not_good
+			}
+			if = {
+				limit = {
+					has_country_leader_with_trait = PBB_ambutions
+				}
+				remove_country_leader_trait = PBB_ambutions
+			}
+			else_if = {
+				limit = {
+					has_country_leader_with_trait = PBB_ambutions2
+				}
+				remove_country_leader_trait = PBB_ambutions2
+			}
+			else_if = {
+				limit = {
+					has_country_leader_with_trait = PBB_ambutions3
+				}
+				remove_country_leader_trait = PBB_ambutions3
+			}
+			else_if = {
+				limit = {
+					has_country_leader_with_trait = PBB_ambutions4
+				}
+				remove_country_leader_trait = PBB_ambutions4
+			}
+			add_country_leader_trait = PBB_bonne_seek
+			country_event = {
+				id = pbb.116
+				days = 8
+				random_hours = 3
+				random_days = 3
+			}
+			FAJ = {
+				country_event = {
+					id = pbb.116
+					days = 8
+					random_hours = 3
+					random_days = 3
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.116
+	title = pbb.116.t
+	desc = pbb.116.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bad_feeling2
+    option = {
+		name = pbb.116.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		trigger = {
+			TAG = FAJ 
+		}
+		hidden_effect = {
+			country_event = {
+				id = pbb.117
+				days = 5
+				random_hours = 3
+				random_days = 3
+			}
+			PBB = {
+				country_event = {
+					id = pbb.117
+					days = 5
+					random_hours = 3
+					random_days = 3
+				}
+			}
+		}
+	}
+	option = {
+		name = pbb.116.b
+		trigger = {
+			TAG = FAJ 
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = pbb.118
+				days = 5
+				random_hours = 3
+				random_days = 3
+			}
+			PBB = {
+				country_event = {
+					id = pbb.118
+					days = 5
+					random_hours = 3
+					random_days = 3
+				}
+			}
+		}
+	}
+	option = {
+		name = pbb.116.b
+		trigger = {
+			NOT = { TAG = FAJ }
+		}
+		add_stability = 0.01
+	}
+}
+country_event = {
+    id = pbb.117
+	title = pbb.117.t
+	desc = pbb.117.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bad_feeling3
+
+	option = {
+		name = pbb.117.a
+		ai_chance = {
+			base = 1
+		}
+		country_event = {
+			id = pbb.119
+			days = 3
+			random_hours = 3
+			random_days = 3
+		}
+	}
+}
+country_event = {
+    id = pbb.118
+	title = pbb.118.t
+	desc = pbb.118.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bad_feeling5
+    option = {
+		name = pbb.118.a
+		if = {
+			limit = {
+				TAG = PBB
+			}
+			news_event = ooonews.11
+			add_country_leader_role = {
+				character = PBB_monster_bb
+				promote_leader = yes
+				country_leader = {
+					ideology = independed_candy
+					expire = "3047.1.1.1"
+					traits = {
+						LIC_death
+					}
+				}
+			}
+			hidden_effect = {
+				add_country_leader_role = {
+					character = PBB_monster_bb
+					promote_leader = yes
+					country_leader = {
+						ideology = mutant
+						expire = "3047.1.1.1"
+						traits = {
+							LIC_death
+						}
+					}
+				}
+			}
+			set_cosmetic_tag = PBB_mutant_kingdom
+			set_country_leader_ideology = mutant
+		}
+	}
+}
+country_event = {
+    id = pbb.119
+	title = pbb.119.t
+	desc = pbb.119.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bad_feeling4
+
+	option = {
+		name = pbb.119.a
+		ai_chance = {
+			base = 1
+		}
+		country_event = pbb.120
+		if = {
+			limit = {
+				TAG = PBB
+			}
+			IKK = { country_event = pbb.120 }
+		}
+	}
+}
+country_event = {
+    id = pbb.120
+	title = pbb.120.t
+	desc = pbb.120.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bad_feeling5
+
+	option = {
+		name = pbb.120.a
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				TAG = PBB
+			}
+			set_global_flag = already_final_fight2
+			news_event = ooonews.12
+			add_country_leader_role = {
+				character = PBB_batler
+				promote_leader = yes
+				country_leader = {
+					ideology = bonnibelle
+					expire = "3047.1.1.1"
+					traits = {
+						cultist
+						hates_vampires
+					}
+				}
+			}
+			hidden_effect = {
+				create_dynamic_country = {
+					original_tag = LIC
+					hidden_effect = {
+						division_template = {
+							name = "death division"
+
+							division_names_group = PBB_MYD_01
+
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+								infantry = { x = 2 y = 0 }
+								artillery_brigade = { x = 2 y = 1 }
+								artillery_brigade = { x = 2 y = 2 }
+								#artillery_brigade = { x = 2 y = 3 }
+								#infantry = { x = 3 y = 0 }
+							}
+							priority = 2
+						}
+						create_country_leader = {
+							name = PBB_monster_bb
+							picture = GFX_portrait_PBB_bb_monster
+							ideology = mutant
+							traits = {
+								LIC_death
+							}
+						}
+						# Starting tech
+							set_technology = {
+								infantry_weapons = 1
+								infantry_weapons1 = 1
+								tech_recon = 1
+								tech_support = 1		
+								tech_engineers = 1
+								tech_military_police = 1
+								tech_trucks = 1
+								motorised_infantry = 1
+								gw_artillery = 1
+								interwar_antiair = 1
+								
+								fuel_silos = 1
+								fuel_refining = 1
+								basic_train = 1
+							}
+
+							set_politics = {
+								ruling_party = neutral
+								elections_allowed = no
+							}
+							set_popularities = {
+								candy = 0
+								neutral = 100
+								fire = 0
+								ice = 0
+								slime = 0
+							}
+							add_ideas = {
+								all_adults_serve1
+								########
+								survivability_ten
+								agility_seven
+								strength_ten
+								intelligence_three
+							}
+							add_offsite_building = { type = arms_factory level = 20 }
+							add_offsite_building = { type = industrial_complex level = 3 }
+							add_offsite_building = { type = dockyard level = 7 }
+						random_state = {
+							limit = {
+								is_owned_by = ROOT
+								is_capital = yes
+							}
+							add_core_of = PREV
+							transfer_state_to = PREV
+						}
+						random_state = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							add_core_of = PREV
+							transfer_state_to = PREV
+						}
+						random_state = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							add_core_of = PREV
+							transfer_state_to = PREV
+						}
+						random_state = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							add_core_of = PREV
+							transfer_state_to = PREV
+						}
+						random_state = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							add_core_of = PREV
+							transfer_state_to = PREV
+						}
+						every_controlled_state = {
+							create_unit = {
+								division = "name = \"lich Division\" division_template = \"death division\" start_experience_factor = 1.5"
+								owner = PREV
+								count = 5
+								allow_spawning_on_enemy_provs = yes
+							}
+						}
+						set_cosmetic_tag = PBB_mutant_kingdom
+					}
+					declare_war_on = {
+						target = ROOT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FAJ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = IKK
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.121
+	title = pbb.121.t
+	desc = pbb.121.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bad_feeling6
+
+	option = {
+		name = pbb.121.a
+		country_event = pbb.122
+		hidden_effect = {
+			if = {
+				limit = {
+					TAG = PBB
+				}
+				random_other_country = {
+					limit = {
+						has_war_with = ROOT
+						original_tag = LIC
+					}
+					ROOT = {
+						annex_country = {
+							target = ROOT
+							transfer_troops = no
+						}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.122
+	title = pbb.122.t
+	desc = pbb.122.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bad_feeling7
+
+	option = {
+		name = pbb.121.a
+		if = {
+			limit = {
+				TAG = PBB
+			}
+			country_event = {
+					id = pbb.123
+					days = 5
+					random_hours = 3
+					random_days = 3
+				}
+			FAJ = {
+				country_event = {
+					id = pbb.123
+					days = 5
+					random_hours = 3
+					random_days = 3
+				}
+			}
+			IKK = {
+				country_event = {
+					id = pbb.123
+					days = 5
+					random_hours = 3
+					random_days = 3
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.123
+	title = pbb.123.t
+	desc = pbb.123.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bad_feeling8
+
+	option = {
+		name = pbb.123.a
+		add_political_power = -100
+
+		country_event = {
+			id = pbb.124
+			days = 5
+			random_hours = 3
+			random_days = 3
+		}
+	}
+}
+country_event = {
+    id = pbb.124
+	title = pbb.124.t
+	desc = pbb.124.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_bad_feeling9
+
+	option = {
+		name = pbb.124.a
+		add_political_power = -25
+		if = {
+			limit = {
+				TAG = PBB
+			}
+			add_country_leader_role = {
+				character = PBB_baby
+				promote_leader = yes
+				country_leader = {
+					ideology = bonnibelle
+					expire = "3047.1.1.1"
+					traits = {
+						PBB_favorite_princess
+						PBB_scientist
+						PBB_not_ready_to_rule
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.125
+	title = pbb.125.t
+	desc = pbb.125.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_our_land
+
+	option = {
+		name = pbb.125.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+			
+		}
+		add_political_power = 150
+		add_stability = 0.04
+		hidden_effect = {	
+			country_event = {
+				id = pbb.126
+				days = 10
+				random_hours = 3
+				random_days = 3
+			}
+		}
+	}
+	option = {
+		name = pbb.125.b
+		ai_chance = {
+			base = 1
+		}
+		trigger = {
+			OLD = { is_subject_of = ROOT }
+		}
+		add_political_power = -105
+		add_command_power = 20
+		OLD = {
+			army_experience = 35
+			add_political_power = 80
+			add_autonomy_score = {
+				value = -160
+				localization = EXAMPLE_BB
+			}
+		}
+		hidden_effect = {	
+			country_event = {
+				id = pbb.126
+				days = 10
+				random_hours = 3
+				random_days = 3
+			}
+		}
+	}
+	option = {
+		name = pbb.125.c
+		ai_chance = {
+			base = 1
+		}
+		trigger = {
+			NUT = { is_subject_of = ROOT }
+		}
+		capital_scope = {
+			add_extra_state_shared_building_slots = 3
+		}
+		NUT = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+			}
+			add_autonomy_score = {
+				value = -160
+				localization = EXAMPLE_BB
+			}
+		}
+		hidden_effect = {	
+			country_event = {
+				id = pbb.127
+				days = 10
+				random_hours = 3
+				random_days = 3
+			}
+		}
+	}
+	option = {
+		name = pbb.125.e
+		ai_chance = {
+			base = 1
+		}
+		trigger = {
+			GLK = { is_subject_of = ROOT }
+		}
+		add_war_support = 0.05
+		add_political_power = -105
+		GLK = {
+			capital_scope = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_autonomy_score = {
+				value = -160
+				localization = EXAMPLE_BB
+			}
+		}
+		hidden_effect = {	
+			country_event = {
+				id = pbb.126
+				days = 10
+				random_hours = 3
+				random_days = 3
+			}
+		}
+	}
+}
+country_event = {
+    id = pbb.126
+	title = pbb.126.t
+	desc = pbb.126.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_NUT_scary
+
+	option = {
+		name = pbb.126.a
+		add_stability = -0.05
+	}
+}
+country_event = {
+    id = pbb.127
+	title = pbb.127.t
+	desc = pbb.127.d
+	
+	is_triggered_only = yes
+	picture = GFX_report_event_PBB_lemon_graph_is_gone
+
+	option = {
+		name = pbb.127.a
+		add_war_support = -0.02
+		add_command_power = -35
 	}
 }

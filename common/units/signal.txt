@@ -27,7 +27,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 20
 		default_morale = 0.3
-		manpower = 500
+		manpower = 25
 		training_time = 120
 
 		#Misc Abilities
@@ -46,7 +46,7 @@ sub_units = {
 		}
 
 		need = {
-			support_equipment = 20
+			support_equipment = 25
 			motorized_equipment = 10
 		}
 
@@ -93,7 +93,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 20
 		default_morale = 0.3
-		manpower = 500
+		manpower = 25
 		training_time = 120
 
 		#Misc Abilities
@@ -110,7 +110,7 @@ sub_units = {
 		}
 
 		need = {
-			support_equipment = 15
+			support_equipment = 25
 			armored_support_vehicle = 20
 		}
 

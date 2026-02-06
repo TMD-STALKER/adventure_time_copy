@@ -1,24 +1,13 @@
 ﻿l_russian:
- #PBB
- PBB_ambutions: "Амбиции"
- PBB_ambutions2: "Амбиции"
- PBB_ambutions3: "Амбиции"
- PBB_ambutions4: "§tАмбиции§!"
- PBB_scientist: "Учёный"
- PBB_emreror_of_life: "Принцесса Вечноживущая"
- PBB_favorite_princess: "Любимая принцесса"
- PBB_ambutions_tt: "\n Если в течение двух месяцев страна не будет совершать новые научные прорывы, или присоединять к себе новые регионы, или получать новых вассалов, или расширять число членов налогового соглашения, то самочувствие Бубльгум существенно ухудшится."
- hates_vampires: "Ненавидит вампиров"
- cultist: "Культист"
- batler: "Верный дворецкий"
- best_princess: "Лучшая принцесса"
- lemon_regent: "Лимонный регент конфетного королевства"
- PBB_ricardio_lavilas: "Сердечный друг"
- PBB_zonoid_advistor: "Советник по зоноидам"
- kingdom_defender: "Защитник королевства"
- PBB_rat: "Крыса"
- PBB_punsh_trait: "Пеньята-агитатор"
- PBB_punsh_trait2: "Чаша полная веселья"
+ #debuffs
+ Sclerosis: "Cклероз"
+ Allergy: "Аллергик"
+ Ignorant: "Невежа"
+ weak_willed: "Слабохарактерный"
+ Greed: "Жадный"
+ social_phobia: "Cоциофобия"
+ Ignorance: "Невежда"
+
  
  ##IKK
  without_heart: "Без сердца"
@@ -32,25 +21,20 @@
  IKK_gunti_trait: "Инструктор снеговиков"
  IKK_gonder_trait: "Разносчик рыбы"
  IKK_gonter_trait: "Блюститель порядка"
- 
+ ####LIC
+ LIC_death: "Смерть воплоти"
+ LIC_death_tt: "\nЛич начнёт войну с каждым государством, с которым у него появится общая граница"
  ##FAJ
  FAJ_finn_gunius: "Безумный гений"
 
- #######################################################################
- ##################################MOF##################################
- #######################################################################
- mo_millytary_puppet: "Марионетка военных"
- MOF_lifemo_trait: "Система жизнеобеспечения"
- MOF_lifemo_trait2: "Система жизнеобеспечения"
- MOF_mmo_trait: "Страж Мо"
  #others
+ purple_person: "Пупырчатая личность"
  in_captivity: "В плену"
  populate_chel: "Агрокультурист"
  sharing_research_chel: "Работает в команде"
  scientist_chel: "Зазнайка"
  taker_chel: "Скупщик"
- PBB_bonne_advistor: "Назначенец принцессы"
- PBB_regent: "Регент"
+ 
  ne_upal: "Не упал"
  rock_and_stone: "Стойкий"
  rock_and_stone2: "Крепкий"
@@ -117,4 +101,6 @@
  crazy: "Безумен"
  delivered_honor: "Честь доставщика"
  is_in_bad_constitution_of_his_neighbor: "Занесён в конституцию соседа как зло"
+ andr_trait: "Гамарджоба"
+ leader_modifier: "Шанс успешного трейда: §G+25%§!"
  

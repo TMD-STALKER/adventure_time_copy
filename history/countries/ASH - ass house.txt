@@ -26,7 +26,7 @@ set_popularities = {
 }
 add_ideas = {
 	disarmed_nation1
+	only_iam
 }
 add_manpower 25000
 recruit_character = ASH_ashe
-recruit_character = ASH_ashe2

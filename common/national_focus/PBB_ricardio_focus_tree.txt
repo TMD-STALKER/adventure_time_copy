@@ -222,9 +222,11 @@ focus_tree = {
 		prerequisite = {
 			focus = PBB_revenge_to_finn
 		}
-		OR = {
-			has_war = yes
-			has_army_experience > 59
+		available = {
+			OR = {
+				has_war = yes
+				has_army_experience > 59
+			}
 		}
 		x = 7
 		y = 1

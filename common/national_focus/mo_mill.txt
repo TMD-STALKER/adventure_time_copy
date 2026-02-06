@@ -38,6 +38,13 @@ focus_tree = {
         }
         completion_reward = {
             upgrade_economy_law = yes
+            capital_scope = {
+                create_unit = {
+                    division = "name = \"SMO№ 2031\" division_template = \"SMO Guard\" start_experience_factor = 0.5"
+                    owner = MOF
+                    count = 2
+                }
+            }
 		}
     }
     focus = {
@@ -49,7 +56,14 @@ focus_tree = {
         prerequisite = {
             focus = mfm_mobilizat_econom
         }
+		will_lead_to_war_with = DCT
         completion_reward = {
+			if = {
+				limit = {
+					is_in_faction_with = DCT
+				}
+				leave_faction = yes
+			}
 			create_wargoal = {
                 type = annex_everything
                 target = DCT
@@ -65,7 +79,14 @@ focus_tree = {
         prerequisite = {
             focus = mfm_mobilizat_econom
         }
+		will_lead_to_war_with = DTF
         completion_reward = {
+			if = {
+				limit = {
+					is_in_faction_with = DTF
+				}
+				leave_faction = yes
+			}
 			create_wargoal = {
                 type = annex_everything
                 target = DTF
@@ -85,21 +106,14 @@ focus_tree = {
             focus = mfm_nectabis
         }
         available = {
-            any_owned_state = {
-                OR = {
-                    is_core_of = DTF
-                    is_core_of = DCT
-                }
-            }
+            any_owned_state = { is_core_of = DTF }
+			any_owned_state = { is_core_of = DCT }
         }
         completion_reward = {
 			country_event = mof.7
             add_war_support = 0.15
             hidden_effect = {
-                country_event = {
-                id = mof.9 #переворот МО
-                days = 230
-            }
+				set_country_flag = mo_civil_war
             }
 		}
     }
@@ -159,6 +173,7 @@ focus_tree = {
         }
 
         completion_reward = {			
+            country_event = mof.12
             if ={
                 limit = {
                     has_idea = MOF_hunta_power_2
@@ -227,8 +242,7 @@ focus_tree = {
             focus = mfm_purge 
         }
         completion_reward = {
-            upgrade_economy_law = yes
-            upgrade_army_law = yes
+            country_event = mof.10
 		}
     }
     focus = {
@@ -241,8 +255,32 @@ focus_tree = {
             focus = mfm_war_south
         }
         completion_reward = {
-			country_event = mof.7
-            upgrade_economy_law = yes
+			if = {
+                limit = {
+                    has_country_flag = clyrly_protocol_prom
+                }
+                capital_scope = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+                swap_ideas = {
+                    remove_idea = MOF_zastoi
+                    add_idea = MOF_zastoi2
+                }
+            }
+            else_if ={
+                limit = {
+                    has_country_flag = clyrly_protocol_army
+                }
+                add_manpower = 5000
+                swap_ideas = {
+                    remove_idea = MOF_zastoi
+                    add_idea = MOF_zastoi2
+                }
+            }
 		}
     }
     focus = {
@@ -272,8 +310,36 @@ focus_tree = {
             focus = mfm_factory_mo
         }
         completion_reward = {
-			country_event = mof.7
-            upgrade_economy_law = yes
+			if = {
+                limit = {
+                    has_country_flag = clyrly_protocol_prom
+                }
+                capital_scope = {
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+                swap_ideas = {
+                    remove_idea = MOF_zastoi2
+                    add_idea = MOF_zastoi3
+                }
+            }
+            else_if = {
+                limit = {
+                    has_country_flag = clyrly_protocol_army
+                }
+                add_manpower = 2500
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 2000
+                }
+                swap_ideas = {
+                    remove_idea = MOF_zastoi2
+                    add_idea = MOF_zastoi3
+                }
+            }
 		}
     }
     focus = {
@@ -286,8 +352,9 @@ focus_tree = {
             focus = mfm_militariz_factory
         }
         completion_reward = {
-			country_event = mof.7
-            upgrade_economy_law = yes
+			add_ideas = MOF_poslednie_brosok
+            set_country_flag = mof_to_victory_cost_ct
+            custom_effect_tooltip = mof_to_victory_cost_tt
 		}
     }
     focus = {
@@ -296,6 +363,67 @@ focus_tree = {
         cost = 6
         x = 6
 		y = 8
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = mfm_victory_tt
+                DPF = {
+                    OR = {
+                        exists = no
+                        is_subject_of = ROOT
+                    }
+                }
+                controls_state = 747
+				controls_state = 757
+                DTT = {
+                    OR = {
+                        exists = no
+                        is_subject_of = ROOT
+                    }
+                }
+                DTF = {
+                    OR = {
+                        exists = no
+                        is_subject_of = ROOT
+                    }
+                }
+                DTV = {
+                    OR = {
+                        exists = no
+                        is_subject_of = ROOT
+                    }
+                }
+                GAD = {
+                    OR = {
+                        exists = no
+                        is_subject_of = ROOT
+                    }
+                }
+                DEC = {
+                    OR = {
+                        exists = no
+                        is_subject_of = ROOT
+                    }
+                }
+                DCT = {
+                    OR = {
+                        exists = no
+                        is_subject_of = ROOT
+                    }
+                }
+                NWD = {
+                    OR = {
+                        exists = no
+                        is_subject_of = ROOT
+                    }
+                }
+                SLO = {
+                    OR = {
+                        exists = no
+                        is_subject_of = ROOT
+                    }
+                }
+            }
+        }
         prerequisite = {
             focus = mfm_killing_mo
         }
@@ -303,8 +431,7 @@ focus_tree = {
             focus = mfm_to_victory
         }
         completion_reward = {
-			country_event = mof.7
-            upgrade_economy_law = yes
+			country_event = mof.11
 		}
     }
 }

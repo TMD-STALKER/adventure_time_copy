@@ -28,7 +28,7 @@ ideologies = {
 		war_impact_on_world_tension = 0.1		#Commie less threatening
 		faction_impact_on_world_tension = 0.1
 
-		ai_fascist = yes
+		ai_neutral = yes
 		ai_ideology_wanted_units_factor = 1.20
 
 		rules = {
@@ -88,7 +88,7 @@ ideologies = {
 		war_impact_on_world_tension = 0.15		#Commie less threatening
 		faction_impact_on_world_tension = 0.2
 
-		ai_fascist = yes # uses the commie AI behaviour
+		ai_neutral = yes # uses the commie AI behaviour
 		ai_ideology_wanted_units_factor = 1.20
 
 		rules = {
@@ -150,7 +150,7 @@ ideologies = {
 
 		color = { 0 225 255 }
 
-		ai_fascist = yes
+		ai_neutral = yes
 		war_impact_on_world_tension = 0.5		#no major danger
 		faction_impact_on_world_tension = 0.25
 
@@ -211,7 +211,7 @@ ideologies = {
 
 		color = { 255 21 0 }
 
-		ai_fascist = yes
+		ai_neutral = yes
 		war_impact_on_world_tension = 0.75		#no major danger
 		faction_impact_on_world_tension = 0.5
 
@@ -239,7 +239,7 @@ ideologies = {
 		faction_modifiers = {	
 			
 		}
-		ai_ideology_wanted_units_factor = 1.96
+		ai_ideology_wanted_units_factor = 2.0
 		
 		ai_give_core_state_control_threshold = 10000
 	}
@@ -282,6 +282,9 @@ ideologies = {
 			collective = {
 				can_be_randomly_selected = no
 			}
+			mutant = {
+				can_be_randomly_selected = no
+			}
 		}
 
 		dynamic_faction_names = {
@@ -294,7 +297,7 @@ ideologies = {
 		}
 
 		color = { 255 246 209 }
-		ai_fascist = yes
+		ai_neutral = yes
 
 		war_impact_on_world_tension = 0.2		#no major danger
 		faction_impact_on_world_tension = 0.2

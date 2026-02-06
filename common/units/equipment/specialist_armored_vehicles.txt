@@ -3,7 +3,7 @@ equipments = {
 
 	### ARMORED ENGINEERS -> Bridge Layer Tanks
 	armored_support_vehicle = {
-		year = 3027
+		year = 3007
 
 		can_be_produced = {
 			NOT = {
@@ -57,7 +57,7 @@ equipments = {
 	}
 
 	armored_support_vehicle_1 = {
-		year = 3030
+		year = 3010
 
 		archetype = armored_support_vehicle
 		priority = 50

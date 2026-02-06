@@ -29,4 +29,4 @@ add_ideas = {
 }
 
 recruit_character = DWC_sovet
-recruit_character = DWC_sovet
+

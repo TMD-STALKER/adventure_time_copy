@@ -33,6 +33,13 @@ ideas = {
 			}
 		}
 		
+		only_iam = {
+			picture = chi_forced_conscription
+			modifier = {
+				
+			}
+		}
+		
 		SHARED_orgazine_propaganda = {
 			picture = POL_the_peasants_strike
 			available = {

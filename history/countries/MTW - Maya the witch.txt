@@ -26,4 +26,4 @@ set_popularities = {
 }
 
 recruit_character = MTW_maya
-recruit_character = MTW_maya2
+

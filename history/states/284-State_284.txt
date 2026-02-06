@@ -5,8 +5,7 @@ state={
 		1243 
 	}
 	resources={
-		steel = 10
-		chromium = 10
+
 	}
 	manpower = 45000
 	state_category = metropolis local_supplies=1.0 

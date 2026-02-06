@@ -17,6 +17,7 @@ set_politics = {
 	ruling_party = neutral
 	elections_allowed = no
 }
+add_manpower = 1000
 set_popularities = {
 	candy = 0
 	neutral = 100
@@ -27,6 +28,7 @@ set_popularities = {
 
 add_ideas = {
 	 disarmed_nation1
+	 only_iam
 }
 
 recruit_character = CWM_crazy_wizzard

@@ -11,6 +11,16 @@ country_event = {
 		name = mof.1.a
 		ai_chance = {
 			base = 1	
+            modifier = { 
+                factor = 50.0
+                OR = {
+                    is_historical_focus_on = yes
+                    has_game_rule = {
+                        rule = MOF_ai_behavior
+                        option = HISTORICAL
+                    }
+                }
+            }
 		}
         add_stability = 0.1
         capital_scope = {
@@ -30,6 +40,27 @@ country_event = {
 		name = mof.1.b
         ai_chance = {
 			base = 1
+            modifier = { 
+                factor = 50.0
+                has_game_rule = {
+                    rule = MOF_ai_behavior
+                    option = FIRE_HUNTA
+                }
+            }
+		}
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_manpower = 1000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_country_leader_trait = {
+				ideology = harmony
+				trait = ai_agressive
+			}
 		}
 		add_war_support = 0.1
         capital_scope = {
@@ -59,7 +90,17 @@ country_event = {
     option = { 
 		name = mof.2.a
 		ai_chance = {
-			base = 3
+			base = 1
+            modifier = { 
+                factor = 50.0
+                OR = {
+                    is_historical_focus_on = yes
+                    has_game_rule = {
+                        rule = MOF_ai_behavior
+                        option = HISTORICAL
+                    }
+                }
+            }
 		}
         add_stability = 0.2
         set_country_flag = peace_flag
@@ -83,6 +124,13 @@ country_event = {
 		name = mof.2.b
         ai_chance = {
 			base = 1
+            modifier = { 
+                factor = 50.0
+                has_game_rule = {
+                    rule = MOF_ai_behavior
+                    option = FIRE_HUNTA
+                }
+            }
 		}
 		add_war_support = 0.2
         if = {
@@ -177,6 +225,15 @@ country_event = {
             ideology = fire
             popularity = 0.25
         }
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_country_leader_trait = {
+				ideology = harmony
+				trait = ai_agressive
+			}
+		}
 	}
 
     option = { 
@@ -190,6 +247,8 @@ country_event = {
                 value > 0
             }
         }
+		custom_effect_tooltip = content_not_ready
+		load_focus_tree = generic
 	}
 }
 
@@ -205,21 +264,17 @@ country_event = {
     option = { 
 		name = mof.6.a
 		ai_chance = {
-			base = 3
+			base = 1
 		}
-        trigger = {
-            has_country_flag = {
-                flag = military_politic
-                value > 0
-            }
-        }
-        load_focus_tree = mfm_focus
-        set_politics = {
-            ruling_party = fire
-        }
-        add_popularity = {
-            ideology = fire
-            popularity = 0.25
+        add_ideas = mfm_pereproshit
+		if = {
+			limit = {
+				is_ai = yes 
+			}
+			add_ideas = ai_agressive2
+		}
+        else = {
+            add_ideas = agressive
         }
 	}
 }
@@ -265,9 +320,20 @@ country_event = {
 		ai_chance = {
 			base = 3
 		}
+		clr_country_flag = mo_civil_war
         set_cosmetic_tag = clyrly_protocol_ct
         kill_country_leader = yes
-        #promote_character = MOF_huntist теперь это не нужно
+        set_country_flag = have_MOF_pushka
+        add_ideas = MOF_pushka
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_country_leader_trait = {
+				ideology = harmony
+				trait = ai_agressive
+			}
+		}
 	}
 }
 
@@ -279,13 +345,125 @@ country_event = {
 	
 	picture = GFX_report_event_MOF_MO
 
-    is_triggered_only = yes
+    trigger = {
+		has_country_flag = {
+			flag = mo_civil_war
+			days > 225
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 6
+	}
     
     option = { 
 		name = mof.9.a
 		ai_chance = {
 			base = 3
 		}
-        set_cosmetic_tag = clyrly_protocol_ct
+		clr_country_flag = mo_civil_war
+		set_politics = {
+            ruling_party = neutral
+        }
+        add_popularity = {
+            ideology = neutral
+            popularity = 0.5
+        }
+		load_focus_tree = generic
+	}
+}
+
+#Выбор развития (военка или промышленность)
+country_event = {
+    id = mof.10
+	title = mof.10.t
+	desc = mof.10.d
+	
+	picture = GFX_report_event_MOF_destroyed_industry3
+
+    is_triggered_only = yes
+    
+    option = { 
+		name = mof.10.a
+		ai_chance = {
+			base = 3
+		}
+        upgrade_economy_law = yes
+        capital_scope = {
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }
+            add_extra_state_shared_building_slots = 2
+        }
+        set_country_flag = clyrly_protocol_prom
+        custom_effect_tooltip = mof_protocol_prom_tt
+	}
+
+    option = { 
+		name = mof.10.b
+		ai_chance = {
+			base = 3
+		}
+        add_ideas = MOF_boevoi_protocol 
+        army_experience = 20
+        upgrade_army_law = yes
+        set_country_flag = clyrly_protocol_army
+        custom_effect_tooltip = mof_protocol_army_tt
+	}
+}
+
+#ОБЪЕДИНЕНИЕ ЮГА
+country_event = {
+    id = mof.11
+	title = mof.11.t
+	desc = mof.11.d
+	
+	picture = GFX_report_event_MOF_factory
+
+    is_triggered_only = yes
+    
+    option = { 
+		name = mof.11.a
+		ai_chance = {
+			base = 3
+		}
+        #ДАТЬ ДЕБФЫ (СОПРОТИВЛЕНИЕ СЛИЗИ И БАНДОСЫ НА ЮГЕ)
+		set_cosmetic_tag = attack_protocol
+		BRK = { country_event = brk.1 } #+ МИРОВОЙ ИВЕНТ ОТ ЭТОГО ИВЕНТА
+		custom_effect_tooltip = content_not_ready
+		load_focus_tree = generic
+	}
+}
+
+#УБИЙСТВО ЛОЯЛИСТОВ МО
+country_event = {
+    id = mof.12
+	title = mof.12.t
+	desc = mof.12.d
+	
+	picture = GFX_report_event_MOF_error
+
+    is_triggered_only = yes
+    
+    option = { 
+		name = mof.12.a
+		ai_chance = {
+			base = 3
+		}
+        set_country_flag = kill
+        add_manpower = -3
+        add_stability = -0.05
+        add_resource = {
+            type = steel
+            amount = 3
+            state = 677
+        }
 	}
 }

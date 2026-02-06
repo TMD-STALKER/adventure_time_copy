@@ -21,6 +21,7 @@ every_possible_country = {
 			TAG = SMM
 			TAG = PPK
 			TAG = GFR
+			original_tag = LIC
 		}
 	}
 	generate_character = {
@@ -61,6 +62,7 @@ every_possible_country = {
 			TAG = SMM
 			TAG = PPK
 			TAG = GFR
+			original_tag = LIC
 		}
 	}
 	#generate_character = {

@@ -95,17 +95,7 @@ no_garrison = {
 	}
 
 	visible = {
-		if = {
-			limit = {
-				original_tag = RAJ
-				has_dlc = "Graveyard of Empires"
-			}
 
-			NOT = {
-				RAJ = { has_country_flag = RAJ_hide_no_garrison } 
-			}
-
-		}
 	}
 
 	ai_will_do = {

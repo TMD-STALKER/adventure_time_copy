@@ -101,7 +101,7 @@
  # ———————————————
  # ВОДА
  # ———————————————
- STRATEGICREGION_1: "УУУ"
+ STRATEGICREGION_1: "Туманное море"
  STRATEGICREGION_3: "Залив мертвецов"
  STRATEGICREGION_4: "Пролив смельчака"
  STRATEGICREGION_5: "Мыс удачи"
@@ -116,10 +116,10 @@
  STRATEGICREGION_41: "Хитрая гавань"
  STRATEGICREGION_42: "Неспокойные воды"
  STRATEGICREGION_43: "Крабьи воды"
- STRATEGICREGION_44: "Президентские воды"
- STRATEGICREGION_45: "Норвежское море"
- STRATEGICREGION_46: "Баренцево море"
- STRATEGICREGION_47: "Побережье Пиренейского полуострова"
+ STRATEGICREGION_44: "Властелиново море"
+ STRATEGICREGION_45: "Море Скальдов"
+ STRATEGICREGION_46: "Северных Рун"
+ STRATEGICREGION_47: "Море Бифроста"
  STRATEGICREGION_48: "Дикие волны"
  STRATEGICREGION_67: "Море Говорящих Волн"
  STRATEGICREGION_68: "Океан Танцующих Медуз"
@@ -172,25 +172,25 @@
  STRATEGICREGION_165: "Залив Вечных Путешествий"
  STRATEGICREGION_166: "Пролив Забытых Историй"
  STRATEGICREGION_167: "Море Бесконечных Приключений" 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ STRATEGICREGION_168: «Море Серебряных Туманов»
+ STRATEGICREGION_169: «Море Вечного Рассвета»
+ STRATEGICREGION_170: «Море Скрытых Течений»
+ STRATEGICREGION_171: «Море Хрустальных Волн»
+ STRATEGICREGION_172: «Море Теней Прошлого»
+ STRATEGICREGION_173: «Море Ледяных Сердец»
+ STRATEGICREGION_174: «Море Полярных Сияний»
+ STRATEGICREGION_175: «Море Безмолвных Приливов»
+ STRATEGICREGION_176: «Море Глубоких Тайн»
+ STRATEGICREGION_177: «Море Водяных Зеркал»
+ STRATEGICREGION_178: «Море Мятежных Ветров»
+ STRATEGICREGION_179: «Море Спящих Вулканов»
+ STRATEGICREGION_180: «Море Немых Криков»
+ STRATEGICREGION_181: «Море Путеводных Звёзд»
+ STRATEGICREGION_182: «Море Радужных Всполохов»
+ STRATEGICREGION_183: «Море Забытых Имён»
+ STRATEGICREGION_184: «Море Вечного Круговорота»
+ STRATEGICREGION_185: «Море Тайных Гаваней»
+
  
  
  

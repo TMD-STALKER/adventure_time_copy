@@ -22,6 +22,9 @@ war_on_south = {
 					has_war_with = MOF
 				}
 			}
+			NOT = {
+				has_country_flag = mof_to_victory_cost_ct
+			}
 		}
 		complete_effect = {
 			create_wargoal = {
@@ -34,6 +37,91 @@ war_on_south = {
 			modifier = {
 				has_war = yes
 				add = -30
+			}
+		}
+	}
+	war2 = {
+		priority = 30
+		########icon = SWI_elect_confederation_president#############
+		cost = 50
+		target_array = global.countries
+		target_trigger = {
+			FROM = {
+				is_neighbor_of = MOF
+				NOT = {
+					tag = BRK
+					tag = NWZ
+					tag = PFV
+				}
+			}
+		}
+		visible = {
+			FROM = {
+				NOT = {
+					is_puppet_of = MOF
+					is_in_faction_with = MOF
+					has_war_with = MOF
+				}
+			}
+			has_country_flag = mof_to_victory_cost_ct
+		}
+		complete_effect = {
+			create_wargoal = {
+                type = annex_everything
+                target = FROM
+            }
+			if = {
+				limit = {
+					is_ai = yes
+					FROM = { is_ai = yes }
+					
+				}
+				FROM = {
+					add_manpower = -3500
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -1350
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				FROM = { original_tag = DEC }
+				add = 50
+			}
+			modifier = {
+				FROM = { original_tag = NWD }
+				add = 45
+			}
+			modifier = {
+				FROM = { original_tag = DTT }
+				add = 40
+			}
+			modifier = {
+				FROM = { original_tag = GAD }
+				add = 35
+			}
+			modifier = {
+				FROM = { original_tag = DPF }
+				add = 30
+			}
+			modifier = {
+				FROM = { original_tag = SLO }
+				add = 25
+			}
+			modifier = {
+				FROM = { original_tag = DTV }
+				add = 20
+			}
+			modifier = {
+				FROM = { original_tag = DPH }
+				add = 15
+			}
+			modifier = {
+				has_war = yes
+				add = -150
 			}
 		}
 	}
@@ -100,6 +188,7 @@ war_on_south = {
 
 		complete_effect = {
 			custom_effect_tooltip = Kyrier_cosmetic_tag_tt
+			news_event = ooonews.14
 			hidden_effect = { 
 				every_controlled_state = {
 					limit = {

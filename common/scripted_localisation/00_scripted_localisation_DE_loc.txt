@@ -172,16 +172,3 @@ defined_text = { #Blackshirt Assault Battalion name
 	}
 }
 
-defined_text = {
-	name = ETH_GetCentralBankName_DE1
-	text = {
-		trigger = {
-			has_government = ice
-			has_completed_focus = ETH_callout_to_the_world
-		}
-		localization_key = DE1_ETH_anarchist_bank
-	}
-	text = {
-		localization_key = DE1_ETH_central_bank
-	}
-} 

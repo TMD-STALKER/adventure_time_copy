@@ -25,6 +25,7 @@ set_popularities = {
 }
 add_ideas = {
 	disarmed_nation1
+	only_iam
 }
 recruit_character = MMO_matphei
 recruit_character = MMO_matphei2

@@ -32,10 +32,13 @@ add_ideas = {
 	FAJ_sword
 	###
 	PBB_member_of_tax_deal
+	only_iam
 }
 set_country_flag = have_FAJ_sword
 recruit_character = FAJ_finn
+recruit_character = FAJ_leader_andr
 recruit_character = FAJ_jake
+
 
 give_guarantee = FUZ
 give_guarantee = HDL

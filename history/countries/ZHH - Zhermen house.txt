@@ -12,7 +12,7 @@ set_technology = {
 }
 
 set_convoys = 0
-
+add_manpower = 1000
 set_politics = {
 	ruling_party = neutral
 	elections_allowed = no
@@ -26,6 +26,7 @@ set_popularities = {
 }
 add_ideas = {
 	disarmed_nation1
+	only_iam
 }
 recruit_character = ZHH_zhermen
 recruit_character = ZHH_zhermen2

@@ -1,6 +1,6 @@
 equipments = {
 	strat_bomber_intercontinental_equipment = {
-		year = 3033
+		year = 3013
 
 		can_be_produced = {
 			NOT = {
@@ -31,7 +31,7 @@ equipments = {
 	}
 
 	strat_bomber_intercontinental_equipment_1 = { 
-		year = 3033
+		year = 3013
 
 		archetype = strat_bomber_intercontinental_equipment
 		priority = 100

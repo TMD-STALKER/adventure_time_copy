@@ -147,21 +147,96 @@ form_desert_category = {
 		icon = generic_form_nation
 		
 		visible = { #Опционально, если общих настроек в категории не достаточно и нужно для отдельных стран что-то дополнительно уточнять
-			
+
 		}
 		available = {
 			is_puppet = no #Обычно марионетки не формируют империи
 			desert_control = yes
 		}
 		complete_effect = {
-			if {
-				limit{
+			if = {
+				limit = {
 					original_tag = BRK
 				}
 				set_cosmetic_tag = brk_desert_cosmetic_tag
 			}
-			else {
-				set_cosmetic_tag = desert_cosmetic_tag
+			else_if = {
+				limit = {
+					original_tag = GLA
+				}
+				set_cosmetic_tag = gla_desert_cosmetic_tag
+			}
+			else_if = {
+				limit = {
+					original_tag = PFV
+				}
+				set_cosmetic_tag = pfv_desert_cosmetic_tag
+			}
+			else_if = {
+				limit = {
+					original_tag = PSG
+				}
+				set_cosmetic_tag = psg_desert_cosmetic_tag
+			}
+			else_if = {
+				limit = {
+					original_tag = TEP
+				}
+				set_cosmetic_tag = tep_desert_cosmetic_tag
+			}
+			else_if = {
+				limit = {
+					OR = {
+						original_tag = NWD
+						original_tag = NWZ
+					}
+				}
+				set_cosmetic_tag = NWD_unite_desert
+			}
+			else_if = {
+				limit = {
+					original_tag = SLO
+				}
+				set_cosmetic_tag = SLO_unite_desert
+			}
+			else_if = {
+				limit = {
+					original_tag = GAD
+				}
+				set_cosmetic_tag = GAD_unite_desert
+			}
+			else_if = {
+				limit = {
+					original_tag = MFT
+				}
+				set_cosmetic_tag = MFT_unite_desert
+			}
+			else_if = {
+				limit = {
+					original_tag = DTF
+				}
+				set_cosmetic_tag = DTF_unite_desert
+			}
+			else_if = {
+				limit = {
+					original_tag = BIL
+				}
+				set_cosmetic_tag = BIL_unite_desert
+			}
+			else_if = {
+				limit = {
+					original_tag = EVF
+				}
+				set_cosmetic_tag = EVF_unite_desert
+			}
+			else_if = {
+				limit = {
+					original_tag = DWC
+				}
+				set_cosmetic_tag = DWC_unite_desert
+			}
+			else = {
+				set_cosmetic_tag = bandit_unite_desert
 			}
 			custom_effect_tooltip = Kyrier_cosmetic_tag_tt
 			hidden_effect = { 
@@ -218,7 +293,29 @@ form_pirat_desert_category = {
 			hidden_effect = { 
 				every_controlled_state = {
 					limit = {
-						is_pirat_desert = yes
+						OR = {
+							state = 769 #VETER
+							state = 767
+							state = 765
+							state = 766
+							state = 758
+							state = 764
+							state = 762
+							state = 756
+							state = 754
+							state = 744 #pushkari
+							state = 751
+							state = 739
+							state = 726
+							state = 749 #podriv
+							state = 730
+							state = 718
+							state = 723
+							state = 703
+							state = 712 #Pie
+							state = 660 #GRENA
+							state = 598
+						}
 					}
 					add_core_of = ROOT
 				}

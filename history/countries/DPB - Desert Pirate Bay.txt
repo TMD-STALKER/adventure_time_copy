@@ -32,6 +32,8 @@ set_popularities = {
 add_ideas = {
 	all_adults_serve1
 }
+recruit_character = DPB_pirats
+recruit_character = DPB_pirats2
 ### Ship Variants ###
 
 if = {

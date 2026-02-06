@@ -9,7 +9,7 @@ state={
 		steel = 10
 		tungsten = 2
 	}
-	manpower = 83500
+	manpower = 1
 	state_category = metropolis local_supplies=1.0 
 	
 	history={

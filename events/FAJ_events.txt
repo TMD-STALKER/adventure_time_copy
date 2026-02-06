@@ -247,7 +247,7 @@ country_event = {
 		add_stability = 0.08
 		add_popularity = {
 			ideology = ROOT
-			opularity = 0.08
+			popularity = 0.08
 		}
 		FROM = { country_event = pbb.80 }
 	}
@@ -272,7 +272,7 @@ country_event = {
 		add_stability = 0.12
 		add_popularity = {
 			ideology = ROOT
-			opularity = 0.17
+			popularity = 0.17
 		}
 		PBB = {
 			country_event = {
@@ -600,6 +600,7 @@ country_event = {
 		trigger = {
 			TAG = FAJ 
 		}
+		set_country_flag = pies_done
 		add_political_power = -40
 		add_to_variable = {
 			var = minus_pies
@@ -628,6 +629,7 @@ country_event = {
 		trigger = {
 			TAG = FAJ 
 		}
+		set_country_flag = pies_done
 		add_political_power = 30
 		add_to_variable = {
 			var = plus_pies
@@ -681,7 +683,7 @@ country_event = {
 
     option = { 
 		name = faj.18.a
-		add_stability = 0.1
+		add_stability = -0.1
 		country_event = {
 			id = faj.19
 			days = 3
@@ -718,5 +720,290 @@ country_event = {
 		name = faj.19.a
 		add_war_support = 0.01
 		add_political_power = 25
+	}
+}
+country_event = {
+    id = faj.20
+	title = faj.20.t
+	desc = faj.20.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.20.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		country_event = {
+			id = faj.21
+			days = 3
+			random_hours = 2
+			random_days = 2
+		}
+	}
+	option = { 
+		name = faj.20.b
+		ai_chance = {
+			base = 1
+		}
+		trigger = {
+			has_country_leader = {
+				character = FAJ_jake
+				ruling_only = yes
+			}
+		}
+		add_stability = 0.08
+		FROM = { add_stability = 0.1 }
+	}
+}
+country_event = {
+    id = faj.21
+	title = faj.21.t
+	desc = faj.21.d
+	picture = GFX_report_event_FAJ_dungeon
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.21.a
+		random_list = {
+			95 = {
+				country_event = faj.22
+			}
+			5 = {
+				if = {
+					limit = {
+						is_historical_focus_on = no
+					}
+					country_event = faj.23
+				}
+				else = {
+					country_event = faj.22
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.22
+	title = faj.22.t
+	desc = faj.22.d
+	picture = GFX_report_event_FAJ_dungeon2
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.22.a
+		random_list = {
+			90 = {
+				country_event = faj.24
+				army_experience = 5
+			}
+			10 = {
+				if = {
+					limit = {
+						is_historical_focus_on = no
+					}
+					country_event = faj.23
+				}
+				else = {
+					country_event = faj.24
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.23
+	title = faj.23.t
+	desc = faj.23.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.23.a
+		add_stability = -0.05
+		add_war_support = -0.08
+		add_political_power = -65
+		kill_country_leader = yes
+	}
+}
+country_event = {
+    id = faj.24
+	title = faj.24.t
+	desc = faj.24.d
+	picture = GFX_report_event_FAJ_dungeon3
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.24.a
+		random_list = {
+			85 = {
+				country_event = faj.25
+				army_experience = 5
+			}
+			15 = {
+				if = {
+					limit = {
+						is_historical_focus_on = no
+					}
+					country_event = faj.23
+				}
+				else = {
+					country_event = faj.25
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.25
+	title = faj.25.t
+	desc = faj.25.d
+	picture = GFX_report_event_FAJ_dungeon4
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.25.a
+		random_list = {
+			80 = {
+				country_event = faj.26
+				army_experience = 5
+			}
+			20 = {
+				if = {
+					limit = {
+						is_historical_focus_on = no
+					}
+					country_event = faj.23
+				}
+				else = {
+					country_event = faj.26
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.26
+	title = faj.26.t
+	desc = faj.26.d
+	picture = GFX_report_event_FAJ_dungeon5
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.26.a
+		random_list = {
+			80 = {
+				country_event = faj.27
+				army_experience = 5
+			}
+			20 = {
+				if = {
+					limit = {
+						is_historical_focus_on = no
+					}
+					country_event = faj.23
+				}
+				else = {
+					country_event = faj.27
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.27
+	title = faj.27.t
+	desc = faj.27.d
+	picture = GFX_report_event_FAJ_dungeon6
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.27.a
+		random_list = {
+			75 = {
+				country_event = faj.28
+				army_experience = 5
+			}
+			25 = {
+				if = {
+					limit = {
+						is_historical_focus_on = no
+					}
+					country_event = faj.23
+				}
+				else = {
+					country_event = faj.28
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+    id = faj.28
+	title = faj.28.t
+	desc = faj.28.d
+	picture = GFX_report_event_FAJ_dungeon7
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.28.a
+		random_list = {
+			70 = {
+				army_experience = 5
+				country_event = faj.29
+				if = {
+					limit = {
+						NOT = { original_tag = PBB }
+					}
+					PBB = { country_event = faj.29 }
+				}
+			}
+			30 = {
+				if = {
+					limit = {
+						is_historical_focus_on = no
+					}
+					country_event = faj.23
+				}
+				else = {
+					army_experience = 5
+					country_event = faj.29
+					if = {
+						limit = {
+							NOT = { original_tag = PBB }
+						}
+						PBB = { country_event = faj.29 }
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.29
+	title = faj.29.t
+	desc = faj.29.d
+	picture = GFX_report_event_FAJ_dungeon8
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.29.a
+		army_experience = 15
+		add_political_power = 50
 	}
 }

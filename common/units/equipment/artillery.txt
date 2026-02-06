@@ -1,7 +1,7 @@
 equipments = {
 
 	artillery_equipment = {
-		year = 3025
+		year = 3005
 
 		is_archetype = yes
 		picture = archetype_artillery_equipment		
@@ -40,7 +40,7 @@ equipments = {
 	}
 
 	artillery_equipment_1 = {
-		year = 3025
+		year = 3005
 
 		archetype = artillery_equipment
 		priority = 50
@@ -48,7 +48,7 @@ equipments = {
 	}
 	
 	artillery_equipment_2 = {
-		year = 3030
+		year = 3010
 
 		archetype = artillery_equipment
 		parent = artillery_equipment_1
@@ -67,7 +67,7 @@ equipments = {
 	}
 	
 	artillery_equipment_3 = {
-		year = 3033
+		year = 3013
 
 		archetype = artillery_equipment
 		parent = artillery_equipment_2
@@ -87,7 +87,7 @@ equipments = {
 
 	# Nebelwerfers!
 	rocket_artillery_equipment = {
-		year = 3031
+		year = 3011
 
 		is_archetype = yes
 		picture = archetype_rocket_artillery_equipment		
@@ -123,7 +123,7 @@ equipments = {
 	}
 	
 	rocket_artillery_equipment_1 = {
-		year = 3031
+		year = 3011
 
 		archetype = rocket_artillery_equipment
 		priority = 60
@@ -131,7 +131,7 @@ equipments = {
 	}
 	
 	rocket_artillery_equipment_2 = {
-		year = 3034
+		year = 3014
 
 		archetype = rocket_artillery_equipment
 		parent = rocket_artillery_equipment_1
@@ -151,7 +151,7 @@ equipments = {
 	
 	#Katyusha 
 	motorized_rocket_equipment = {
-		year = 3025
+		year = 3005
 
 		is_archetype = yes
 		picture = archetype_motorized_rocket_equipment			
@@ -191,7 +191,7 @@ equipments = {
 	}
 	
 	motorized_rocket_equipment_1 = {
-		year = 3030
+		year = 3010
 
 		archetype = motorized_rocket_equipment
 		priority = 70
@@ -204,7 +204,7 @@ equipments = {
 	###################################
 
 	super_heavy_artillery_equipment = {
-		year = 3027
+		year = 3007
 
 		is_archetype = yes
 		picture = archetype_artillery_equipment		
@@ -249,7 +249,7 @@ equipments = {
 	}
 
 	super_heavy_artillery_equipment_1 = {
-		year = 3027
+		year = 3007
 
 		archetype = super_heavy_artillery_equipment
 		priority = 50
@@ -258,7 +258,7 @@ equipments = {
 	}
 
 	self_propelled_super_heavy_artillery_equipment = {
-		year = 3027
+		year = 3007
 
 		is_archetype = yes
 		picture = archetype_artillery_equipment		
@@ -305,7 +305,7 @@ equipments = {
 	}
 
 	self_propelled_super_heavy_artillery_equipment_1 = {
-		year = 3027
+		year = 3007
 
 		archetype = self_propelled_super_heavy_artillery_equipment
 		priority = 50

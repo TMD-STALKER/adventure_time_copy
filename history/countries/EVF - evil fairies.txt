@@ -28,4 +28,3 @@ add_ideas = {
 	all_adults_serve1
 }
 recruit_character = EVF_jordan
-recruit_character = EVF_jordan2

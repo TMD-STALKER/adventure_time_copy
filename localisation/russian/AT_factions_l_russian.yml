@@ -1,15 +1,5 @@
 ﻿l_russian:
- #PBB
- PBB_candy_empire: "Империя сластей"
- glk_ppp_faction: "Конфетная уния"
- PBB_zombie_empire_faction: "Новая империя"
- faction_goal_more_manpower: "Нарастить армию"
- faction_goal_more_manpower_desc: "Мы должны показать соседям на что способна империя, когда ей угрожает опасность"
- faction_goal_strong_capital: "Сильная столица"
- faction_goal_safety_border: "Безопасная граница"
- faction_goal_safety_border_desc: "Прочие элементали угрожают целостности нашего королевства. Не будет мира на наших землях до тех пор, пока у границ не останутся только конфеты."
- faction_goal_no_more_enemies: "Нет больше врагов"
- faction_goal_no_more_enemies_desc: "На землях ООО не будет мира до тех пор, пока одна из ведущих держав не вытеснет все остальные"
+
  #BHP
  BHP_house_union: "Уния домов"
  #FIK
@@ -48,8 +38,9 @@
  FACTION_NAME_fire_6: "$LEADER_COUNTRY_ADJ$ая защита очага"
  FACTION_NAME_neutral_1: "Договор о взаимной безопасности"
  FACTION_NAME_neutral_2: "Содружство неравнодушных"
- FACTION_NAME_neutral_3: "Объединённые силы ООО"
+ FACTION_NAME_neutral_3: "Объединённые силы УУУ"
  FACTION_NAME_neutral_4: "$LEADER_COUNTRY_ADJ$ий альянс сильных"
  FACTION_NAME_neutral_5: "$LEADER_COUNTRY_ADJ$ий союз обороны"
  FACTION_NAME_neutral_6: "$LEADER_COUNTRY_ADJ$ий ударный кулак"
+ anti_mo_coalition: "Яичный Пакт"
  

@@ -1339,25 +1339,8 @@ country_event = {
 	desc = gener.22.d
 	picture = GFX_report_event_DEN_danish_politics
 
-	trigger = {
-		has_war = no
-		NOT = { has_completed_focus = SHARED_trade_focus }
-		OR = {
-			has_completed_focus = SHARED_this_is_end_ist_it
-			has_completed_focus = SHARED_we_need_mans
-			has_completed_focus = SHARED_we_need_weapons
-			has_completed_focus = SHARED_train_new_army_of_liberation
-			has_completed_focus = SHARED_secret_industry
-			has_completed_focus = SHARED_naval_factories
-			has_completed_focus = SHARED_civil_factories
-			has_completed_focus = SHARED_military_factories
-			has_completed_focus = SHARED_resistance
-			has_completed_focus = SHARED_operation_liberty
-		}
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = {
 		name = gener.22.a
@@ -1664,6 +1647,8 @@ country_event = {
 	picture = GFX_report_event_DEN_danish_politics
 
 	trigger = {
+		has_civil_war = no
+		is_target_of_coup = no
 		NOT = { 
 			TAG = MOF
 			TAG = PBB
@@ -1672,23 +1657,23 @@ country_event = {
 		OR = {
 			AND = {
 				has_government = neutral
-				neutral < 0.26
+				neutral < 0.2
 			}
 			AND = {
 				has_government = ice
-				ice < 0.26
+				ice < 0.2
 			}
 			AND = {
 				has_government = fire
-				fire < 0.26
+				fire < 0.2
 			}
 			AND = {
 				has_government = slime
-				slime < 0.26
+				slime < 0.2
 			}
 			AND = {
 				has_government = candy
-				candy < 0.26
+				candy < 0.2
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 equipments = {
 	mothership_equipment = {
-		year = 3033
+		year = 3013
 
 		can_be_produced = {
 			NOT = {
@@ -32,7 +32,7 @@ equipments = {
 	}
 
 	mothership_equipment_0 = { #Is actually 5 planes strapped to another bigger plane. Its the tuna of the air
-		year = 3033
+		year = 3013
 
 		archetype = mothership_equipment
 		priority = 100

@@ -32,21 +32,46 @@
 
 # This specifically overrides the rule check as to whether or not you can guarantee other ideologies
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME_TRIGGER = {
+any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
+		}
+	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	NOT = {
+
 		has_game_rule = {
 			rule = allow_guarantees
 			option = LIMITED
 		}
 	}
+
 }
 
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
+any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
+		}
+	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_guarantees
 				option = ALWAYS_FREE
 			}
+
 		}
 		always = yes
 	}
@@ -86,6 +111,7 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_REVOKE_GUARANTEE_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
@@ -101,28 +127,38 @@ DIPLOMACY_REVOKE_GUARANTEE_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_release_nations
 				option = FREE
 			}
-			#OR = {
-			#	NOT = { has_dlc = "Man the Guns" }
-			#	NOT = { original_tag = ENG }
-			#}
+
 		}
 		always = yes
 	}
 	
 }
 DIPLOMACY_MILACC_ENABLE_TRIGGER = {
+any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
+		}
+	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
 				option = FREE
 			}
+
 		}
 		always = yes
 	}
@@ -152,12 +188,24 @@ DIPLOMACY_MILACC_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
+any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
+		}
+	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
 				option = FREE
 			}
+
 		}
 		always = yes
 	}
@@ -188,6 +236,17 @@ DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_REVOKE_OFFER_MILACC_ENABLE_TRIGGER = {
+any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
+		}
+	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	#if = {
 	#	limit = {
 	#		original_tag = PHI
@@ -202,22 +261,55 @@ DIPLOMACY_REVOKE_OFFER_MILACC_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_REVOKE_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
-	
+any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
+		}
+	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 }
 
 DIPLOMACY_REVOKE_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = {
-	
+any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
+		}
+	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
+
 }
 
 DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
 				option = FREE
 			}
+
 		}
-		always = yes
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -245,14 +337,26 @@ DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_access
 				option = FREE
 			}
+
 		}
-		always = yes
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -280,14 +384,26 @@ DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
 				option = FREE
 			}
+
 		}
-		always = yes
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -295,8 +411,19 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 				rule = allow_lend_lease
 				option = LIMITED
 			}
+
 		}
-		always = yes #handled by game logic, see above
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -336,14 +463,26 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
 				option = FREE
 			}
+
 		}
-		always = yes
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -352,7 +491,17 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 				option = LIMITED
 			}
 		}
-		always = yes #handled by game logic, see above
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -392,14 +541,26 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_licensing
 				option = FREE
 			}
+
 		}
-		always = yes
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -439,14 +600,26 @@ DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_wargoals
 				option = ALWAYS_FREE
 			}
+			
 		}
-		always = yes
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -454,8 +627,19 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 				rule = allow_wargoals
 				option = LIMITED
 			}
+
 		}
-		always = yes
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -543,14 +727,26 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_BOOST_PARTY_POPULARITY_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_party_boosting
 				option = FREE
 			}
+
 		}
-		always = yes
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -590,6 +786,7 @@ DIPLOMACY_BOOST_PARTY_POPULARITY_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_STAGE_COUP_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
@@ -597,7 +794,17 @@ DIPLOMACY_STAGE_COUP_ENABLE_TRIGGER = {
 				option = FREE
 			}
 		}
-		always = yes
+		any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -625,6 +832,7 @@ DIPLOMACY_STAGE_COUP_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_LEAVE_FACTION_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
@@ -638,7 +846,18 @@ DIPLOMACY_LEAVE_FACTION_ENABLE_TRIGGER = {
 		}
 	}
 }
- DIPLOMACY_ASSUME_FACTION_LEADERSHIP_ENABLE_TRIGGER = {
+DIPLOMACY_ASSUME_FACTION_LEADERSHIP_ENABLE_TRIGGER = {
+any_owned_state = {
+			any_state = {
+				is_owned_by = FROM
+				distance_to = {
+					value < 1800
+					target = PREV
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	if = {
 		limit = {
 			has_game_rule = {
@@ -653,6 +872,7 @@ DIPLOMACY_LEAVE_FACTION_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_KICK_FROM_FACTION_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
@@ -667,14 +887,31 @@ DIPLOMACY_KICK_FROM_FACTION_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
+
 	if = {
 		limit = {
 			has_game_rule = {
 				rule = allow_volunteers
 				option = ALWAYS_FREE
 			}
+
 		}
-		
+		OR = {
+			has_idea = volunters_support
+			AND = {
+				any_owned_state = {
+					any_state = {
+						is_owned_by = FROM
+						distance_to = {
+							value < 1800
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -683,7 +920,22 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				option = LIMITED
 			}
 		}
-		
+		OR = {
+			has_idea = volunters_support
+			AND = {
+				any_owned_state = {
+					any_state = {
+						is_owned_by = FROM
+						distance_to = {
+							value < 1800
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+		hidden_trigger = { NOT = { original_tag = LIC } }
+		FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	}
 	if = {
 		limit = {
@@ -729,7 +981,17 @@ game_weight_can_add_communist = {
 }
 
 DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
-	
+	any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
+		}
+	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	if = { 
 		limit = {
 			FROM = { NOT = { has_war_with_non_exiled_country = yes } }
@@ -742,7 +1004,17 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 	
 }
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
-	
+	any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
+		}
+	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
 	if = { 
 		limit = {
 			NOT = { has_war_with_non_exiled_country = yes } 
@@ -755,22 +1027,32 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
 	
 }
 DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
-	if = { 
-		limit = {
-			has_dlc = "Arms Against Tyranny"
-			original_tag = DEN
-			has_country_flag = DEN_is_protectorate_flag
-			is_subject = yes 
-
-		}
-		custom_trigger_tooltip = {
-			tooltip = DENMARK_IS_A_PUPPET_FACTION
-			always = no
+	any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
 		}
 	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
+
 }
 DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
-	
+	any_owned_state = {
+		any_state = {
+			is_owned_by = FROM
+			distance_to = {
+				value < 1800
+				target = PREV
+			}
+		}
+	}
+	hidden_trigger = { NOT = { original_tag = LIC } }
+	FROM = { hidden_trigger = { NOT = { original_tag = LIC } } }
+
 }
 
 

@@ -18,3 +18,7 @@ SKE_cosmetic = {
 	color = rgb { 55  93  58 }
 	color_ui = rgb { 55  93  58 }
 }
+berry_emerald_unite = {
+	color = rgb { 205  0  135 }
+	color_ui = rgb { 205  0  135 }
+}

@@ -1,7 +1,7 @@
 equipments = {
 
 #	heavy_tank_equipment = {
-#		year = 3025
+#		year = 3005
 #
 #		can_be_produced = {
 #			NOT = {
@@ -57,7 +57,7 @@ equipments = {
 #
 #	# 1934
 #	heavy_tank_equipment_1 = {
-#		year = 3025
+#		year = 3005
 #
 #		archetype = heavy_tank_equipment		
 #		priority = 90
@@ -67,7 +67,7 @@ equipments = {
 #
 #	# 1941
 #	heavy_tank_equipment_2 = {
-#		year = 3032
+#		year = 3012
 #
 #		archetype = heavy_tank_equipment
 #		parent = heavy_tank_equipment_1
@@ -98,7 +98,7 @@ equipments = {
 #
 #	# 1943
 #	heavy_tank_equipment_3 = {
-#		year = 3034
+#		year = 3014
 #
 #		archetype = heavy_tank_equipment
 #		parent = heavy_tank_equipment_2
@@ -128,7 +128,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_artillery_equipment = {
-#		year = 3025
+#		year = 3005
 #
 #		can_be_produced = {
 #			NOT = {
@@ -182,7 +182,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_artillery_equipment_1 = {
-#		year = 3025
+#		year = 3005
 #
 #		archetype = heavy_tank_artillery_equipment
 #		family = heavy_tank_equipment_1
@@ -194,7 +194,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_artillery_equipment_2 = {
-#		year = 3032
+#		year = 3012
 #
 #		archetype = heavy_tank_artillery_equipment
 #		parent = heavy_tank_artillery_equipment_1
@@ -227,7 +227,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_artillery_equipment_3 = {
-#		year = 3034
+#		year = 3014
 #
 #		archetype = heavy_tank_artillery_equipment
 #		parent = heavy_tank_artillery_equipment_2
@@ -260,7 +260,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_destroyer_equipment = {
-#		year = 3025
+#		year = 3005
 #
 #		can_be_produced = {
 #			NOT = {
@@ -314,7 +314,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_destroyer_equipment_1 = {
-#		year = 3025
+#		year = 3005
 #
 #		archetype = heavy_tank_destroyer_equipment
 #		family = heavy_tank_equipment_1
@@ -326,7 +326,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_destroyer_equipment_2 = {
-#		year = 3032
+#		year = 3012
 #
 #		archetype = heavy_tank_destroyer_equipment
 #		parent = heavy_tank_destroyer_equipment_1
@@ -361,7 +361,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_destroyer_equipment_3 = {
-#		year = 3034
+#		year = 3014
 #
 #		archetype = heavy_tank_destroyer_equipment
 #		parent = heavy_tank_destroyer_equipment_2
@@ -396,7 +396,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_aa_equipment = {
-#		year = 3025
+#		year = 3005
 #
 #		can_be_produced = {
 #			NOT = {
@@ -450,7 +450,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_aa_equipment_1 = {
-#		year = 3025
+#		year = 3005
 #
 #		archetype = heavy_tank_aa_equipment
 #		family = heavy_tank_equipment_1
@@ -462,7 +462,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_aa_equipment_2 = {
-#		year = 3032
+#		year = 3012
 #
 #		archetype = heavy_tank_aa_equipment
 #		parent = heavy_tank_aa_equipment_1
@@ -497,7 +497,7 @@ equipments = {
 #	}
 #
 #	heavy_tank_aa_equipment_3 = {
-#		year = 3034
+#		year = 3014
 #
 #		archetype = heavy_tank_aa_equipment
 #		parent = heavy_tank_aa_equipment_2

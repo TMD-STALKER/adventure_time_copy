@@ -8,6 +8,12 @@ change_portrait = {
 		}
 	}
 }
+SHARED_policemans_of_war = {
+	priority = 95
+	allowed = { TAG = PBB }
+	icon = intervention_overseas
+	visible = { has_completed_focus = SHARED_policemans_of_war }
+}
 jurisdiction_of_bananguard_category = {
 	priority = 90
 	allowed = { TAG = PBB }

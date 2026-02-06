@@ -1069,6 +1069,28 @@ PBB_ai_behavior = {
 	}
 }
 
+MOF_ai_behavior = {
+	name = "MOF_ai_behavior"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = HISTORICAL
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_OPTION_HISTORICAL_MOF_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FIRE_HUNTA
+		text = "RULE_OPTION_FIRE_HUNTA"
+		desc = "RULE_OPTION_FIRE_HUNTA_DESC"
+		allow_achievements = no
+	}
+}
+
 
  ##   ##  #   # ###      ## ### ### #  # ###  
 #    #  # ## ## #       #   #    #  #  # #  # 

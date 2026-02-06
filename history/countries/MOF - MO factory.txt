@@ -1,6 +1,6 @@
-capital = 1435
+capital = 677
 
-#oob = "MOF_1936"
+oob = "MOF_3027"
 
 # Starting tech
 set_technology = {
@@ -32,9 +32,10 @@ recruit_character = MOF_lifemo2
 recruit_character = MOF_lifemo
 recruit_character = MOF_mmo
 recruit_character = MOF_MO
-recruit_character = MOF_MO2
-recruit_character = MOF_MO3
+recruit_character = MOF_mo_mil_advisor_att
+recruit_character = MOF_mo_mil_advisor_org
+recruit_character = MOF_mo_mil_advisor_moral
+recruit_character = MOF_mo_advisor_prop
+
 recruit_character = MOF_huntist
-recruit_character = MOF_MO4
-recruit_character = MOF_MO5
-recruit_character = MOF_MO6
+

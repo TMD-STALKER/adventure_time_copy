@@ -2,8 +2,9 @@ characters = {
 	FAJ_finn = {
 		name = FAJ_finn
 		portraits = {
-			civilian = {
+			civilian = { 
 				large = "gfx/leaders/FAJ/finn.dds"
+				small="GFX_idea_FAJ_finn"
 			}
 		}
 		country_leader = {
@@ -52,11 +53,30 @@ characters = {
 				planning_skill = 2
 				logistics_skill = 3
 				legacy_id = -1 
+		}
+	}
+	FAJ_leader_andr = {
+		name = leader_andr
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKK/andr.dds"
+			}
+		}
+		
+		field_marshal={
+			traits = { }
 			visible = {
-				NOT = {
-					has_government = ice
+				has_country_leader = {
+					character = FAJ_leader_andr
+					ruling_only = yes
 				}
 			}
+			skill = 5
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 7
+			logistics_skill = 5
+			legacy_id = -1 
 		}
 	}
 	FAJ_jake = {
@@ -64,6 +84,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/FAJ/jake.dds"
+				small="GFX_idea_FAJ_fake"
 			}
 		}
 		country_leader = {
@@ -82,18 +103,13 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { politically_connected harsh_leader }
-				skill = 4
-				attack_skill = 4
-				defense_skill = 5
-				planning_skill = 4
-				logistics_skill = 5
+				traits = { politically_connected harsh_leader }
+				skill = 5
+				attack_skill = 6
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 3
 				legacy_id = -1 
-			visible = {
-				NOT = {
-					has_government = candy
-				}
-			}
 		}
 	}
 }

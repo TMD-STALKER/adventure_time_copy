@@ -518,7 +518,7 @@
 				}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment
-					amount = 500
+					amount = 250
 				}
 			}
 			else = {
@@ -565,48 +565,8 @@
 		completion_reward = {
 			if = {
 				limit = {
-					has_country_flag = SHARED_heavy_industry_focus_flag
+					has_country_flag = SHARED_heavy_industry_focus_flag5
 				}
-				set_country_flag = SHARED_heavy_industry_focus_flag2
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-				uncomplete_national_focus = {
-				  focus = SHARED_heavy_industry_focus
-				  uncomplete_children = no
-				  refund_political_power = no
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_flag = SHARED_heavy_industry_focus_flag2
-				}
-				set_country_flag = SHARED_heavy_industry_focus_flag3
 				random_owned_state = {
 					limit = {
 						free_building_slots = {
@@ -637,7 +597,47 @@
 				}
 				add_tech_bonus = {
 					bonus = 0.2
-					uses = 1
+					uses = 3
+					category = industry
+				}
+				add_research_slot = 1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SHARED_heavy_industry_focus_flag4
+				}
+				set_country_flag = SHARED_heavy_industry_focus_flag5
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					bonus = 0.2
+					uses = 3
 					category = industry
 				}
 				uncomplete_national_focus = {
@@ -692,9 +692,9 @@
 			}
 			else_if = {
 				limit = {
-					has_country_flag = SHARED_heavy_industry_focus_flag4
+					has_country_flag = SHARED_heavy_industry_focus_flag2
 				}
-				set_country_flag = SHARED_heavy_industry_focus_flag5
+				set_country_flag = SHARED_heavy_industry_focus_flag3
 				random_owned_state = {
 					limit = {
 						free_building_slots = {
@@ -725,7 +725,7 @@
 				}
 				add_tech_bonus = {
 					bonus = 0.2
-					uses = 3
+					uses = 1
 					category = industry
 				}
 				uncomplete_national_focus = {
@@ -736,8 +736,9 @@
 			}
 			else_if = {
 				limit = {
-					has_country_flag = SHARED_heavy_industry_focus_flag5
+					has_country_flag = SHARED_heavy_industry_focus_flag
 				}
+				set_country_flag = SHARED_heavy_industry_focus_flag2
 				random_owned_state = {
 					limit = {
 						free_building_slots = {
@@ -766,13 +767,13 @@
 						instant_build = yes
 					}
 				}
-				add_tech_bonus = {
-					bonus = 0.2
-					uses = 3
-					category = industry
+				uncomplete_national_focus = {
+				  focus = SHARED_heavy_industry_focus
+				  uncomplete_children = no
+				  refund_political_power = no
 				}
-				add_research_slot = 1
 			}
+
 			else = {
 				set_country_flag = SHARED_heavy_industry_focus_flag
 				random_owned_state = {
@@ -850,8 +851,8 @@
 					has_tech = interwar_antitank
 				}
 				add_equipment_to_stockpile = {
-					type = anti_tank
-					amount = 350
+					type = anti_tank_equipment
+					amount = 175
 				}
 			}
 			else = {
@@ -911,8 +912,8 @@
 					has_tech = interwar_antiair
 				}
 				add_equipment_to_stockpile = {
-					type = anti_tank
-					amount = 350
+					type = anti_air_equipment
+					amount = 175
 				}
 			}
 			else = {
@@ -1096,13 +1097,13 @@
 		completion_reward = {
 			if = {
 				limit = {
-					has_country_flag = SHARED_trade_focus_flag
+					has_country_flag = SHARED_trade_focus_flag5
 				}
 				random_other_country = {
 					limit = {
 						is_enemy_ideology = no
 					}
-					add_stability = 0.04
+					add_stability = 0.12
 					random_owned_state = {
 						limit = {
 							infrastructure < 5
@@ -1115,13 +1116,41 @@
 						}
 					}
 					capital_scope = {
-						add_resource = {
-							type = steel
-							amount = 2
+						random_list = {
+							20 = {
+								add_resource = {
+									type = steel
+									amount = 2
+								}
+							}
+							20 = {
+								add_resource = {
+									type = oil
+									amount = 2
+								}
+							}
+							20 = {
+								add_resource = {
+									type = aluminium
+									amount = 2
+								}
+							}
+							20 = {
+								add_resource = {
+									type = tungsten
+									amount = 2
+								}
+							}
+							20 = {
+								add_resource = {
+									type = chromium
+									amount = 2
+								}
+							}
 						}
 					}
 				}
-				add_political_power = 100
+				add_political_power = 300
 				random_owned_state = {
 					limit = {
 						infrastructure < 5
@@ -1135,147 +1164,40 @@
 					
 				}
 				capital_scope = {
-					add_resource = {
-						type = steel
-						amount = 2
-					}
-				}
-				set_country_flag = SHARED_trade_focus_flag2
-				uncomplete_national_focus = {
-				  focus = SHARED_trade_focus
-				  uncomplete_children = no
-				  refund_political_power = no
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_flag = SHARED_trade_focus_flag2
-				}
-				set_country_flag = SHARED_trade_focus_flag3
-				random_other_country = {
-					limit = {
-						is_enemy_ideology = no
-					}
-					add_stability = 0.06
-					random_owned_state = {
-						limit = {
-							infrastructure < 5
+					random_list = {
+							20 = {
+								add_resource = {
+									type = steel
+									amount = 2
+								}
+							}
+							20 = {
+								add_resource = {
+									type = oil
+									amount = 2
+								}
+							}
+							20 = {
+								add_resource = {
+									type = aluminium
+									amount = 2
+								}
+							}
+							20 = {
+								add_resource = {
+									type = tungsten
+									amount = 2
+								}
+							}
+							20 = {
+								add_resource = {
+									type = chromium
+									amount = 2
+								}
+							}
 						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-					}
-					capital_scope = {
-						add_resource = {
-							type = steel
-							amount = 2
-						}
-						add_resource = {
-							type = oil
-							amount = 2
-						}
-					}
 				}
-				add_political_power = 150
-				random_owned_state = {
-					limit = {
-						infrastructure < 5
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					
-				}
-				capital_scope = {
-					add_resource = {
-						type = steel
-						amount = 2
-					}
-					add_resource = {
-						type = oil
-						amount = 2
-					}
-				}
-				uncomplete_national_focus = {
-				  focus = SHARED_trade_focus
-				  uncomplete_children = no
-				  refund_political_power = no
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_flag = SHARED_trade_focus_flag3
-				}
-				set_country_flag = SHARED_trade_focus_flag4
-				random_other_country = {
-					limit = {
-						is_enemy_ideology = no
-					}
-					add_stability = 0.08
-					random_owned_state = {
-						limit = {
-							infrastructure < 5
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-					}
-					capital_scope = {
-						add_resource = {
-							type = steel
-							amount = 2
-						}
-						add_resource = {
-							type = oil
-							amount = 2
-						}
-						add_resource = {
-							type = aluminium
-							amount = 2
-						}
-					}
-				}
-				add_political_power = 200
-				random_owned_state = {
-					limit = {
-						infrastructure < 5
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					
-				}
-				capital_scope = {
-					add_resource = {
-						type = steel
-						amount = 2
-					}
-					add_resource = {
-						type = oil
-						amount = 2
-					}
-					add_resource = {
-						type = aluminium
-						amount = 2
-					}
-				}
-				uncomplete_national_focus = {
-				  focus = SHARED_trade_focus
-				  uncomplete_children = no
-				  refund_political_power = no
-				}
+				add_research_slot = 1
 			}
 			else_if = {
 				limit = {
@@ -1331,22 +1253,32 @@
 					
 				}
 				capital_scope = {
-					add_resource = {
-						type = steel
-						amount = 2
-					}
-					add_resource = {
-						type = oil
-						amount = 2
-					}
-					add_resource = {
-						type = aluminium
-						amount = 2
-					}
-					add_resource = {
-						type = tungsten
-						amount = 2
-					}
+					random_list = {
+							25 = {
+								add_resource = {
+									type = steel
+									amount = 2
+								}
+							}
+							25 = {
+								add_resource = {
+									type = oil
+									amount = 2
+								}
+							}
+							25 = {
+								add_resource = {
+									type = aluminium
+									amount = 2
+								}
+							}
+							25 = {
+								add_resource = {
+									type = tungsten
+									amount = 2
+								}
+							}
+						}
 				}
 				uncomplete_national_focus = {
 				  focus = SHARED_trade_focus
@@ -1356,13 +1288,169 @@
 			}
 			else_if = {
 				limit = {
-					has_country_flag = SHARED_trade_focus_flag5
+					has_country_flag = SHARED_trade_focus_flag3
+				}
+				set_country_flag = SHARED_trade_focus_flag4
+				random_other_country = {
+					limit = {
+						is_enemy_ideology = no
+					}
+					add_stability = 0.08
+					random_owned_state = {
+						limit = {
+							infrastructure < 5
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+					capital_scope = {
+						random_list = {
+							34 = {
+								add_resource = {
+									type = steel
+									amount = 2
+								}
+							}
+							33 = {
+								add_resource = {
+									type = oil
+									amount = 2
+								}
+							}
+							33 = {
+								add_resource = {
+									type = aluminium
+									amount = 2
+								}
+							}
+						}
+					}
+				}
+				add_political_power = 200
+				random_owned_state = {
+					limit = {
+						infrastructure < 5
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					
+				}
+				capital_scope = {
+					34 = {
+								add_resource = {
+									type = steel
+									amount = 2
+								}
+							}
+							33 = {
+								add_resource = {
+									type = oil
+									amount = 2
+								}
+							}
+							33 = {
+								add_resource = {
+									type = aluminium
+									amount = 2
+								}
+							}
+				}
+				uncomplete_national_focus = {
+				  focus = SHARED_trade_focus
+				  uncomplete_children = no
+				  refund_political_power = no
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SHARED_trade_focus_flag2
+				}
+				set_country_flag = SHARED_trade_focus_flag3
+				random_other_country = {
+					limit = {
+						is_enemy_ideology = no
+					}
+					add_stability = 0.06
+					random_owned_state = {
+						limit = {
+							infrastructure < 5
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+					capital_scope = {
+						random_list = {
+							50 = {
+								add_resource = {
+									type = steel
+									amount = 2
+								}
+							}
+							50 = {
+								add_resource = {
+									type = oil
+									amount = 2
+								}
+							}
+						}
+					}
+				}
+				add_political_power = 150
+				random_owned_state = {
+					limit = {
+						infrastructure < 5
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					
+				}
+				capital_scope = {
+					random_list = {
+							50 = {
+								add_resource = {
+									type = steel
+									amount = 2
+								}
+							}
+							50 = {
+								add_resource = {
+									type = oil
+									amount = 2
+								}
+							}
+						}
+				}
+				uncomplete_national_focus = {
+				  focus = SHARED_trade_focus
+				  uncomplete_children = no
+				  refund_political_power = no
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SHARED_trade_focus_flag
 				}
 				random_other_country = {
 					limit = {
 						is_enemy_ideology = no
 					}
-					add_stability = 0.12
+					add_stability = 0.04
 					random_owned_state = {
 						limit = {
 							infrastructure < 5
@@ -1379,25 +1467,9 @@
 							type = steel
 							amount = 2
 						}
-						add_resource = {
-							type = oil
-							amount = 2
-						}
-						add_resource = {
-							type = aluminium
-							amount = 2
-						}
-						add_resource = {
-							type = tungsten
-							amount = 2
-						}
-						add_resource = {
-							type = chromium
-							amount = 2
-						}
 					}
 				}
-				add_political_power = 300
+				add_political_power = 100
 				random_owned_state = {
 					limit = {
 						infrastructure < 5
@@ -1415,24 +1487,13 @@
 						type = steel
 						amount = 2
 					}
-					add_resource = {
-						type = oil
-						amount = 2
-					}
-					add_resource = {
-						type = aluminium
-						amount = 2
-					}
-					add_resource = {
-						type = tungsten
-						amount = 2
-					}
-					add_resource = {
-							type = chromium
-							amount = 2
-						}
 				}
-				add_research_slot = 1
+				set_country_flag = SHARED_trade_focus_flag2
+				uncomplete_national_focus = {
+				  focus = SHARED_trade_focus
+				  uncomplete_children = no
+				  refund_political_power = no
+				}
 			}
 			else = {
 				set_country_flag = SHARED_trade_focus_flag
@@ -1550,11 +1611,11 @@
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 45725
+				amount = 22725
 			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
-				amount = 25725
+				amount = 12725
 			}
 			if = {
 				limit = {
@@ -1744,48 +1805,8 @@
 		completion_reward = {
 			if = {
 				limit = {
-					has_country_flag = SHARED_lite_industry_focus_flag
+					has_country_flag = SHARED_lite_industry_focus_flag5
 				}
-				set_country_flag = SHARED_lite_industry_focus_flag2
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				uncomplete_national_focus = {
-				  focus = SHARED_lite_industry_focus
-				  uncomplete_children = no
-				  refund_political_power = no
-				}
-			}
-			else_if = {
-				limit = {
-					has_country_flag = SHARED_lite_industry_focus_flag2
-				}
-				set_country_flag = SHARED_lite_industry_focus_flag3
 				random_owned_state = {
 					limit = {
 						free_building_slots = {
@@ -1816,7 +1837,47 @@
 				}
 				add_tech_bonus = {
 					bonus = 0.2
-					uses = 1
+					uses = 3
+					category = industry
+				}
+				add_research_slot = 1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SHARED_lite_industry_focus_flag4
+				}
+				set_country_flag = SHARED_lite_industry_focus_flag5
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					bonus = 0.2
+					uses = 3
 					category = industry
 				}
 				uncomplete_national_focus = {
@@ -1871,9 +1932,9 @@
 			}
 			else_if = {
 				limit = {
-					has_country_flag = SHARED_lite_industry_focus_flag4
+					has_country_flag = SHARED_lite_industry_focus_flag2
 				}
-				set_country_flag = SHARED_lite_industry_focus_flag5
+				set_country_flag = SHARED_lite_industry_focus_flag3
 				random_owned_state = {
 					limit = {
 						free_building_slots = {
@@ -1904,7 +1965,7 @@
 				}
 				add_tech_bonus = {
 					bonus = 0.2
-					uses = 3
+					uses = 1
 					category = industry
 				}
 				uncomplete_national_focus = {
@@ -1912,45 +1973,6 @@
 				  uncomplete_children = no
 				  refund_political_power = no
 				}
-			}
-			else_if = {
-				limit = {
-					has_country_flag = SHARED_lite_industry_focus_flag5
-				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				add_tech_bonus = {
-					bonus = 0.2
-					uses = 3
-					category = industry
-				}
-				add_research_slot = 1
 			}
 			else = {
 				set_country_flag = SHARED_lite_industry_focus_flag
@@ -2116,7 +2138,7 @@
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = convoy_1
-				amount = 150
+				amount = 75
 			}
 			random_owned_state = {
 				limit = {
@@ -2237,7 +2259,7 @@
 				add_extra_state_shared_building_slots = 1
 				add_resource = {
 					type = chromium
-					amount = 5
+					amount = 3
 				}
 			}
 			random_owned_state = {
@@ -2252,7 +2274,7 @@
 				add_extra_state_shared_building_slots = 1
 				add_resource = {
 					type = coal
-					amount = 5
+					amount = 3
 				}
 			}
 			random_owned_state = {
@@ -2267,7 +2289,7 @@
 				add_extra_state_shared_building_slots = 1
 				add_resource = {
 					type = oil
-					amount = 5
+					amount = 3
 				}
 			}
 		}
@@ -2314,7 +2336,7 @@
 			else = {
 				add_equipment_to_stockpile = {
 					type = convoy_1
-					amount = 150
+					amount = 75
 				}
 				swap_ideas = {
 					remove_idea = SHARED_trade_flet3

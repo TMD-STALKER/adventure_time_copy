@@ -1,5 +1,5 @@
 ﻿
-capital = 653
+capital = 521
 
 oob = "DGT_3027"
 #set_naval_oob = "DGT_3027_Naval"

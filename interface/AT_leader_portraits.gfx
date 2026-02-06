@@ -16,8 +16,24 @@ spriteTypes = {
 		name = "GFX_portrait_unknown_female"
 		texturefile = "gfx/leaders/leader_unknown_female.dds"
 	}
+	###LIC
+	
+	spriteType = {
+		name = "GFX_portrait_LIC_lich"
+		texturefile = "gfx/leaders/LIC/LIC_lich.dds"
+	}
 	
 	###PBB
+	
+	spriteType = {
+		name = "GFX_portrait_PBB_bb_not_good"
+		texturefile = "gfx/leaders/PBB/PBB_bb_not_good.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_PBB_bb_monster"
+		texturefile = "gfx/leaders/PBB/PBB_bb_monster.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_portrait_PBB_clasic"
@@ -104,6 +120,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_finn_scientist"
 		texturefile = "gfx/leaders/FAJ/finn_scientist.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_FAJ_jake_purple"
+		texturefile = "gfx/leaders/FAJ/FAJ_jake_purple.dds"
 	}
 	
 }

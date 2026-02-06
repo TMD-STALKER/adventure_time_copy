@@ -3,7 +3,7 @@
 equipments = {
 
 #	amphibious_tank_equipment = {
-#		year = 3025
+#		year = 3005
 #
 #		can_be_produced = {
 #			NOT = {
@@ -55,7 +55,7 @@ equipments = {
 #	}
 #
 #	amphibious_tank_equipment_1 = {
-#		year = 3025
+#		year = 3005
 #		
 #		archetype = amphibious_tank_equipment
 #		priority = 10
@@ -67,7 +67,7 @@ equipments = {
 #	}
 #
 #	amphibious_tank_equipment_2 = {
-#		year = 3030
+#		year = 3010
 #		
 #		archetype = amphibious_tank_equipment
 #		parent = amphibious_tank_equipment_1

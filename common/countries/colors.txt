@@ -8,6 +8,11 @@ ELB = {
 	color_ui = rgb { 102  167  217 }
 }
 
+BLE = {
+	color = rgb { 235  107  131 }
+	color_ui = rgb { 235  107  131 }
+}
+
 TMK = {
 	color = rgb { 149  224  164 }
 	color_ui = rgb { 149  224  164 }

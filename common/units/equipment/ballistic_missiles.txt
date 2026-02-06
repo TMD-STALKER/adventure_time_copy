@@ -1,7 +1,7 @@
 equipments = {
 	
 	ballistic_missile_equipment = {
-		year = 3027
+		year = 3007
 
 		can_be_produced = {
 			NOT = {
@@ -43,7 +43,7 @@ equipments = {
 	}
 	
 	ballistic_missile_equipment_1 = {
-		year = 3035
+		year = 3015
 
 		archetype = ballistic_missile_equipment
 		is_buildable = yes
@@ -56,7 +56,7 @@ equipments = {
 		air_bombing = 550
 	}
 	ballistic_missile_equipment_2 = {
-		year = 3036
+		year = 3016
 
 		archetype = ballistic_missile_equipment
 		parent = ballistic_missile_equipment_1
@@ -76,7 +76,7 @@ equipments = {
 
 	#MM: Unused
 	ballistic_missile_equipment_3 = {
-		year = 3036
+		year = 3016
 
 		archetype = ballistic_missile_equipment
 		parent = ballistic_missile_equipment_2

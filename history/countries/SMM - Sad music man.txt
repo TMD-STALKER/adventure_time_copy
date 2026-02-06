@@ -26,6 +26,7 @@ set_popularities = {
 }
 add_ideas = {
 	disarmed_nation1
+	only_iam
 }
 add_manpower = 10000
 recruit_character = SMM_musicman

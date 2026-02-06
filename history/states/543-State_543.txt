@@ -13,5 +13,9 @@ state={
 	history={
 		owner = GLA
 		add_core_of = GLA
+
+		victory_points = {
+			1553 10
+		}
 	}
 }

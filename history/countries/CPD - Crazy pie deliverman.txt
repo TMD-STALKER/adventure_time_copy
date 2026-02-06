@@ -27,7 +27,7 @@ set_popularities = {
 
 add_ideas = {
 	disarmed_nation1
+	only_iam
 }
 add_manpower = 10000
 recruit_character = CPD_delivermen
-recruit_character = CPD_delivermen1

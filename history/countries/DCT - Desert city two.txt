@@ -27,6 +27,8 @@ set_popularities = {
 
 add_ideas = {
 	limited_exports1
+
+	DCT_oligarhy
 }
 
 recruit_character = DCT_sovet

@@ -6,7 +6,6 @@ state={
 	}
 	resources={
 		aluminium = 21
-		steel = 10
 	}
 	manpower = 1
 	state_category = metropolis local_supplies=1.0 

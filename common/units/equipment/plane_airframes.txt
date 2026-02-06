@@ -221,7 +221,7 @@ equipments = {
 	small_plane_airframe_1 = { #Basic
 		abbreviation = "afs1"
 		derived_variant_name = fighter_equipment_1
-		year = 3027
+		year = 3007
 
 		archetype = small_plane_airframe
 		parent = small_plane_airframe_0
@@ -298,7 +298,7 @@ equipments = {
 	small_plane_airframe_2 = { #Improved
 		abbreviation = "afs2"
 		derived_variant_name = fighter_equipment_2
-		year = 3030
+		year = 3010
 
 		archetype = small_plane_airframe
 		parent = small_plane_airframe_1
@@ -402,7 +402,7 @@ equipments = {
 	small_plane_airframe_3 = { #Advanced
 		abbreviation = "afs3"
 		derived_variant_name = fighter_equipment_3
-		year = 3033
+		year = 3013
 
 		archetype = small_plane_airframe
 		parent = small_plane_airframe_2
@@ -525,7 +525,7 @@ equipments = {
 	small_plane_airframe_4 = { #modern
 		abbreviation = "afs4"
 		derived_variant_name = jet_fighter_equipment_1 # We should use "jet" for this or any of the ones below, but this is good enough for now.
-		year = 3036
+		year = 3016
 
 		archetype = small_plane_airframe
 		parent = small_plane_airframe_3
@@ -1012,7 +1012,7 @@ equipments = {
 	cv_small_plane_airframe_1 = { #Basic
 		abbreviation = "afc1"
 		derived_variant_name = cv_fighter_equipment_1
-		year = 3027
+		year = 3007
 
 		archetype = cv_small_plane_airframe
 		parent = cv_small_plane_airframe_0
@@ -1088,7 +1088,7 @@ equipments = {
 	cv_small_plane_airframe_2 = { #Improved
 		abbreviation = "afc2"
 		derived_variant_name = cv_fighter_equipment_2
-		year = 3030
+		year = 3010
 
 		archetype = cv_small_plane_airframe
 		parent = cv_small_plane_airframe_1
@@ -1191,7 +1191,7 @@ equipments = {
 	cv_small_plane_airframe_3 = { #Advanced
 		abbreviation = "afc3"
 		derived_variant_name = cv_fighter_equipment_3
-		year = 3033
+		year = 3013
 
 		archetype = cv_small_plane_airframe
 		parent = cv_small_plane_airframe_2
@@ -1300,7 +1300,7 @@ equipments = {
 
 	cv_small_plane_airframe_4 = { #modern
 		abbreviation = "afc4"
-		year = 3036
+		year = 3016
 
 		archetype = cv_small_plane_airframe
 		parent = cv_small_plane_airframe_3
@@ -1675,7 +1675,7 @@ equipments = {
 	medium_plane_airframe_1 = { #Basic
 		abbreviation = "afm1"
 		derived_variant_name = tac_bomber_equipment_1
-		year = 3027
+		year = 3007
 
 		archetype = medium_plane_airframe
 		parent = medium_plane_airframe_0
@@ -1806,7 +1806,7 @@ equipments = {
 	medium_plane_airframe_2 = { #Improved
 		abbreviation = "afm2"
 		derived_variant_name = tac_bomber_equipment_2
-		year = 3030
+		year = 3010
 
 		archetype = medium_plane_airframe
 		parent = medium_plane_airframe_1
@@ -1954,7 +1954,7 @@ equipments = {
 	medium_plane_airframe_3 = { #Advanced
 		abbreviation = "afm3"
 		derived_variant_name = tac_bomber_equipment_3
-		year = 3033
+		year = 3013
 
 		archetype = medium_plane_airframe
 		parent = medium_plane_airframe_2
@@ -2114,7 +2114,7 @@ equipments = {
 	medium_plane_airframe_4 = { #Modern
 		abbreviation = "afm4"
 		derived_variant_name = jet_tac_bomber_equipment_1
-		year = 3036
+		year = 3016
 
 		archetype = medium_plane_airframe
 		parent = medium_plane_airframe_3
@@ -2531,7 +2531,7 @@ equipments = {
 	large_plane_airframe_1 = { #Basic
 		abbreviation = "afl1"
 		derived_variant_name = strat_bomber_equipment_1
-		year = 3027
+		year = 3007
 
 		archetype = large_plane_airframe
 		parent = large_plane_airframe_0
@@ -2671,7 +2671,7 @@ equipments = {
 	large_plane_airframe_2 = { #Improved
 		abbreviation = "afl2"
 		derived_variant_name = strat_bomber_equipment_2
-		year = 3030
+		year = 3010
 
 		archetype = large_plane_airframe
 		parent = large_plane_airframe_1
@@ -2837,7 +2837,7 @@ equipments = {
 	large_plane_airframe_3 = { #Advanced
 		abbreviation = "afl3"
 		derived_variant_name = strat_bomber_equipment_3
-		year = 3033
+		year = 3013
 
 		archetype = large_plane_airframe
 		parent = large_plane_airframe_2
@@ -3003,7 +3003,7 @@ equipments = {
 	large_plane_airframe_4 = { #Modern
 		abbreviation = "afl4"
 		derived_variant_name = jet_strat_bomber_equipment_1
-		year = 3036
+		year = 3016
 
 		archetype = large_plane_airframe
 		parent = large_plane_airframe_3

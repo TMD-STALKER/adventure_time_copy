@@ -42,7 +42,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 2
+				factor = 35
 				is_historical_focus_on = yes
 			}
 		}

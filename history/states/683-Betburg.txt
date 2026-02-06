@@ -6,9 +6,6 @@ state={
 	provinces={
 		461 2417 
 	}
-	resources={
-		steel = 14
-	}
 	history={
 		owner = DTF
 		add_core_of = DTF

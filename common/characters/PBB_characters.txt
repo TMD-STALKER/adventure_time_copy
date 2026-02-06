@@ -44,6 +44,80 @@ characters = {
 			}
 		}
 	}
+	FAJ_finn2 = {
+		name = FAJ_finn
+		portraits = {
+			civilian = { 
+				large = "gfx/leaders/FAJ/finn.dds"
+				small="GFX_idea_FAJ_finn"
+			}
+		}
+		
+		advisor={
+			slot = high_command
+			idea_token = FAJ_finn2
+			allowed  = {
+				original_tag = PBB
+			}
+			visible = { has_country_flag = finn_with_us_flag }
+			#available = { is_army_leader = no }
+			traits  = {
+				PBB_my_hero
+			}
+			ai_will_do = {
+				factor = 4.000
+			}
+			cost = 35
+		}
+		field_marshal = {
+			traits = { politically_connected harsh_leader }
+			visible = { 
+				has_country_flag = finn_with_us_flag
+				#is_advisor = no
+			}
+			skill = 5
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1 
+		}
+	}
+	FAJ_jake2 = {
+		name = FAJ_jake
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FAJ/jake.dds"
+				small="GFX_idea_FAJ_fake"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = FAJ_jake2
+			allowed  = {
+				original_tag = PBB
+			}
+			visible = { has_country_flag = finn_with_us_flag }
+			#available = { is_army_leader = no }
+			traits  = {
+				PBB_my_hero
+			}
+			cost = 165
+		}
+		field_marshal = {
+			traits = { politically_connected harsh_leader }
+			visible = { 
+				has_country_flag = finn_with_us_flag 
+				#is_advisor = no
+			}
+				skill = 4
+				attack_skill = 4
+				defense_skill = 5
+				planning_skill = 4
+				logistics_skill = 5
+				legacy_id = -1 
+		}
+	}
 	PBB_pogremushkin = {
 		name = PGM_pogremushkin
 		portraits = {
@@ -149,6 +223,24 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/PBB/PBB_zombe_bb.dds"
+				small="GFX_idea_PBB_batler"
+			}
+		}
+	}
+	PBB_monster_bb = {
+		name = PBB_monster_bb
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PBB/PBB_bb_monster.dds"
+				small="GFX_idea_PBB_batler"
+			}
+		}
+	}
+	PBB_baby = {
+		name = PBB_baby
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PBB/PBB_baby_bonne.dds"
 				small="GFX_idea_PBB_batler"
 			}
 		}
@@ -290,6 +382,41 @@ characters = {
 			}
 			traits = {
 				army_chief_offensive_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	PBB_chistopher = {
+		name = PBB_chistopher
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PBB/PBB_banan_kr.dds"
+				small="GFX_idea_PBB_chistopher"
+			}
+		}
+		field_marshal = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1 
+		}
+		advisor={
+			slot = high_command
+			idea_token = PBB_chistopher
+			cost = 140
+			allowed = {
+				original_tag = PBB
+			}
+			available = {
+				#has_country_flag = SHARED_old_guard_question_flag
+			}
+			traits = {
+				army_chief_defensive_3
 			}
 			ai_will_do = {
 				factor = 1.000

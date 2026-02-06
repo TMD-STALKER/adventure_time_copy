@@ -24,7 +24,10 @@ country_event = {
 	desc = {
 		text = net.1.d_4
 		trigger = {
-			has_country_leader_ideology = peaseful_slime
+			OR = {
+				has_country_leader_ideology = peaseful_slime
+				has_country_leader_ideology = neutral_slime
+			}
 		}
 	}
 	desc = {
@@ -36,7 +39,10 @@ country_event = {
 	desc = {
 		text = net.1.d_6
 		trigger = {
-			has_country_leader_ideology = iceking
+			OR = {
+				has_country_leader_ideology = iceking
+				has_country_leader_ideology = icecream
+			}
 		}
 	}
 	desc = {
@@ -54,7 +60,10 @@ country_event = {
 	desc = {
 		text = net.1.d_9
 		trigger = {
-			has_country_leader_ideology = evil
+			OR = {
+				has_country_leader_ideology = evil
+				has_country_leader_ideology = reaction
+			}
 		}
 	}
 	desc = {
@@ -93,6 +102,7 @@ country_event = {
 			OR = {
 				has_country_leader_ideology = technocracy
 				has_country_leader_ideology = collective
+				has_country_leader_ideology = military_mo
 			}
 		}
 	}
@@ -111,7 +121,10 @@ country_event = {
 	desc = {
 		text = net.1.d_18
 		trigger = {
-			has_country_leader_ideology = monarchy
+			OR = {
+				has_country_leader_ideology = monarchy
+				has_country_leader_ideology = junta
+			}
 		}
 	}
     is_triggered_only = yes
@@ -131,7 +144,10 @@ country_event = {
 	option = { 
 		name = net.1.c
 		trigger = {
-			has_country_leader_ideology = monarchy
+			OR = {
+				has_country_leader_ideology = monarchy
+				has_country_leader_ideology = junta
+			}
 		} 
 	}
 	option = { 
@@ -149,7 +165,10 @@ country_event = {
 	option = { 
 		name = net.1.g
 		trigger = {
-			has_country_leader_ideology = technocracy
+			OR = {
+				has_country_leader_ideology = technocracy
+				has_country_leader_ideology = military_mo
+			}
 		} 
 	}
 	option = { 
@@ -185,7 +204,10 @@ country_event = {
 	option = { 
 		name = net.1.n
 		trigger = {
-			has_country_leader_ideology = evil
+			OR = {
+				has_country_leader_ideology = evil
+				has_country_leader_ideology = reaction
+			}
 		} 
 	}
 	option = { 
@@ -203,7 +225,10 @@ country_event = {
 	option = { 
 		name = net.1.q
 		trigger = {
-			has_country_leader_ideology = iceking
+			OR = {
+				has_country_leader_ideology = iceking
+				has_country_leader_ideology = icecream
+			}
 		} 
 	}
 	option = { 
@@ -215,7 +240,10 @@ country_event = {
 	option = { 
 		name = net.1.s
 		trigger = {
-			has_country_leader_ideology = peaseful_slime
+			OR = {
+				has_country_leader_ideology = peaseful_slime
+				has_country_leader_ideology = neutral_slime
+			}
 		} 
 	}
 	option = { 

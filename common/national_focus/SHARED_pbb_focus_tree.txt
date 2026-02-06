@@ -701,6 +701,7 @@
 					add_dynamic_modifier = {
 						modifier = SHARED_licvidate_getto2
 						scope = ROOT
+						days = 365
 					}
 				}
 				#custom_effect_tooltip = SHARED_licvidate_getto_tt
@@ -1562,7 +1563,8 @@
 		x = 35
 		y = 7
 		completion_reward = {
-			
+			army_experience = 15
+			add_ideas = SHARED_artillery_polks
 		}
 
 	}
@@ -2001,6 +2003,9 @@
 		}
 		x = 30
 		y = 6
+		completion_reward = {
+			unlock_decision_category_tooltip = SHARED_policemans_of_war
+		}
 
 	}
 	shared_focus = {
@@ -2016,6 +2021,10 @@
 		}
 		x = 33
 		y = 7
+		completion_reward = {	
+			add_ideas = SHARED_gas_polks
+			army_experience = 15
+		}
 
 	}
 	shared_focus = {

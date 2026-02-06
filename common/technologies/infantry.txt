@@ -839,9 +839,9 @@ technologies = {
 		}
 		
 		on_research_complete_limit = {
-			NOT = {
-				has_template_containing_unit = ranger_battalion
-			}
+			#NOT = {
+			#	has_template_containing_unit = ranger_battalion
+			#}
 		}
 		on_research_complete = {
 			hidden_effect = {
