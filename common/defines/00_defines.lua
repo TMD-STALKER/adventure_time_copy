@@ -2658,12 +2658,12 @@ NAI = {
 
 	-- Calculating wanted nr of divisions
 	WANTED_UNITS_INDUSTRY_FACTOR = 1.60,                        -- How many units a country wants is partially based on how much military industry that is available
-	WANTED_UNITS_THREAT_BASE = 2,                             -- If no threat, multiply min wanted units by this
+	WANTED_UNITS_THREAT_BASE = 0.6,                             -- If no threat, multiply min wanted units by this
 	WANTED_UNITS_THREAT_MAX = 6.0,                             -- Normalized threat is clamped to this
-	WANTED_UNITS_WAR_THREAT_FACTOR = 2.15,                       -- Factor threat with this if country is at war. this value is overriden by the value in ideology database if that value exceedes this.
-	WANTED_UNITS_DANGEROUS_NEIGHBOR_FACTOR = 2.15,              -- Factor if has dangerous neighbor
+	WANTED_UNITS_WAR_THREAT_FACTOR = 1.15,                       -- Factor threat with this if country is at war. this value is overriden by the value in ideology database if that value exceedes this.
+	WANTED_UNITS_DANGEROUS_NEIGHBOR_FACTOR = 1.15,              -- Factor if has dangerous neighbor
 	WANTED_UNITS_MANPOWER_DIVISOR = 500,                      -- Normalizing divisor for AI manpower. (for each x max available manpower, they want one division)
-	WANTED_UNITS_WEIGHT_FRONTS_WANT = 1,                      -- Weight of front needs when computing final nr wanted units
+	WANTED_UNITS_WEIGHT_FRONTS_WANT = 0.5,                      -- Weight of front needs when computing final nr wanted units
 	WANTED_UNITS_WEIGHT_FACTORIES = 0.45,                        -- Weight of military factories when computing final nr wanted units
 	WANTED_UNITS_WEIGHT_MANPOWER = 0.3,                         -- Weight of manpower availability when computing final nr wanted units
 	WANTED_UNITS_MIN_DEFENCE_FACTOR = 0.4,						-- Factor on units required for min defence

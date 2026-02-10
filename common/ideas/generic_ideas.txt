@@ -34,6 +34,13 @@ ideas = {
 		}
 		
 		only_iam = {
+			allowed = {
+				original_tag = ROOT
+			}
+
+			allowed_civil_war = {
+				tag = ROOT
+			}
 			picture = chi_forced_conscription
 			modifier = {
 				

@@ -6,6 +6,9 @@
 		available = {
 			num_of_controlled_states > 0
 			has_capitulated = no
+			NOT = {
+				has_idea = closed_economy1
+			}
 		}
 		#relative_position_id = SHARED_create_army
 		x = 35
@@ -73,6 +76,7 @@
 		#		tag = OLD
 		#	}
 		#}
+		available = { NOT = { has_idea = disarmed_nation1 } }
 		completion_reward = {
 			army_experience = 10
 			navy_experience = 10
@@ -188,6 +192,12 @@
 			focus = SHARED_modern_army
 		}
 		#relative_position_id = SHARED_create_army
+		available = { 
+			NOT = { 
+				has_idea = disarmed_nation1
+				has_idea = volunteer_only1
+			} 
+		}
 		x = 25
 		y = 2
 		completion_reward = {
@@ -346,6 +356,12 @@
 			focus = SHARED_traditional_army
 		}
 		#relative_position_id = SHARED_create_army
+		available = { 
+			OR = { 
+				has_idea = extensive_conscription1
+				has_idea = service_by_requirement1
+			} 
+		}
 		x = 29
 		y = 2
 		completion_reward = {
@@ -581,20 +597,6 @@
 						instant_build = yes
 					}
 				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
 				add_tech_bonus = {
 					bonus = 0.2
 					uses = 3
@@ -607,20 +609,6 @@
 					has_country_flag = SHARED_heavy_industry_focus_flag4
 				}
 				set_country_flag = SHARED_heavy_industry_focus_flag5
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
 				random_owned_state = {
 					limit = {
 						free_building_slots = {
@@ -665,20 +653,6 @@
 						instant_build = yes
 					}
 				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
 				add_tech_bonus = {
 					bonus = 0.2
 					uses = 2
@@ -709,20 +683,6 @@
 						instant_build = yes
 					}
 				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
 				add_tech_bonus = {
 					bonus = 0.2
 					uses = 1
@@ -739,20 +699,6 @@
 					has_country_flag = SHARED_heavy_industry_focus_flag
 				}
 				set_country_flag = SHARED_heavy_industry_focus_flag2
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
 				random_owned_state = {
 					limit = {
 						free_building_slots = {
@@ -1092,6 +1038,7 @@
 			focus = SHARED_investition_in_capital
 		}
 		#relative_position_id = SHARED_create_army
+		available = { has_idea = free_trade1 }
 		x = 35
 		y = 4
 		completion_reward = {
@@ -1582,7 +1529,7 @@
 		x = 32
 		y = 6
 		completion_reward = {
-			add_manpower = 45725
+			add_manpower = 15725
 			add_ideas = SHARED_we_need_mans
 			if = {
 				limit = {
@@ -1636,6 +1583,17 @@
 		}
 		prerequisite = {
 			focus = SHARED_we_need_weapons
+		}
+		bypass = {
+			OR = {
+				has_idea = only_iam
+				has_army_size = {
+					size > 99
+				}
+			}
+		}
+		bypass_effect = {
+			army_experience = 25
 		}
 		#relative_position_id = SHARED_create_army
 		available_if_capitulated = yes
@@ -1730,13 +1688,16 @@
 		x = 35
 		y = 7
 		completion_reward = {
-			add_offsite_building = { type = dockyard level = 2 }
 			if = {
 				limit = {
 					NOT = { has_completed_focus = SHARED_trade_focus }
 				}
+				add_offsite_building = { type = dockyard level = 2 }
 				add_legitimacy = 10
 				custom_effect_tooltip = SHARED_this_is_end_ist_it_tt
+			}
+			else = {
+				add_offsite_building = { type = dockyard level = 1 }
 			}
 		}
 
@@ -1821,20 +1782,6 @@
 						instant_build = yes
 					}
 				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
 				add_tech_bonus = {
 					bonus = 0.2
 					uses = 3
@@ -1847,20 +1794,6 @@
 					has_country_flag = SHARED_lite_industry_focus_flag4
 				}
 				set_country_flag = SHARED_lite_industry_focus_flag5
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
 				random_owned_state = {
 					limit = {
 						free_building_slots = {
@@ -1905,20 +1838,6 @@
 						instant_build = yes
 					}
 				}
-				random_owned_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
 				add_tech_bonus = {
 					bonus = 0.2
 					uses = 2
@@ -1949,6 +1868,22 @@
 						instant_build = yes
 					}
 				}
+				add_tech_bonus = {
+					bonus = 0.2
+					uses = 1
+					category = industry
+				}
+				uncomplete_national_focus = {
+				  focus = SHARED_lite_industry_focus
+				  uncomplete_children = no
+				  refund_political_power = no
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SHARED_lite_industry_focus_flag
+				}
+				set_country_flag = SHARED_lite_industry_focus_flag2
 				random_owned_state = {
 					limit = {
 						free_building_slots = {
@@ -1962,11 +1897,6 @@
 						level = 1
 						instant_build = yes
 					}
-				}
-				add_tech_bonus = {
-					bonus = 0.2
-					uses = 1
-					category = industry
 				}
 				uncomplete_national_focus = {
 				  focus = SHARED_lite_industry_focus
@@ -2012,13 +1942,17 @@
 		x = 37
 		y = 7
 		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 2 }
+			
 			if = {
 				limit = {
 					NOT = { has_completed_focus = SHARED_trade_focus }
 				}
+				add_offsite_building = { type = industrial_complex level = 2 }
 				add_legitimacy = 10
 				custom_effect_tooltip = SHARED_this_is_end_ist_it_tt
+			}
+			else = {
+				add_offsite_building = { type = industrial_complex level = 1 }
 			}
 		}
 
@@ -2090,13 +2024,17 @@
 		x = 39
 		y = 7
 		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 2 }
+			
 			if = {
 				limit = {
 					NOT = { has_completed_focus = SHARED_trade_focus }
 				}
+				add_offsite_building = { type = arms_factory level = 2 }
 				add_legitimacy = 10
 				custom_effect_tooltip = SHARED_this_is_end_ist_it_tt
+			}
+			else = {
+				add_offsite_building = { type = arms_factory level = 1 }
 			}
 		}
 
@@ -3147,6 +3085,17 @@
 		
 		prerequisite = {
 			focus = SHARED_train_new_army_of_liberation
+		}
+		bypass = {
+			OR = {
+				has_idea = only_iam
+				has_army_size = {
+					size > 99
+				}
+			}
+		}
+		bypass_effect = {
+			army_experience = 25
 		}
 		#relative_position_id = SHARED_create_army
 		available_if_capitulated = yes

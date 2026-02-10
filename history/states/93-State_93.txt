@@ -4,7 +4,7 @@ state={
 	provinces={
 		175 686 690 1271 1801 1978 1988 
 	}
-	manpower = 45000
+	manpower = 15000
 	state_category = rural local_supplies=1.0 
 	resources={
 		steel = 14

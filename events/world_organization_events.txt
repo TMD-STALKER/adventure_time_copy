@@ -3677,7 +3677,7 @@ country_event = {
 				}
 				set_country_flag = soviet_event_flag
 				country_event = {
-					id = soviet.8
+					id = soviet.10
 					days = 2
 				}
 			}
@@ -4115,7 +4115,7 @@ country_event = {
 				}
 				set_country_flag = soviet_event_flag
 				country_event = {
-					id = soviet.8
+					id = soviet.12
 					days = 2
 				}
 			}
@@ -4440,7 +4440,7 @@ country_event = {
 				}
 				set_country_flag = soviet_event_flag
 				country_event = {
-					id = soviet.8
+					id = soviet.12
 					days = 2
 				}
 			}
@@ -4878,7 +4878,7 @@ country_event = {
 				}
 				set_country_flag = soviet_event_flag
 				country_event = {
-					id = soviet.8
+					id = soviet.14
 					days = 2
 				}
 			}
@@ -5203,7 +5203,7 @@ country_event = {
 				}
 				set_country_flag = soviet_event_flag
 				country_event = {
-					id = soviet.8
+					id = soviet.14
 					days = 2
 				}
 			}

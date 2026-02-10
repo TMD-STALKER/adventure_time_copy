@@ -24,7 +24,15 @@ set_popularities = {
 	ice = 3
 	slime = 3
 }
-
+if = {
+	limit = {
+		is_debug = yes
+	}
+	set_power_balance = {
+		id = FAJ_power_balance
+		set_default = yes
+	}
+}
 add_ideas = {
 	disarmed_nation1
 	autarkic_economy1

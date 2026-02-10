@@ -12,7 +12,7 @@ state={
 		rubber = 1
 		oil = 1
 	}
-	manpower = 45000
+	manpower = 15000
 	state_category = rural local_supplies=1.0 
 	
 	history={

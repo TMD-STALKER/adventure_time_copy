@@ -4,7 +4,7 @@ state={
 	provinces={
 		13 187 284 296 589 631 1129 1144 1155 1610 1827 2071 2076 2092 2103 2109 2115 
 	}
-	manpower = 45000
+	manpower = 15000
 	state_category = metropolis local_supplies=1.0 
 	
 	history={

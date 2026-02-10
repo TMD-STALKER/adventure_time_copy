@@ -84,7 +84,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/FAJ/jake.dds"
-				small="GFX_idea_FAJ_fake"
+				small="GFX_idea_FAJ_jake"
 			}
 		}
 		country_leader = {

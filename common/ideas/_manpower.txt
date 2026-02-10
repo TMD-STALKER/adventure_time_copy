@@ -65,7 +65,7 @@ ideas = {
 
 			modifier = {
 				factory_energy_consumption = 0.05
-				conscription = 0.05
+				conscription = 0.04
 				political_power_factor = 0.1
 				request_lease_tension = -0.5
 				war_stability_factor = -0.1
@@ -97,7 +97,7 @@ ideas = {
 
 			modifier = {
 				factory_energy_consumption = 0.15
-				conscription = 0.1
+				conscription = 0.07
 				surrender_limit = 0.1
 				resistance_damage_to_garrison_on_our_occupied_states = 0.5
 				training_time_factor = -0.1
@@ -163,7 +163,7 @@ ideas = {
 
 			modifier = {
 				factory_energy_consumption = 0.1
-				conscription = 0.15
+				conscription = 0.1
 				army_core_defence_factor = 0.25
 				army_core_attack_factor = 0.25
 				defensive_war_stability_factor = 0.25
@@ -208,7 +208,7 @@ ideas = {
 
 			modifier = {
 				factory_energy_consumption = 0.2
-				conscription = 0.2
+				conscription = 0.13
 				drift_defence_factor = 0.1
 				political_power_factor = -0.15
 				industrial_capacity_factory = -0.05
@@ -281,7 +281,7 @@ ideas = {
 
 			modifier = {
 				factory_energy_consumption = 0.35
-				conscription = 0.25
+				conscription = 0.16
 				industrial_capacity_factory = -0.15
 				industrial_capacity_dockyard = -0.15
 				production_speed_buildings_factor = -0.15
@@ -344,7 +344,7 @@ ideas = {
 			level = 1
 
 			modifier = {
-				conscription = 0.35
+				conscription = 0.19
 				industrial_capacity_factory = -0.1
 				industrial_capacity_dockyard = -0.1
 				production_speed_buildings_factor = -0.1
@@ -381,7 +381,7 @@ ideas = {
 			
 
 			modifier = {
-				conscription = 0.25
+				conscription = 0.2
 				drift_defence_factor = 0.15
 				army_speed_factor = -0.15
 				coordination_bonus = -0.1

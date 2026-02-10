@@ -3,3 +3,6 @@ FAJ_danger_for_jake = {
 	
 	priority = 100
 }
+
+FAJ_balance_of_power_category = {
+}

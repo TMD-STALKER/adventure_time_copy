@@ -4,7 +4,7 @@ state={
 	provinces={
 		258 960 1142 1302 1438 1718 1826 2000 2010 
 	}
-	manpower = 45000
+	manpower = 15000
 	state_category = rural local_supplies=1.0 
 	
 	history={

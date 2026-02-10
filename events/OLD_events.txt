@@ -141,3 +141,60 @@ country_event = {
 		}
 	}
 }
+country_event = {
+    id = old.5
+	title = old.5.t
+	desc = old.5.d
+	picture = GFX_report_event_OLD_angry
+    is_triggered_only = yes
+
+    option = { 
+		name = old.5.a
+		ai_chance = {
+			base = 1
+		}
+		end_puppet = FROM
+		add_war_support = -0.15
+		add_political_power = -150
+		FROM = {
+			country_event = da.1
+			leave_faction = yes
+			add_political_power = 150
+		}
+	}
+    option = { 
+		name = old.5.b
+		ai_chance = {
+			base = 5
+		}
+		add_war_support = 0.05
+		end_puppet = FROM
+		FROM = {
+			every_owned_state = { add_core_of = ROOT }
+			leave_faction = yes
+			add_political_power = 75
+			country_event = net.1
+		}
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+country_event = {
+    id = old.6
+	title = old.6.t
+	desc = old.6.d
+	picture = GFX_report_event_PBB_vote_day
+    is_triggered_only = yes
+
+    option = { 
+		name = old.6.a
+		set_cosmetic_tag = OLD_independed
+		set_rule = {
+			can_create_factions = yes
+		}
+		custom_effect_tooltip = content_not_ready
+		load_focus_tree = generic
+	}
+}

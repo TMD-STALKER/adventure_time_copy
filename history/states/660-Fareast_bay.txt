@@ -9,7 +9,7 @@ state={
 		steel = 10
 		tungsten = 10
 	}
-	manpower = 45000
+	manpower = 15000
 	state_category = metropolis local_supplies=1.0
 	history={
 		owner = DPE

@@ -9,7 +9,7 @@ state={
 		steel = 5
 		oil = 65
 	}
-	manpower = 45000
+	manpower = 15000
 	state_category = town local_supplies=1.0 
 	history={
 		owner = DTV

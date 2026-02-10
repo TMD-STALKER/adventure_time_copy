@@ -4,7 +4,7 @@ state={
 	provinces={
 		148 965 2005 2007 2015 
 	}
-	manpower = 45000
+	manpower = 15000
 	state_category = town local_supplies=1.0 
 	
 	history={

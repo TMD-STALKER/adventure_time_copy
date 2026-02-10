@@ -21,7 +21,7 @@ country_event = {
 
     option = { 
 		name = debug.2.a
-		country_event = debug.3
+		hidden_effect = { country_event = debug.3 }
 	}
 	option = { 
 		name = debug.2.b
@@ -36,10 +36,11 @@ country_event = {
 
     option = { 
 		name = debug.3.a
-		country_event = debug.4
+		hidden_effect = { country_event = debug.4 }
 	}
 	option = { 
 		name = debug.3.b
+		add_manpower = -1
 	}
 }
 country_event = {
@@ -133,32 +134,6 @@ country_event = {
 	#fire_only_once = yes
 
 	immediate = {
-		uncomplete_national_focus = {
-				  focus = SHARED_this_is_end_ist_it
-				  uncomplete_children = yes
-				  refund_political_power = no
-				}
-		
-				if = {
-					limit = {
-						has_completed_focus = SHARED_we_need_mans
-					}
-					add_manpower = -23725
-					remove_ideas = SHARED_we_need_mans
-				}
-				if = {
-					limit = {
-						has_completed_focus = SHARED_we_need_weapons
-					}
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = -23725
-					}
-					add_equipment_to_stockpile = {
-						type = support_equipment
-						amount = -12725
-					}
-				}
 				if = {
 					limit = {
 						has_completed_focus = SHARED_train_new_army_of_liberation
@@ -230,6 +205,31 @@ country_event = {
 						has_completed_focus = SHARED_secret_industry
 					}
 					add_offsite_building = { type = arms_factory level = -1 }
+				}
+				if = {
+					limit = {
+						has_completed_focus = SHARED_we_need_mans
+					}
+					add_manpower = -23725
+					remove_ideas = SHARED_we_need_mans
+				}
+				if = {
+					limit = {
+						has_completed_focus = SHARED_we_need_weapons
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -23725
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = -12725
+					}
+				}
+		uncomplete_national_focus = {
+				  focus = SHARED_this_is_end_ist_it
+				  uncomplete_children = yes
+				  refund_political_power = no
 				}
 	}
 	

@@ -25,7 +25,12 @@
 #
 #	can be added to countries, states, unit leaders or special projects
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
-
+OLD_shavels_mod = {
+	icon = GFX_modifiers_sabotaged_resource
+	
+	enemy_attrition = 0.15
+	enemy_army_speed_factor = -0.2
+}
 MOD_concenternate_decision = {
 	icon = GFX_modifiers_sabotaged_resource
 	resistance_growth = 1

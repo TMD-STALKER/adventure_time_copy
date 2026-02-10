@@ -4,7 +4,7 @@ state={
 	provinces={
 		1005 
 	}
-	manpower = 45000
+	manpower = 15000
 	resources={
 		oil = 14
 		coal = 3

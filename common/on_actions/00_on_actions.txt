@@ -861,7 +861,8 @@ on_actions = {
 							load_focus_tree = mfm_focus
 						}
 						5 = {
-							load_focus_tree = OLD_focus_tree
+							#load_focus_tree = OLD_focus_tree
+							load_focus_tree = mfm_focus
 						}
 						5 = {
 							load_focus_tree = PBB_focus_tree
@@ -1959,18 +1960,32 @@ on_actions = {
 
 	on_monthly_PBB = {
 		effect = {
-			if = {
+			else_if = {
+				limit = {	
+					has_country_flag = pbb_its_bad_time_forth
+				}
+				clr_country_flag = pbb_its_bad_time_forth
+				clr_country_flag = pbb_its_bad_time_third
+				clr_country_flag = pbb_its_bad_time_second
+				clr_country_flag = pbb_its_bad_time
+				PBB_bonne_bad = yes
+			}
+			else_if = {
+				limit = {	
+					has_country_flag = pbb_its_bad_time_third
+				}
+				set_country_flag = pbb_its_bad_time_forth
+			}
+			else_if = {
 				limit = {	
 					has_country_flag = pbb_its_bad_time_second
 				}
-				clr_country_flag = pbb_its_bad_time_second
-				PBB_bonne_bad = yes
+				set_country_flag = pbb_its_bad_time_third
 			}
 			else_if = {
 				limit = {	
 					has_country_flag = pbb_its_bad_time
 				}
-				clr_country_flag = pbb_its_bad_time
 				set_country_flag = pbb_its_bad_time_second
 			}
 			else = {

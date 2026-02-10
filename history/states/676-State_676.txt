@@ -7,7 +7,7 @@ state={
 	resources={
 		chromium = 14
 	}
-	manpower = 45000
+	manpower = 15000
 	state_category = town local_supplies=1.0 
 	history={
 		owner = DCT

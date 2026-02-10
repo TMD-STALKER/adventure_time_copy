@@ -9,7 +9,7 @@ state={
 		tungsten = 4
 		oil = 17
 	}
-	manpower = 45000
+	manpower = 15000
 	state_category = town local_supplies=1.0 
 	
 	history={

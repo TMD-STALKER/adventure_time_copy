@@ -1,3 +1,41 @@
+FAJ_balance_of_power_category = {
+	test_1 = { 
+		priority = 100
+		visible = { is_debug = yes }
+		available = {
+			
+		}
+		complete_effect = {
+			add_power_balance_value = {
+				id = FAJ_power_balance
+				value = -0.2
+			}
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	test_2 = { 
+		priority = 100
+		visible = { is_debug = yes }
+		available = {
+			
+		}
+		complete_effect = {
+			add_power_balance_value = {
+				id = FAJ_power_balance
+				value = 0.2
+			}
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
 FAJ_danger_for_jake = {
 	FAJ_jake_need_healing = {
 		priority = 100

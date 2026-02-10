@@ -34,6 +34,7 @@ set_popularities = {
 	ice = 0
 	slime = 0
 }
+set_major = yes
 add_ideas = {
 	all_adults_serve1
 	########

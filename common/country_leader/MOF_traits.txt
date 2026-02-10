@@ -3,7 +3,7 @@ leader_traits = {
 	ai_agressive = {
 		random = no
 		ai_focus_aggressive_factor = 1
-		ai_desired_divisions_factor = 1
+		ai_desired_divisions_factor = 2
 		
 	}
 	

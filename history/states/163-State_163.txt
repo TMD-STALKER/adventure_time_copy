@@ -4,7 +4,7 @@ state={
 	provinces={
 		124 331 1227 1408 2033 
 	}
-	manpower = 45000
+	manpower = 15000
 	state_category = rural local_supplies=1.0 
 	resources={
 		chromium = 5
