@@ -228,24 +228,27 @@ capture_items = {
 			OR = {
 				any_subject_country = {
 					has_country_flag = have_ice_crown
+					has_civil_war = no
 				}
 				AND = {
 					any_war_score > 29
 					any_enemy_country = {
 						surrender_progress > 0.85
 						has_country_flag = have_ice_crown
+						has_civil_war = no
 					}
 				}
 			}
 		}
 		available = {
-			
+			has_civil_war = no
 		}
 
 		complete_effect = { 
 			random_other_country = {
 				limit = {
 					has_country_flag = have_ice_crown
+					has_civil_war = no
 				}
 				add_war_support = -0.01
 				clr_country_flag = have_ice_crown
@@ -269,24 +272,27 @@ capture_items = {
 			OR = {
 				any_subject_country = {
 					has_country_flag = have_FAJ_sword
+					has_civil_war = no
 				}
 				AND = {
 					any_war_score > 29
 					any_enemy_country = {
 						surrender_progress > 0.85
 						has_country_flag = have_FAJ_sword
+						has_civil_war = no
 					}
 				}
 			}
 		}
 		available = {
-			
+			has_civil_war = no
 		}
 
 		complete_effect = { 
 			random_other_country = {
 				limit = {
 					has_country_flag = have_FAJ_sword
+					has_civil_war = no
 				}
 				add_war_support = -0.01
 				clr_country_flag = have_FAJ_sword
@@ -310,24 +316,27 @@ capture_items = {
 			OR = {
 				any_subject_country = {
 					has_country_flag = have_cup_sword
+					has_civil_war = no
 				}
 				AND = {
 					any_war_score > 29
 					any_enemy_country = {
 						surrender_progress > 0.85
 						has_country_flag = have_cup_sword
+						has_civil_war = no
 					}
 				}
 			}
 		}
 		available = {
-			
+			has_civil_war = no
 		}
 
 		complete_effect = { 
 			random_other_country = {
 				limit = {
 					has_country_flag = have_cup_sword
+					has_civil_war = no
 				}
 				add_war_support = -0.01
 				clr_country_flag = have_cup_sword
@@ -351,24 +360,27 @@ capture_items = {
 			OR = {
 				any_subject_country = {
 					has_country_flag = have_pbb_cloth
+					has_civil_war = no
 				}
 				AND = {
 					any_war_score > 29
 					any_enemy_country = {
 						surrender_progress > 0.85
 						has_country_flag = have_pbb_cloth
+						has_civil_war = no
 					}
 				}
 			}
 		}
 		available = {
-			
+			has_civil_war = no
 		}
 
 		complete_effect = { 
 			random_other_country = {
 				limit = {
 					has_country_flag = have_pbb_cloth
+					has_civil_war = no
 				}
 				add_war_support = -0.01
 				clr_country_flag = have_pbb_cloth
@@ -392,24 +404,27 @@ capture_items = {
 			OR = {
 				any_subject_country = {
 					has_country_flag = have_ice_cloth
+					has_civil_war = no
 				}
 				AND = {
 					any_war_score > 29
 					any_enemy_country = {
 						surrender_progress > 0.85
 						has_country_flag = have_ice_cloth
+						has_civil_war = no
 					}
 				}
 			}
 		}
 		available = {
-			
+			has_civil_war = no
 		}
 
 		complete_effect = { 
 			random_other_country = {
 				limit = {
 					has_country_flag = have_ice_cloth
+					has_civil_war = no
 				}
 				add_war_support = -0.01
 				clr_country_flag = have_ice_cloth
@@ -433,24 +448,27 @@ capture_items = {
 			OR = {
 				any_subject_country = {
 					has_country_flag = have_stone_helmet
+					has_civil_war = no
 				}
 				AND = {
 					any_war_score > 29
 					any_enemy_country = {
 						surrender_progress > 0.85
 						has_country_flag = have_stone_helmet
+						has_civil_war = no
 					}
 				}
 			}
 		}
 		available = {
-			
+			has_civil_war = no
 		}
 
 		complete_effect = { 
 			random_other_country = {
 				limit = {
 					has_country_flag = have_stone_helmet
+					has_civil_war = no
 				}
 				add_war_support = -0.01
 				clr_country_flag = have_stone_helmet
@@ -474,18 +492,20 @@ capture_items = {
 			OR = {
 				any_subject_country = {
 					has_country_flag = have_pies
+					has_civil_war = no
 				}
 				AND = {
 					any_war_score > 29
 					any_enemy_country = {
 						surrender_progress > 0.85
 						has_country_flag = have_pies
+						has_civil_war = no
 					}
 				}
 			}
 		}
 		available = {
-			
+			has_civil_war = no
 		}
 
 		complete_effect = { 
@@ -515,24 +535,27 @@ capture_items = {
 			OR = {
 				any_subject_country = {
 					has_country_flag = have_bublik_of_bonne
+					has_civil_war = no
 				}
 				AND = {
 					any_war_score > 29
 					any_enemy_country = {
 						surrender_progress > 0.85
 						has_country_flag = have_bublik_of_bonne
+						has_civil_war = no
 					}
 				}
 			}
 		}
 		available = {
-			
+			has_civil_war = no
 		}
 
 		complete_effect = { 
 			random_other_country = {
 				limit = {
 					has_country_flag = have_bublik_of_bonne
+					has_civil_war = no
 				}
 				add_war_support = -0.01
 				clr_country_flag = have_bublik_of_bonne
@@ -556,24 +579,27 @@ capture_items = {
 			OR = {
 				any_subject_country = {
 					has_country_flag = have_pbb_tiara
+					has_civil_war = no
 				}
 				AND = {
 					any_war_score > 29
 					any_enemy_country = {
 						surrender_progress > 0.85
 						has_country_flag = have_pbb_tiara
+						has_civil_war = no
 					}
 				}
 			}
 		}
 		available = {
-			
+			has_civil_war = no
 		}
 
 		complete_effect = { 
 			random_other_country = {
 				limit = {
 					has_country_flag = have_pbb_tiara
+					has_civil_war = no
 				}
 				add_war_support = -0.01
 				clr_country_flag = have_pbb_tiara
@@ -1162,6 +1188,10 @@ GENERIC_helping_others = {
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_neighbor_of = ROOT }
+				}
 				has_defensive_war = yes
 				NOT = {
 					has_war_with = ROOT
@@ -1172,7 +1202,20 @@ GENERIC_helping_others = {
 			}
 		}
 		visible = {
-			
+			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_neighbor_of = ROOT }
+				}
+				has_defensive_war = yes
+				NOT = {
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+					is_puppet_of = ROOT
+					is_subject_of = ROOT
+				}
+			}
+			has_completed_focus = GENERIC_home_for_people
 		}
 		available = {
 			FROM = { 
@@ -4021,6 +4064,7 @@ GENERIC_deal_of_era = {
 		on_map_mode = decision_view_only
 		target_trigger = {
 			FROM = {
+				is_neighbor_of = ROOT
 				NOT = { 
 					is_owned_by = ROOT
 				}
@@ -4029,6 +4073,7 @@ GENERIC_deal_of_era = {
 		}
 		visible = {
 			FROM = {
+				is_neighbor_of = ROOT
 				NOT = { 
 					is_owned_by = ROOT
 				}
@@ -4136,7 +4181,10 @@ GENERIC_deal_of_era = {
 		}
 		ai_will_do = {
 			base = 1
-			
+			modifier = {
+				FROM = { has_country_flag = poshol_nahui_bot }
+				add = -30
+			}
 		}
 	}
 	factory_deal = {
@@ -4147,6 +4195,7 @@ GENERIC_deal_of_era = {
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
+				is_neighbor_of = ROOT
 				NOT = { 
 					has_war_with = ROOT
 				}
@@ -4158,6 +4207,7 @@ GENERIC_deal_of_era = {
 		}
 		visible = {
 			FROM = {
+				is_neighbor_of = ROOT
 				NOT = { 
 					has_war_with = ROOT
 				}
@@ -4214,7 +4264,10 @@ GENERIC_deal_of_era = {
 		}
 		ai_will_do = {
 			base = 1
-			
+			modifier = {
+				FROM = { has_country_flag = poshol_nahui_bot }
+				add = -30
+			}
 		}
 	}
 	docy_deal = {
@@ -4225,6 +4278,7 @@ GENERIC_deal_of_era = {
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
+				is_neighbor_of = ROOT
 				NOT = { 
 					has_war_with = ROOT
 				}
@@ -4236,6 +4290,7 @@ GENERIC_deal_of_era = {
 		}
 		visible = {
 			FROM = {
+				is_neighbor_of = ROOT
 				NOT = { 
 					has_war_with = ROOT
 				}
@@ -4294,7 +4349,10 @@ GENERIC_deal_of_era = {
 		}
 		ai_will_do = {
 			base = 1
-			
+			modifier = {
+				FROM = { has_country_flag = poshol_nahui_bot }
+				add = -30
+			}
 		}
 	}
 }

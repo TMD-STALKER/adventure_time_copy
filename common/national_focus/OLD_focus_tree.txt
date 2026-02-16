@@ -535,6 +535,26 @@ focus_tree = {
 		x = 6
 		y = 4
 		completion_reward = {
+			PBB = {
+				country_event = old.7
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = effect_tooltip_agree
+					country_event = old.8
+					add_autonomy_score = {
+						value = 165
+						localization = OLD_deal_with_batler
+					}
+				PBB = {
+					every_owned_state = {
+						limit = {
+							any_neighbor_state = { is_owned_by = ROOT }
+						}
+						add_core_of = ROOT
+						transfer_state_to = ROOT
+					}
+				}
+			}
 			custom_effect_tooltip = content_not_ready
 			load_focus_tree = generic
 		}

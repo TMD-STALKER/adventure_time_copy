@@ -1789,6 +1789,21 @@ on_actions = {
 			}
 			every_country = {
 				limit = {
+					is_ai = yes
+					OR = {
+						has_idea = free_trade1
+						has_idea = export_focus1
+						has_idea = limited_exports1
+					}
+					has_game_rule = {
+						rule = absolute_chaos
+						option = DEFAULT
+					}
+				}
+				add_ideas = passive_ai
+			}
+			every_country = {
+				limit = {
 					OR = {
 						has_idea = volunteer_only1
 						has_idea = disarmed_nation1
@@ -2176,14 +2191,15 @@ on_actions = {
 						surrender_progress > 0.8
 						longest_war_length > 12
 					}
-					all_enemy_country = {
-						NOT = { has_cosmetic_tag = PBB_resistance_candy }
+					any_enemy_country = {
+						NOT = { has_cosmetic_tag = PBB_candy_hunta }
 					}
+					has_civil_war = no
 					any_owned_state = { is_capital = no }
 				}
 				country_event = {
 					id = pbb.15
-					days = 15
+					days = 35
 					random_hours = 12
 					random_days = 5
 				}

@@ -16,25 +16,25 @@ units = {
 	
 	division = {
 		name = "HOTDOG Division"
-		location = 77
+		location = 668
 		division_template = "HOTDOG Guard"
 		start_experience_factor = 1
 	}
 	division = {
 		name = "HOTDOG Division"
-		location = 77
+		location = 668
 		division_template = "HOTDOG Guard"
 		start_experience_factor = 1
 	}
 	division = {
 		name = "HOTDOG Division"
-		location = 77
+		location = 668
 		division_template = "HOTDOG Guard"
 		start_experience_factor = 1
 	}
 	division = {
 		name = "HOTDOG Division"
-		location = 77
+		location = 668
 		division_template = "HOTDOG Guard"
 		start_experience_factor = 1
 	}

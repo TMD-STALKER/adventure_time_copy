@@ -272,6 +272,10 @@ spriteTypes = {
 		name = "GFX_report_event_OLD_angry"
 		texturefile = "gfx/event_pictures/report_event_OLD_angry.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_OLD_speach"
+		texturefile = "gfx/event_pictures/report_event_OLD_speach.dds"
+	}
 	###BEK
 	spriteType = {
 		name = "GFX_report_event_BEK_angry"

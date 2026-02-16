@@ -198,3 +198,70 @@ country_event = {
 		load_focus_tree = generic
 	}
 }
+country_event = {
+    id = old.7
+	title = old.7.t
+	desc = old.7.d
+	picture = GFX_report_event_OLD_speach
+    is_triggered_only = yes
+
+    option = { 
+		name = old.7.a
+		ai_chance = {
+			base = 3
+		}
+		FROM = { 
+			country_event = old.8
+			add_autonomy_score = {
+				value = 165
+				localization = OLD_deal_with_batler
+			}
+			
+		}
+		every_owned_state = {
+			limit = {
+				any_neighbor_state = { is_owned_by = ROOT }
+			}
+			add_core_of = ROOT
+			transfer_state_to = ROOT
+		}
+		add_political_power = 80
+		army_experience = 5
+	}
+	option = { 
+		name = old.7.b
+		ai_chance = {
+			base = 1
+		}
+		add_stability = 0.05
+		FROM = {
+			country_event = net.1
+			add_autonomy_score = {
+				value = -200
+				localization = help_bb
+			}
+		}
+	}
+}
+country_event = {
+    id = old.8
+	title = old.8.t
+	desc = old.8.d
+	picture = GFX_report_event_OLD_speach
+    is_triggered_only = yes
+
+    option = { 
+		name = old.8.a
+		ai_chance = {
+			base = 3
+		}
+		
+	}
+	option = { 
+		name = old.8.b
+		ai_chance = {
+			base = 1
+		}
+		
+	}
+}

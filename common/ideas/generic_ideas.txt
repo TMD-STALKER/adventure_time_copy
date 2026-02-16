@@ -1,6 +1,20 @@
 ideas = {
     country = {
 		
+		passive_ai = {
+			allowed = {
+				original_tag = ROOT
+			}
+
+			allowed_civil_war = {
+				tag = ROOT
+			}
+			modifier = {
+				ai_desired_divisions_factor = -0.9
+				custom_modifier_tooltip = passive_ai_modifier
+			}
+		}
+		
 		commonstate_idea = {
 			picture = por_iberian_workers_united
 			available = {

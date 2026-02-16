@@ -29,7 +29,37 @@
 #				}
 #			}
 #		}
-
+within_reachable_land_distance_of_from = {
+    FROM = {
+        PREV = {
+            within_reachable_land_distance_of_prev = yes
+        }
+    }
+}
+within_reachable_land_distance_of_prev = {
+    if = {
+        limit = {
+            is_neighbor_of = PREV
+        }
+        custom_trigger_tooltip = {
+            tooltip = is_neighbor_of_prev_tt
+            # Nothing here, faster than always = yes
+        }
+    }
+    else = {
+        calculate_land_distance_of_prev = yes
+        custom_trigger_tooltip = {
+            check_variable = { closest_distance_to@PREV < distance }
+            tooltip = within_reachable_land_distance_of_prev_tt
+        }
+    }
+}
+calculate_land_distance_of_prev = {
+    set_temp_variable = { distance_in_km = modifier@diplomacy_distance }
+    multiply_temp_variable = { distance_in_km = modifier@diplomacy_distance_factor }
+    set_temp_variable = { distance = distance_in_km }
+    divide_temp_variable = { distance = 1.793 }
+}
 # This specifically overrides the rule check as to whether or not you can guarantee other ideologies
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME_TRIGGER = {
 	NOT = {
@@ -48,7 +78,7 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 				option = ALWAYS_FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -57,7 +87,7 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 				option = LIMITED
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -109,7 +139,7 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 			}
 			
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	
 	
@@ -126,7 +156,7 @@ DIPLOMACY_MILACC_ENABLE_TRIGGER = {
 				option = FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -161,7 +191,7 @@ DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
 				option = FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -209,7 +239,7 @@ DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 				option = FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -244,7 +274,7 @@ DIPLOMACY_OFFER_DOCKING_RIGHTS_ENABLE_TRIGGER = {
 				option = FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -279,7 +309,7 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 				option = FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -288,7 +318,7 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 				option = LIMITED
 			}
 		}
-		always = yes #handled by game logic, see above
+		within_reachable_land_distance_of_from = yes #handled by game logic, see above
 	}
 	if = {
 		limit = {
@@ -335,7 +365,7 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 				option = FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -344,7 +374,7 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 				option = LIMITED
 			}
 		}
-		always = yes #handled by game logic, see above
+		within_reachable_land_distance_of_from = yes #handled by game logic, see above
 	}
 	if = {
 		limit = {
@@ -391,7 +421,7 @@ DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
 				option = FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -438,7 +468,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 				option = ALWAYS_FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -447,7 +477,7 @@ DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 				option = LIMITED
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -542,7 +572,7 @@ DIPLOMACY_BOOST_PARTY_POPULARITY_ENABLE_TRIGGER = {
 				option = FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -589,7 +619,7 @@ DIPLOMACY_STAGE_COUP_ENABLE_TRIGGER = {
 				option = FREE
 			}
 		}
-		always = yes
+		within_reachable_land_distance_of_from = yes
 	}
 	if = {
 		limit = {
@@ -666,8 +696,10 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				option = ALWAYS_FREE
 			}
 		}
-		
-			always = yes
+		OR = {
+			has_idea = volunters_support
+			within_reachable_land_distance_of_from = yes
+		}
 	}
 	if = {
 		limit = {
@@ -676,7 +708,10 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				option = LIMITED
 			}
 		}
-		always = yes
+		OR = {
+			has_idea = volunters_support
+			within_reachable_land_distance_of_from = yes
+		}
 	}
 	if = {
 		limit = {

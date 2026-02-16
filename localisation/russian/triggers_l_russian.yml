@@ -41,7 +41,7 @@
  ice_king_pressure_tt_NOT: "Давление не максимально"
  opposition_winning_tt: "Поддержка оппозиции выше §Y50%§!"
  opposition_winning_tt_NOT: "Поддержка оппозиции ниже §Y50%§!"
- 
+ within_reachable_land_distance_of_prev_tt: "Должны быть соседями"
  
  ###################################################################################
  TRIGGER_HAS_COMBAT_MODIFIER: "Есть боевой модификатор: $MODIFIER|H$"

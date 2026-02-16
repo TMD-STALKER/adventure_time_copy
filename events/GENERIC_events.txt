@@ -1036,6 +1036,7 @@ country_event = {
 			hidden_effect = { add_political_power = 400 }
 			country_event = net.1
 		}
+		set_country_flag = poshol_nahui_bot
 		hidden_effect = {
 			random_owned_state = {
 				limit = {
@@ -1096,6 +1097,7 @@ country_event = {
 		ai_chance = {
 			base = 1
 		}
+		set_country_flag = poshol_nahui_bot
 		add_war_support = 0.01
 		add_political_power = 30
 		FROM = {
@@ -1154,6 +1156,7 @@ country_event = {
 		ai_chance = {
 			base = 1
 		}
+		set_country_flag = poshol_nahui_bot
 		add_war_support = 0.01
 		add_political_power = 30
 		FROM = {
@@ -2107,7 +2110,7 @@ country_event = {
 							limit = {
 								TAG = ROOT
 							}
-							to_state = RREV.PREV
+							to_state = PREV.PREV.PREV
 						}
 					}
 				}
