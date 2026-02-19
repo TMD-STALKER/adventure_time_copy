@@ -2029,7 +2029,7 @@
 	}
 	shared_focus = {
 		id = SHARED_project_of_new_bananaguards
-		icon = GFX_focus_ARG_universidad_de_buenos_aires
+		icon = GFX_focus_PBB_new_bananguard
 		cost = 10
 		prerequisite = {
 			focus = SHARED_gas_polks

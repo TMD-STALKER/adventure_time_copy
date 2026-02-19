@@ -26,6 +26,10 @@ spriteTypes = {
 	name = "GFX_focus_PBB_industry_for_war"
 	texturefile = "gfx/interface/goals/focus_PBB_industry_for_war.dds"			
 	}
+	SpriteType = {
+	name = "GFX_focus_PBB_new_bananguard"
+	texturefile = "gfx/interface/goals/focus_PBB_new_bananguard.dds"			
+	}
 
 	#### Generic continuous goal icons
 
