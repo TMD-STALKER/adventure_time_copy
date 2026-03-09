@@ -53,4 +53,99 @@ form_SKE_decision_category = {
 	visible = { 
 	}
 }
+form_RIVER_decision_category = {
+	icon = generic_formable_nations
+
+	allowed = {
+		OR = {
+			original_tag = DEN
+			original_tag = LRH
+			original_tag = BRZ
+			original_tag = OAK
+			original_tag = PGM
+			original_tag = TMT
+			original_tag = FOX
+		}
+	}
+
+	visible = { 
+	}
+}
+form_RIVER2_decision_category = {
+	icon = generic_formable_nations
+
+	allowed = {
+		original_tag = RIV
+	}
+
+	visible = { 
+	}
+}
+form_grandmlek_decision_category = {
+	icon = generic_formable_nations
+
+	allowed = {
+		original_tag = TMK
+	}
+
+	visible = { 
+	}
+}
+form_big_wolf_decision_category = {
+	icon = generic_formable_nations
+
+	allowed = {
+		OR = {
+			original_tag = WLT
+			original_tag = HUW
+			original_tag = WWL
+		}
+	}
+
+	visible = { 
+	}
+}
+form_knight_decision_category = {
+	icon = generic_formable_nations
+
+	allowed = {
+		OR = {
+			original_tag = FAJ
+			original_tag = BIL
+			original_tag = FHL
+			original_tag = ZHH
+			original_tag = TMT
+			original_tag = TGA
+			original_tag = SOM
+			original_tag = PGM
+			original_tag = MAR
+			original_tag = LRH
+			original_tag = KNG
+			original_tag = KEN
+			original_tag = GAD
+			original_tag = FTQ
+			original_tag = DEN
+		}
+	}
+
+	visible = {
+		OR = {
+			has_idea = autarkic_economy1
+			original_tag = KNG
+		}
+	}
+}
+form_swamp_decision_category = {
+	icon = generic_formable_nations
+
+	allowed = {
+		OR = {
+			original_tag = GFR
+			original_tag = IFI
+		}
+	}
+
+	visible = { 
+	}
+}
 

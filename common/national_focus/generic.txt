@@ -132,6 +132,10 @@ focus_tree = {
 			modifier = {
 				factor = 0 
 				threat < 0.5
+				has_game_rule = {
+					rule = absolute_chaos
+					option = DEFAULT
+				}
 			}
 		}
 		x = 1
@@ -2049,6 +2053,10 @@ focus_tree = {
 			modifier = {
 				factor = 0 
 				threat < 0.5
+				has_game_rule = {
+					rule = absolute_chaos
+					option = DEFAULT
+				}
 			}
 		}
 		x = 21
@@ -2391,6 +2399,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GENERIC_member_of
 		}
+		ai_will_do = {
+			factor = 2
+		}
 		bypass = {
 			OR = {
 				original_tag = NWZ
@@ -2527,6 +2538,9 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = GENERIC_mobilization
+		}
+		ai_will_do = {
+			factor = 1
 		}
 		available = {
 			OR = {

@@ -75,6 +75,36 @@
  EVF_unite_desert_fire: "Империя пламенных охотников"
  EVF_unite_desert_slime: "Вечный Магнеслайм"
  EVF_unite_desert_neutral: "Джордания"
+ 
+ river_cosmetic_tag_fire: "Федерация Лаваград"
+ river_cosmetic_tag_neutral: "Речной союз"
+ river_cosmetic_tag_slime: "Реки слизи"
+ river_cosmetic_tag_ice: "Гармония льдов"
+ river_cosmetic_tag_candy: "Сладководье"
+ 
+ river_cosmetic_tag_two_fire: "Лаворечье"
+ river_cosmetic_tag_two_candy: "Республика согласия"
+ river_cosmetic_tag_two_ice: "Реки льда и смерти"
+ river_cosmetic_tag_two_slime: "Вечноречье"
+ river_cosmetic_tag_two_neutral: "Гранд-Междуречье"
+ 
+ grandmel_cosmetic_tag_fire: "Империя Грандмерк"
+ grandmel_cosmetic_tag_candy: "Республика Грандмлек"
+ grandmel_cosmetic_tag_ice: "Утопия Грандмлек"
+ grandmel_cosmetic_tag_slime: "Грандслизь"
+ grandmel_cosmetic_tag_neutral: "Грандмлек"
+ 
+ bigwolf_cosmetic_tag_fire: "Огне-Пасть волка"
+ bigwolf_cosmetic_tag_candy: "Сласте-Пасть волка"
+ bigwolf_cosmetic_tag_ice: "Ледо-Пасть волка"
+ bigwolf_cosmetic_tag_slime: "Слизе-Пасть волка"
+ bigwolf_cosmetic_tag_neutral: "Пасть волка"
+ 
+ knight_cosmetic_tag_fire: "Великий орден огненосцев"
+ knight_cosmetic_tag_slime: "Орден слизи и чести"
+ knight_cosmetic_tag_ice: "Орден вечных льдов"
+ knight_cosmetic_tag_candy: "Великий орден сласти"
+ knight_cosmetic_tag_neutral: "Великий орден защищённых"
 
  brkgla_desert_cosmetic_tag_ice: "Соединённые Горы Мороженого"
  kirill_smart_slime: "Республика взрывной слизи"
@@ -92,6 +122,19 @@
  SKE_cosmetic_neutral: "Королевство скелетов"
  SKE_cosmetic_fire: "Королевство костей и сажи"
  SKE_cosmetic_ice: "Империя забытых"
+
+ gfr_desert_cosmetic_tag_slime: "Жабьи топи"
+ gfr_desert_cosmetic_tag_candy: "Федерация Вуубиивуу"
+ gfr_desert_cosmetic_tag_neutral: "Жабьи владения"
+ gfr_desert_cosmetic_tag_fire: "Власть Жабы"
+ gfr_desert_cosmetic_tag_ice: "Жабья Криотопь"
+
+ifi_desert_cosmetic_tag_neutral: "Непотопляемое королевство"
+ifi_desert_cosmetic_tag_fire: "Империя Вуубиивуу"
+ifi_desert_cosmetic_tag_slime: "Великие топи слизи"
+ifi_desert_cosmetic_tag_candy: "Рыбье содружество"
+ifi_desert_cosmetic_tag_ice: "Ледяной диктат"
+ 
  
 
  

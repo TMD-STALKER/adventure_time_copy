@@ -1,3 +1,448 @@
+form_knight_decision_category = {
+	form_knight_decision = {
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 395
+				state = 418
+				state = 391
+				state = 393
+				state = 401
+				state = 375
+				state = 346
+				state = 364
+				state = 381
+				state = 344
+				state = 341
+				state = 366 ###
+				state = 345
+				state = 352
+				state = 316
+				state = 317
+				state = 298
+				state = 303
+				state = 421
+				state = 396
+				state = 424
+				state = 350
+				state = 417 ###
+				state = 365
+				state = 388
+				state = 386
+				state = 371
+				state = 357
+				state = 347
+				state = 351
+				state = 296
+				state = 297
+				state = 215
+				state = 313
+				state = 318
+				state = 264
+				state = 274
+			}
+		}
+		icon = generic_form_nation
+		
+		visible = {
+			
+		}
+		available = {
+			is_puppet = no
+			knight_trigger = yes
+		}
+		complete_effect = {
+			remove_ideas = only_iam
+			set_cosmetic_tag = knight_cosmetic_tag
+			custom_effect_tooltip = grandmel_cosmetic_tag_tt
+			remove_ideas = only_iam
+			hidden_effect = {
+				country_event = gener.46
+				add_country_leader_trait = leader_of_orden
+				every_controlled_state = {
+					limit = {
+						knight_territory = yes
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 100
+		}
+	}
+}
+form_big_wolf_decision_category = {
+	form_big_wolf_decision = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 364
+				state = 350
+				state = 316
+				state = 298
+				state = 303
+				state = 317
+				state = 366 ##
+				state = 345 ##
+				state = 267
+				state = 250
+				state = 274
+				state = 235
+				state = 313
+				state = 318
+				state = 264
+				state = 296
+				state = 421
+				state = 396
+				state = 424
+				state = 350
+				state = 365 ##
+				state = 388
+				state = 386
+				state = 371
+				state = 357
+				state = 347
+				state = 351
+			}
+		}
+		icon = generic_form_nation
+		
+		visible = {
+			
+		}
+		fire_only_once = yes
+		
+		available = {
+			is_puppet = no 
+			wolf_trigger = yes
+		}
+		complete_effect = {
+			remove_ideas = only_iam
+			set_cosmetic_tag = bigwolf_cosmetic_tag
+			custom_effect_tooltip = grandmel_cosmetic_tag_tt
+			hidden_effect = { 
+				every_controlled_state = {
+					limit = {
+						wolf_territory = yes
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 100
+		}
+	}
+}
+form_grandmlek_decision_category = {
+	form_grandmelk_decision = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 364
+				state = 381
+				state = 346
+				state = 350
+				state = 316
+				state = 298
+				state = 303
+				state = 317
+				state = 366
+				state = 345
+				state = 352
+				state = 344
+				state = 341
+			}
+		}
+		icon = generic_form_nation
+		fire_only_once = yes
+		visible = {
+			
+		}
+		available = {
+			is_puppet = no 
+			grandmelk_trigger = yes
+		}
+		complete_effect = {
+			remove_ideas = only_iam
+			set_cosmetic_tag = grandmel_cosmetic_tag
+			custom_effect_tooltip = grandmel_cosmetic_tag_tt
+			hidden_effect = { 
+				every_controlled_state = {
+					limit = {
+						grandmelk_territory = yes
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 100
+		}
+	}
+}
+form_RIVER2_decision_category = {
+	form_RIVER2_decision = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 450 #vavilon
+				state = 448
+				state = 470
+				state = 489
+				state = 509
+				state = 527 #lokot
+				state = 492
+				state = 462 #derevna
+				state = 468
+				state = 502
+				state = 536
+				state = 517
+				state = 524
+				state = 558 #besi
+				state = 568
+				state = 539
+				state = 522
+				state = 548 #margaret
+				state = 410 #hui
+				state = 442 #derevushka
+				state = 435
+				state = 474
+				state = 427
+				state = 411
+				state = 394 #poselok
+				state = 412
+				state = 404
+				state = 369
+				state = 308 #snakes
+			}
+		}
+		fire_only_once = yes
+		icon = generic_form_nation
+		
+		visible = {
+			
+		}
+		available = {
+			is_puppet = no 
+			vavilon_trigger = yes
+		}
+		complete_effect = {
+			remove_ideas = only_iam
+			set_cosmetic_tag = river_cosmetic_tag_two
+			custom_effect_tooltip = river_cosmetic_tag_two_tt
+			hidden_effect = { 
+				every_controlled_state = {
+					limit = {
+						vavilon_territory = yes
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 200
+		}
+	}
+}
+form_RIVER_decision_category = {
+	form_RIVER_decision = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 359
+					state = 338
+					state = 339
+					state = 353
+					state = 363
+					state = 340
+					state = 370
+					state = 368
+					state = 383
+			}
+		}
+		fire_only_once = yes
+		icon = generic_form_nation
+		
+		visible = { 
+			any_owned_state = {
+				OR = {
+					state = 359
+					state = 338
+					state = 339
+					state = 353
+					state = 363
+					state = 340
+					state = 370
+					state = 368
+					state = 383
+				}
+			}
+		}
+		available = {
+			is_puppet = no #Обычно марионетки не формируют империи
+			controls_state = 359
+			controls_state = 338
+			controls_state = 339
+			controls_state = 353
+			controls_state = 363
+			controls_state = 340
+			controls_state = 370
+			controls_state = 368
+			controls_state = 383
+		}
+		complete_effect = {
+			remove_ideas = only_iam
+			set_cosmetic_tag = river_cosmetic_tag
+			custom_effect_tooltip = river_cosmetic_tag_tt
+			hidden_effect = { 
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 359
+							state = 338
+							state = 339
+							state = 353
+							state = 363
+							state = 340
+							state = 370
+							state = 368
+							state = 383
+						}
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 200
+		}
+	}
+	south_reaver_expansion = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 374
+			}
+		}
+		icon = infiltrate_state
+		
+		visible = { 
+			has_cosmetic_tag = river_cosmetic_tag
+		}
+		fire_only_once = yes
+		available = {
+			controls_state = 374
+		}
+		complete_effect = {
+			374 = { add_core_of = ROOT }
+		}
+		ai_will_do = { 
+			factor = 200
+		}
+	}
+	meedle_reaver_expansion = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 321
+				state = 311
+				state = 330
+				state = 306
+			}
+		}
+		icon = infiltrate_state
+		
+		visible = { 
+			has_cosmetic_tag = river_cosmetic_tag
+		}
+		fire_only_once = yes
+		available = {
+			controls_state = 321
+			controls_state = 311
+			controls_state = 330
+			controls_state = 306
+		}
+		complete_effect = {
+			321 = { add_core_of = ROOT }
+			311 = { add_core_of = ROOT }
+			330 = { add_core_of = ROOT }
+			306 = { add_core_of = ROOT }
+		}
+		ai_will_do = { 
+			factor = 200
+		}
+	}
+	east_reaver_expansion = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 335
+				state = 295
+				state = 328
+				state = 279
+				state = 284
+			}
+		}
+		icon = infiltrate_state
+		
+		visible = { 
+			has_cosmetic_tag = river_cosmetic_tag
+		}
+		fire_only_once = yes
+		available = {
+			controls_state = 335
+			controls_state = 295
+			controls_state = 328
+			controls_state = 279
+			controls_state = 284
+		}
+		complete_effect = {
+			335 = { add_core_of = ROOT }
+			295 = { add_core_of = ROOT }
+			328 = { add_core_of = ROOT }
+			279 = { add_core_of = ROOT }
+			284 = { add_core_of = ROOT }
+		}
+		ai_will_do = { 
+			factor = 200
+		}
+	}
+	north_reaver_expansion = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 275
+				state = 231
+				state = 230
+				state = 218
+				state = 238
+				state = 270
+				state = 245
+			}
+		}
+		icon = infiltrate_state
+		
+		visible = { 
+			has_cosmetic_tag = river_cosmetic_tag
+		}
+		fire_only_once = yes
+		available = {
+			controls_state = 275
+			controls_state = 231
+			controls_state = 230
+			controls_state = 218
+			controls_state = 238
+			controls_state = 270
+			controls_state = 245
+		}
+		complete_effect = {
+			275 = { add_core_of = ROOT }
+			231 = { add_core_of = ROOT }
+			230 = { add_core_of = ROOT }
+			218 = { add_core_of = ROOT }
+			238 = { add_core_of = ROOT }
+			270 = { add_core_of = ROOT }
+			245 = { add_core_of = ROOT }
+		}
+		ai_will_do = { 
+			factor = 200
+		}
+	}
+}
 form_desert_category = {
 	form_desert_decision = {
 		highlight_states = {
@@ -144,6 +589,7 @@ form_desert_category = {
 				state = 520
 			}
 		}
+		fire_only_once = yes
 		icon = generic_form_nation
 		
 		visible = { #Опционально, если общих настроек в категории не достаточно и нужно для отдельных стран что-то дополнительно уточнять
@@ -154,6 +600,7 @@ form_desert_category = {
 			desert_control = yes
 		}
 		complete_effect = {
+			remove_ideas = only_iam
 			if = {
 				limit = {
 					original_tag = BRK
@@ -282,12 +729,13 @@ form_pirat_desert_category = {
 			}
 		}
 		icon = generic_form_nation
-		
+		fire_only_once = yes
 		available = {
 			is_puppet = no #Обычно марионетки не формируют империи
 			desert_pirat_control = yes
 		}
 		complete_effect = {
+		remove_ideas = only_iam
 			set_cosmetic_tag = kirill_smart
 			custom_effect_tooltip = pirat_desert_cosmetic_tag_tt
 			hidden_effect = { 
@@ -342,7 +790,7 @@ form_ring_decision_category = {
 			}
 		}
 		icon = generic_form_nation
-		
+		fire_only_once = yes
 		available = {
 			is_puppet = no 
 			controls_state = 419
@@ -355,6 +803,7 @@ form_ring_decision_category = {
 			controls_state = 374
 		}
 		complete_effect = {
+		remove_ideas = only_iam
 			set_cosmetic_tag = RPC_cosmetic
 				every_controlled_state = {
 					limit = {
@@ -401,7 +850,7 @@ form_SKE_decision_category = {
 			}
 		}
 		icon = generic_form_nation
-		
+		fire_only_once = yes
 		available = {
 			is_puppet = no 
 			controls_state = 80
@@ -430,6 +879,7 @@ form_SKE_decision_category = {
 		}
 		complete_effect = {
 			set_cosmetic_tag = SKE_cosmetic
+			remove_ideas = only_iam
 			every_controlled_state = {
 				limit = {
 					OR = {
@@ -457,6 +907,98 @@ form_SKE_decision_category = {
 		}
 		ai_will_do = { 
 			factor = 200
+		}
+	}
+}
+form_swamp_decision_category = {
+	form_swamp_decision = {
+		highlight_states = {
+				highlight_state_targets = {
+					state = 371
+					state = 357
+					state = 351
+					state = 347
+					state = 378
+					state = 379
+					state = 377
+					state = 405
+					state = 416
+					state = 440
+					state = 439
+					state = 423
+					state = 397
+					state = 399
+					state = 389
+					state = 415
+					state = 403
+					state = 434
+					state = 469
+					state = 485
+					state = 446
+					state = 426
+					state = 417
+					state = 365
+					state = 388
+					state = 386
+					state = 467
+					state = 462
+					state = 482
+					state = 403
+				}
+		}
+		fire_only_once = yes
+		available = {
+			is_swamp = yes
+		}
+		icon = generic_form_nation
+		complete_effect = {
+			remove_ideas = only_iam
+			every_controlled_state = {
+				limit = {
+					OR = {
+							state = 371
+							state = 357
+							state = 351
+							state = 347
+							state = 378
+							state = 379
+							state = 377
+							state = 405
+							state = 416
+							state = 440
+							state = 439
+							state = 423
+							state = 397
+							state = 399
+							state = 389
+							state = 415
+							state = 403
+							state = 434
+							state = 469
+							state = 485
+							state = 446
+							state = 426
+							state = 417
+							state = 365
+							state = 388
+							state = 386
+							state = 467
+							state = 462
+							state = 482
+							state = 403
+					}
+				}
+				add_core_of = ROOT
+			}
+			if = {
+				limit = {
+					original_tag = GFR
+				}
+				set_cosmetic_tag = gfr_desert_cosmetic_tag
+			}
+			else = {
+				set_cosmetic_tag = ifi_desert_cosmetic_tag
+			}
 		}
 	}
 }

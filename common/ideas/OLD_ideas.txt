@@ -1,6 +1,137 @@
 ideas = {
     country = {
 		
+		OLD_rats_in_the_kingdom = {
+			allowed = {
+				original_tag = ROOT
+			}
+
+			allowed_civil_war = {
+				tag = ROOT
+			}
+			picture = usa_desegregation_1
+			
+			modifier = {
+				candy_drift = -0.1
+				drift_defence_factor = -0.13
+				political_power_factor = -0.13
+				trade_opinion_factor = -0.13
+				subjects_autonomy_gain = 1
+			}
+		}
+		OLD_rats_in_the_kingdom2 = {
+			allowed = {
+				original_tag = ROOT
+			}
+
+			allowed_civil_war = {
+				tag = ROOT
+			}
+			picture = usa_desegregation_1
+			
+			modifier = {
+				neutral_drift = -0.1
+				drift_defence_factor = -0.13
+				political_power_factor = -0.13
+				trade_opinion_factor = -0.13
+				subjects_autonomy_gain = 1
+			}
+		}
+		
+		OLD_ready_for_liberation = {
+			allowed = {
+				original_tag = OLD
+			}
+
+			allowed_civil_war = {
+				tag = OLD
+			}
+			picture = usa_desegregation_1
+			
+			modifier = {
+				political_power_factor = 0.05
+				experience_gain_army_factor = 0.05
+				army_attack_factor = 0.05
+				resistance_damage_to_garrison_on_our_occupied_states = 0.1
+				resistance_growth_on_our_occupied_states = 0.15
+			}
+			targeted_modifier = {
+				tag = PBB
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+	
+		OLD_radio_of_science = {
+			allowed = {
+				original_tag = OLD
+			}
+
+			allowed_civil_war = {
+				tag = OLD
+			}
+			picture = generic_radar
+			
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.05
+				war_support_factor = 0.05
+				war_stability_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = PBB
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+		}
+		OLD_radio_of_science2 = {
+			allowed = {
+				original_tag = OLD
+			}
+
+			allowed_civil_war = {
+				tag = OLD
+			}
+			picture = generic_radar
+			
+			modifier = {
+				war_support_factor = -0.1
+				war_stability_factor = -0.1
+				resistance_target = 0.1
+				resistance_activity = 0.1
+			}
+			targeted_modifier = {
+				tag = PBB
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.1
+			}
+			targeted_modifier = {
+				tag = OLD
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.1
+			}
+		}
+		
+		OLD_shine_in_the_dark = {
+			allowed = {
+				original_tag = OLD
+			}
+
+			allowed_civil_war = {
+				tag = OLD
+			}
+			picture = ITA_il_sol_dell_avvenire_ns
+			
+			modifier = {
+				decryption_factor = 0.35
+				encryption_factor = 0.35
+			}
+			targeted_modifier = {
+				tag = PBB
+				attack_bonus_against = 0.1
+			}
+		}
+		
 		OLD_education_with_princess = {
 		
 			allowed = {

@@ -133,7 +133,7 @@ FAJ_power_balance = {
 		icon = "GFX_bop_FAJ_finn_side"
 		
 		range = {
-			id = FAJ_min_finn_trust_range
+			id = FAJ_min_min_finn_trust_range
 			min = 0.15
 			max = 0.30
 			modifier = {

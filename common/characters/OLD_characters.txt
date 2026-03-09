@@ -4,6 +4,33 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/OLD/OLD_starchi.dds"
+				small="GFX_idea_OLD_starchi"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = OLD_starchi
+			cost = 100
+			allowed = {
+				original_tag = OLD
+				NOT = {
+					has_country_leader = {
+						character = OLD_starchi
+						ruling_only = yes
+					}
+				}
+			}
+			available = {
+				NOT = {
+					is_subject_of = PBB
+					is_in_faction_with = PBB
+				}
+			}
+			traits = {
+				OLD_trush_fighter
+			}
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		country_leader = {
@@ -15,6 +42,9 @@ characters = {
 			ideology = monarchy
 			expire = "1940.1.1.1"
 			id = -1
+			traits = {
+				OLD_trush_fighter
+			}
 		}
 		country_leader = {
 			ideology = neutral_slime
@@ -32,17 +62,190 @@ characters = {
 			id = -1
 		}
 	}
-	OLD_starchi2 = {
-		name = OLD_starchi
+	OLD_science = {
+		name = PBB_science
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/OLD/OLD_starchi.dds"
+				large = "gfx/leaders/PBB/PBB_batler.dds"
+				small="GFX_idea_PBB_sciencerat"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = OLD_science
+			cost = 100
+			allowed = {
+				original_tag = OLD
+				
+			}
+			available = {
+				has_country_flag = OLD_create_organization_of_resistance_flag
+			}
+			traits = {
+				PBB_rat
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	OLD_kenet = {
+		name = OLD_kenet
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OLD/OLD_kenet.dds"
+				small="GFX_idea_OLD_kenet"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = OLD_kenet
+			cost = 125
+			allowed = {
+				original_tag = OLD
+				
+			}
+			available = {
+				has_country_flag = OLD_create_organization_of_resistance_flag
+			}
+			traits = {
+				OLD_scientist_of_organization
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { }
+			visible = {
+				has_country_flag = OLD_create_organization_of_resistance_flag
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1 
+		}
+	}
+	OLD_banan = {
+		name = OLD_banan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OLD/OLD_banan.dds"
+				small="GFX_idea_OLD_fake_banan"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = OLD_banan
+			cost = 150
+			allowed = {
+				original_tag = OLD
+				
+			}
+			available = {
+				has_country_flag = OLD_create_organization_of_resistance_flag
+			}
+			traits = {
+				OLD_brave_warrior
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { }
+			visible = {
+				has_country_flag = OLD_create_organization_of_resistance_flag
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1 
+		}
+	}
+	OLD_miro = {
+		name = OLD_miro
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OLD/OLD_miro.dds"
+				small="GFX_idea_OLD_miro"
 			}
 		}
 		country_leader = {
 			ideology = monarchy
-			expire = "1944.1.1.1"
+			expire = "3990.1.1.1"
 			id = -1
+			desc = OLD_miro_desc
+			traits = {
+				OLD_mirotvorets
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = OLD_miro
+			cost = 150
+			allowed = {
+				original_tag = OLD
+				has_country_flag = OLD_resistance_flag
+			}
+			available = {
+				has_country_flag = OLD_resistance_flag
+				NOT = {
+					has_country_leader = {
+						character = OLD_miro
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				OLD_mirotvorets
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { }
+			visible = {
+				has_country_flag = OLD_resistance_flag
+			}
+			skill = 7
+			attack_skill = 7
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 6
+			legacy_id = -1 
+		}
+	}
+	OLD_cake = {
+		name = OLD_cake
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OLD/OLD_cake.dds"
+				small="GFX_idea_OLD_cake_doctor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = OLD_cake
+			cost = 100
+			allowed = {
+				original_tag = OLD
+				
+			}
+			available = {
+				has_country_flag = OLD_create_organization_of_resistance_flag
+			}
+			traits = {
+				OLD_doctor
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 }

@@ -51,6 +51,47 @@ leader_traits = {
 	##################
 	######ДЕБАФЫ######
 	##################
+	
+	strongest_fool = {
+		random = yes
+		research_speed_factor = -0.03
+		political_power_factor = -0.03
+		breakthrough_factor = 0.03
+		initiative_factor = 0.03
+	}
+	hands_no_hands = {
+		random = yes
+		equipment_bonus = {
+			infantry_equipment = {
+				instant = yes
+				maximum_speed = -0.05
+				hardness = -0.05
+			}
+			support_equipment = {
+				instant = yes
+				reliability = -0.05
+				uild_cost_ic = 0.05
+			}
+			infantry_equipment = {
+				instant = yes
+				reliability = -0.05
+				hardness = -0.05
+			}
+		}
+	}
+	
+	brainless = {
+		random = yes
+		stability_factor = -0.5
+		political_power_gain = -0.5
+	}
+	
+	homeguy = {
+		random = yes
+		generate_wargoal_tension = 0.3
+		guarantee_tension = 0.3
+		join_faction_tension = 0.3
+	}
 
 	Sclerosis = {
 		random = yes
@@ -99,12 +140,37 @@ leader_traits = {
 		trade_opinion_factor = -0.3
 	}	
 	
+	cannibal = {
+		random = yes
+		weekly_manpower = -2
+		monthly_population = -0.2
+	}
 	
+	treplo = {
+		random = yes
+		civilian_intel_to_others = 50
+		airforce_intel_to_others = 50
+		army_intel_to_others = 50
+		navy_intel_to_others = 50
+	}
+
+	crazy = {
+		political_power_gain = -0.25
+		stability_factor = -0.2
+		war_support_factor = -0.2
+	}
+
 	#################
 
 	
 	
-	
+	leader_of_orden = {
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.25
+		war_support_factor = 0.25
+		drift_defence_factor = 0.15
+	}
 	
 
 

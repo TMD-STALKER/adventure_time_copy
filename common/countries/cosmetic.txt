@@ -22,3 +22,27 @@ berry_emerald_unite = {
 	color = rgb { 205  0  135 }
 	color_ui = rgb { 205  0  135 }
 }
+grandmel_cosmetic_tag = {
+	color = rgb { 105  224  200 }
+	color_ui = rgb { 105  224  200 }
+}
+river_cosmetic_tag_two = {
+	color = rgb { 207  131  255 }
+	color_ui = rgb { 207  131  255 }
+}
+river_cosmetic_tag_two = {
+	color = rgb { 231  34  135 }
+	color_ui = rgb { 231  34  135 }
+}
+knight_cosmetic_tag = {
+	color = rgb { 0  40  235 }
+	color_ui = rgb { 0  40  235 }
+}
+gfr_desert_cosmetic_tag = {
+	color = rgb { 86  117  40 }
+	color_ui = rgb { 86  117  40 }
+}
+ifi_desert_cosmetic_tag = {
+	color = rgb { 118  19  30 }
+	color_ui = rgb { 118  19  30 }
+}

@@ -30,4 +30,8 @@ if = {
 	add_to_tech_sharing_group = commonwealth_research
 }
 recruit_character = OLD_starchi
-recruit_character = OLD_starchi2
+recruit_character = OLD_science
+recruit_character = OLD_kenet
+recruit_character = OLD_cake
+recruit_character = OLD_miro
+recruit_character = OLD_banan

@@ -1,3 +1,429 @@
+PBB_take_all_power = {
+	OLD_propaganda_anti_candy = {
+		days_remove = 15
+		priority = 100
+		icon = eng_propaganda_campaigns
+		cost = 25
+		visible = {
+			has_country_flag = OLD_war_with_batler_flag
+		}
+		available = {
+			thirty_popularity = yes
+		}
+		complete_effect = { 
+			overlord = {
+				add_popularity = {
+					ideology = THIS
+					popularity = -0.02
+				}
+			}
+		}
+		modifier = {
+			drift_defence_factor = -0.05
+		}
+		ai_will_do = {
+			base = 15
+			
+		}
+	}
+	OLD_ANTI_WAR_propaganda_anti_candy = {
+		days_remove = 20
+		priority = 100
+		icon = eng_propaganda_campaigns
+		cost = 30
+		visible = {
+			has_country_flag = OLD_war_with_batler_flag
+			overlord = { has_war = yes }
+		}
+		available = {
+			thirty_popularity = yes
+		}
+		complete_effect = { 
+			overlord = {
+				add_war_support = -0.01
+				add_popularity = {
+					ideology = THIS
+					popularity = -0.03
+				}
+			}
+		}
+		modifier = {
+			drift_defence_factor = -0.05
+			stability_weekly = -0.001
+		}
+		ai_will_do = {
+			base = 15
+			
+		}
+	}
+	OLD_talk_with_army = {
+		days_remove = 90
+		icon = generic_army_support
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = OLD_war_with_batler_flag
+		}
+		available = {
+			thirty_popularity = yes
+			has_army_experience > 19
+			overlord = {
+				popularity_50 = no
+			}
+		}
+		remove_effect = {
+			set_country_flag = OLD_talk_with_army_flag
+			overlord = {
+				add_war_support = -0.05
+				army_experience = -15
+				add_popularity = {
+					ideology = THIS
+					popularity = -0.15
+				}
+			}
+		}
+		ai_will_do = {
+			base = 15
+			
+		}
+	}
+	OLD_talk_with_people = {
+		days_remove = 60
+		icon = SWI_expand_covert_operations
+		cost = 55
+		fire_only_once = yes
+		visible = {
+			has_country_flag = OLD_war_with_batler_flag
+		}
+		available = {
+			thirty_popularity = yes
+			overlord = {
+				popularity_50 = no
+			}
+		}
+		remove_effect = {
+			set_country_flag = OLD_talk_with_people_flag
+			overlord = {
+				add_stability = -0.1
+				add_popularity = {
+					ideology = THIS
+					popularity = -0.08
+				}
+			}
+		}
+		ai_will_do = {
+			base = 15
+			
+		}
+	}
+	OLD_talk_with_policy = {
+		days_remove = 40
+		icon = generic_political_discourse
+		cost = 115
+		fire_only_once = yes
+		visible = {
+			has_country_flag = OLD_war_with_batler_flag
+		}
+		available = {
+			thirty_popularity = yes
+			overlord = {
+				popularity_50 = no
+			}
+		}
+		remove_effect = {
+			set_country_flag = OLD_talk_with_policy_flag
+			overlord = {
+				add_political_power = -100
+				add_popularity = {
+					ideology = THIS
+					popularity = -0.07
+				}
+			}
+		}
+		ai_will_do = {
+			base = 15
+			
+		}
+	}
+	OLD_hour_x = {
+		days_remove = 15
+		icon = generic_political_discourse
+		cost = 115
+		fire_only_once = yes
+		visible = {
+			has_country_flag = OLD_war_with_batler_flag
+		}
+		available = {
+			has_country_flag = OLD_talk_with_policy_flag
+			has_country_flag = OLD_talk_with_people_flag
+			has_country_flag = OLD_talk_with_army_flag
+			overlord = {
+				popularity_25 = no
+			}
+		}
+		remove_effect = {
+			
+			overlord = {
+				custom_effect_tooltip = release_all_puppet_tt
+				hidden_effect = {
+					every_subject_country = {
+						PREV = {
+							set_autonomy = {
+								target = PREV
+								autonomous_state = autonomy_free
+								end_wars = no
+								end_civil_wars = no
+							}
+						}
+						ROOT = { puppet = PREV }
+					}
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomous_state = autonomy_dominion
+							end_wars = no
+							end_civil_wars = no
+						}
+						set_faction_leader = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 15
+			
+		}
+	}
+}
+OLD_great_war = {
+	OLD_our_goal = {
+		priority = 100
+
+		days_mission_timeout = 29
+		icon = ITA_reorganize_ascari
+		activation = {
+			has_idea = OLD_death_or_freedom
+			NOT = { has_global_flag = peace_with_bonne }
+ 		}
+
+		available = {
+			PBB = {
+				custom_trigger_tooltip = {
+					tooltip = neighbor_states_old
+					all_owned_state = {
+						OR = {
+							NOT = { any_neighbor_state = { is_owned_by = ROOT } }
+							AND = {
+								is_controlled_by = ROOT
+								any_neighbor_state = { is_owned_by = ROOT }
+							}
+						}
+					}
+				}
+			}
+		}
+
+		is_good = no
+
+		complete_effect = { 
+			every_controlled_state = {
+				limit = {
+					NOT = { is_owned_by = ROOT }
+					is_owned_by = PBB
+				}
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+			}
+			white_peace = PBB
+			every_other_country = {
+				limit = {
+					OR = {
+						is_subject_of = PBB
+						is_in_faction_with = PBB
+					}
+					has_war_with = ROOT
+				}
+				white_peace = ROOT
+			}
+			set_global_flag = peace_with_bonne
+		}
+
+		timeout_effect = {
+			add_war_support = -0.01
+			add_stability = -0.01
+			add_political_power = -25
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.01
+			}
+			PBB = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = PBB_very_small_crime
+							has_idea = PBB_small_crime
+							has_idea = PBB_crime
+							has_idea = PBB_big_crime
+							has_idea = PBB_very_big_crime
+						}
+					}
+					random_list = {
+						40 = {
+							PBB_more_bandit = yes
+						}
+						40 = {
+							add_stability = -0.04
+							add_political_power = -30
+						}
+						20 = {
+							add_political_power = -55
+							add_war_support = -0.03
+							add_stability = -0.03
+						}
+					}
+				}
+				else = {
+					random_list = {
+						50 = {
+							add_stability = -0.04
+							add_political_power = -30
+						}
+						50 = {
+							add_political_power = -55
+							add_war_support = -0.03
+							add_stability = -0.03
+						}
+					}
+				}
+			}
+		}
+	}
+	OLD_peace_soon = {
+		priority = 100
+
+		days_mission_timeout = 230
+		icon = eng_trade_unions_support
+		fire_only_once = yes
+		activation = {
+			has_idea = OLD_death_or_freedom
+			NOT = { has_global_flag = peace_with_bonne }
+ 		}
+
+		available = {
+			has_global_flag = peace_with_bonne
+		}
+
+		is_good = no
+
+		complete_effect = { 
+			add_political_power = 150
+			add_stability = 0.05
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.15
+			}
+		}
+
+		timeout_effect = {
+			every_controlled_state = {
+				limit = {
+					NOT = { is_owned_by = ROOT }
+					is_owned_by = PBB
+				}
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+			}
+			white_peace = PBB
+			every_other_country = {
+				limit = {
+					OR = {
+						is_subject_of = PBB
+						is_in_faction_with = PBB
+					}
+					has_war_with = ROOT
+				}
+				white_peace = ROOT
+			}
+			set_global_flag = peace_with_bonne
+		}
+	}
+}
+OLD_watching_for_metropoly_category = {
+	OLD_watching_for_metropoly_capital_lar = {
+		days_remove = 40
+		allowed = { 
+			TAG = OLD 
+			has_dlc = "La Resistance"
+		}
+		priority = 100
+		icon = SOV_academy_of_sciences
+		cost = 150
+		visible = {
+			has_variable = OLD_power_of_network
+		}
+		available = {
+			has_stability > 0.5
+			PBB = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		complete_effect = { 
+			add_stability = -0.01
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = OLD_power_of_network
+				value = 10
+				tooltip = add_10_to_OLD_power_of_network
+			}
+		}
+		modifier = {
+			intel_network_gain_factor = 0.15
+		}
+		ai_will_do = {
+			base = 15
+			
+		}
+	}
+	OLD_watching_for_metropoly_capital = {
+		days_remove = 40
+		allowed = { 
+			TAG = OLD 
+			NOT = { has_dlc = "La Resistance" }
+		}
+		priority = 100
+		icon = SOV_academy_of_sciences
+		cost = 150
+		visible = {
+			has_variable = OLD_power_of_network
+		}
+		available = {
+			has_stability > 0.5
+			PBB = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		complete_effect = { 
+			add_stability = -0.01
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = OLD_power_of_network
+				value = 10
+				tooltip = add_10_to_OLD_power_of_network
+			}
+		}
+		modifier = {
+			encryption_factor = 0.15
+		}
+		ai_will_do = {
+			base = 15
+			
+		}
+	}
+}
 OLD_radiostation_of_truth = {
 	on_the_air = {
 		priority = 30
@@ -5,14 +431,14 @@ OLD_radiostation_of_truth = {
 		days_re_enable = 5
 		icon = eng_propaganda_campaigns
 		cost = 45
-
+		visible = { is_subject = yes }
 		available = {
 			compare_autonomy_progress_ratio > 0.25
 			compare_autonomy_state > autonomy_integrated_puppet
 		}
 		complete_effect = {
 			add_autonomy_score = {
-				value = 10
+				value = 20
 				localization = on_the_air
 			}
 		}
@@ -29,6 +455,276 @@ OLD_radiostation_of_truth = {
 		ai_will_do = {
 			base = 1
 			
+		}
+	}
+	OLD_trush_fighter = {
+		priority = 45
+		days_remove = 35
+		icon = generic_speech
+		cost = 130
+		fire_only_once = yes
+		visible = { NOT = { has_country_leader_with_trait = OLD_trush_fighter } }
+		available = {
+			compare_autonomy_progress_ratio > 0.25
+			compare_autonomy_state > autonomy_integrated_puppet
+		}
+		remove_effect = {
+			add_country_leader_trait = OLD_trush_fighter
+		}
+		modifier = {
+			autonomy_gain_global_factor = 0.15
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				date > 3008.01.01
+				add = 20
+			}
+			
+		}
+	}
+	OLD_speach_for_our_people = {
+		priority = 25
+		days_remove = 15
+		days_re_enable = 3
+		icon = generic_political_address
+		cost = 60
+		visible = { 
+			is_subject = yes
+			has_country_flag = OLD_speach_for_our_people_flag
+		}
+		available = {
+			compare_autonomy_progress_ratio > 0.35
+			compare_autonomy_state > autonomy_integrated_puppet
+		}
+		complete_effect = {
+			add_autonomy_score = {
+				value = -5
+				localization = OLD_speach_for_our_people
+			}
+		}
+		remove_effect = {
+			add_command_power = 5
+			add_political_power = 50
+			overlord = {
+				add_stability = -0.03
+				add_political_power = -60
+			}
+		}
+		modifier = {
+			political_power_cost = 0.1
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				date > 3008.05.01
+				add = 20
+			}
+		}
+	}
+	OLD_speach_for_our_states = {
+		priority = 10
+		days_remove = 35
+		state_target = yes
+		on_map_mode = decision_view_only
+		icon = generic_political_rally
+		cost = 80
+		target_trigger = {
+			FROM = {
+				is_capital = no
+				NOT = { has_state_flag = join_to_our_resistance_flag }
+				any_neighbor_state = {
+					OR = {
+						is_owned_by = ROOT
+						has_state_flag = join_to_our_resistance_flag
+					}
+				}
+				owner = {
+					ROOT = { is_subject_of = PREV }
+				}
+			}
+		}
+		visible = {
+			has_country_flag = OLD_speach_for_our_people_flag
+			FROM = {
+				is_capital = no
+				NOT = { has_state_flag = join_to_our_resistance_flag }
+				any_neighbor_state = {
+					OR = {
+						is_owned_by = ROOT
+						has_state_flag = join_to_our_resistance_flag
+					}
+				}
+				owner = {
+					ROOT = { is_subject_of = PREV }
+				}
+			}
+		}
+		available = {
+			compare_autonomy_state > autonomy_integrated_puppet
+		}
+		complete_effect = {
+			add_autonomy_score = {
+				value = -15
+				localization = OLD_speach_for_our_states_loc
+			}
+		}
+		remove_effect = {
+			FROM = {
+				set_state_flag = join_to_our_resistance_flag
+				custom_effect_tooltip = OLD_speach_for_our_states_tt
+				owner = {
+					army_experience = -5
+					add_political_power = -50
+				}
+			}
+			if = {
+				limit = {
+					has_variable = OLD_our_states_var
+				}
+					add_to_variable = {
+						var = OLD_our_states_var
+						value = 1
+					}
+				}
+				else = {
+					set_variable = {
+						var = OLD_our_states_var
+						value = 0
+					}
+				}
+		}
+		modifier = {
+			political_power_cost = 0.1
+			autonomy_gain_global_factor = -0.05
+			command_power_gain_mult = -0.15
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	OLD_speach_for_foregn_money = {
+		target_array = global.countries
+		priority = 10
+		days_remove = 35
+		icon = generic_political_rally
+		cost = 80
+		target_trigger = {
+			FROM = {
+				NOT = { 
+					has_idea = closed_economy1
+					is_in_faction_with = PBB
+					is_subject_of = PBB
+				}
+			}
+		}
+		visible = {
+			has_country_flag = OLD_speach_for_foregn_governments_flag
+			FROM = {
+				NOT = { 
+					has_idea = closed_economy1
+					is_in_faction_with = PBB
+					is_subject_of = PBB
+				}
+				has_opinion = {
+					target = ROOT
+					value > 10
+				}
+			}
+		}
+		available = {
+			compare_autonomy_state > autonomy_integrated_puppet
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 24
+				}
+				has_opinion = {
+					target = PBB
+					value < 50
+				}
+			}
+		}
+		remove_effect = {
+			FROM = { 
+				country_event = gener.27
+				effect_tooltip = {
+					custom_effect_tooltip = effect_tooltip_agree
+					if = {
+						limit = {
+							NOT = { has_idea = helping_other_puppet }
+						}
+						add_timed_idea = {
+							idea = helping_other_puppet
+							days = 100
+						}
+					}
+					else = {
+						modify_timed_idea = {
+							idea = helping_other_puppet
+							days = 100
+						}
+					}
+					ROOT = {
+						add_political_power = 30
+						add_war_support = 0.01
+						add_autonomy_score = {
+							value = 65
+							localization = other_help_score
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				FROM = { has_country_flag = idi_nahui_starchi }
+				add = -25
+			}
+		}
+	}
+	OLD_speach_for_foregn_governments = {
+		priority = 10
+		days_remove = 20
+		icon = generic_political_discourse
+		cost = 110
+
+		visible = {
+			is_puppet = yes
+			has_country_flag = OLD_speach_for_foregn_governments_flag
+			any_other_country = {
+				NOT = { 
+					has_idea = closed_economy1
+					is_in_faction_with = PBB
+					is_subject_of = PBB
+				}
+			}
+		}
+		available = {
+			compare_autonomy_state > autonomy_integrated_puppet
+			
+		}
+		complete_effect = {
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_idea = closed_economy1
+						is_in_faction_with = ROOT.OVERLORD
+					}
+				}
+				add_political_power = 65
+			}
+		}
+		remove_effect = {
+			add_autonomy_score = {
+				value = 80
+				localization = OLD_speach_for_foregn_governments
+			}
+			up_dept = yes
+		}
+		ai_will_do = {
+			base = 1
 		}
 	}
 }

@@ -1,16 +1,35 @@
 ideas = {
     country = {
 		
-		passive_ai = {
+		total_war = {
 			allowed = {
 				original_tag = ROOT
 			}
-
+			picture = PRC_hundred_regiments_offensive
 			allowed_civil_war = {
 				tag = ROOT
 			}
 			modifier = {
-				ai_desired_divisions_factor = -0.9
+				army_attack_speed_factor = 0.05
+				army_speed_factor = 0.05
+				breakthrough_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = -0.08
+				army_morale_factor = -0.07
+				army_org_factor = -0.08
+			}
+		}
+		
+		passive_ai = {
+			allowed = {
+				original_tag = ROOT
+			}
+			picture = SWI_spirit_of_saint_bernard
+			allowed_civil_war = {
+				tag = ROOT
+			}
+			modifier = {
+				ai_desired_divisions_factor = -0.7
 				custom_modifier_tooltip = passive_ai_modifier
 			}
 		}

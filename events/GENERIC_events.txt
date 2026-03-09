@@ -1575,8 +1575,16 @@ country_event = {
 		ai_chance = {
 			base = 1
 		}
+		if = {
+			limit = {
+				FROM = { TAG = OLD }
+			}
+			set_country_flag = idi_nahui_starchi
+		}
 		add_stability = 0.01
-		FROM = { country_event = net.1 }
+		FROM = { 
+			country_event = net.1
+		}
 		
 	}
 }
@@ -2004,13 +2012,15 @@ country_event = {
 	option = {
 		name = gener.37.a
 		ai_chance = {
-			base = 1
+			base = 2
 			modifier = {
 				factor = 3
 				any_controlled_state = { is_owned_by = FROM }
 				all_owned_state = { is_controlled_by_ROOT_or_ally = yes }
 			}
 		}
+		add_stability = 0.1
+		add_political_power = 200
 		every_owned_state = {
 			limit = {
 				is_controlled_by = FROM
@@ -2040,6 +2050,13 @@ country_event = {
 				transfer_state_to = PREV
 				add_compliance = 35
 			}
+			every_owned_state = {
+				limit = {
+					is_controlled_by = FROM
+				}
+				transfer_state_to = FROM
+				add_compliance = 35
+			}
 			white_peace = FROM
 		}
 		white_peace = FROM
@@ -2060,7 +2077,10 @@ country_event = {
 		ai_chance = {
 			base = 1
 		}
-		FROM = { set_country_flag = my_targeted_flag_@FROM add_war_support = 0.01 }
+		add_ideas = total_war
+		FROM = {
+			country_event = net.1
+		}
 	}
 }
 country_event = {
@@ -2573,5 +2593,37 @@ country_event = {
 	option = {
 		name = gener.45.a
 		
+	}
+}
+country_event = {
+	id = gener.46
+	title = gener.46.t
+	desc = gener.46.d
+	picture = GFX_report_event_KNG_cool_house
+
+	is_triggered_only = yes
+
+	option = {
+		name = gener.46.a
+		ai_chance = {
+			base = 1
+		}
+		add_stability = 0.02
+	}
+	option = {
+		name = gener.46.b
+		ai_chance = {
+			base = 1
+		}
+		set_capital = { state = 393 }
+		393 = { set_state_name = "Нойдаспехфурт" }
+	}
+	option = {
+		name = gener.46.c
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = 25
+		set_capital = { state = 215 }
 	}
 }

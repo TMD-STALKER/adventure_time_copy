@@ -27,8 +27,8 @@ set_popularities = {
 	slime = 5
 }
 add_ideas = {
-	IKK_gunter_guard
 	IKK_ice_infrustructure
+	IKK_gunter_guard
 	####
 	disarmed_nation1
 	export_focus1

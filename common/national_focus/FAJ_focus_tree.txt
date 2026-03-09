@@ -1,0 +1,286 @@
+focus_tree = {
+	id = FAJ_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			is_debug = yes
+			tag = FAJ
+		}
+	}
+	default = no
+	focus = {
+		id = FAJ_jake_the_god
+		icon = GFX_goal_unknown
+		cost = 5
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range < FAJ_min_min_finn_trust_range
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		x = 3
+		y = 0
+		completion_reward = {
+			
+				
+		}
+
+	}
+	focus = {
+		id = FAJ_finn_the_human
+		icon = GFX_goal_unknown
+		cost = 5
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range > FAJ_min_min_jake_trust_range
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		x = 9
+		y = 0
+		completion_reward = {
+			
+				
+		}
+
+	}
+	focus = {
+		id = FAJ_lover_deals
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_jake_the_god
+		}
+		x = 2
+		y = 1
+
+	}
+	focus = {
+		id = FAJ_hard_friendship
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_lover_deals
+		}
+		x = 2
+		y = 3
+
+	}
+	focus = {
+		id = FAJ_at_the_pumple_kingdom
+		icon = GFX_goal_unknown
+		cost = 3
+		prerequisite = {
+			focus = FAJ_jake_the_god
+		}
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = FAJ_magic_garden
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_at_the_pumple_kingdom
+		}
+		prerequisite = {
+			focus = FAJ_hard_friendship
+		}
+		x = 3
+		y = 4
+
+	}
+	focus = {
+		id = FAJ_ocean_of_fear
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_magic_garden
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = FAJ_adventure_time
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_jake_the_god
+		}
+		prerequisite = {
+			focus = FAJ_finn_the_human
+		}
+		available = {
+			
+		}
+		x = 6
+		y = 1
+
+	}
+	focus = {
+		id = FAJ_ice_king_troble
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_adventure_time
+		}
+		x = 5
+		y = 2
+
+	}
+	focus = {
+		id = FAJ_jigger
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_best_apple
+			focus = FAJ_ice_king_troble
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = FAJ_best_apple
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_adventure_time
+		}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = FAJ_build_fort
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_jigger
+		}
+		x = 6
+		y = 4
+
+	}
+	focus = {
+		id = FAJ_city_of_thiefs
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_build_fort
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = FAJ_wizards
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_build_fort
+		}
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = FAJ_enheridion
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_finn_the_human
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = FAJ_at_the_princess_service
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_finn_the_human
+		}
+		x = 10
+		y = 1
+
+	}
+	focus = {
+		id = FAJ_princess_knight
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_at_the_princess_service
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = FAJ_boom_boom_mountain
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_enheridion
+		}
+		prerequisite = {
+			focus = FAJ_princess_knight
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = FAJ_whats_is_life
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_boom_boom_mountain
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = FAJ_his_hero
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_whats_is_life
+		}
+		x = 9
+		y = 6
+
+	}
+	focus = {
+		id = FAJ_rainy_day_daydream
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_ocean_of_fear
+		}
+		x = 3
+		y = 6
+
+	}
+	focus = {
+		id = FAJ_gut_grinder
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = FAJ_city_of_thiefs
+			focus = FAJ_wizards
+		}
+		x = 6
+		y = 6
+
+	}
+}

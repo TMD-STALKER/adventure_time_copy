@@ -994,3 +994,263 @@ news_event = {
 		}
 	}
 }
+news_event = {
+	id = ooonews.15
+	title = ooonews.15.t
+	desc = {
+		text = ooonews.15.d
+		trigger = {
+			TAG = PBB
+		}
+	}
+	desc = {
+		text = ooonews.15.d_2
+		trigger = {
+			NOT = { TAG =  PBB }
+		}
+	}
+	
+	fire_only_once = yes
+	picture = GFX_news_event_013
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ooonews.15.a
+		trigger = {
+			has_government = slime
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.15.b
+		trigger = { 
+			has_government = candy 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.15.c
+		trigger = { 
+			has_government = neutral 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.15.e
+		trigger = { 
+			has_government = fire 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.15.f
+		trigger = { 
+			has_government = ice 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.15.g
+		trigger = { 
+			TAG = PBB
+		}
+	}
+}
+news_event = {
+	id = ooonews.16
+	title = ooonews.16.t
+	desc = {
+		text = ooonews.16.d
+		trigger = {
+			TAG = PBB
+		}
+	}
+	desc = {
+		text = ooonews.16.d_2
+		trigger = {
+			NOT = { TAG =  PBB }
+		}
+	}
+	
+	fire_only_once = yes
+	picture = GFX_news_event_014
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ooonews.16.a
+		trigger = {
+			has_government = slime
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.16.b
+		trigger = { 
+			has_government = candy 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.16.c
+		trigger = { 
+			has_government = neutral 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.16.e
+		trigger = { 
+			has_government = fire 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.16.f
+		trigger = { 
+			has_government = ice 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.16.g
+		trigger = { 
+			TAG = PBB
+		}
+	}
+}
+news_event = {
+	id = ooonews.17
+	title = ooonews.17.t
+	desc = {
+		text = ooonews.17.d
+		trigger = {
+			TAG = OLD
+		}
+	}
+	desc = {
+		text = ooonews.17.d_2
+		trigger = {
+			NOT = { TAG = OLD }
+		}
+	}
+	
+	fire_only_once = yes
+	picture = GFX_news_event_015
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ooonews.17.a
+		trigger = {
+			has_government = slime
+			NOT = { TAG = OLD }
+		}
+	}
+	option = {
+		name = ooonews.17.b
+		trigger = { 
+			has_government = candy 
+			NOT = { TAG = OLD }
+		}
+	}
+	option = {
+		name = ooonews.17.c
+		trigger = { 
+			has_government = neutral 
+			NOT = { TAG = OLD }
+		}
+	}
+	option = {
+		name = ooonews.17.e
+		trigger = { 
+			has_government = fire 
+			NOT = { TAG = OLD }
+		}
+	}
+	option = {
+		name = ooonews.17.f
+		trigger = { 
+			has_government = ice 
+			NOT = { TAG = OLD }
+		}
+	}
+	option = {
+		name = ooonews.17.g
+		trigger = { 
+			TAG = OLD
+		}
+	}
+}
+news_event = {
+	id = ooonews.18
+	title = ooonews.18.t
+	desc = {
+		text = ooonews.18.d
+		trigger = {
+			TAG = PBB
+		}
+	}
+	desc = {
+		text = ooonews.18.d_2
+		trigger = {
+			NOT = { TAG =  PBB }
+		}
+	}
+	
+	fire_only_once = yes
+	picture = GFX_news_event_016
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ooonews.18.a
+		trigger = {
+			has_government = slime
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.16.b
+		trigger = { 
+			has_government = candy 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.18.c
+		trigger = { 
+			has_government = neutral 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.18.e
+		trigger = { 
+			has_government = fire 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.18.f
+		trigger = { 
+			has_government = ice 
+			NOT = { TAG = PBB }
+		}
+	}
+	option = {
+		name = ooonews.18.g
+		trigger = { 
+			TAG = PBB
+		}
+	}
+}

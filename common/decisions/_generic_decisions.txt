@@ -6,7 +6,7 @@ debug_decisions = {
 			
 		}
 		complete_effect = {
-			kill_country_leader = yes
+			add_country_leader_trait = treplo
 		}
 		remove_effect = {
 		}
@@ -1239,7 +1239,71 @@ GENERIC_helping_others = {
 }
 wartime_category = {
 	
-	
+	longwar_mission = {
+		priority = 100
+
+		days_mission_timeout = 25
+		icon = generic_political_rally
+
+		activation = {
+			has_war = yes
+			NOT = {
+				TAG = PBB
+			}
+			OR = {
+				NOT = { original_tag = OLD }
+				NOT = { has_war_with = PBB }
+			}
+ 		}
+
+		available = {
+			OR = {
+				has_war = no
+				num_of_controlled_states > var:our_goal_on_war_var
+			}
+		}
+
+		is_good = no
+
+		complete_effect = { 
+			army_experience = 5
+			air_experience = 2
+			navy_experience = 2
+			add_command_power = 15
+			add_political_power = 45
+			add_war_support = 0.04
+			add_stability = 0.02
+			add_to_variable = {
+				var = our_goal_on_war_var
+				value = 1
+			}
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					has_war_support < 0.1
+					has_stability < 0.4
+				}
+				every_enemy_country = {
+					limit = {
+						is_subject = no
+						is_puppet = no
+						OR = {
+							is_in_faction = no
+							is_faction_leader = yes
+						}
+					}
+					country_event = gener.37
+				}
+			}
+			else = {
+				add_stability = -0.01
+				add_war_support = -0.01
+			}
+			custom_effect_tooltip = longwar_mission_tt
+		}
+	}
 	
 	mafia_longwar_mission = {
 		priority = 100
@@ -1293,14 +1357,14 @@ wartime_category = {
 			FROM = {
 				is_owned_by = ROOT
 				controller = { has_war_with = ROOT }
-				any_neighbor_state = { is_controlled_by_ROOT_or_ally = yes }
+				any_neighbor_state = { is_controlled_by = ROOT }
 			}
 		}
 		visible = {
 			FROM = {
 				is_owned_by = ROOT
 				controller = { has_war_with = ROOT }
-				any_neighbor_state = { is_controlled_by_ROOT_or_ally = yes }
+				any_neighbor_state = { is_controlled_by = ROOT }
 			}
 		}
 		#custom_cost_text = decision_cost_CP_25_ArmXP_15
@@ -1353,13 +1417,13 @@ wartime_category = {
 		target_trigger = {
 			FROM = {
 				owner = { has_war_with = ROOT }
-				#any_neighbor_state = { is_controlled_by_ROOT_or_ally = yes }
+				any_neighbor_state = { is_controlled_by = ROOT }
 			}
 		}
 		visible = {
 			FROM = {
 				owner = { has_war_with = ROOT }
-				#any_neighbor_state = { is_controlled_by_ROOT_or_ally = yes }
+				any_neighbor_state = { is_controlled_by = ROOT }
 			}
 		}
 		#custom_cost_text = decision_cost_CP_25_ArmXP_15
@@ -2174,6 +2238,32 @@ GENERIC_people_need_it = {
 	}
 }
 economy_decisions = { #Потом доделаю
+	
+	use_gun = {
+		priority = 95
+		icon = generic_assassination
+		cost = 15
+		visible = {
+			NOT = {
+				TAG = MOF
+				TAG = PBB
+			}
+			has_stability < 0.1
+		}
+		available = {
+			has_stability < 0.01
+		}
+		complete_effect = {
+			kill_country_leader = yes
+			add_stability = 0.35
+			add_war_support = -0.05
+		}
+		ai_will_do = {
+			base = 0
+			
+		}
+	}
+
 	randomazer_of_country = {
 		priority = 100
 

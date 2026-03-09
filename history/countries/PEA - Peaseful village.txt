@@ -26,6 +26,7 @@ set_popularities = {
 }
 add_ideas = {
 	disarmed_nation1
+	limited_exports1
 }
 recruit_character = PEA_peaseful
 recruit_character = PEA_peaseful2

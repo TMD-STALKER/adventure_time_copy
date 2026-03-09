@@ -4,4 +4,30 @@ OLD_radiostation_of_truth = {
 	visible = {
 		has_country_flag = OLD_radiostation_of_truth_flag
 	}
+	icon = generic_propaganda
+}
+OLD_watching_for_metropoly_category = {
+	priority = 90
+	allowed = { TAG = OLD }
+	visible = {
+		has_country_flag = OLD_create_organization_of_resistance_flag
+	}
+	icon = SWI_federal_council
+}
+OLD_great_war = {
+	priority = 100
+	allowed = { TAG = OLD }
+	visible = {
+		has_idea = OLD_death_or_freedom
+		NOT = { has_global_flag = peace_with_bonne }
+	}
+	icon = sov_great_patriotic_war
+}
+PBB_take_all_power = {
+	priority = 100
+	allowed = { TAG = OLD }
+	visible = {
+		has_country_flag = OLD_war_with_batler_flag
+	}
+	
 }

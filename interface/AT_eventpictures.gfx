@@ -235,6 +235,22 @@ spriteTypes = {
 		name = "GFX_report_event_PBB_bad_feeling9"
 		texturefile = "gfx/event_pictures/report_event_PBB_bad_feeling9.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_PBB_watching_for_starchi"
+		texturefile = "gfx/event_pictures/report_event_PBB_watching_for_starchi.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_batler"
+		texturefile = "gfx/event_pictures/report_event_PBB_batler.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_batler2"
+		texturefile = "gfx/event_pictures/report_event_PBB_batler2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PBB_batler3"
+		texturefile = "gfx/event_pictures/report_event_PBB_batler3.dds"
+	}
 	####NUT
 	spriteType = {
 		name = "GFX_report_event_NUT_good_thinks"
@@ -248,6 +264,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_MAR_logo"
 		texturefile = "gfx/event_pictures/report_event_MAR_logo.dds"
+	}
+	####KNG
+	spriteType = {
+		name = "GFX_report_event_KNG_cool_house"
+		texturefile = "gfx/event_pictures/report_event_KNG_cool_house.dds"
 	}
 	####MAR
 	spriteType = {
@@ -275,6 +296,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_OLD_speach"
 		texturefile = "gfx/event_pictures/report_event_OLD_speach.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OLD_organization_of_trush"
+		texturefile = "gfx/event_pictures/report_event_OLD_organization_of_trush.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OLD_batlers_defeat"
+		texturefile = "gfx/event_pictures/report_event_OLD_batlers_defeat.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OLD_mirotvorets"
+		texturefile = "gfx/event_pictures/report_event_OLD_mirotvorets.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OLD_mirotvorets2"
+		texturefile = "gfx/event_pictures/report_event_OLD_mirotvorets2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OLD_mirotvorets3"
+		texturefile = "gfx/event_pictures/report_event_OLD_mirotvorets3.dds"
 	}
 	###BEK
 	spriteType = {

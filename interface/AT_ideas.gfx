@@ -71,10 +71,36 @@ spriteTypes = {
 		name = "GFX_idea_FAJ_jake"
 		texturefile = "gfx/interface/ideas/idea_FAJ_jake.dds"
 	}
+	#SLO
+	spriteType = {
+		name = "GFX_idea_SLO_slodolf_slitler"
+		texturefile = "gfx/interface/ideas/idea_SLO_slodolf_slitler.dds"
+	}
+	#OLD
+	spriteType = {
+		name = "GFX_idea_OLD_starchi"
+		texturefile = "gfx/interface/ideas/idea_OLD_starchi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OLD_fake_banan"
+		texturefile = "gfx/interface/ideas/idea_OLD_fake_banan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OLD_kenet"
+		texturefile = "gfx/interface/ideas/idea_OLD_kenet.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OLD_miro"
+		texturefile = "gfx/interface/ideas/idea_OLD_miro.dds"
+	}
 	#IKK
 	spriteType = {
 		name = "GFX_idea_IKK_ice_king_guard"
 		texturefile = "gfx/interface/ideas/idea_IKK_ice_king_guard.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_IKK_ice_king_guard2"
+		texturefile = "gfx/interface/ideas/idea_IKK_ice_king_guard2.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_IKK_gander"

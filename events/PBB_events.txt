@@ -175,14 +175,24 @@ country_event = {
 		}
 		add_war_support = 0.15
 		add_command_power = 30
-		upgrade_army_law = yes
-		upgrade_economy_law = yes
+		add_manpower = 5000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 5000
+			producer = FROM
+		}
+		every_owned_state = { add_core_of = FROM }
 		FROM = { 
 			end_puppet = ROOT
 			leave_faction = yes
 			declare_war_on = {
 				target = ROOT
 				type = annex_everything
+			}
+			add_manpower = -8500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -8500
 			}
 		}
 		custom_effect_tooltip = we_need_stand_tt
@@ -2073,11 +2083,11 @@ country_event = {
 		ai_chance = {
 			base = 3
 		}
-		promote_character = PBB_batler1
 		set_politics = {
 			ruling_party = neutral
 			elections_allowed = no
 		}
+		promote_character = PBB_batler
 		add_popularity = {
 			ideology = neutral
 			popularity = 0.35

@@ -10,7 +10,7 @@ ideas = {
 			allowed_civil_war = {
 				tag = IKK
 			}
-			picture = IKK_ice_king_guard
+			picture = IKK_ice_king_guard2
 			
 			modifier = {
 				political_power_factor = 0.1

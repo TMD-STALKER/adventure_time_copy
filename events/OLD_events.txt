@@ -77,6 +77,7 @@ country_event = {
 			give_guarantee = ROOT
 			hidden_effect = { country_event = old.3 }
 		}
+		SKE = { give_guarantee = ROOT }
 		give_military_access = MAR
 		add_war_support = 0.08
 		every_owned_state = {
@@ -121,6 +122,7 @@ country_event = {
 		}
 		FROM = {
 			country_event = da.1
+			set_cosmetic_tag = unite_nut_old_empire
 			annex_country = {
 				target = ROOT
 				transfer_troops = yes
@@ -138,6 +140,7 @@ country_event = {
 			add_political_power = 100
 			puppet = ROOT
 			country_event = net.1
+			set_cosmetic_tag = unite_nut_old_empire
 		}
 	}
 }
@@ -197,12 +200,22 @@ country_event = {
 		custom_effect_tooltip = content_not_ready
 		load_focus_tree = generic
 	}
+	option = { 
+		name = old.6.b
+		set_cosmetic_tag = OLD_independed
+		set_rule = {
+			can_create_factions = yes
+		}
+		promote_character = OLD_miro
+		custom_effect_tooltip = content_not_ready
+		load_focus_tree = generic
+	}
 }
 country_event = {
     id = old.7
 	title = old.7.t
 	desc = old.7.d
-	picture = GFX_report_event_OLD_speach
+	picture = GFX_report_event_PBB_batler2
     is_triggered_only = yes
 
     option = { 
@@ -222,8 +235,8 @@ country_event = {
 			limit = {
 				any_neighbor_state = { is_owned_by = ROOT }
 			}
-			add_core_of = ROOT
-			transfer_state_to = ROOT
+			add_core_of = FROM
+			transfer_state_to = FROM
 		}
 		add_political_power = 80
 		army_experience = 5
@@ -237,9 +250,15 @@ country_event = {
 		FROM = {
 			country_event = net.1
 			add_autonomy_score = {
-				value = -200
+				value = -300
 				localization = help_bb
 			}
+			uncomplete_national_focus = {
+			  focus = OLD_deal_with_batler
+			  uncomplete_children = yes
+			  refund_political_power = no
+			}
+			set_country_flag = bonne_suka
 		}
 	}
 }
@@ -247,7 +266,7 @@ country_event = {
     id = old.8
 	title = old.8.t
 	desc = old.8.d
-	picture = GFX_report_event_OLD_speach
+	picture = GFX_report_event_PBB_batler3
     is_triggered_only = yes
 
     option = { 
@@ -255,13 +274,837 @@ country_event = {
 		ai_chance = {
 			base = 3
 		}
-		
+		set_global_flag = final_for_deadmans
+		if = {
+			limit = {
+				DED = { is_guaranteed_by = MAR }
+			}
+			DED = {
+				every_owned_state = { add_core_of = ROOT add_claim_by = PBB }
+			}
+			MAR = {
+				every_owned_state = { add_core_of = ROOT add_claim_by = PBB }
+			}
+			declare_war_on = {
+                target = DED
+                type = annex_everything
+            }
+		}
+		else = {
+			MAR = {
+				every_owned_state = { add_core_of = ROOT add_claim_by = PBB }
+			}
+			declare_war_on = {
+                target = MAR
+                type = annex_everything
+            }
+			DED = {
+				create_wargoal = {
+					type = annex_everything
+					target = MAR
+				}
+			}
+		}
+		news_event = {
+			id = ooonews.17
+			days = 10
+			random_hours = 12
+			random_days = 10
+		}
 	}
 	option = { 
 		name = old.8.b
 		ai_chance = {
 			base = 1
 		}
-		
+		set_global_flag = final_for_deadmans
+		PBB = {
+			country_event = old.14
+			effect_tooltip = {
+				custom_effect_tooltip = effect_tooltip_agree
+				SKE = { every_owned_state = { add_core_of = ROOT add_claim_by = PBB } }
+				if = {
+					limit = {
+						DED = { is_guaranteed_by = MAR }
+					}
+					DED = {
+						every_owned_state = { add_core_of = ROOT add_claim_by = PBB }
+					}
+					MAR = {
+						every_owned_state = { add_core_of = ROOT add_claim_by = PBB }
+					}
+					declare_war_on = {
+						target = DED
+						type = annex_everything
+					}
+				}
+				else = {
+					MAR = {
+						every_owned_state = { add_core_of = ROOT add_claim_by = PBB }
+					}
+					declare_war_on = {
+						target = MAR
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SKE
+						type = annex_everything
+					}
+					DED = {
+						create_wargoal = {
+							type = annex_everything
+							target = MAR
+						}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = old.9
+	title = old.9.t
+	desc = old.9.d
+	picture = GFX_report_event_OLD_organization_of_trush
+    is_triggered_only = yes
+
+    option = { 
+		name = old.9.a
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+				has_intelligence_agency = no
+			}
+			add_political_power = 250
+			create_intelligence_agency = {
+				name = "Свет во тьме"
+			}
+		}
+		else_if = {
+			limit = {
+				has_dlc = "La Resistance"
+				has_intelligence_agency = yes
+			}
+			upgrade_intelligence_agency = upgrade_economy_civilian
+			upgrade_intelligence_agency = upgrade_army_department
+		}
+		else = {
+			add_political_power = 200
+			add_ideas = OLD_shine_in_the_dark
+		}
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		set_country_flag = OLD_create_organization_of_resistance_flag
+		custom_effect_tooltip = OLD_create_organization_of_resistance_tt
+	}
+	option = { 
+		name = old.9.b
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+				has_intelligence_agency = no
+			}
+			add_war_support = 0.01
+			create_intelligence_agency = {
+				name = "Свет во тьме"
+			}
+		}
+		else_if = {
+			limit = {
+				has_dlc = "La Resistance"
+				has_intelligence_agency = yes
+			}
+			upgrade_intelligence_agency = upgrade_economy_civilian
+			upgrade_intelligence_agency = upgrade_army_department
+		}
+		else = {
+			add_ideas = OLD_shine_in_the_dark
+		}
+		add_offsite_building = { type = arms_factory level = 1 }
+		set_country_flag = OLD_create_organization_of_resistance_flag
+		custom_effect_tooltip = OLD_create_organization_of_resistance_tt
+	}
+}
+country_event = {
+    id = old.10
+	title = old.10.t
+	desc = old.10.d
+	picture = GFX_report_event_OLD_mirotvorets
+    is_triggered_only = yes
+
+    option = { 
+		name = old.10.a
+		add_war_support = 0.05
+		set_country_flag = OLD_resistance_flag
+		custom_effect_tooltip = OLD_create_organization_of_resistance_tt
+		hidden_effect = {
+			country_event = {
+				id = old.11
+				days = 5
+				random_hours = 12
+				random_days = 5
+			}
+			PBB = {
+				country_event = {
+					id = old.11
+					days = 5
+					random_hours = 12
+					random_days = 5
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = old.11
+	title = old.11.t
+	desc = old.11.d
+	picture = GFX_report_event_PBB_watching_for_starchi
+    is_triggered_only = yes
+
+    option = { 
+		name = old.11.a
+		add_political_power = -20
+		if = {
+			limit = {
+				original_tag = PBB
+			}
+			country_event = {
+				id = old.18
+				days = 2
+				random_hours = 7
+				random_days = 3
+			}
+		}
+	}
+}
+country_event = {
+    id = old.12
+	title = old.12.t
+	desc = old.12.d
+	picture = GFX_report_event_PBB_kirill
+    is_triggered_only = yes
+
+    option = { 
+		name = old.12.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 50
+				is_historical_focus_on = yes
+			}
+		}
+		trigger = {
+			PBB = {
+				has_country_leader = {
+					character = PBB_bonne
+					ruling_only = yes
+				}
+			}
+		}
+		add_political_power = 100
+		add_war_support = 0.04
+		PBB = {
+			add_political_power = -50
+			add_stability = -0.05
+			add_popularity = {
+				ideology = THIS
+				popularity = -0.25
+			}
+		}
+		news_event = {
+			id = ooonews.15
+			days = 10
+			random_hours = 12
+			random_days = 10
+		}
+	}
+	option = { 
+		name = old.12.b
+		ai_chance = {
+			base = 1
+		}
+		trigger = {
+			NOT = { has_completed_focus = OLD_try_to_stop }
+			is_puppet = yes
+		}
+		add_political_power = -350
+		add_stability = -0.25
+		overlord = {
+			country_event = old.5
+			effect_tooltip = {
+				custom_effect_tooltip = effect_tooltip_agree
+						ROOT = { add_political_power = 150 }
+						end_puppet = ROOT
+						add_war_support = -0.15
+						add_political_power = -150
+						custom_effect_tooltip = war_tooltip
+			}
+		}
+	}
+	option = { 
+		name = old.12.b
+		ai_chance = {
+			base = 1
+		}
+		add_war_support = 0.15
+		add_command_power = 30
+		army_experience = 10
+		upgrade_army_law = yes
+		every_owned_state = { add_claim_by = PBB }
+		PBB = {
+			add_political_power = -100
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_command_power = -40
+			every_owned_state = { add_claim_by = ROOT }
+		}
+	}
+}
+country_event = {
+    id = old.13
+	title = old.13.t
+	desc = old.13.d
+	picture = GFX_report_event_OLD_speach
+    is_triggered_only = yes
+
+    option = { 
+		name = old.13.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 50
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = 200
+		every_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			add_ideas = OLD_radio_of_science
+		}
+	}
+	option = { 
+		name = old.13.b
+		ai_chance = {
+			base = 1
+		}
+		add_war_support = 0.1
+		every_other_country = {
+			limit = {
+				NOT = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					has_idea = closed_economy1
+				}
+			}
+			add_ideas = OLD_radio_of_science2
+		}
+	}
+}
+country_event = {
+    id = old.14
+	title = old.14.t
+	desc = old.14.d
+	picture = GFX_report_event_PBB_batler2
+    is_triggered_only = yes
+
+    option = { 
+		name = old.14.a
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				DED = { is_guaranteed_by = MAR }
+			}
+			DED = {
+				every_owned_state = { add_core_of = FROM add_claim_by = ROOT }
+			}
+			MAR = {
+				every_owned_state = { add_core_of = FROM add_claim_by = ROOT }
+			}
+			SKE = { every_owned_state = { add_core_of = FROM add_claim_by = ROOT } }
+			FROM = {
+				declare_war_on = {
+					target = DED
+					type = annex_everything
+				}
+				country_event = da.1
+			}
+		}
+		else = {
+			MAR = {
+				every_owned_state = { add_core_of = ROOT add_claim_by = PBB }
+			}
+			SKE = { every_owned_state = { add_core_of = FROM add_claim_by = ROOT } }
+			FROM = {
+				declare_war_on = {
+					target = MAR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SKE
+					type = annex_everything
+				}
+				country_event = da.1
+			}
+			DED = {
+				create_wargoal = {
+					type = annex_everything
+					target = MAR
+				}
+			}
+		}
+		news_event = {
+			id = ooonews.17
+			days = 10
+			random_hours = 12
+			random_days = 10
+		}
+	}
+	option = { 
+		name = old.14.b
+		ai_chance = {
+			base = 1
+		}
+		FROM = {
+			country_event = net.1
+			if = {
+				limit = {
+					DED = { is_guaranteed_by = MAR }
+				}
+				DED = {
+					every_owned_state = { add_core_of = FROM add_claim_by = PBB }
+				}
+				MAR = {
+					every_owned_state = { add_core_of = FROM add_claim_by = PBB }
+				}
+				declare_war_on = {
+					target = DED
+					type = annex_everything
+				}
+			}
+			else = {
+				MAR = {
+					every_owned_state = { add_core_of = FROM add_claim_by = PBB }
+				}
+				declare_war_on = {
+					target = MAR
+					type = annex_everything
+				}
+				DED = {
+					create_wargoal = {
+						type = annex_everything
+						target = MAR
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = old.15
+	title = old.15.t
+	desc = old.15.d
+	picture = GFX_report_event_PBB_bad_feeling3
+    is_triggered_only = yes
+
+    option = { 
+		name = old.15.a
+		ai_chance = {
+			base = 1
+		}
+		add_manpower = -1350
+		add_stability = 0.1
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.05
+		}
+	}
+	option = { 
+		name = old.15.b
+		ai_chance = {
+			base = 1
+		}
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.08
+		}
+	}
+}
+country_event = {
+    id = old.16
+	title = old.16.t
+	desc = old.16.d
+	picture = GFX_report_event_DED_angry_gousts
+    is_triggered_only = yes
+
+    option = { 
+		name = old.16.a
+		ai_chance = {
+			base = 5
+		}
+		DED = {
+			country_event = old.17
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = effect_tooltip_agree
+			puppet = DED
+			custom_effect_tooltip = effect_tooltip_notagree
+			faction_leader = { add_to_faction = DED }
+		}
+	}
+	option = { 
+		name = old.16.b
+		ai_chance = {
+			base = 1
+		}
+		add_stability = 0.01
+		add_political_power = 30
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.05
+		}
+	}
+}
+country_event = {
+    id = old.17
+	title = old.17.t
+	desc = old.17.d
+	picture = GFX_report_event_PBB_kingdom
+    is_triggered_only = yes
+
+    option = { 
+		name = old.17.a
+		ai_chance = {
+			base = 5
+		}
+		add_war_support = -0.1
+		add_political_power = 50
+		FROM = {
+			country_event = da.1
+			puppet = ROOT
+		}
+	}
+	option = { 
+		name = old.17.b
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = 15
+		add_stability = 0.01
+		FROM = {
+			country_event = net.1
+			faction_leader = { 
+				add_to_faction = ROOT
+				add_ai_strategy = {
+					type = alliance
+					id = ROOT
+					value = 100
+				}
+				hidden_effect = {
+					ROOT = {
+						add_ai_strategy = {
+							type = alliance
+							id = PREV
+							value = 100
+						}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = old.18
+	title = old.18.t
+	desc = old.18.d
+	picture = GFX_report_event_OLD_mirotvorets2
+    is_triggered_only = yes
+
+    option = { 
+		name = old.18.a
+		ai_chance = {
+			base = 1
+		}
+		random_list = {
+			25 = {
+				country_event = pbb.23
+				PBB_more_bandit = yes
+			}
+			25 = {
+				country_event = pbb.24
+				PBB_more_bandit = yes
+			}
+			50 = {
+				country_event = old.18
+				OLD = { country_event = old.18 }
+			}
+		}
+	}
+	option = { 
+		name = old.18.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 50
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = 50
+		add_war_support = 0.02
+		OLD = {
+			country_event = {
+				id = old.20
+				days = 5
+				random_hours = 7
+				random_days = 3
+			}
+		}
+		custom_effect_tooltip = batler_go
+	}
+}
+country_event = {
+    id = old.19
+	title = old.19.t
+	desc = old.19.d
+	picture = GFX_report_event_OLD_mirotvorets
+    is_triggered_only = yes
+
+    option = { 
+		name = old.19.a
+		clr_country_flag = OLD_resistance_flag
+	}
+}
+country_event = {
+    id = old.20
+	title = old.20.t
+	desc = old.20.d
+	picture = GFX_report_event_OLD_batlers_defeat
+    is_triggered_only = yes
+
+    option = { 
+		name = old.20.a
+		ai_chance = {
+			base = 1
+		}
+		add_stability = 0.01
+		add_political_power = -60
+		country_event = {
+			id = old.21
+			days = 5
+			random_hours = 7
+			random_days = 3
+		}
+	}
+	option = { 
+		name = old.20.b
+		ai_chance = {
+			base = 1
+		}
+		trigger = {
+			is_subject = no
+		}
+		PBB = {
+			country_event = {
+				id = old.23
+				days = 5
+				random_hours = 7
+				random_days = 3
+			}
+		}
+	}
+}
+country_event = {
+    id = old.21
+	title = old.21.t
+	desc = old.21.d
+	picture = GFX_report_event_PBB_batler
+    is_triggered_only = yes
+
+    option = { 
+		name = old.21.a
+		add_political_power = -70
+		PBB = {
+			country_event = {
+				id = old.22
+				days = 5
+				random_hours = 7
+				random_days = 3
+			}
+		}
+	}
+}
+country_event = {
+    id = old.22
+	title = old.22.t
+	desc = old.22.d
+	picture = GFX_report_event_OLD_mirotvorets3
+    is_triggered_only = yes
+
+    option = { 
+		name = old.22.a
+		add_political_power = 100
+	}
+}
+country_event = {
+    id = old.23
+	title = old.23.t
+	desc = old.23.d
+	picture = GFX_report_event_OLD_batlers_defeat
+    is_triggered_only = yes
+
+    option = { 
+		name = old.23.a
+		if = {
+			limit = {
+				has_country_leader = {
+					character = PBB_batler
+					ruling_only = yes
+				}
+			}
+			kill_country_leader = yes
+		}
+		else = {
+			set_country_flag = killed_flag
+		}
+	}
+}
+country_event = {
+    id = old.24
+	title = old.24.t
+	desc = old.24.d
+	picture = GFX_report_event_OLD_princess_snake
+    is_triggered_only = yes
+
+    option = { 
+		name = old.24.a
+		ai_chance = {
+			base = 1
+		}
+		set_rule = {
+			can_decline_call_to_war = yes
+		}
+		overlord = {
+			every_other_country = {
+				limit = {
+					is_neighbor_of = PREV
+					NOT = {
+						is_in_faction_with = PREV
+						is_subject_of = PREV
+						is_puppet_of = PREV
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+		}
+		custom_effect_tooltip = all_neighbors_not_friends
+	}
+	option = { 
+		name = old.24.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 50
+				is_historical_focus_on = yes
+			}
+		}
+		overlord = {
+			country_event = old.25
+			effect_tooltip = {
+				if = {
+					limit = {
+						has_governmrnt = candy
+					}
+					add_ideas = OLD_rats_in_the_kingdom
+				}
+				else = {
+					add_ideas = OLD_rats_in_the_kingdom2
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = PREV
+						is_subject_of = PREV
+						is_puppet_of = PREV
+					}
+				}
+				country_event = old.25
+			}
+		}
+	}
+	option = { 
+		name = old.24.c
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = 50
+		capital_scope = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		} 
+		overlord = {
+			add_stability = 0.05
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+}
+country_event = {
+    id = old.25
+	title = old.25.t
+	desc = old.25.d
+	picture = GFX_report_event_PBB_without_leader
+    is_triggered_only = yes
+
+    option = { 
+		name = old.25.a
+		trigger = {
+			original_tag = PBB
+		}
+		if = {
+			limit = {
+				has_governmrnt = candy
+			}
+			add_ideas = OLD_rats_in_the_kingdom
+		}
+		else = {
+			add_ideas = OLD_rats_in_the_kingdom2
+		}
+	}
+	option = { 
+		name = old.25.b
+		trigger = {
+			NOT = { original_tag = PBB }
+		}
+		add_political_power = 70
+		add_war_support = 0.02
 	}
 }

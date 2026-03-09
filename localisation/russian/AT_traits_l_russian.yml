@@ -9,7 +9,14 @@
  Ignorance: "Невежда"
  passive_ai_modifier: "Чтобы обрушить на себя весь гнев ии, включите настройку хаотичного фокуса ии в опциях перед игрой"
  passive_ai: "Пассивный ии"
- 
+ strongest_fool: "Слабоумие и отвага"
+ hands_no_hands: "Руки-крюки"
+ brainless: "Опухоль мозга"
+ homeguy: "Домосед"
+ cannibal: "Каннибал"
+ treplo: "Трепло"
+ crazy: "Сумасшедший"
+
  ##IKK
  without_heart: "Без сердца"
  IKK_i_just_want_to_be_nice_guy: "Социапат"
@@ -35,7 +42,7 @@
  sharing_research_chel: "Работает в команде"
  scientist_chel: "Зазнайка"
  taker_chel: "Скупщик"
- 
+ leader_of_orden: "Глава ордена"
  ne_upal: "Не упал"
  rock_and_stone: "Стойкий"
  rock_and_stone2: "Крепкий"

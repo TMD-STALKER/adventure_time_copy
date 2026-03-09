@@ -139,7 +139,7 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 			}
 			
 		}
-		within_reachable_land_distance_of_from = yes
+		
 	}
 	
 	

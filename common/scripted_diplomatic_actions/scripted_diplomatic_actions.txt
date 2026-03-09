@@ -116,6 +116,7 @@ scripted_diplomatic_actions = {
 			is_puppet = no
 			is_subject = no
 			THIS = {
+				NOT = { original_tag = LIC }
 				OR = {
 					AND = {
 						has_war_with = ROOT
@@ -128,6 +129,19 @@ scripted_diplomatic_actions = {
 						is_faction_leader = yes
 					}
 				}
+			}
+			OR = {
+				AND = {
+					has_completed_focus = OLD_try_to_stop
+					THIS = { 
+						NOT = { 
+							TAG = PBB
+							is_subject_of = PBB
+							is_in_faction_with = PBB
+						} 
+					}
+				}
+				NOT = { has_completed_focus = OLD_try_to_stop }
 			}
 		}
 		selectable = { #if action is selectable on gui

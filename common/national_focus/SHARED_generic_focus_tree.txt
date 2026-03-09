@@ -98,6 +98,7 @@
 		}
 		available = {
 			is_puppet = yes
+			NOT = { has_focus_tree = OLD_focus_tree }
 		}
 		mutually_exclusive = {
 			focus = SHARED_path_of_loyalty
