@@ -42,6 +42,7 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			add_war_support = 0.1
+			upgrade_survivability = yes
 			set_country_leader_ideology = independed_candy
 			add_popularity = {
 				ideology = candy
@@ -95,10 +96,12 @@ focus_tree = {
 			}
 			add_war_support = 0.05
 			army_experience = 10
+			upgrade_intelligence = yes
 		}
 		x = 9
 		y = 0
 		completion_reward = {
+			upgrade_intelligence = yes
 			add_political_power = 100
 			add_autonomy_score = {
 				value = 100
@@ -138,7 +141,8 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			has_global_flag = experiment_is_end_flag 
+			has_global_flag = experiment_is_end_flag
+			upgrade_strength = yes
 		}
 		bypass_effect = {
 			PBB = { country_event = old.1 }
@@ -146,6 +150,7 @@ focus_tree = {
 		x = 16
 		y = 0
 		completion_reward = {
+			upgrade_strength = yes
 			set_politics = {
 				ruling_party = neutral
 				elections_allowed = no
@@ -191,7 +196,8 @@ focus_tree = {
 		x = 8
 		y = 1
 		completion_reward = {
-			add_political_power = 200
+			add_political_power = 150
+			upgrade_intelligence = yes
 			add_ideas = OLD_education_with_princess
 		}
 
@@ -207,6 +213,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			add_research_slot = 1
+			upgrade_intelligence = yes
 			set_country_flag = OLD_investing_in_researches_flag
 			unlock_decision_tooltip = OLD_investing_in_researches
 		}
@@ -393,6 +400,8 @@ focus_tree = {
 		x = 12
 		y = 3
 		completion_reward = {
+			upgrade_survivability = yes
+			upgrade_charisma = yes
 			country_event = old.10
 		}
 
@@ -409,6 +418,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_political_power = 200
+			upgrade_eloquence = yes
 			unlock_decision_category_tooltip = OLD_radiostation_of_truth
 			set_country_flag = OLD_radiostation_of_truth_flag
 		}
@@ -426,6 +436,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			add_manpower = 1587
+			upgrade_charisma = yes
 			overlord = {
 				add_stability = -0.05
 			}
@@ -447,6 +458,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			add_political_power = 150
+			upgrade_eloquence = yes
 			overlord = {
 				add_war_support = -0.02
 				add_political_power = -45
@@ -478,6 +490,7 @@ focus_tree = {
 		x = 14
 		y = 3
 		completion_reward = {
+			upgrade_eloquence = yes
 			country_event = old.12
 		}
 
@@ -626,7 +639,8 @@ focus_tree = {
 				limit = {
 					has_completed_focus = OLD_descriditation_of_princess
 				}
-				
+				add_political_power = 200
+				upgrade_eloquence = yes
 			}
 			else = {
 				custom_effect_tooltip = OLD_found_secrets_ttt

@@ -390,6 +390,104 @@ upgrade_agility = {
 		}
 	}
 }
+upgrade_survivability = {
+	custom_effect_tooltip = upgrade_survivability_tt
+	if = {
+		limit = {
+			has_idea = survivability_one
+		}
+		hidden_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = survivability_two
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = survivability_two
+		}
+		hidden_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = survivability_three
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = survivability_three
+		}
+		hidden_effect = {
+			add_offsite_building = { type =arms_factory level = 1 }
+			add_ideas = survivability_forth
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = survivability_forth
+		}
+		hidden_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = survivability_five
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = survivability_five
+		}
+		hidden_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = survivability_six
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = survivability_six
+		}
+		hidden_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = survivability_seven
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = survivability_seven
+		}
+		hidden_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = survivability_eth
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = survivability_eth
+		}
+		hidden_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = survivability_nine
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = survivability_nine
+		}
+		hidden_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = survivability_ten
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = survivability_ten
+		}
+		add_political_power = 50
+		add_stability = 0.01
+		add_war_support = 0.01
+	}
+	else = {
+		hidden_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_ideas = survivability_one
+		}
+	}
+}
 upgrade_strength = {
 	custom_effect_tooltip = upgrade_strength_tt
 	if = {

@@ -7,6 +7,7 @@
  upgrade_intelligence_tt: "§Y[ROOT.GetLeader]§! получит новый уровнень §Yинтеллекта§!"
  upgrade_eloquence_tt: "§Y[ROOT.GetLeader]§! получит новый уровнень §Yкрасноречия§!"
  upgrade_strength_tt: "§Y[ROOT.GetLeader]§! получит новый уровнень §Yсилы§!"
+ upgrade_survivability_tt: "§Y[ROOT.GetLeader]§! получит новый уровнень §YЖивучести§!"
  more_fire_danger_tt: "Угроза от §Yнарода огня§! §Rвозрастёт§!"
  no_fire_danger_tt: "Угроза от §Yнарода огня§! §Gспадёт§!"
  more_mage_danger_tt: "Угроза от §Yнарода магов§! §Rвозрастёт§!"
