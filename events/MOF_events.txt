@@ -434,11 +434,24 @@ country_event = {
 		ai_chance = {
 			base = 3
 		}
-        #ДАТЬ ДЕБФЫ (СОПРОТИВЛЕНИЕ СЛИЗИ И БАНДОСЫ НА ЮГЕ)
+        add_ideas = MOF_separi
+        add_ideas = MOF_uzers
+        add_ideas = MOF_bandits
 		set_cosmetic_tag = attack_protocol
-		BRK = { country_event = brk.1 } #+ МИРОВОЙ ИВЕНТ ОТ ЭТОГО ИВЕНТА
-		custom_effect_tooltip = content_not_ready
-		load_focus_tree = generic
+		BRK = { country_event = brk.1 }
+		load_focus_tree = mmn_focus
+        every_controlled_state = {
+            limit = {
+                OR = {
+                    is_core_of = SLO
+                    is_core_of = DEC
+                }
+            }
+            add_dynamic_modifier = {
+                modifier = separi_mo
+                scope = ROOT
+            }
+        }
 	}
 }
 

@@ -6,7 +6,7 @@ debug_decisions = {
 			
 		}
 		complete_effect = {
-			add_country_leader_trait = treplo
+			kill_country_leader = yes
 		}
 		remove_effect = {
 		}
@@ -254,6 +254,94 @@ capture_items = {
 				clr_country_flag = have_ice_crown
 			}
 			set_country_flag = have_ice_crown
+			add_war_support = 0.01
+		}
+		ai_will_do = {
+			base = 25
+			modifier = {
+				is_historical_focus_on = yes
+				add = -50
+			}
+		}
+	}
+	take_old_cap_from_enemy = {
+		priority = 100
+		cost = 100
+		icon = generic_confiscation
+		visible = {
+			OR = {
+				any_subject_country = {
+					has_country_flag = have_old_cap
+					has_civil_war = no
+				}
+				AND = {
+					any_war_score > 29
+					any_enemy_country = {
+						surrender_progress > 0.85
+						has_country_flag = have_old_cap
+						has_civil_war = no
+					}
+				}
+			}
+		}
+		available = {
+			has_civil_war = no
+		}
+
+		complete_effect = { 
+			random_other_country = {
+				limit = {
+					has_country_flag = have_old_cap
+					has_civil_war = no
+				}
+				add_war_support = -0.01
+				clr_country_flag = have_old_cap
+			}
+			set_country_flag = have_old_cap
+			add_war_support = 0.01
+		}
+		ai_will_do = {
+			base = 25
+			modifier = {
+				is_historical_focus_on = yes
+				add = -50
+			}
+		}
+	}
+	take_old_shovel_from_enemy = {
+		priority = 100
+		cost = 100
+		icon = generic_confiscation
+		visible = {
+			OR = {
+				any_subject_country = {
+					has_country_flag = have_old_shovel
+					has_civil_war = no
+				}
+				AND = {
+					any_war_score > 29
+					any_enemy_country = {
+						surrender_progress > 0.85
+						has_country_flag = have_old_shovel
+						has_civil_war = no
+					}
+				}
+			}
+		}
+		available = {
+			has_civil_war = no
+		}
+
+		complete_effect = { 
+			random_other_country = {
+				limit = {
+					has_country_flag = have_old_shovel
+					has_civil_war = no
+				}
+				add_war_support = -0.01
+				clr_country_flag = have_old_shovel
+			}
+			set_country_flag = have_old_shovel
 			add_war_support = 0.01
 		}
 		ai_will_do = {

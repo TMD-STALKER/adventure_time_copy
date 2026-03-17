@@ -1,0 +1,46 @@
+focus_tree = {
+    id = mmn_focus
+    country = {
+        factor = 0
+		
+		modifier = {
+			add = 1
+			tag = MOF
+		}
+
+        modifier = {
+			add = 15
+			is_debug = yes
+			tag = MOF
+		}
+    }
+    default = no
+    continuous_focus_position = { x = 1200 y = 6 }
+	shared_focus = MOF_slow_but_right
+	shared_focus = MOF_faster_and_faster
+	shared_focus = MOF_infantry_doctrine
+	shared_focus = MOF_artillery_doctrine
+	shared_focus = MOF_motorization_doctrine
+	shared_focus = MOF_tank_doctrine
+    
+    focus = {
+        id = mfm_situatsia
+        icon = GFX_focus_generic_military_dictatorship
+        cost = 3
+        x = 6
+		y = 0
+        completion_reward = {
+			country_event = mof.6 #ситуация в стране и отношение к нам (всё плачевно)
+		}
+    }
+    focus = {
+        id = mfm_separi
+        icon = GFX_focus_generic_military_dictatorship
+        cost = 6
+        x = 6
+		y = 1
+        completion_reward = {
+			country_event = mof.6
+		}
+    }
+}

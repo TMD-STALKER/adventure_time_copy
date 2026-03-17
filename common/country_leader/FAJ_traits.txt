@@ -1,0 +1,28 @@
+leader_traits = {
+	FAJ_finn_the_human = {
+		random = no
+		stability_factor = 0.07
+		army_morale_factor = 0.07
+		opinion_gain_monthly_same_ideology_factor = 0.15
+	}
+	FAJ_jake_the_god = {
+		random = no
+		war_support_factor = 0.07
+		army_attack_factor = 0.07
+		breakthrough_factor = 0.07
+		political_power_factor = 0.07
+	}
+	
+	FAJ_true_king_of_ooo = {
+		random = no
+		stability_factor = 0.5
+		drift_defence_factor = 0.35
+	}
+	
+	FAJ_best_friend = {
+		random = yes
+		stability_factor = 0.05
+		neutral_drift = 0.05
+		opinion_gain_monthly_factor = 0.15
+	}
+}

@@ -39,7 +39,15 @@ characters = {
 				original_tag = FAJ
 			}
 			traits  = {
-				warrior_code
+				FAJ_finn_the_human
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = FAJ_finn
+						ruling_only = yes
+					}
+				}
 			}
 			ai_will_do = {
 				factor = 4.000
@@ -98,8 +106,16 @@ characters = {
 			allowed  = {
 				original_tag = FAJ
 			}
-			traits  = {
-				warrior_code
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = FAJ_jake
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				FAJ_jake_the_god
 			}
 		}
 		corps_commander = {
@@ -110,6 +126,42 @@ characters = {
 				planning_skill = 2
 				logistics_skill = 3
 				legacy_id = -1 
+		}
+	}
+	FAJ_BMO = {
+		name = FAJ_BMO
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FAJ/FAJ_BMO.dds"
+				small="GFX_idea_FAJ_bmo"
+			}
+		}
+		country_leader = {
+			ideology = adventure
+			expire = "1944.1.1.1"
+			id = -1
+			traits = {
+				FAJ_true_king_of_ooo
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FAJ_BMO
+			allowed  = {
+				original_tag = FAJ
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = FAJ_BMO
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				FAJ_best_friend
+			}
+			cost = 80
 		}
 	}
 }

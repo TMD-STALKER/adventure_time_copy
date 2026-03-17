@@ -129,6 +129,7 @@ form_knight_decision_category = {
 	}
 
 	visible = {
+		any_owned_state = { is_core_of = KNG }
 		OR = {
 			has_idea = autarkic_economy1
 			original_tag = KNG

@@ -1,6 +1,25 @@
 ideas = {
     country = {
 		
+		MOF_infantry_doctrine = {
+			
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = MOF_military_power
+			
+			modifier = {
+				army_morale_factor = 0.05
+				army_org_regain = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		
 		agressive = {
 			
 			allowed = {
@@ -353,6 +372,66 @@ ideas = {
                     build_cost_ic = -0.2
                 }
             }
+		}
+
+		MOF_separi = {
+
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = MEX_revolutionary_army 
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.05
+				custom_modifier_tooltip = MOF_separi_tt
+			}
+		}
+
+		MOF_uzers = {
+
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = POL_the_peasants_strike
+
+			modifier = {
+				stability_factor = -0.15
+				weekly_manpower = -10
+				industry_repair_factor = -0.2
+			}
+		}
+
+		MOF_bandits = {
+
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = SPR_political_violence
+
+			modifier = {
+				stability_factor = -0.1
+				local_resources_factor = -0.2
+				consumer_goods_factor = 0.2
+				army_speed_factor = -0.15
+				army_core_attack_factor = -0.15
+				army_core_defence_factor = -0.15
+			}
 		}
 	}
 }

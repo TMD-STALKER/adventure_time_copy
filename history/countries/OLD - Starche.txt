@@ -29,6 +29,12 @@ if = {
 
 	add_to_tech_sharing_group = commonwealth_research
 }
+set_country_flag = have_old_cap
+set_country_flag = have_old_shovel
+add_ideas = {
+	old_cap
+	old_shovel
+}
 recruit_character = OLD_starchi
 recruit_character = OLD_science
 recruit_character = OLD_kenet

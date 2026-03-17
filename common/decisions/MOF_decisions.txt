@@ -188,7 +188,7 @@ war_on_south = {
 
 		complete_effect = {
 			custom_effect_tooltip = Kyrier_cosmetic_tag_tt
-			news_event = ooonews.14
+			set_country_flag = mof_conquer_south
 			hidden_effect = { 
 				every_controlled_state = {
 					limit = {

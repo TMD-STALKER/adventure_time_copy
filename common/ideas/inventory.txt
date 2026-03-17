@@ -49,6 +49,26 @@ ideas = {
 				#defense_bonus_against = 0.55
 			}
 		}
+		old_cap = {
+			removal_cost = -1
+			
+			visible = {
+				has_country_flag = have_old_cap
+			}
+			allowed_to_remove = {
+                always = yes #потом сюда надо OR прописать
+            }
+			available = { 
+				has_head = yes
+				not_commune = yes
+			}
+			picture = OLD_cap
+			modifier = {
+				political_power_factor = 0.05
+				neutral_drift = 0.02
+				trade_opinion_factor = 0.02
+			}
+		}
 		pbb_tiara = {
 			removal_cost = -1
 			
@@ -314,6 +334,31 @@ ideas = {
 			}
 			
 		}
+		old_shovel = {
+			removal_cost = -1
+			
+			visible = {
+				has_country_flag = have_old_shovel
+				NOT = { has_idea = old_shovel2 }
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = { 
+				has_hands = yes
+				not_commune = yes
+			}
+			picture = OLD_shovel
+			modifier = {
+				army_defence_factor = 0.05
+				dig_in_speed_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = SKE
+				attack_bonus_against = 0.06
+				defense_bonus_against = 0.06
+			}
+		}
 	}
 	hands2 = {
 		law = yes
@@ -430,6 +475,31 @@ ideas = {
 				#defense_bonus_against = 0.55
 			}
 			
+		}
+		old_shovel2 = {
+			removal_cost = -1
+			
+			visible = {
+				has_country_flag = have_old_shovel
+				NOT = { has_idea = old_shovel }
+			}
+			allowed_to_remove = {
+                always = yes
+            }
+			available = { 
+				has_hands = yes
+				not_commune = yes
+			}
+			picture = OLD_shovel
+			modifier = {
+				army_defence_factor = 0.05
+				dig_in_speed_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = SKE
+				attack_bonus_against = 0.06
+				defense_bonus_against = 0.06
+			}
 		}
 	}
 	artefacts = {

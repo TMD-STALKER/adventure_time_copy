@@ -79,6 +79,10 @@
  take_have_pies_from_enemy_desc: "Лишь мы достойны этого вкуса"
  take_bublik_of_bonne_from_enemy: "Захватить монетку"
  take_bublik_of_bonne_from_enemy_desc: ""
+ take_old_shovel_from_enemy: "Захватить лопату могильщика"
+ take_old_shovel_from_enemy_desc: "Пора и нам покопать"
+ take_old_cap_from_enemy: "Присвоить шляпу могильщика себе"
+ take_old_cap_from_enemy_desc: "В хозяйстве пригодится"
  ######FAJ
  FAJ_danger_for_jake: "Джейк в беде"
  FAJ_jake_need_healing: "В поисках лекарства"

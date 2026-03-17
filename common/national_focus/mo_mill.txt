@@ -4,8 +4,7 @@ focus_tree = {
         factor = 0
 
         modifier = {
-			add = 15
-			is_debug = yes
+			add = 1
 			tag = MOF
 		}
     }
@@ -423,6 +422,7 @@ focus_tree = {
                     }
                 }
             }
+            has_country_flag = mof_conquer_south
         }
         prerequisite = {
             focus = mfm_killing_mo
@@ -432,6 +432,7 @@ focus_tree = {
         }
         completion_reward = {
 			country_event = mof.11
+            news_event = ooonews.14
 		}
     }
 }

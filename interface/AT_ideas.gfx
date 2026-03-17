@@ -71,6 +71,10 @@ spriteTypes = {
 		name = "GFX_idea_FAJ_jake"
 		texturefile = "gfx/interface/ideas/idea_FAJ_jake.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_FAJ_bmo"
+		texturefile = "gfx/interface/ideas/idea_FAJ_bmo.dds"
+	}
 	#SLO
 	spriteType = {
 		name = "GFX_idea_SLO_slodolf_slitler"
@@ -92,6 +96,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_OLD_miro"
 		texturefile = "gfx/interface/ideas/idea_OLD_miro.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OLD_cap"
+		texturefile = "gfx/interface/ideas/idea_OLD_cap.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OLD_shovel"
+		texturefile = "gfx/interface/ideas/idea_OLD_shovel.dds"
 	}
 	#IKK
 	spriteType = {

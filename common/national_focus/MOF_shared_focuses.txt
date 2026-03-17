@@ -1,0 +1,962 @@
+
+	shared_focus = {
+		id = MOF_slow_but_right
+		icon = GFX_focus_DEN_limited_regulations
+		cost = 5
+		mutually_exclusive = {
+			focus = MOF_faster_and_faster
+		}
+		x = 21
+		y = 0
+
+	}
+	shared_focus = { 
+		id = MOF_faster_and_faster
+		icon = GFX_focus_DEN_no_regulations
+		cost = 5
+		mutually_exclusive = {
+			focus = MOF_slow_but_right
+		}
+		x = 27
+		y = 0
+
+	}
+	shared_focus = {
+		id = MOF_infantry_doctrine
+		icon = GFX_focus_generic_urban_training
+		cost = 1
+		x = 31
+		y = 0
+		completion_reward = {
+			add_ideas = MOF_infantry_doctrine
+			custom_effect_tooltip = doctrine_focuses_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_5_step_infantry = yes
+					}
+				}
+				else_if = {
+					limit = {
+						has_4_step_infantry = yes
+					}
+				}
+				else_if = {
+					limit = {
+						has_3_step_infantry = yes
+					}
+				}
+				else_if = {
+					limit = {
+						has_2_step_infantry = yes
+					}
+				}
+				else_if = {
+					limit = {
+						has_1_step_infantry = yes
+					}
+				}
+			}
+		}
+
+	}
+	shared_focus = {
+		id = MOF_artillery_doctrine
+		icon = GFX_goal_generic_army_artillery2
+		cost = 1
+		x = 36
+		y = 0
+
+	}
+	shared_focus = {
+		id = MOF_motorization_doctrine
+		icon = GFX_goal_generic_army_motorized
+		cost = 1
+		x = 40
+		y = 0
+
+	}
+	shared_focus = {
+		id = MOF_tank_doctrine
+		icon = GFX_goal_generic_army_tanks
+		cost = 1
+		x = 44
+		y = 0
+
+	}
+	shared_focus = {
+		id = MOF_dmo_modification
+		icon = GFX_goal_generic_production
+		cost = 5
+		prerequisite = {
+			focus = MOF_slow_but_right
+		}
+		x = 21
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_first_step_of_restoration
+		icon = GFX_focus_generic_industry_1
+		cost = 5
+		prerequisite = {
+			focus = MOF_slow_but_right
+			focus = MOF_faster_and_faster
+		}
+		x = 24
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_use_police_resourses
+		icon = GFX_focus_AUS_raid_military_storages
+		cost = 6
+		prerequisite = {
+			focus = MOF_first_step_of_restoration
+		}
+		mutually_exclusive = {
+			focus = MOF_use_resoourses_of_conservation
+		}
+		x = 22
+		y = 2
+
+	}
+	shared_focus = {
+		id = MOF_download_new_police_dravers
+		icon = GFX_focus_generic_printing_press
+		cost = 5
+		prerequisite = {
+			focus = MOF_use_police_resourses
+		}
+		x = 21
+		y = 3
+
+	}
+	shared_focus = {
+		id = MOF_use_resoourses_of_conservation
+		icon = GFX_focus_DEN_heavy_regulations
+		cost = 6
+		prerequisite = {
+			focus = MOF_first_step_of_restoration
+		}
+		mutually_exclusive = {
+			focus = MOF_use_police_resourses
+		}
+		x = 26
+		y = 2
+
+	}
+	shared_focus = {
+		id = MOF_second_step_of_restoration
+		icon = GFX_focus_generic_industry_2
+		cost = 6
+		prerequisite = {
+			focus = MOF_use_police_resourses
+			focus = MOF_use_resoourses_of_conservation
+		}
+		x = 24
+		y = 3
+
+	}
+	shared_focus = {
+		id = MOF_economic_production
+		icon = GFX_focus_generic_currency_reforms
+		cost = 5
+		prerequisite = {
+			focus = MOF_second_step_of_restoration
+		}
+		mutually_exclusive = {
+			focus = MOF_overworking
+		}
+		x = 22
+		y = 4
+
+	}
+	shared_focus = {
+		id = MOF_overworking
+		icon = GFX_focus_generic_economic_recovery
+		cost = 5
+		prerequisite = {
+			focus = MOF_second_step_of_restoration
+		}
+		mutually_exclusive = {
+			focus = MOF_economic_production
+		}
+		x = 26
+		y = 4
+
+	}
+	shared_focus = {
+		id = MOF_final_step
+		icon = GFX_focus_generic_industry_3
+		cost = 15
+		prerequisite = {
+			focus = MOF_economic_production
+			focus = MOF_overworking
+		}
+		x = 24
+		y = 5
+
+	}
+	shared_focus = {
+		id = MOF_project_sea
+		icon = GFX_goal_generic_build_navy
+		cost = 5
+		prerequisite = {
+			focus = MOF_final_step
+		}
+		allow_branch = {
+			is_debug = yes
+		}
+		x = 19
+		y = 7
+
+	}
+	shared_focus = {
+		id = MOF_first_mo_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		prerequisite = {
+			focus = MOF_final_step
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 24
+		y = 7
+
+	}
+	shared_focus = {
+		id = MOF_explain_ruins
+		icon = GFX_focus_generic_public_works
+		cost = 5
+		prerequisite = {
+			focus = MOF_first_mo_plan
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 24
+		y = 8
+
+	}
+	shared_focus = {
+		id = MOF_re_use_old_camers
+		icon = GFX_goal_generic_construction
+		cost = 5
+		prerequisite = {
+			focus = MOF_first_mo_plan
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 22
+		y = 8
+
+	}
+	shared_focus = {
+		id = MOF_new_standarts
+		icon = GFX_focus_CHI_registry_of_property
+		cost = 5
+		prerequisite = {
+			focus = MOF_first_mo_plan
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 26
+		y = 8
+
+	}
+	shared_focus = {
+		id = MOF_start_new_production
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		cost = 10
+		prerequisite = {
+			focus = MOF_re_use_old_camers
+		}
+		prerequisite = {
+			focus = MOF_explain_ruins
+		}
+		prerequisite = {
+			focus = MOF_new_standarts
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 24
+		y = 9
+
+	}
+	shared_focus = {
+		id = MOF_our_markets
+		icon = GFX_focus_SOV_merge_plants
+		cost = 5
+		prerequisite = {
+			focus = MOF_start_new_production
+		}
+		mutually_exclusive = {
+			focus = MOF_export_focus
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 24
+		y = 10
+
+	}
+	shared_focus = {
+		id = MOF_export_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5
+		prerequisite = {
+			focus = MOF_start_new_production
+		}
+		mutually_exclusive = {
+			focus = MOF_our_markets
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 26
+		y = 10
+
+	}
+	shared_focus = {
+		id = MOF_open_company
+		icon = GFX_focus_SWE_landsverk
+		cost = 10
+		prerequisite = {
+			focus = MOF_our_markets
+			focus = MOF_export_focus
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 25
+		y = 11
+
+	}
+	shared_focus = {
+		id = MOF_emo_modification
+		icon = GFX_goal_generic_production2
+		cost = 5
+		prerequisite = {
+			focus = MOF_faster_and_faster
+		}
+		x = 27
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_mobilization_of_peaceful_mo
+		icon = GFX_focus_SWI_issue_war_bonds
+		cost = 5
+		prerequisite = {
+			focus = MOF_use_resoourses_of_conservation
+		}
+		x = 27
+		y = 3
+
+	}
+	shared_focus = {
+		id = MOF_project_sky
+		icon = GFX_goal_generic_build_airforce
+		cost = 5
+		prerequisite = {
+			focus = MOF_final_step
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 30
+		y = 7
+
+	}
+	shared_focus = {
+		id = MOF_robots_with_bombs
+		icon = GFX_goal_poland_goal
+		cost = 5
+		prerequisite = {
+			focus = MOF_project_sky
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 28
+		y = 8
+
+	}
+	shared_focus = {
+		id = MOF_engineer_brigades
+		icon = GFX_focus_SOV_organize_wreckers
+		cost = 4
+		prerequisite = {
+			focus = MOF_infantry_doctrine
+		}
+		x = 29
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_death_for_everyone
+		icon = GFX_focus_FIN_motti_tactics
+		cost = 5
+		prerequisite = {
+			focus = MOF_robots_with_bombs
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 29
+		y = 9
+
+	}
+	shared_focus = {
+		id = MOF_stels_brigades
+		icon = GFX_focus_RAJ_a_policy_of_silence
+		cost = 4
+		prerequisite = {
+			focus = MOF_infantry_doctrine
+		}
+		x = 31
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_mass_fortifications
+		icon = GFX_focus_BEL_better_than_maginot
+		cost = 4
+		prerequisite = {
+			focus = MOF_engineer_brigades
+			focus = MOF_stels_brigades
+		}
+		x = 30
+		y = 2
+
+	}
+	shared_focus = {
+		id = MOF_radars
+		icon = GFX_goal_generic_radar
+		cost = 5
+		prerequisite = {
+			focus = MOF_project_sky
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 30
+		y = 8
+
+	}
+	shared_focus = {
+		id = MOF_storm_brigades
+		icon = GFX_goal_rhineland
+		cost = 4
+		prerequisite = {
+			focus = MOF_infantry_doctrine
+		}
+		x = 33
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_mass_attacks
+		icon = GFX_goal_generic_secret_weapon
+		cost = 4
+		prerequisite = {
+			focus = MOF_stels_brigades
+			focus = MOF_storm_brigades
+		}
+		x = 32
+		y = 2
+
+	}
+	shared_focus = {
+		id = MOF_operative_tactic
+		icon = GFX_focus_generic_army_doctrines_2
+		cost = 4
+		prerequisite = {
+			focus = MOF_mass_fortifications
+			focus = MOF_mass_attacks
+		}
+		x = 31
+		y = 3
+
+	}
+	shared_focus = {
+		id = MOF_speedy_robots
+		icon = GFX_focus_HUN_establish_the_mavag_aircraft_factory
+		cost = 5
+		prerequisite = {
+			focus = MOF_project_sky
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 32
+		y = 8
+
+	}
+	shared_focus = {
+		id = MOF_wundergun
+		icon = GFX_focus_NOR_drobak_coastal_fort
+		cost = 4
+		prerequisite = {
+			focus = MOF_artillery_doctrine
+		}
+		x = 35
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_overfire
+		icon = GFX_focus_AUS_frontmiliz_focus
+		cost = 4
+		prerequisite = {
+			focus = MOF_artillery_doctrine
+		}
+		x = 36
+		y = 2
+
+	}
+	shared_focus = {
+		id = MOF_hell_on_the_earth
+		icon = GFX_focus_RAJ_a_private_military
+		cost = 4
+		prerequisite = {
+			focus = MOF_overfire
+		}
+		x = 35
+		y = 3
+
+	}
+	shared_focus = {
+		id = MOF_more_exploses
+		icon = GFX_focus_wonderweapons
+		cost = 4
+		prerequisite = {
+			focus = MOF_hell_on_the_earth
+		}
+		x = 35
+		y = 4
+
+	}
+	shared_focus = {
+		id = MOF_line_artillery
+		icon = GFX_focus_SMB_mountain_guns
+		cost = 4
+		prerequisite = {
+			focus = MOF_artillery_doctrine
+		}
+		x = 37
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_godness_guns
+		icon = GFX_focus_generic_anti_tank_guns
+		cost = 5
+		prerequisite = {
+			focus = MOF_overfire
+		}
+		x = 37
+		y = 3
+
+	}
+	shared_focus = {
+		id = MOF_far_far_strikes
+		icon = GFX_focus_SWE_let_fly_all_guns
+		cost = 4
+		prerequisite = {
+			focus = MOF_godness_guns
+		}
+		x = 37
+		y = 4
+
+	}
+	shared_focus = {
+		id = MOF_sneekee
+		icon = GFX_focus_generic_truck
+		cost = 4
+		prerequisite = {
+			focus = MOF_motorization_doctrine
+		}
+		x = 39
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_mobile_radars
+		icon = GFX_focus_SWE_radiotjanst
+		cost = 4
+		prerequisite = {
+			focus = MOF_sneekee
+		}
+		x = 39
+		y = 3
+
+	}
+	shared_focus = {
+		id = MOF_tracks_with_guns
+		icon = GFX_focus_HABSBURG_the_modern_hussar
+		cost = 4
+		prerequisite = {
+			focus = MOF_motorization_doctrine
+		}
+		x = 40
+		y = 2
+
+	}
+	shared_focus = {
+		id = MOF_mobile_hubs
+		icon = GFX_focus_generic_supply_line
+		cost = 4
+		prerequisite = {
+			focus = MOF_motorization_doctrine
+		}
+		x = 41
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_mobile_forges
+		icon = GFX_focus_generic_purchase_mechanized_equipment
+		cost = 4
+		prerequisite = {
+			focus = MOF_mobile_hubs
+		}
+		x = 41
+		y = 3
+
+	}
+	shared_focus = {
+		id = MOF_system_of_controlling_area
+		icon = GFX_focus_generic_armored_air_support
+		cost = 4
+		prerequisite = {
+			focus = MOF_mobile_radars
+		}
+		prerequisite = {
+			focus = MOF_mobile_forges
+		}
+		x = 40
+		y = 4
+
+	}
+	shared_focus = {
+		id = MOF_mozkrig
+		icon = GFX_focus_generic_tank_assault
+		cost = 4
+		prerequisite = {
+			focus = MOF_tank_doctrine
+		}
+		x = 43
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_life_armor
+		icon = GFX_focus_generic_nuclear_development
+		cost = 4
+		prerequisite = {
+			focus = MOF_mozkrig
+		}
+		x = 43
+		y = 2
+
+	}
+	shared_focus = {
+		id = MOF_frankenmo
+		icon = GFX_focus_YUG_zmaj
+		cost = 4
+		prerequisite = {
+			focus = MOF_life_armor
+		}
+		x = 43
+		y = 4
+
+	}
+	shared_focus = {
+		id = MOF_sea_focus1
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = MOF_project_sea
+		}
+		x = 19
+		y = 8
+
+	}
+	shared_focus = {
+		id = MOF_sea_focus2
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = MOF_sea_focus1
+		}
+		x = 18
+		y = 9
+
+	}
+	shared_focus = {
+		id = MOF_sea_focus3
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = MOF_sea_focus1
+		}
+		x = 20
+		y = 9
+
+	}
+	shared_focus = {
+		id = MOF_sea_4
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = MOF_sea_focus2
+		}
+		x = 18
+		y = 10
+
+	}
+	shared_focus = {
+		id = MOF_sea_focus5
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = MOF_sea_focus3
+		}
+		x = 20
+		y = 10
+
+	}
+	shared_focus = {
+		id = MOF_build_on_new_territory
+		icon = GFX_focus_generic_low_cost_housing
+		cost = 5
+		prerequisite = {
+			focus = MOF_expansion_of_factories
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 21
+		y = 11
+
+	}
+	shared_focus = {
+		id = MOF_researching_of_industry
+		icon = GFX_focus_research
+		cost = 5
+		prerequisite = {
+			focus = MOF_expansion_of_factories
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 23
+		y = 11
+
+	}
+	shared_focus = {
+		id = MOF_expansion_of_factories
+		icon = GFX_focus_generic_mass_production
+		cost = 5
+		prerequisite = {
+			focus = MOF_start_new_production
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 22
+		y = 10
+
+	}
+	shared_focus = {
+		id = MOF_safety_sky
+		icon = GFX_focus_generic_escort_efficiency
+		cost = 5
+		prerequisite = {
+			focus = MOF_speedy_robots
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 31
+		y = 9
+
+	}
+	shared_focus = {
+		id = MOF_chose_partner
+		icon = GFX_focus_generic_air_partners
+		cost = 10
+		prerequisite = {
+			focus = MOF_death_for_everyone
+			focus = MOF_safety_sky
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 30
+		y = 10
+
+	}
+	shared_focus = {
+		id = MOF_learn_of_air_forces
+		icon = GFX_focus_generic_pilot_training
+		cost = 5
+		prerequisite = {
+			focus = MOF_chose_partner
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 30
+		y = 11
+
+	}
+	shared_focus = {
+		id = MOF_second_mo_plan
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		prerequisite = {
+			focus = MOF_researching_of_industry
+		}
+		prerequisite = {
+			focus = MOF_open_company
+		}
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				is_debug = no
+			}
+		}
+		x = 24
+		y = 12
+
+	}
+	shared_focus = {
+		id = MOF_podavit_i_razdavit
+		icon = GFX_focus_generic_army_tanks2
+		cost = 4
+		prerequisite = {
+			focus = MOF_tank_doctrine
+		}
+		x = 45
+		y = 1
+
+	}
+	shared_focus = {
+		id = MOF_new_split_metals
+		icon = GFX_focus_generic_military_industry
+		cost = 4
+		prerequisite = {
+			focus = MOF_podavit_i_razdavit
+		}
+		x = 45
+		y = 2
+
+	}
+	shared_focus = {
+		id = MOF_skan_technology
+		icon = GFX_focus_generic_radio_communication
+		cost = 4
+		prerequisite = {
+			focus = MOF_life_armor
+			focus = MOF_new_split_metals
+		}
+		x = 44
+		y = 3
+
+	}
+	shared_focus = {
+		id = MOF_zakalka
+		icon = GFX_goal_generic_build_tank
+		cost = 4
+		prerequisite = {
+			focus = MOF_new_split_metals
+		}
+		x = 45
+		y = 4
+
+	}
+

@@ -33,6 +33,9 @@ if = {
 		set_default = yes
 	}
 }
+add_offsite_building = { type = industrial_complex level = 5 }
+add_offsite_building = { type = arms_factory level = 10 }
+add_offsite_building = { type = dockyard level = 5 }
 add_ideas = {
 	disarmed_nation1
 	autarkic_economy1
@@ -41,11 +44,20 @@ add_ideas = {
 	###
 	PBB_member_of_tax_deal
 	only_iam
+	
+	####
+	strength_five
+	agility_five
+	charisma_five
+	survivability_five
 }
+
+
 set_country_flag = have_FAJ_sword
 recruit_character = FAJ_finn
 recruit_character = FAJ_leader_andr
 recruit_character = FAJ_jake
+recruit_character = FAJ_BMO
 
 
 give_guarantee = FUZ

@@ -1,0 +1,85 @@
+has_5_step_infantry = {
+	OR = {
+		has_completed_focus = MOF_more_exploses
+		has_completed_focus = MOF_far_far_strikes
+		has_completed_focus = MOF_system_of_controlling_area
+		has_completed_focus = MOF_frankenmo
+		has_completed_focus = MOF_zakalka
+	}
+}
+has_4_step_infantry = {
+	OR = {
+		has_completed_focus = MOF_hell_on_the_earth
+		has_completed_focus = MOF_godness_guns
+		has_completed_focus = MOF_mobile_radars
+		has_completed_focus = MOF_mobile_forges
+		has_completed_focus = MOF_skan_technology
+	}
+}
+has_3_step_infantry = {
+	OR = {
+		has_completed_focus = MOF_overfire
+		has_completed_focus = MOF_tracks_with_guns
+		has_completed_focus = MOF_life_armor
+		has_completed_focus = MOF_new_split_metals
+	}
+}
+has_2_step_infantry = {
+	OR = {
+		has_completed_focus = MOF_wundergun
+		has_completed_focus = MOF_line_artillery
+		has_completed_focus = MOF_sneekee
+		has_completed_focus = MOF_mobile_hubs
+		has_completed_focus = MOF_mozkrig
+		has_completed_focus = MOF_podavit_i_razdavit
+	}
+}
+has_1_step_infantry = {
+	OR = {
+		has_completed_focus = MOF_artillery_doctrine
+		has_completed_focus = MOF_motorization_doctrine
+		has_completed_focus = MOF_tank_doctrine
+	}
+}
+has_5_step_artillery = {
+	OR = {
+		has_completed_focus = MOF_system_of_controlling_area
+		has_completed_focus = MOF_frankenmo
+		has_completed_focus = MOF_zakalka
+	}
+}
+has_4_step_artillery = {
+	OR = {
+		has_completed_focus = MOF_operative_tactic
+		has_completed_focus = MOF_mobile_radars
+		has_completed_focus = MOF_mobile_forges
+		has_completed_focus = MOF_skan_technology
+	}
+}
+has_3_step_artillery = {
+	OR = {
+		has_completed_focus = MOF_mass_fortifications
+		has_completed_focus = MOF_mass_attacks
+		has_completed_focus = MOF_tracks_with_guns
+		has_completed_focus = MOF_life_armor
+		has_completed_focus = MOF_new_split_metals
+	}
+}
+has_2_step_artillery = {
+	OR = {
+		has_completed_focus = MOF_storm_brigades
+		has_completed_focus = MOF_stels_brigades
+		has_completed_focus = MOF_engineer_brigades
+		has_completed_focus = MOF_sneekee
+		has_completed_focus = MOF_mobile_hubs
+		has_completed_focus = MOF_mozkrig
+		has_completed_focus = MOF_podavit_i_razdavit
+	}
+}
+has_1_step_artillery = {
+	OR = {
+		has_completed_focus = MOF_infantry_doctrine
+		has_completed_focus = MOF_motorization_doctrine
+		has_completed_focus = MOF_tank_doctrine
+	}
+}
