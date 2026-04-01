@@ -267,6 +267,13 @@ leader_traits = {
 
 	#################
 	
+	blr_trait = {
+		random = yes
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.05
+		production_factory_max_efficiency_factor = 0.05
+	}
+	
 	fruct_dictator = {
 		random = no
 		political_power_gain = 0.5

@@ -72,6 +72,23 @@ characters = {
 			legacy_id = -1 
 		}
 	}
+	IKK_lukashenko = {
+		name = IKK_lukashenko
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IKK/IKK_true_belarus_leader.dds"
+				small="GFX_idea_IKK_ganter"
+			}
+		}
+		country_leader = {
+			ideology = monarchy
+			expire = "4940.1.1.1"
+			id = -1
+			traits = {
+				blr_trait
+			}
+		}
+	}
 	IKK_ganti = {
 		name = IKK_ganti
 		portraits = {
