@@ -1,0 +1,448 @@
+add_namespace = stw
+
+country_event = {
+    id = stw.1
+	title = stw.1.t
+	desc = stw.1.d
+	picture = GFX_report_event_SOK_kingdom
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.1.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+		country_event = stw.2
+		FAJ = {	
+			country_event = stw.2
+		}
+	}
+	option = { 
+		name = stw.1.b
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				country_exists = SOK
+				SOK = { is_ai = yes }
+			}
+			
+			SOK = {
+				country_event = stw.3
+				declare_war_on = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				country_exists = SOK
+				SOK = { is_ai = no }
+			}
+			
+			SOK = {
+				country_event = stw.3
+				create_wargoal = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+		}
+		else = {
+			random_other_country = {
+				limit = {
+					any_owned_state = { is_core_of = SOK }
+				}
+				country_event = stw.3
+				release_on_controlled = SOK
+			}
+			hidden_effect = {
+				SOK = {
+					declare_war_on = {
+						target = ROOT
+						type = annex_everything
+					}
+					division_template = {
+						name = "monsters"
+
+						division_names_group = PBB_MYD_01
+						is_locked = no
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"monsters\" division_template = \"monsters\" start_manpower_factor = 1"
+							owner = SOK
+							count = 5
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+		}
+		
+		add_timed_idea = {
+			idea = STW_war_scouting
+			days = 180
+		}
+	}
+	option = { 
+		name = stw.1.c
+		ai_chance = {
+			base = 1
+		}
+		random_other_country = {
+			limit = {
+				any_owned_state = { is_core_of = SOK }
+			}
+			country_event = stw.3
+		}
+		add_timed_idea = {
+			idea = STW_war_scouting2
+			days = 180
+		}
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+				state = 195
+				num_provinces = 1
+				on_win = at_border.1.t
+				on_lose = at_border.2.t
+				on_cancel = at_border.2.t
+				modifier = 0.1
+				dig_in_factor = 0
+				terrain_factor = 0
+			}	
+			defender = {
+				state = 178
+				num_provinces = 1
+				on_win = at_border.3.t
+				on_lose = at_border.4.t
+				on_cancel = at_border.4.t
+			}
+		}
+	}
+
+}
+country_event = {
+    id = stw.2
+	title = stw.2.t
+	desc = stw.2.d
+	picture = GFX_report_event_SOK_kingdom
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.2.a
+		add_stability = 0.05
+		add_political_power = 100
+	}
+}
+country_event = {
+    id = stw.3
+	title = stw.3.t
+	desc = stw.3.d
+	picture = GFX_report_event_SOK_kingdom
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.3.a
+		add_stability = -0.05
+		add_political_power = -35
+	}
+}
+country_event = {
+    id = stw.4
+	title = stw.4.t
+	desc = stw.4.d
+	picture = GFX_report_event_STW_home
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.4.a
+		add_political_power = 150
+		add_war_support = 0.03
+	}
+}
+country_event = {
+    id = stw.5
+	title = stw.5.t
+	desc = stw.5.d
+	picture = GFX_report_event_STW_home
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.5.a
+		add_political_power = 200
+	}
+}
+country_event = {
+    id = stw.6
+	title = stw.6.t
+	desc = stw.6.d
+	picture = GFX_report_event_STW_home
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.6.a
+		add_political_power = 150
+		add_stability = 0.03
+	}
+}
+country_event = {
+    id = stw.7
+	title = stw.7.t
+	desc = stw.7.d
+	picture = GFX_report_event_STW_home
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.7.a
+		ai_chance = {
+			base = 2
+		}
+		FROM = {
+			country_event = da.1
+		}
+		give_guarantee = FROM
+		give_military_access = FROM
+	}
+	option = { 
+		name = stw.7.b
+		ai_chance = {
+			base = 1
+		}
+		FROM = { country_event = net.1 }
+		add_stability = 0.01
+		add_political_power = 20
+	}
+}
+country_event = {
+    id = stw.8
+	title = stw.8.t
+	desc = stw.8.d
+	picture = GFX_report_event_STW_home
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.8.a
+		add_political_power = -30
+		effect_tooltip = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FROM
+			}
+		}
+	}
+}
+country_event = {
+    id = stw.9
+	title = stw.9.t
+	desc = stw.9.d
+	picture = GFX_report_event_STW_home
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.9.a
+		ai_chance = {
+			base = 2
+		}
+		FROM = {
+			country_event = {
+				id = stw.10
+				days = 5
+				random_hours = 5
+				random_days = 5
+			}
+			give_military_access = ROOT
+		}
+		country_event = {
+			id = stw.10
+			days = 5
+			random_hours = 5
+			random_days = 5
+		}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		give_military_access = FROM
+	}
+	option = { 
+		name = stw.9.b
+		ai_chance = {
+			base = 1
+		}
+		FROM = { country_event = net.1 }
+		add_stability = 0.01
+		add_political_power = 20
+	}
+}
+country_event = {
+    id = stw.10
+	title = stw.10.t
+	desc = stw.10.d
+	picture = GFX_report_event_STW_learning
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.10.a
+		add_political_power = 80
+		add_stability = 0.05
+		add_ideas = STW_RESEARCHING
+		
+	}
+}
+country_event = {
+    id = stw.11
+	title = stw.11.t
+	desc = stw.11.d
+	picture = GFX_report_event_STW_home
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.11.a
+		ai_chance = {
+			base = 2
+		}
+		FROM = {
+			country_event = da.1
+			capital_scope = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		capital_scope = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		give_military_access = FROM
+	}
+	option = { 
+		name = stw.11.b
+		ai_chance = {
+			base = 1
+		}
+		FROM = { country_event = net.1 }
+		add_stability = 0.01
+		add_political_power = 20
+	}
+}
+country_event = {
+    id = stw.12
+	title = stw.12.t
+	desc = stw.12.d
+	picture = GFX_report_event_PBB_our_land
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.12.a
+		add_ideas = STW_declaration_of_our_sun_places
+	}
+}
+country_event = {
+    id = stw.13
+	title = stw.13.t
+	desc = stw.13.d
+	picture = GFX_report_event_STW_home
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.13.a
+		ai_chance = {
+			base = 1
+		}
+		add_war_support = 0.03
+		FROM = {
+			country_event = da.1
+			
+		}
+		every_other_country = {
+			limit = {
+				FROM = {
+					OR = {
+						has_war_with = PREV
+						has_annex_war_goal = PREV
+						has_wargoal_against = PREV
+						is_justifying_wargoal_against = PREV
+					}
+				}
+			}
+			ROOT = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = PREV
+				}
+			}
+		}
+	}
+	option = { 
+		name = stw.13.b
+		ai_chance = {
+			base = 1
+		}
+		FROM = { country_event = net.1 }
+		add_stability = 0.05
+		add_political_power = 75
+	}
+}
+country_event = {
+    id = stw.14
+	title = stw.14.t
+	desc = stw.14.d
+	picture = GFX_report_event_STW_home
+	is_triggered_only = yes
+
+    option = { 
+		name = stw.14.a
+		ai_chance = {
+			base = 1
+		}
+		add_stability = 0.05
+		FROM = {
+			country_event = da.1
+			add_ideas = STW_dan
+		}
+		add_ideas = STW_dan2
+	}
+	option = { 
+		name = stw.14.b
+		ai_chance = {
+			base = 1
+		}
+		FROM = { 
+			country_event = net.1
+		}
+		every_owned_state = {
+			limit = {
+				any_neighbor_state = { is_owned_by = FROM }
+			}
+			add_claim_by = FROM
+		}
+		add_war_support = 0.05
+	}
+}

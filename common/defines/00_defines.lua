@@ -1721,6 +1721,10 @@ NNavy = {
 	},
 	MISSION_DEFAULT_SPREAD_BASE = 1.0, -- multiplier for mission spreads. higher = less ships on start
 
+
+	-------		For "aggression" related values, think of it more as "risk taking" rather than "aggression". 
+	-------		It modifies how big of a difference between taskforce strengths the ships will consider "i could do that"
+
 	AGGRESSION_SETTINGS_VALUES = { -- ships will use this values while deciding to attack enemies
 		0,		-- do not engage
 		0.5,	-- low
@@ -2008,6 +2012,7 @@ NNavy = {
 		17,	-- Mine sweepers
 		29,	-- Patrol task force
 		1,	-- Convoy escort
+		5,	-- Dominance patrol force
 	},
 
 	-- NOTE: you can see the effect of changing the values down below by running the command tfria with a task force selected

@@ -10,8 +10,9 @@ FAJ_power_balance = {
 		min = -0.15
 		max = 0.15
 		modifier = {
-			
+			stability_factor = 0.1
 		}
+		
 		on_activate = { 
 			set_power_balance_gfx = {
 				id = FAJ_power_balance
@@ -41,9 +42,11 @@ FAJ_power_balance = {
 			min = -0.30
 			max = -0.15
 			modifier = {
-				
+				war_support_factor = 0.02
+				supply_factor = 0.05
+				annex_cost_factor = -0.05
 			}
-			on_activate = { #TODO_Manu: Scripted effect checking for leader and swapping to appropriate GFX
+			on_activate = { 
 				set_power_balance_gfx = {
 					id = FAJ_power_balance
 					side = FAJ_jake_side
@@ -54,7 +57,7 @@ FAJ_power_balance = {
 					side = FAJ_finn_side
 					gfx = "GFX_bop_FAJ_finn_side"
 				}
-				
+				promote_character = FAJ_jake
 		
 			}
 		}
@@ -64,9 +67,12 @@ FAJ_power_balance = {
 			min = -0.60
 			max = -0.30
 			modifier = {
-				
+				war_support_factor = 0.05
+				supply_factor = 0.08
+				annex_cost_factor = -0.08
+				consumer_goods_factor = 0.03
 			}
-			on_activate = { #TODO_Manu: Scripted effect checking for leader and swapping to appropriate GFX
+			on_activate = { 
 				set_power_balance_gfx = {
 					id = FAJ_power_balance
 					side = FAJ_jake_side
@@ -77,7 +83,17 @@ FAJ_power_balance = {
 					side = FAJ_finn_side
 					gfx = "GFX_bop_FAJ_finn_side"
 				}
-				
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader = {
+								character = FAJ_jake
+								ruling_only = yes
+							}
+						}
+					}
+					promote_character = FAJ_jake
+				}
 		
 			}
 		}
@@ -87,9 +103,13 @@ FAJ_power_balance = {
 			min = -0.80
 			max = -0.60
 			modifier = {
-				
+				war_support_factor = 0.08
+				supply_factor = 0.11
+				annex_cost_factor = -0.11
+				consumer_goods_factor = 0.06
+				max_command_power = 5
 			}
-			on_activate = { #TODO_Manu: Scripted effect checking for leader and swapping to appropriate GFX
+			on_activate = { 
 				set_power_balance_gfx = {
 					id = FAJ_power_balance
 					side = FAJ_jake_side
@@ -100,7 +120,10 @@ FAJ_power_balance = {
 					side = FAJ_finn_side
 					gfx = "GFX_bop_FAJ_finn_side"
 				}
-				
+				add_country_leader_trait = FAJ_jake_balance
+			}
+			on_deactivate = {
+				#remove_country_leader_trait = FAJ_jake_balance
 			}
 		}
 
@@ -109,7 +132,11 @@ FAJ_power_balance = {
 			min = -1
 			max = -0.80
 			modifier = {
-				
+				war_support_factor = 0.11
+				supply_factor = 0.14
+				annex_cost_factor = -0.14
+				consumer_goods_factor = 0.09
+				max_command_power = 10
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -137,9 +164,11 @@ FAJ_power_balance = {
 			min = 0.15
 			max = 0.30
 			modifier = {
-				
+				political_power_factor = 0.05
+				war_stability_factor = 0.05
+				candy_acceptance = 5
 			}
-			on_activate = { #TODO_Manu: Scripted effect checking for leader and swapping to appropriate GFX
+			on_activate = { 
 				set_power_balance_gfx = {
 					id = FAJ_power_balance
 					side = FAJ_finn_side
@@ -150,7 +179,10 @@ FAJ_power_balance = {
 					side = FAJ_jake_side
 					gfx = "GFX_bop_FAJ_jake_side"
 				}
-				
+				promote_character = {
+					character = FAJ_finn
+					ideology = adventure
+				}
 			}
 		}
 		
@@ -159,9 +191,12 @@ FAJ_power_balance = {
 			min = 0.30
 			max = 0.60
 			modifier = {
-				
+				political_power_factor = 0.08
+				war_stability_factor = 0.08
+				candy_acceptance = 10
+				neutral_acceptance = 5
 			}
-			on_activate = { #TODO_Manu: Scripted effect checking for leader and swapping to appropriate GFX
+			on_activate = { 
 				set_power_balance_gfx = {
 					id = FAJ_power_balance
 					side = FAJ_finn_side
@@ -172,7 +207,20 @@ FAJ_power_balance = {
 					side = FAJ_jake_side
 					gfx = "GFX_bop_FAJ_jake_side"
 				}
-				
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader = {
+								character = FAJ_finn
+								ruling_only = yes
+							}
+						}
+					}
+					promote_character = {
+						character = FAJ_finn
+						ideology = adventure
+					}
+				}
 			}
 		}
 		range = {
@@ -180,9 +228,13 @@ FAJ_power_balance = {
 			min = 0.60
 			max = 0.80
 			modifier = {
-				
+				political_power_factor = 0.11
+				war_stability_factor = 0.11
+				candy_acceptance = 15
+				neutral_acceptance = 10
+				slime_acceptance = 5
 			}
-			on_activate = { #TODO_Manu: Scripted effect checking for leader and swapping to appropriate GFX
+			on_activate = { 
 				set_power_balance_gfx = {
 					id = FAJ_power_balance
 					side = FAJ_finn_side
@@ -193,7 +245,10 @@ FAJ_power_balance = {
 					side = FAJ_jake_side
 					gfx = "GFX_bop_FAJ_jake_side"
 				}
-				
+				add_country_leader_trait = FAJ_finn_balance
+			}
+			on_deactivate = {
+				#remove_country_leader_trait = FAJ_finn_balance
 			}
 		}
 
@@ -202,7 +257,12 @@ FAJ_power_balance = {
 			min = 0.80
 			max = 1
 			modifier = {
-				
+				political_power_factor = 0.14
+				war_stability_factor = 0.14
+				candy_acceptance = 20
+				neutral_acceptance = 15
+				slime_acceptance = 10
+				fire_acceptance = 5
 			}
 			on_activate = {
 				set_power_balance_gfx = {

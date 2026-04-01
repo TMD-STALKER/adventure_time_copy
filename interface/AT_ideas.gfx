@@ -80,6 +80,11 @@ spriteTypes = {
 		name = "GFX_idea_SLO_slodolf_slitler"
 		texturefile = "gfx/interface/ideas/idea_SLO_slodolf_slitler.dds"
 	}
+	#wal
+	spriteType = {
+		name = "GFX_idea_WAL_mountain"
+		texturefile = "gfx/interface/ideas/idea_WAL_mountain.dds"
+	}
 	#OLD
 	spriteType = {
 		name = "GFX_idea_OLD_starchi"
@@ -222,6 +227,23 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_PBB_bubleguard"
 		texturefile = "gfx/interface/ideas/idea_PBB_bubleguard.dds"
+	}
+	#####oak#######
+	spriteType = {
+		name = "GFX_idea_OAK_beast"
+		texturefile = "gfx/interface/ideas/idea_OAK_beast.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OAK_belka"
+		texturefile = "gfx/interface/ideas/idea_OAK_belka.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OAK_burunduk"
+		texturefile = "gfx/interface/ideas/idea_OAK_burunduk.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OAK_kurwa"
+		texturefile = "gfx/interface/ideas/idea_OAK_kurwa.dds"
 	}
 	#####MOF#######
 	spriteType = {

@@ -174,7 +174,7 @@ not_commune = {
 								ruling_only = yes
 							}
 							has_country_leader = {
-								character = GOP_god_of_partyes
+								character = STW_stenly_family
 								ruling_only = yes
 							}
 						}

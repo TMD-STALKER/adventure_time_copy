@@ -17,12 +17,45 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/OAK/OAK_beast.dds"
+				small="GFX_idea_OAK_beast"
 			}
 		}
 		country_leader = {
-			ideology = monarchy
+			ideology = neutral_slime
 			expire = "1940.1.1.1"
 			id = -1
+		}
+		advisor={
+			slot = high_command
+			idea_token = OAK_beast
+			cost = 50
+			allowed = {
+				original_tag = OAK
+				
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = OAK_beast
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				OAK_iglometatel
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1 
 		}
 	}
 	OAK_kurwa = {
@@ -30,12 +63,137 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/OAK/OAK_kurwa.dds"
+				small="GFX_idea_OAK_kurwa"
+			}
+		}
+		country_leader = {
+			ideology = peaseful_ice
+			expire = "1940.1.1.1"
+			id = -1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = OAK_kurwa
+			cost = 135
+			allowed = {
+				original_tag = OAK
+				
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = OAK_kurwa
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				OAK_buildmaster
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1 
+		}
+	}
+	OAK_belka = {
+		name = OAK_belka
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OAK/OAK_belka.dds"
+				small="GFX_idea_OAK_belka"
 			}
 		}
 		country_leader = {
 			ideology = monarchy
 			expire = "1940.1.1.1"
 			id = -1
+		}
+		advisor={
+			slot = air_chief
+			idea_token = OAK_belka
+			cost = 100
+			allowed = {
+				original_tag = OAK
+				
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = OAK_belka
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				OAK_skymaster
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1 
+		}
+	}
+	OAK_BURUNDUK = {
+		name = OAK_BURUNDUK
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/OAK/OAK_BURUNDUK.dds"
+				small="GFX_idea_OAK_burunduk"
+			}
+		}
+		country_leader = {
+			ideology = independed_candy
+			expire = "1940.1.1.1"
+			id = -1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = OAK_BURUNDUK
+			cost = 135
+			allowed = {
+				original_tag = OAK
+				
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = OAK_BURUNDUK
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				OAK_hubburunduk
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = -1 
 		}
 	}
 }

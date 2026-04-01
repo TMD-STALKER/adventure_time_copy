@@ -1,0 +1,15 @@
+﻿l_russian:
+ 
+ #FAJ
+ FAJ_power_balance: "Герои УУУ"
+ FAJ_medium_trust_range: "Лучшие друзья"
+ FAJ_jake_side: "Джейк"
+ FAJ_min_min_jake_trust_range: "Джейк советует"
+ FAJ_min_jake_trust_range: "Джейк настаивает"
+ FAJ_jake_trust_range: "Джейк принуждает"
+ FAJ_very_jake_trust_range: "Джейк приказывает"
+ FAJ_finn_side: "Финн"
+ FAJ_min_min_finn_trust_range: "Финн советует"
+ FAJ_min_finn_trust_range: "Финн настаивает"
+ FAJ_finn_trust_range: "Финн принуждает"
+ FAJ_very_finn_trust_range: "Финн приказывает"

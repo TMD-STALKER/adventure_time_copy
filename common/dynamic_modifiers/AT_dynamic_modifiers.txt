@@ -102,10 +102,10 @@ GENERIC_resourses_for_live_mod2 = {
 }
 SHARED_homelanders2 = {
 	icon = GFX_modifiers_sabotaged_resource
-	army_core_defence_factor = 0.15
-	army_org_regain = 0.15
-	enemy_local_supplies = -0.45
-	enemy_attrition = 0.25
+	army_core_defence_factor = 0.12
+	army_org_regain = 0.12
+	enemy_local_supplies = -0.32
+	enemy_attrition = 0.1
 }
 SHARED_capital_of_bisness2 = {
 	icon = GFX_modifiers_sabotaged_resource

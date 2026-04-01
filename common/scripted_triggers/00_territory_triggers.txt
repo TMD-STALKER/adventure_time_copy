@@ -788,7 +788,6 @@ south_desert_control = {
 is_swamp = {
 	custom_trigger_tooltip = {
 		tooltip = is_swamp_tt
-			OR = {
 				controls_state = 371
 				controls_state = 357
 				controls_state = 351
@@ -819,6 +818,5 @@ is_swamp = {
 				controls_state = 462
 				controls_state = 482
 				controls_state = 403
-			}
 	}
 }

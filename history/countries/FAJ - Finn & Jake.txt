@@ -32,6 +32,7 @@ if = {
 		id = FAJ_power_balance
 		set_default = yes
 	}
+	
 }
 add_offsite_building = { type = industrial_complex level = 5 }
 add_offsite_building = { type = arms_factory level = 10 }

@@ -131,7 +131,10 @@ change_ideology_category = {
 	priority = 10
 
 	visible = {
-		NOT = { TAG = MOF }
+		NOT = { 
+			TAG = MOF
+			has_idea = only_iam
+		}
 		OR = {
 			AND = {
 				has_government = neutral

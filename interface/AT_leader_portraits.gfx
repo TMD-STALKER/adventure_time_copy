@@ -60,8 +60,13 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_PBB_candy_zombie"
+		name = "GFX_portrait_PBB_candy_zombie"
 		texturefile = "gfx/leaders/PBB/PBB_candy_zombie.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_PBB_baby_bonne"
+		texturefile = "gfx/leaders/PBB/PBB_baby_bonne.dds"
 	}
 	
 	###IKK

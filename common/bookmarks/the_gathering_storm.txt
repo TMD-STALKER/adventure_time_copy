@@ -8,10 +8,15 @@ bookmarks = {
 		default = yes
 		
 		"FAJ"={
-			history = "NON_GATHERING_STORM_DESC"
+			history = "FAJ_GATHERING_STORM_DESC"
 			ideas = {
 				only_iam
 				PBB_member_of_tax_deal
+			}
+			focuses = {
+				GENERI_ice
+				GENERI_candy
+				GENERI_fire
 			}
 		}
 		"PBB"={
@@ -74,6 +79,18 @@ bookmarks = {
 				mof_what_we_safe
 				mof_politica
 				mof_ITOG
+			}
+		}
+		"STW"={
+			minor = yes
+			history = "STW_GATHERING_STORM_DESC"
+			ideas = {
+				
+			}
+			focuses = {
+				STW_home_of_stability
+				STW_new_monarcy
+				STW_our_eaten_territory
 			}
 		}
 		effect = {

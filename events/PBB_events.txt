@@ -5125,30 +5125,7 @@ country_event = {
 				TAG = PBB
 			}
 			news_event = ooonews.11
-			add_country_leader_role = {
-				character = PBB_monster_bb
-				promote_leader = yes
-				country_leader = {
-					ideology = independed_candy
-					expire = "3047.1.1.1"
-					traits = {
-						LIC_death
-					}
-				}
-			}
-			hidden_effect = {
-				add_country_leader_role = {
-					character = PBB_monster_bb
-					promote_leader = yes
-					country_leader = {
-						ideology = mutant
-						expire = "3047.1.1.1"
-						traits = {
-							LIC_death
-						}
-					}
-				}
-			}
+			promote_character = PBB_monster_bb
 			set_cosmetic_tag = PBB_mutant_kingdom
 			set_country_leader_ideology = mutant
 		}
@@ -5444,22 +5421,16 @@ country_event = {
 	option = {
 		name = pbb.124.a
 		add_political_power = -25
-		if = {
-			limit = {
-				TAG = PBB
-			}
-			add_country_leader_role = {
-				character = PBB_baby
-				promote_leader = yes
-				country_leader = {
-					ideology = bonnibelle
-					expire = "3047.1.1.1"
-					traits = {
-						PBB_favorite_princess
-						PBB_scientist
-						PBB_not_ready_to_rule
-					}
-				}
+		hidden_effect = { promote_character = PBB_baby }
+		create_country_leader = {
+			name = PBB_baby
+			picture = GFX_portrait_PBB_baby_bonne
+			expire = "4000.1.1"
+			ideology = bonnibelle
+			traits = {
+				PBB_favorite_princess
+				PBB_scientist
+				PBB_not_ready_to_rule
 			}
 		}
 	}

@@ -235,6 +235,14 @@ characters = {
 				small="GFX_idea_PBB_batler"
 			}
 		}
+		country_leader = {
+			ideology = independed_candy
+			expire = "4000.1.1.1"
+			traits = {
+				LIC_death
+			}
+			id = -1
+		}
 	}
 	PBB_baby = {
 		name = PBB_baby
@@ -243,6 +251,16 @@ characters = {
 				large = "gfx/leaders/PBB/PBB_baby_bonne.dds"
 				small="GFX_idea_PBB_batler"
 			}
+		}
+		country_leader = {
+			ideology = bonnibelle
+			expire = "4000.1.1.1"
+			traits = {
+				PBB_favorite_princess
+						PBB_scientist
+						PBB_not_ready_to_rule
+			}
+			id = -1
 		}
 	}
 	PBB_bananaman = {

@@ -2,6 +2,14 @@ Kyrier_cosmetic_tag = {
     color = rgb { 217 54 46 }
     color_ui = rgb { 217 54 46 }
 }
+STW_greater_arbuzia = {
+	color = rgb { 158  0  54 }
+    color_ui = rgb { 158  0  54 }
+}
+STW_greater_ocean_arbuzia = {
+	color = rgb { 167  204  0 }
+    color_ui = rgb { 167  204  0 }
+}
 PBB_big_candy_zombie_empire_tag = {
     color = rgb { 92  158  44 }
     color_ui = rgb { 92  158  44 }

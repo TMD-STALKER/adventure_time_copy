@@ -1,0 +1,555 @@
+STW_expansion_category = {
+	STW_take_state_berry = {
+		priority = 95
+		icon = POL_looming_peasants_strike
+		cost = 125
+		fire_only_once = yes
+		available = {
+			has_border_war = no
+			has_war = no
+		}
+		complete_effect = {
+			166 = { add_core_of = ROOT }
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 186
+					num_provinces = 1
+					on_win = at_border.1.t
+					on_lose = at_border.2.t
+					on_cancel = at_border.2.t
+					modifier = 0.1
+					dig_in_factor = 0
+					terrain_factor = 0
+				}	
+				defender = {
+					state = 166
+					num_provinces = 1
+					on_win = at_border.3.t
+					on_lose = at_border.4.t
+					on_cancel = at_border.4.t
+				}
+			}
+		}
+		ai_will_do = {
+			base = 25
+			
+		}
+	}
+	STW_take_state_berry2 = {
+		priority = 95
+		icon = POL_looming_peasants_strike
+		cost = 125
+		fire_only_once = yes
+		available = {
+			has_border_war = no
+			has_war = no
+		}
+		complete_effect = {
+			221 = { add_core_of = ROOT }
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 186
+					num_provinces = 1
+					on_win = at_border.1.t
+					on_lose = at_border.2.t
+					on_cancel = at_border.2.t
+					modifier = 0.1
+					dig_in_factor = 0
+					terrain_factor = 0
+				}	
+				defender = {
+					state = 221
+					num_provinces = 1
+					on_win = at_border.3.t
+					on_lose = at_border.4.t
+					on_cancel = at_border.4.t
+				}
+			}
+		}
+		ai_will_do = {
+			base = 25
+			
+		}
+	}
+}
+STW_partnership_category = {
+	STW_neighbors_are_scared = {
+		priority = 100
+
+		days_mission_timeout = 200
+		icon = generic_speech
+
+		activation = {
+			always = no
+ 		}
+
+		available = {
+			any_other_country = {
+				has_guaranteed = ROOT
+				has_government = ROOT
+				OR = {
+					is_faction_leader = yes
+					is_major = yes
+					is_neighbor_of = ROOT
+					num_of_controlled_states > 24
+				}
+			}
+		}
+
+		is_good = no
+
+		complete_effect = { 
+			add_political_power = 25
+			add_stability = 0.01
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+		}
+
+		timeout_effect = { 
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+				country_event = stw.8
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+				}
+			}
+		}
+	}
+	STW_chose_partner_decision = {
+		priority = 80
+		cost = 75
+		days_remove = 25
+		icon = generic_political_address
+		target_array = global.countries
+		fire_only_once = yes
+		target_trigger = {
+			FROM = {
+				has_government = ROOT
+				OR = {
+					is_major = yes
+					is_faction_leader = yes
+					is_neighbor_of = ROOT
+					num_of_controlled_states > 24
+				}
+			}
+		}
+		visible = {
+			FROM = {
+				has_government = ROOT
+				OR = {
+					is_major = yes
+					is_faction_leader = yes
+					is_neighbor_of = ROOT
+					num_of_controlled_states > 24
+				}
+			}
+			
+		}
+		available = {
+			FROM = {
+				NOT = {
+					has_war_with = ROOT
+					is_justifying_wargoal_against = ROOT
+					has_wargoal_against = ROOT
+				}
+			}
+		}
+
+		remove_effect = { 
+			FROM = {
+				country_event = stw.7
+				effect_tooltip = {
+					custom_effect_tooltip = effect_tooltip_agree
+					give_guarantee = ROOT
+					give_military_access = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			base = 100
+
+		}
+	}
+}
+STW_trade_with_hospital = {
+	STW_open_border = {
+		priority = 80
+		cost = 100
+		icon = SWI_isolate_switzerland
+		visible = {
+			any_other_country = {
+				owns_state = 228
+				NOT = { gives_military_access_to = ROOT }
+			}
+			
+		}
+		available = {
+			any_other_country = {
+				owns_state = 228
+				has_opinion = {
+					target = ROOT
+					value > 65
+				}
+			}
+		}
+
+		complete_effect = { 
+			random_other_country = {
+				limit = {
+					owns_state = 228
+				}
+				give_military_access = ROOT
+				ROOT = { give_military_access = PREV }
+			}
+		}
+		ai_will_do = {
+			base = 1
+
+		}
+	}
+	STW_we_need_help = {
+		priority = 80
+		cost = 75
+		days_remove = 25
+		icon = hol_exchange_intelligence_data
+		visible = {
+			any_other_country = {
+				owns_state = 228
+			}
+			
+		}
+		available = {
+			any_other_country = {
+				owns_state = 228
+				has_opinion = {
+					target = ROOT
+					value > 35
+				}
+			}
+		}
+		remove_effect = { 
+			random_other_country = {
+				limit = {
+					owns_state = 228
+				}
+				add_political_power = 40
+			}
+		}
+		modifier = {
+			org_loss_when_moving = -0.05
+			army_fuel_consumption_factor = -0.05
+			experience_loss_factor = -0.15
+		}
+		ai_will_do = {
+			base = 1
+
+		}
+	}
+	STW_we_need_help2 = {
+		priority = 80
+		cost = 65
+		days_remove = 25
+		icon = generic_reorganize_irregulars
+		visible = {
+			any_other_country = {
+				owns_state = 228
+			}
+			
+		}
+		available = {
+			any_other_country = {
+				owns_state = 228
+				has_opinion = {
+					target = ROOT
+					value > 35
+				}
+			}
+		}
+		remove_effect = { 
+			random_other_country = {
+				limit = {
+					owns_state = 228
+				}
+				add_political_power = 35
+			}
+		}
+		modifier = {
+			acclimatization_hot_climate_gain_factor = 0.1
+			acclimatization_cold_climate_gain_factor = 0.1
+		}
+		ai_will_do = {
+			base = 1
+
+		}
+	}
+	STW_we_need_help3 = {
+		priority = 80
+		cost = 85
+		days_remove = 25
+		icon = RAJ_famine
+		visible = {
+			any_other_country = {
+				owns_state = 228
+			}
+			
+		}
+		available = {
+			any_other_country = {
+				owns_state = 228
+				has_opinion = {
+					target = ROOT
+					value > 35
+				}
+			}
+		}
+		remove_effect = { 
+			random_other_country = {
+				limit = {
+					owns_state = 228
+				}
+				add_political_power = 50
+			}
+		}
+		modifier = {
+			planning_speed = 0.05
+			army_speed_factor = 0.05
+			cavalry_attack_factor = 0.15
+		}
+		ai_will_do = {
+			base = 1
+
+		}
+	}
+	STW_common_resourse_expansion = {
+		priority = 80
+		cost = 150
+		days_remove = 125
+		icon = generic_construction
+		visible = {
+			OR = {
+				has_tech = excavation1
+				AND = {
+					has_tech = excavation2
+					has_country_flag = excavation_flag
+				}
+				AND = {
+					has_tech = excavation3
+					has_country_flag = excavation_flag2
+				}
+				AND = {
+					has_tech = excavation4
+					has_country_flag = excavation_flag3
+				}
+				AND = {
+					has_tech = excavation5
+					has_country_flag = excavation_flag4
+					NOT = { has_country_flag = excavation_flag5 }
+				}
+			}
+			
+		}
+		available = {
+			any_other_country = {
+				owns_state = 228
+				has_opinion = {
+					target = ROOT
+					value > 40
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 1
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_tech = excavation5
+					has_country_flag = excavation_flag4
+					NOT = { has_country_flag = excavation_flag5 }
+				}
+				228 = {
+					add_resource = {
+						type = coal
+						amount = 5
+					}
+					add_resource = {
+						type = rubber
+						amount = 4
+					}
+					add_resource = {
+						type = steel
+						amount = 3
+					}
+					add_resource = {
+						type = aluminium
+						amount = 2
+					}
+					add_resource = {
+						type = tungsten
+						amount = 1
+					}
+				}
+				capital_scope = {
+					add_resource = {
+						type = coal
+						amount = 5
+					}
+					add_resource = {
+						type = rubber
+						amount = 4
+					}
+					add_resource = {
+						type = steel
+						amount = 3
+					}
+					add_resource = {
+						type = aluminium
+						amount = 2
+					}
+					add_resource = {
+						type = tungsten
+						amount = 1
+					}
+				}
+				set_country_flag = excavation_flag5
+			}
+			else_if = {
+				limit = {
+					has_tech = excavation4
+					has_country_flag = excavation_flag3
+				}
+				228 = {
+					add_resource = {
+						type = coal
+						amount = 4
+					}
+					add_resource = {
+						type = rubber
+						amount = 3
+					}
+					add_resource = {
+						type = steel
+						amount = 2
+					}
+					add_resource = {
+						type = aluminium
+						amount = 1
+					}
+				}
+				capital_scope = {
+					add_resource = {
+						type = coal
+						amount = 4
+					}
+					add_resource = {
+						type = rubber
+						amount = 3
+					}
+					add_resource = {
+						type = steel
+						amount = 2
+					}
+					add_resource = {
+						type = aluminium
+						amount = 1
+					}
+				}
+				set_country_flag = excavation_flag4
+			}
+			else_if = {
+				limit = {
+					has_tech = excavation3
+					has_country_flag = excavation_flag2
+				}
+				228 = {
+					add_resource = {
+						type = coal
+						amount = 3
+					}
+					add_resource = {
+						type = rubber
+						amount = 2
+					}
+					add_resource = {
+						type = steel
+						amount = 1
+					}
+				}
+				capital_scope = {
+					add_resource = {
+						type = coal
+						amount = 3
+					}
+					add_resource = {
+						type = rubber
+						amount = 2
+					}
+					add_resource = {
+						type = steel
+						amount = 1
+					}
+				}
+				set_country_flag = excavation_flag3
+			}
+			else_if = {
+				limit = {
+					has_tech = excavation2
+					has_country_flag = excavation_flag
+				}
+				228 = {
+					add_resource = {
+						type = coal
+						amount = 2
+					}
+					add_resource = {
+						type = rubber
+						amount = 1
+					}
+				}
+				capital_scope = {
+					add_resource = {
+						type = coal
+						amount = 2
+					}
+					add_resource = {
+						type = rubber
+						amount = 1
+					}
+				}
+				set_country_flag = excavation_flag2
+			}
+			else = {
+				228 = {
+					add_resource = {
+						type = coal
+						amount = 1
+					}
+				}
+				capital_scope = {
+					add_resource = {
+						type = coal
+						amount = 1
+					}
+				}
+				set_country_flag = excavation_flag
+			}
+		}
+		modifier = {
+			consumer_goods_factor = 0.25
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			base = 1
+
+		}
+	}
+	
+}

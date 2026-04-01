@@ -23,13 +23,13 @@ focus_tree = {
 				range < FAJ_min_min_finn_trust_range
 			}
 		}
-		allow_branch = {
-			is_power_balance_in_range = {
-				id = FAJ_power_balance
-				range < FAJ_min_min_finn_trust_range
-			}
-			NOT = { has_completed_focus = FAJ_finn_the_human }
-		}
+		#allow_branch = {
+		#	is_power_balance_in_range = {
+		#		id = FAJ_power_balance
+		#		range < FAJ_min_min_finn_trust_range
+		#	}
+		#	#NOT = { has_completed_focus = FAJ_finn_the_human }
+		#}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		x = 5
@@ -50,13 +50,13 @@ focus_tree = {
 				range > FAJ_min_min_jake_trust_range
 			}
 		}
-		allow_branch = {
-			is_power_balance_in_range = {
-				id = FAJ_power_balance
-				range > FAJ_min_min_jake_trust_range
-			}
-			NOT = { has_completed_focus = FAJ_jake_the_god }
-		}
+		#allow_branch = {
+		#	is_power_balance_in_range = {
+		#		id = FAJ_power_balance
+		#		range > FAJ_min_min_jake_trust_range
+		#	}
+		#	#NOT = { has_completed_focus = FAJ_jake_the_god }
+		#}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		x = 7
@@ -71,39 +71,85 @@ focus_tree = {
 		id = FAJ_lover_deals
 		icon = GFX_goal_unknown
 		cost = 5
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range < FAJ_min_min_finn_trust_range
+			}
+		}
 		prerequisite = {
 			focus = FAJ_jake_the_god
 		}
+		bypass = {
+			NOT = { country_exists = LRH }
+		}
+		bypass_effect = {
+			add_political_power = 50
+		}
 		x = 2
 		y = 1
+		completion_reward = {
+			LRH = {
+				country_event = faj.35
+				effect_tooltip = {
+					custom_effect_tooltip = effect_tooltip_agree
+					LRH = { add_ideas = FAJ_lover_deals }
+					ROOT = { add_political_power = 125 }
+				}
+			}
+		}
 
 	}
 	focus = {
 		id = FAJ_hard_friendship
 		icon = GFX_goal_unknown
 		cost = 5
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range < FAJ_min_min_finn_trust_range
+			}
+		}
 		prerequisite = {
 			focus = FAJ_lover_deals
 		}
 		x = 2
 		y = 3
+		completion_reward = {
+			
+		}
 
 	}
 	focus = {
 		id = FAJ_at_the_pumple_kingdom
 		icon = GFX_goal_unknown
 		cost = 3
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range < FAJ_min_min_finn_trust_range
+			}
+		}
 		prerequisite = {
 			focus = FAJ_jake_the_god
 		}
 		x = 3
 		y = 2
+		completion_reward = {
+			
+		}
 
 	}
 	focus = {
 		id = FAJ_magic_garden
 		icon = GFX_goal_unknown
 		cost = 5
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range < FAJ_min_min_finn_trust_range
+			}
+		}
 		prerequisite = {
 			focus = FAJ_at_the_pumple_kingdom
 		}
@@ -112,6 +158,8 @@ focus_tree = {
 		}
 		x = 3
 		y = 4
+		completion_reward = {
+		}
 
 	}
 	focus = {
@@ -121,8 +169,16 @@ focus_tree = {
 		prerequisite = {
 			focus = FAJ_magic_garden
 		}
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range < FAJ_min_min_finn_trust_range
+			}
+		}
 		x = 3
 		y = 5
+		completion_reward = {
+		}
 
 	}
 	focus = {
@@ -140,6 +196,10 @@ focus_tree = {
 		}
 		x = 6
 		y = 1
+		completion_reward = {
+			set_country_flag = FAJ_adventure_time_flag
+			unlock_decision_category_tooltip = FAJ_adventure_time
+		}
 
 	}
 	focus = {
@@ -151,6 +211,8 @@ focus_tree = {
 		}
 		x = 5
 		y = 2
+		completion_reward = {
+		}
 
 	}
 	focus = {
@@ -213,11 +275,20 @@ focus_tree = {
 		id = FAJ_enheridion
 		icon = GFX_focus_SWE_education_reform
 		cost = 5
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range > FAJ_min_min_jake_trust_range
+			}
+		}
 		prerequisite = {
 			focus = FAJ_finn_the_human
 		}
 		x = 9
 		y = 2
+		completion_reward = {
+			country_event = faj.30
+		}
 
 	}
 	focus = {
@@ -226,6 +297,12 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = FAJ_finn_the_human
+		}
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range > FAJ_min_min_jake_trust_range
+			}
 		}
 		x = 10
 		y = 1
@@ -237,6 +314,12 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = FAJ_at_the_princess_service
+		}
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range > FAJ_min_min_jake_trust_range
+			}
 		}
 		x = 10
 		y = 3
@@ -252,8 +335,18 @@ focus_tree = {
 		prerequisite = {
 			focus = FAJ_princess_knight
 		}
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range > FAJ_min_min_jake_trust_range
+			}
+		}
 		x = 9
 		y = 4
+		completion_reward = {
+			country_event = faj.31
+			custom_effect_tooltip = FAJ_boom_boom_mountain_tt
+		}
 
 	}
 	focus = {
@@ -262,6 +355,12 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = FAJ_boom_boom_mountain
+		}
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range > FAJ_min_min_jake_trust_range
+			}
 		}
 		x = 9
 		y = 5
@@ -274,6 +373,12 @@ focus_tree = {
 		prerequisite = {
 			focus = FAJ_whats_is_life
 		}
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range > FAJ_min_min_jake_trust_range
+			}
+		}
 		x = 9
 		y = 6
 
@@ -284,6 +389,12 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = FAJ_ocean_of_fear
+		}
+		available = {
+			is_power_balance_in_range = {
+				id = FAJ_power_balance
+				range < FAJ_min_min_finn_trust_range
+			}
 		}
 		x = 3
 		y = 6

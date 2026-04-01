@@ -1,0 +1,24 @@
+STW_expansion_category = {
+	priority = 100
+	allowed = { TAG = STW }
+	visible = {
+		has_country_flag = STW_escolation_flag
+	}
+	icon = border_conflicts
+}
+STW_partnership_category = {
+	priority = 100
+	allowed = { TAG = STW }
+	visible = {
+		has_country_flag = STW_chose_partner_flag
+	}
+	icon = generic_foreign_policy
+}
+STW_trade_with_hospital = {
+	priority = 100
+	allowed = { TAG = STW }
+	visible = {
+		has_country_flag = STW_trade_with_hospital_flag
+	}
+	icon = generic_foreign_policy
+}

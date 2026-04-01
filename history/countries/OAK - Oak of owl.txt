@@ -25,6 +25,12 @@ set_popularities = {
 	slime = 0
 }
 
+add_ideas = {
+	OAK_on_the_tree
+}
+
 recruit_character = OAK_owl
 recruit_character = OAK_beast
 recruit_character = OAK_kurwa
+recruit_character = OAK_belka
+recruit_character = OAK_BURUNDUK

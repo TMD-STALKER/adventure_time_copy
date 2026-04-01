@@ -1,0 +1,27 @@
+ideas = {
+    country = {
+		
+		FAJ_lover_deals = {
+			
+			allowed = {
+				original_tag = FAJ
+			}
+
+			allowed_civil_war = {
+				tag = FAJ
+			}
+			picture = generic_flexible_foreign_policy2
+			
+			modifier = {
+				political_power_factor = 0.08
+				stability_factor = 0.08
+				initiative_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = FAJ
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+		}
+	}
+}

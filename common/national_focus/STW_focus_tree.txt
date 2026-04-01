@@ -4,7 +4,6 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			is_debug = yes
 			tag = STW
 		}
 	}
@@ -20,8 +19,63 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = STW_new_monarcy
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = STW_new_monarcy
+				}
+			}
+		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
 		x = 2
 		y = 0
+		completion_reward = {
+			add_ideas = STW_home_of_stability
+			add_manpower = 3500
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -31,8 +85,59 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = STW_home_of_stability
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = STW_home_of_stability
+				}
+			}
+		}
 		x = 14
 		y = 0
+		completion_reward = {
+			add_popularity = {
+				ideology = fire
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = slime
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = ice
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = candy
+				popularity = -0.1
+			}
+			add_ideas = STW_new_monarcy
+			add_manpower = 3500
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -42,8 +147,22 @@ focus_tree = {
 		prerequisite = {
 			focus = STW_home_of_stability
 		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
 		x = 1
 		y = 1
+		completion_reward = {
+			add_ideas = STW_develop_family
+			add_manpower = 3500
+			set_country_flag = STW_develop_family_flag
+			unlock_decision_tooltip = family_tradition
+			unlock_decision_tooltip = family_tradition2
+		}
 
 	}
 	focus = {
@@ -53,8 +172,19 @@ focus_tree = {
 		prerequisite = {
 			focus = STW_home_of_stability
 		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
 		x = 3
 		y = 1
+		completion_reward = {
+			add_manpower = 3500
+			add_ideas = STW_agrarian_heaven
+		}
 
 	}
 	focus = {
@@ -67,8 +197,18 @@ focus_tree = {
 		prerequisite = {
 			focus = STW_agrarian_heaven
 		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
 		x = 2
 		y = 2
+		completion_reward = {
+			country_event = stw.1
+		}
 
 	}
 	focus = {
@@ -78,8 +218,54 @@ focus_tree = {
 		prerequisite = {
 			focus = STW_scout_forest
 		}
+		available = { NOT = { has_war_with = PBB } }
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
 		x = 1
 		y = 3
+		bypass = {
+			NOT = { country_exists = PBB }
+		}
+		bypass_effect = {
+			add_political_power = 15
+			add_stability = 0.01
+			add_ideas = STW_RESEARCHING
+		}
+		completion_reward = {
+			PBB = {
+				country_event = stw.9
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = effect_tooltip_agree
+					country_event = {
+						id = stw.10
+						days = 5
+						random_hours = 5
+						random_days = 5
+					}
+					give_military_access = PBB
+					PBB = {
+						country_event = {
+							id = stw.10
+							days = 5
+							random_hours = 5
+							random_days = 5
+						}
+						diplomatic_relation = {
+							country = ROOT
+							relation = non_aggression_pact
+							active = yes
+						}
+						give_military_access = ROOT
+					}
+					
+				}
+		}
 
 	}
 	focus = {
@@ -89,8 +275,58 @@ focus_tree = {
 		prerequisite = {
 			focus = STW_scout_forest
 		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
+		available = { NOT = { has_war_with = COM } }
+		bypass = {
+			NOT = { country_exists = COM }
+		}
+		bypass_effect = {
+			add_political_power = 15
+			add_stability = 0.01
+			add_ideas = STW_RESEARCHING
+		}
 		x = 3
 		y = 3
+		completion_reward = {
+			add_manpower = 3500
+			COM = {
+				country_event = stw.11
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = effect_tooltip_agree
+				capital_scope = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				give_military_access = COM
+				COM = {
+					diplomatic_relation = {
+						country = FROM
+						relation = non_aggression_pact
+						active = yes
+					}
+					give_military_access = FROM
+					capital_scope = {
+						add_extra_state_shared_building_slots = 4
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -104,8 +340,21 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = STW_dictatorship
 		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
 		x = 3
 		y = 4
+		completion_reward = {
+			add_manpower = 3500
+			add_ideas = STW_candy_tradition
+			custom_effect_tooltip = content_not_ready
+			load_focus_tree = generic
+		}
 
 	}
 	focus = {
@@ -116,8 +365,51 @@ focus_tree = {
 			focus = STW_home_of_stability
 			focus = STW_new_monarcy
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
+		available = {
+			has_war = no
+		}
 		x = 6
 		y = 1
+		completion_reward = {
+			add_ideas = STW_neutral_politic
+			if = {
+				limit = {
+					NOT = { has_completed_focus = STW_our_eaten_territory }
+				}
+				add_political_power = 285
+				reduce_focus_completion_cost = {
+					focus = STW_our_eaten_territory
+					cost = -30
+				}
+				reduce_focus_completion_cost = {
+					focus = STW_declaration_of_our_sun_places
+					cost = -70
+				}
+				custom_effect_tooltip = stw_chose_focus
+			}
+			else = {
+				add_stability = -0.1
+				every_neighbor_country = {
+					ROOT = {
+						every_owned_state = { add_core_of = PREV.PREV }
+					}
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -127,8 +419,38 @@ focus_tree = {
 		prerequisite = {
 			focus = STW_declare_neutrality
 		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
 		x = 6
 		y = 2
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_completed_focus = STW_our_eaten_territory }
+				}
+				set_country_flag = STW_trade_with_hospital_flag
+				unlock_decision_category_tooltip = STW_trade_with_hospital
+			}
+			else = {
+				add_stability = -0.15
+				random_other_country = {
+					limit = {
+						owns_state = 228
+					}
+					country_event = gener.2
+					effect_tooltip = {
+						custom_effect_tooltip = effect_tooltip_agree
+						ROOT = { puppet = PREV }
+					}
+				}
+			}
+
+		}
 
 	}
 	focus = {
@@ -139,8 +461,60 @@ focus_tree = {
 			focus = STW_new_monarcy
 			focus = STW_home_of_stability
 		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
+		bypass = { controls_state = 186 }
+		bypass_effect = {
+			add_political_power = 100
+			add_war_support = 0.05
+		}
 		x = 8
 		y = 1
+		completion_reward = {
+			186 = { add_core_of = STW }
+			add_timed_idea = {
+				idea = STW_our_eaten_territory
+				days = 125
+			}
+			if = {
+				limit = {
+					NOT = { has_completed_focus = STW_declare_neutrality }
+				}
+				start_border_war = {
+					change_state_after_war = yes
+					attacker = {
+						state = 195
+						num_provinces = 1
+						on_win = at_border.1.t
+						on_lose = at_border.2.t
+						on_cancel = at_border.2.t
+						modifier = 0.1
+						dig_in_factor = 0
+						terrain_factor = 0
+					}	
+					defender = {
+						state = 186
+						num_provinces = 1
+						on_win = at_border.3.t
+						on_lose = at_border.4.t
+						on_cancel = at_border.4.t
+					}
+				}
+				reduce_focus_completion_cost = {
+					focus = STW_declare_neutrality
+					cost = -100
+				}
+				custom_effect_tooltip = stw_chose_focus2
+			}
+			else = {
+				upgrade_army_law = yes
+			}
+		}
 
 	}
 	focus = {
@@ -150,8 +524,43 @@ focus_tree = {
 		prerequisite = {
 			focus = STW_our_eaten_territory
 		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
 		x = 8
 		y = 2
+		completion_reward = {
+			set_country_flag = STW_escolation_flag
+			if = {
+				limit = {
+					has_completed_focus = STW_declare_neutrality
+				}
+				random_other_country = {
+					limit = {
+						owns_state = 172
+					}
+					country_event = stw.14
+				}
+				effect_tooltip = {	
+					custom_effect_tooltip = effect_tooltip_agree
+					add_ideas = STW_dan2
+					random_other_country = {
+						limit = {
+							owns_state = 172
+						}
+						add_ideas = STW_dan
+					}
+				}
+			}
+			else = {
+				unlock_decision_tooltip = STW_take_state_berry
+				unlock_decision_tooltip = STW_take_state_berry2
+			}
+		}
 
 	}
 	focus = {
@@ -165,8 +574,30 @@ focus_tree = {
 			focus = STW_ice_fruct
 			focus = STW_slime_fruct
 		}
+		available = {
+			fire > 0.35
+		}
 		x = 12
 		y = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STW_new_monarcy
+				add_idea = STW_fire_fruct
+			}
+			set_politics = {
+				ruling_party = fire
+				elections_allowed = no
+			}
+			country_event = stw.4
+			every_other_country = {
+				limit = {
+					has_government = fire
+				}
+				country_event = stw.4
+			}
+			set_country_flag = STW_chose_partner_flag
+			activate_mission = STW_neighbors_are_scared
+		}
 
 	}
 	focus = {
@@ -180,8 +611,30 @@ focus_tree = {
 			focus = STW_fire_fruct
 			focus = STW_slime_fruct
 		}
+		available = {
+			ice > 0.35
+		}
 		x = 14
 		y = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STW_new_monarcy
+				add_idea = STW_ice_fruct
+			}
+			set_politics = {
+				ruling_party = ice
+				elections_allowed = no
+			}
+			country_event = stw.5
+			every_other_country = {
+				limit = {
+					has_government = ice
+				}
+				country_event = stw.5
+			}
+			set_country_flag = STW_chose_partner_flag
+			activate_mission = STW_neighbors_are_scared
+		}
 
 	}
 	focus = {
@@ -195,8 +648,30 @@ focus_tree = {
 			focus = STW_ice_fruct
 			focus = STW_fire_fruct
 		}
+		available = {
+			slime > 0.35
+		}
 		x = 16
 		y = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STW_new_monarcy
+				add_idea = STW_slime_fruct
+			}
+			set_politics = {
+				ruling_party = slime
+				elections_allowed = no
+			}
+			country_event = stw.6
+			every_other_country = {
+				limit = {
+					has_government = slime
+				}
+				country_event = stw.6
+			}
+			set_country_flag = STW_chose_partner_flag
+			activate_mission = STW_neighbors_are_scared
+		}
 
 	}
 	focus = {
@@ -210,6 +685,10 @@ focus_tree = {
 		}
 		x = 14
 		y = 2
+		completion_reward = {
+			add_political_power = 100
+			unlock_decision_tooltip = STW_chose_partner_decision
+		}
 
 	}
 	focus = {
@@ -224,6 +703,12 @@ focus_tree = {
 		}
 		x = 11
 		y = 3
+		completion_reward = {
+			country_event = stw.12
+			effect_tooltip = {
+				add_ideas = STW_declaration_of_our_sun_places
+			}
+		}
 
 	}
 	focus = {
@@ -235,6 +720,24 @@ focus_tree = {
 		}
 		x = 10
 		y = 4
+		bypass = { NOT = { country_exists = EMP } }
+		bypass_effect = {
+			every_state = {
+				limit = {
+					is_core_of = EMP
+				}
+				add_core_of = ROOT
+			}
+		}
+		completion_reward = {
+			EMP = {
+				every_owned_state = { add_core_of = ROOT }
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = EMP
+			}
+		}
 
 	}
 	focus = {
@@ -246,7 +749,24 @@ focus_tree = {
 		}
 		x = 12
 		y = 4
-
+		bypass = { NOT = { country_exists = FHW } }
+		bypass_effect = {
+			every_state = {
+				limit = {
+					is_core_of = FHW
+				}
+				add_core_of = ROOT
+			}
+		}
+		completion_reward = {
+			FHW = {
+				every_owned_state = { add_core_of = ROOT }
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FHW
+			}
+		}
 	}
 	focus = {
 		id = STW_dictatorship
@@ -259,8 +779,35 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = STW_candy_tradition
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 25
+				is_historical_focus_on = yes
+			}
+		}
+		offset = {
+			x = 15
+			y = 0
+			trigger = {
+				has_completed_focus = STW_home_of_stability
+			}
+		}
 		x = 1
 		y = 4
+		completion_reward = {
+			add_popularity = {
+				ideology = neutral
+				popularity = 0.5
+			}
+			set_politics = {
+				ruling_party = neutral
+				elections_allowed = no
+			}
+			add_country_leader_trait = fruct_dictator
+			custom_effect_tooltip = content_not_ready
+				load_focus_tree = generic
+		}
 
 	}
 	focus = {
@@ -273,8 +820,60 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = STW_eastern_dream
 		}
+		available = {
+			has_war_support > 0.79
+			NOT = { has_idea = STW_neutral_politic }
+		}
 		x = 13
 		y = 5
+		completion_reward = {
+			set_cosmetic_tag = STW_greater_ocean_arbuzia
+			every_other_country = {
+				limit = {
+					any_owned_state = {
+						OR = {
+							is_core_of = PIB
+							is_core_of = WOL
+							is_core_of = PBT
+						}
+					}
+				}
+				every_owned_state = { add_core_of = ROOT }
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						has_opinion = {
+							target = ROOT
+							value > 50
+						}
+						has_guaranteed = ROOT
+						has_non_aggression_pact_with = ROOT
+					}
+					NOT = {
+						is_puppet_of = ROOT
+						is_in_faction_with = ROOT
+						has_war_with = ROOT
+						has_annex_war_goal = ROOT
+						has_wargoal_against = ROOT
+						is_justifying_wargoal_against = ROOT
+					}
+				}
+				country_event = stw.13
+				effect_tooltip = {
+					custom_effect_tooltip = effect_tooltip_agree
+					custom_effect_tooltip = will_get_our_wargoals
+				}
+			}
+			custom_effect_tooltip = content_not_ready
+				load_focus_tree = generic
+		}
 
 	}
 	focus = {
@@ -284,11 +883,62 @@ focus_tree = {
 		prerequisite = {
 			focus = STW_chose_partner
 		}
+		available = {
+			has_war_support > 0.79
+			NOT = { has_idea = STW_neutral_politic }
+		}
 		mutually_exclusive = {
 			focus = STW_norten_dream
 		}
 		x = 15
 		y = 5
+		completion_reward = {
+			set_cosmetic_tag = STW_greater_arbuzia
+			every_other_country = {
+				limit = {
+					any_owned_state = {
+						OR = {
+							is_core_of = PBB
+							is_core_of = BEK
+						}
+					}
+				}
+				every_owned_state = { add_core_of = ROOT }
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						has_opinion = {
+							target = ROOT
+							value > 50
+						}
+						has_guaranteed = ROOT
+						has_non_aggression_pact_with = ROOT
+					}
+					NOT = {
+						is_puppet_of = ROOT
+						is_in_faction_with = ROOT
+						has_war_with = ROOT
+						has_annex_war_goal = ROOT
+						has_wargoal_against = ROOT
+						is_justifying_wargoal_against = ROOT
+					}
+				}
+				country_event = stw.13
+				effect_tooltip = {
+					custom_effect_tooltip = effect_tooltip_agree
+					custom_effect_tooltip = will_get_our_wargoals
+				}
+			}
+			custom_effect_tooltip = content_not_ready
+				load_focus_tree = generic
+		}
 
 	}
 }

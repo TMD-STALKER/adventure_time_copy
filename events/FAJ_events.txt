@@ -1007,3 +1007,286 @@ country_event = {
 		add_political_power = 50
 	}
 }
+country_event = {
+    id = faj.30
+	title = faj.30.t
+	desc = faj.30.d
+	picture = GFX_report_event_FAJ_enhiridion
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.30.a
+		
+	}
+}
+country_event = {
+    id = faj.31
+	title = faj.31.t
+	desc = faj.31.d
+	picture = GFX_report_event_FAJ_vikings
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.31.a
+		ai_chance = {
+			base = 1
+		}
+		add_stability = -0.15
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.15
+		}
+		add_ideas = WAL_sad_mountain
+		WAL = {
+			country_event = {
+				id = faj.32
+				days = 5
+				random_hours = 12
+				random_days = 10
+			}
+			add_ideas = WAL_sad_mountain
+		}
+		BGT = {
+			country_event = {
+				id = faj.32
+				days = 5
+				random_hours = 12
+				random_days = 10
+			}
+		}
+		DRG = {
+			country_event = {
+				id = faj.32
+				days = 5
+				random_hours = 12
+				random_days = 10
+			}
+		}
+	}
+	option = { 
+		name = faj.31.b
+		ai_chance = {
+			base = 1
+		}
+		trigger = {
+			has_political_power > 199
+		}
+		add_political_power = -200
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.15
+		}
+		WAL = {
+			country_event = {
+				id = faj.33
+				days = 10
+				random_hours = 12
+				random_days = 10
+			}
+		}
+		BGT = {
+			country_event = {
+				id = faj.33
+				days = 10
+				random_hours = 12
+				random_days = 10
+			}
+		}
+	}
+	option = { 
+		name = faj.31.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		trigger = {
+			has_political_power > 299
+		}
+		add_political_power = -300
+		add_stability = 0.05
+		add_war_support = 0.01
+		army_experience = 10
+		add_ideas = WAL_happy_mountain
+		country_event = {
+			id = faj.34
+			days = 10
+			random_hours = 12
+			random_days = 10
+		}
+		WAL = {
+			country_event = {
+				id = faj.34
+				days = 10
+				random_hours = 12
+				random_days = 10
+			}
+			add_ideas = WAL_happy_mountain
+		}
+		BGT = {
+			country_event = {
+				id = faj.34
+				days = 10
+				random_hours = 12
+				random_days = 10
+			}
+		}
+		DRG = {
+			country_event = {
+				id = faj.34
+				days = 10
+				random_hours = 12
+				random_days = 10
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.32
+	title = faj.32.t
+	desc = faj.32.d
+	picture = GFX_report_event_WAL_bad_times
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.32.a
+		if = {
+			limit = {
+				OR = {
+					original_tag = DRG
+					original_tag = BGT
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WAL
+			}
+		}
+		else = {
+			effect_tooltip = { add_ideas = WAL_sad_mountain }
+			create_wargoal = {
+				type = annex_everything
+				target = BGT
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.33
+	title = faj.33.t
+	desc = faj.33.d
+	picture = GFX_report_event_WAL_bad_times
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.33.a
+		if = {
+			limit = {
+				OR = {
+					original_tag = DRG
+					original_tag = BGT
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WAL
+			}
+		}
+		else = {
+			effect_tooltip = { add_ideas = WAL_sad_mountain }
+			create_wargoal = {
+				type = annex_everything
+				target = BGT
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.34
+	title = faj.34.t
+	desc = faj.34.d
+	picture = GFX_report_event_WAL_everyone_is_happy
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.34.a
+		if = {
+			limit = { original_tag = WAL }
+			effect_tooltip = { add_ideas = WAL_happy_mountain }
+			add_war_support = 0.05
+			add_political_power = 150
+		}
+		else = {
+			add_political_power = 70
+			add_war_support = 0.02
+			add_stability = 0.02
+		}
+	}
+}
+country_event = {
+    id = faj.35
+	title = faj.35.t
+	desc = faj.35.d
+	picture = GFX_report_event_FAJ_house_on_the_tree
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		name = faj.35.a
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 35
+				is_historical_focus_on = yes
+			}
+		}
+		add_ideas = FAJ_lover_deals
+		FROM = {
+			country_event = faj.36
+		}
+	}
+	option = { 
+		name = faj.35.b
+		ai_chance = {
+			base = 1
+		}
+		add_stability = 0.05
+		add_political_power = 80
+		FROM = {
+			country_event = faj.37
+			every_owned_state = { add_claim_by = ROOT }
+		}
+	}
+}
+country_event = {
+    id = faj.36
+	title = faj.36.t
+	desc = faj.36.d
+	picture = GFX_report_event_LRH_friendship
+	is_triggered_only = yes
+
+
+    option = { 
+		name = faj.36.a
+		add_political_power = 125
+	}
+}
+country_event = {
+    id = faj.37
+	title = faj.37.t
+	desc = faj.37.d
+	#picture = GFX_report_event_FAJ_house_on_the_tree
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.37.a
+		add_stability = -0.01
+	}
+}

@@ -2326,7 +2326,68 @@ GENERIC_people_need_it = {
 	}
 }
 economy_decisions = { #Потом доделаю
-	
+	family_tradition = {
+		priority = 95
+		icon = POL_looming_peasants_strike
+		cost = 110
+		days_remove = 75
+		allowed = { original_tag = STW }
+		visible = {
+			has_country_flag = STW_develop_family_flag
+		}
+		available = {
+			thirty_popularity = yes
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.05
+			}
+		}
+		modifier = {
+			stability_factor = 0.05
+			political_power_daily = 0.1
+			consumer_goods_factor = -0.15
+		}
+		ai_will_do = {
+			base = 1
+			
+		}
+	}
+	family_tradition2 = {
+		priority = 95
+		icon = POL_looming_peasants_strike
+		cost = 75
+		days_remove = 75
+		allowed = { original_tag = STW }
+		visible = {
+			has_country_flag = STW_develop_family_flag
+		}
+		available = {
+			OR = {
+				thirty_popularity = yes
+				has_war = yes
+				any_neighbor_country = { is_enemy_ideology = yes }
+			}
+		}
+		remove_effect = {
+			add_stability = -0.02
+			add_war_support = -0.02
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.15
+			}
+		}
+		modifier = {
+			consumer_goods_factor = -0.25
+			local_resources_factor = 0.1
+			army_speed_factor = 0.05
+		}
+		ai_will_do = {
+			base = 1
+			
+		}
+	}
 	use_gun = {
 		priority = 95
 		icon = generic_assassination

@@ -1,0 +1,22 @@
+leader_traits = {
+	OAK_iglometatel = {
+		random = no
+		army_attack_factor = 0.05
+		army_attack_speed_factor = 0.05
+	}
+	OAK_buildmaster = {
+		random = no
+		production_speed_buildings_factor = 0.1
+		factory_energy_consumption = -0.1
+	}
+	OAK_skymaster = {
+		random = no
+		recon_factor = 0.15
+		max_planning_factor = 0.15
+	}
+	OAK_hubburunduk = {
+		random = no
+		consumer_goods_factor = -0.1
+		local_resources_factor = 0.1
+	}
+}

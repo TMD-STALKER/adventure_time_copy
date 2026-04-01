@@ -1987,6 +1987,24 @@ on_actions = {
 			}
 		}
 	}
+	on_weekly_STW = {
+		effect = {
+			if = {
+				limit = {
+					has_idea = STW_candy_tradition
+					all_neighbor_country = { has_war = no }
+				}
+				add_stability = 0.01
+			}
+			else_if = {
+				limit = {
+					has_idea = STW_candy_tradition
+					any_neighbor_country = { has_war = yes }
+				}
+				add_stability = -0.03
+			}
+		}
+	}
 	on_daily_FIK = {
 		effect = {
 			if = {

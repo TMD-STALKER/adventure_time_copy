@@ -504,6 +504,19 @@ spriteTypes = {
 		name = "GFX_report_event_GLK_graph_of_candy_kingdom"
 		texturefile = "gfx/event_pictures/report_event_GLK_graph_of_candy_kingdom.dds"
 	}
+	###wal
+	spriteType = {
+		name = "GFX_report_event_WAL_bad_times"
+		texturefile = "gfx/event_pictures/report_event_WAL_bad_times.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_WAL_mountain"
+		texturefile = "gfx/event_pictures/report_event_WAL_mountain.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_WAL_everyone_is_happy"
+		texturefile = "gfx/event_pictures/report_event_WAL_everyone_is_happy.dds"
+	}
 	
 	###FHL
 	spriteType = {
@@ -515,11 +528,41 @@ spriteTypes = {
 		name = "GFX_report_event_FHL_scared2"
 		texturefile = "gfx/event_pictures/report_event_FHL_scared2.dds"
 	}
-	
+	###stw
+	spriteType = {
+		name = "GFX_report_event_STW_home"
+		texturefile = "gfx/event_pictures/report_event_STW_home.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_STW_learning"
+		texturefile = "gfx/event_pictures/report_event_STW_learning.dds"
+	}
+	###sok 
+	spriteType = {
+		name = "GFX_report_event_SOK_kingdom"
+		texturefile = "gfx/event_pictures/report_event_SOK_kingdom.dds"
+	}
+	###lrh
+	spriteType = {
+		name = "GFX_report_event_SOK_kingdom"
+		texturefile = "gfx/event_pictures/report_event_SOK_kingdom.dds"
+	}
 	###faj 
 	spriteType = {
 		name = "GFX_report_event_FAJ_new_armor"
 		texturefile = "gfx/event_pictures/report_event_FAJ_new_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_house_on_the_tree"
+		texturefile = "gfx/event_pictures/report_event_FAJ_house_on_the_tree.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_vikings"
+		texturefile = "gfx/event_pictures/report_event_FAJ_vikings.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_enhiridion"
+		texturefile = "gfx/event_pictures/report_event_FAJ_enhiridion.dds"
 	}
 	spriteType = {
 		name = "GFX_report_event_FAJ_new_armor2"

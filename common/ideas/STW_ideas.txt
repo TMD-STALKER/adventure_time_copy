@@ -1,0 +1,323 @@
+ideas = {
+    country = {
+		
+		STW_home_of_stability = {
+			
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = generic_economic_recovery
+			
+			modifier = {
+				political_power_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				war_stability_factor = 0.1
+				consumer_goods_factor = 0.35
+				war_support_factor = -0.05
+			}
+		}
+		STW_develop_family = {
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = ITA_battaglie_per_la_nascite
+			
+			modifier = {
+				monthly_population = 0.15
+				local_resources_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		STW_agrarian_heaven = {
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = ARG_civilian_economy_boost
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				global_building_slots_factor = 0.4
+				consumer_goods_factor = -0.2
+			}
+		}
+		
+		STW_war_scouting = {
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = BALTIC_forest_brothers
+			
+			modifier = {
+				war_stability_factor = 0.05
+				war_support_factor = 0.05
+				command_power_gain_mult = 0.05
+				experience_gain_army_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = SOK
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.1
+			}
+		}
+		STW_war_scouting2 = {
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = BALTIC_forest_brothers
+			
+			modifier = {
+				war_stability_factor = 0.05
+				war_support_factor = 0.05
+				command_power_gain_mult = 0.05
+				experience_gain_army_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = EMP
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.1
+			}
+		}
+		STW_neutral_politic = {
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}
+			
+			available = {
+				has_war = no
+			}
+			
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				stability_weekly = 0.0001
+				enemy_declare_war_tension = 0.15
+				enemy_justify_war_goal_time = 0.15
+				generate_wargoal_tension = 0.75
+				guarantee_tension = 0.75
+				join_faction_tension = 0.75
+				lend_lease_tension = 0.25
+				send_volunteers_tension = 0.5
+			}
+		}
+		STW_our_eaten_territory = {
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = SPR_class_war
+			
+			modifier = {
+				army_core_attack_factor = 0.75
+				army_attack_speed_factor = 0.5
+				army_core_defence_factor = 0.05
+				army_morale = 7
+				army_org = 7
+			}
+		}
+		STW_new_monarcy = {
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = AUS_habsburg_monarchy_restored
+			
+			modifier = {
+				stability_weekly = -0.0001
+				candy_drift = -0.15
+				neutral_drift = -0.15
+			}
+		}
+		
+		STW_ice_fruct = {
+		
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = AUS_habsburg_monarchy_restored
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				ice_drift = 0.05
+				candy_drift = -0.15
+				neutral_drift = -0.15
+			}
+		}
+		STW_fire_fruct = {
+		
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = AUS_habsburg_monarchy_restored
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.2
+				fire_drift = 0.05
+				candy_drift = -0.15
+				neutral_drift = -0.15
+			}
+		}
+		STW_slime_fruct = {
+		
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = AUS_habsburg_monarchy_restored
+			
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.1
+				slime_drift = 0.05
+				candy_drift = -0.15
+				neutral_drift = -0.15
+			}
+		}
+		STW_RESEARCHING = {
+		
+			allowed = {
+				original_tag = ROOT
+			}
+
+			allowed_civil_war = {
+				tag = ROOT
+			}	
+		
+			picture = PER_tehran_power_grid_idea
+			
+			modifier = {
+				research_speed_factor = 0.08
+				political_power_factor = 0.05
+				local_resources_factor = 0.05
+				monthly_population = 0.05
+			}
+		}
+		STW_declaration_of_our_sun_places = {
+		
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = AUS_phonix_insurance_variant
+			
+			modifier = {
+				generate_wargoal_tension = -1
+				justify_war_goal_time = -0.15
+				compliance_growth = 0.25
+				political_power_cost = 0.25
+			}
+		}
+		STW_candy_tradition = {
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = BRA_departamento_nacional_do_cafe
+			
+			modifier = {
+				political_power_factor = 0.05
+				drift_defence_factor = 0.05
+				war_stability_factor = 0.15
+				consumer_goods_factor = -0.05
+				custom_modifier_tooltip = STW_candy_tradition_tt
+			}
+		}
+		STW_dan = {
+		
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = generic_devalue_currency
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+				political_power_cost = 0.1
+			}
+		}
+		STW_dan2 = {
+		
+			allowed = {
+				original_tag = STW
+			}
+
+			allowed_civil_war = {
+				tag = STW
+			}	
+		
+			picture = generic_mild_economic_recovery
+			
+			modifier = {
+				consumer_goods_factor = -0.25
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+	}
+}

@@ -99,6 +99,9 @@ characters = {
 			ideology = adventure
 			expire = "1944.1.1.1"
 			id = -1
+			traits = {
+				
+			}
 		}
 		advisor={
 			slot = political_advisor

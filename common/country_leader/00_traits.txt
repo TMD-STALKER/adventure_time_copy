@@ -266,7 +266,15 @@ leader_traits = {
 	}
 
 	#################
-
+	
+	fruct_dictator = {
+		random = no
+		political_power_gain = 0.5
+		recruitable_population_factor = 0.25
+		consumer_goods_factor = -0.05
+		stability_factor = -0.05
+		war_support_factor = -0.05
+	}
 	
 	
 	leader_of_orden = {

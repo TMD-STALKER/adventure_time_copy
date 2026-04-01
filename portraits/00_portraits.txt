@@ -262,6 +262,59 @@ BEK = {
 		}
 	}
 }
+STW = {
+	army = {
+		male = {
+			"gfx/leaders/STW/STW_minorich.dds"
+			"gfx/leaders/STW/STW_minorich2.dds"
+			"gfx/leaders/STW/STW_minorich3.dds"
+		}
+	}
+	navy = {
+		male = {
+			"gfx/leaders/STW/STW_minorich.dds"
+			"gfx/leaders/STW/STW_minorich2.dds"
+			"gfx/leaders/STW/STW_minorich3.dds"
+		}
+	}
+	political = {
+		ice = {
+			male = { 
+				"gfx/leaders/STW/STW_minorich.dds"
+				"gfx/leaders/STW/STW_minorich2.dds"
+				"gfx/leaders/STW/STW_minorich3.dds"
+			}
+		}
+		candy = {
+			male = { 
+				"gfx/leaders/STW/STW_minorich.dds"
+				"gfx/leaders/STW/STW_minorich2.dds"
+				"gfx/leaders/STW/STW_minorich3.dds"
+			}
+		}
+		fire = {
+			male = { 
+				"gfx/leaders/STW/STW_minorich.dds"
+				"gfx/leaders/STW/STW_minorich2.dds"
+				"gfx/leaders/STW/STW_minorich3.dds"
+			}
+		}
+		slime = {
+			male = { 
+				"gfx/leaders/STW/STW_minorich.dds"
+				"gfx/leaders/STW/STW_minorich2.dds"
+				"gfx/leaders/STW/STW_minorich3.dds"
+			}
+		}
+		neutral = {
+			male = { 
+				"gfx/leaders/STW/STW_minorich.dds"
+				"gfx/leaders/STW/STW_minorich2.dds"
+				"gfx/leaders/STW/STW_minorich3.dds"
+			}
+		}
+	}
+}
 MOF = {
 	army = {
 		male = {

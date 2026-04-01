@@ -76,7 +76,7 @@ ideas = {
 			}
 			picture = chi_forced_conscription
 			modifier = {
-				
+				drift_defence_factor = -0.35
 			}
 		}
 		
