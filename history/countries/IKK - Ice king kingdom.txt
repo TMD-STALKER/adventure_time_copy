@@ -94,6 +94,7 @@ recruit_character = IKK_gunter
 recruit_character = IKK_gunti
 recruit_character = IKK_gynter
 recruit_character = IKK_ice_king2
+recruit_character = IKK_lukashenko
 
 set_country_flag = have_ice_crown
 set_country_flag = have_ice_cloth
