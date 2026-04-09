@@ -228,6 +228,10 @@ spriteTypes = {
 		name = "GFX_idea_PBB_bubleguard"
 		texturefile = "gfx/interface/ideas/idea_PBB_bubleguard.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PBB_new_bananguard"
+		texturefile = "gfx/interface/ideas/idea_PBB_new_bananguard.dds"
+	}
 	#####oak#######
 	spriteType = {
 		name = "GFX_idea_OAK_beast"

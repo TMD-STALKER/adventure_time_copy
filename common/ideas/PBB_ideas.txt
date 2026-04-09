@@ -1,6 +1,26 @@
 ideas = {
     country = {
 		
+		SHARED_project_of_new_bananaguards2 = {
+		
+			allowed = {
+				original_tag = PBB
+			}
+
+			allowed_civil_war = {
+				tag = PBB
+			}
+			picture = PBB_new_bananguard
+			
+			modifier = {
+				land_doctrine_cost_factor = -0.25
+				experience_gain_army_unit_factor = 0.25
+				experience_loss_factor = -0.25
+				research_speed_factor = 0.1
+				max_planning_factor = 0.25
+			}
+		}
+		
 		PBB_dont_flow_boat = {
 			picture = eng_steady_as_she_goes
 			

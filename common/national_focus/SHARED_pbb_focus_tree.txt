@@ -2046,6 +2046,23 @@
 
 	}
 	shared_focus = {
+		id = SHARED_project_of_new_bananaguards2
+		icon = GFX_focus_PBB_bananguard_3
+		cost = 10
+		prerequisite = {
+			focus = SHARED_project_of_new_bananaguards
+		}
+		available = {
+			has_army_experience > 99
+		}
+		x = 34
+		y = 9
+		completion_reward = {
+			add_ideas = SHARED_project_of_new_bananaguards2
+		}
+
+	}
+	shared_focus = {
 		id = SHARED_more_arms_factory
 		icon = GFX_focus_generic_mass_production
 		cost = 10

@@ -35,7 +35,10 @@ focus_tree = {
 		x = 5
 		y = 0
 		completion_reward = {
-			 
+			add_power_balance_value = {
+				id = FAJ_power_balance
+				value = -0.1
+			}
 				
 		}
 
@@ -62,7 +65,10 @@ focus_tree = {
 		x = 7
 		y = 0
 		completion_reward = {
-			
+			add_power_balance_value = {
+				id = FAJ_power_balance
+				value = 0.1
+			}
 				
 		}
 
@@ -85,17 +91,25 @@ focus_tree = {
 		}
 		bypass_effect = {
 			add_political_power = 50
+			add_power_balance_value = {
+				id = FAJ_power_balance
+				value = -0.05
+			}
 		}
 		x = 2
 		y = 1
 		completion_reward = {
+			add_power_balance_value = {
+				id = FAJ_power_balance
+				value = -0.08
+			}
 			LRH = {
 				country_event = faj.35
-				effect_tooltip = {
-					custom_effect_tooltip = effect_tooltip_agree
-					LRH = { add_ideas = FAJ_lover_deals }
-					ROOT = { add_political_power = 125 }
-				}
+			}
+			effect_tooltip = {
+				custom_effect_tooltip = effect_tooltip_agree
+				add_political_power = 125
+				LRH = { add_ideas = FAJ_lover_deals }
 			}
 		}
 
@@ -116,7 +130,10 @@ focus_tree = {
 		x = 2
 		y = 3
 		completion_reward = {
-			
+			add_power_balance_value = {
+				id = FAJ_power_balance
+				value = -0.08
+			}
 		}
 
 	}
@@ -125,6 +142,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 3
 		available = {
+			
 			is_power_balance_in_range = {
 				id = FAJ_power_balance
 				range < FAJ_min_min_finn_trust_range
