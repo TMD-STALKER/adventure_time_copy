@@ -485,6 +485,25 @@ focus_tree = {
 				limit = {
 					NOT = { has_completed_focus = STW_declare_neutrality }
 				}
+				division_template = {
+					name = "cavalry group"
+
+					division_names_group = PBB_MYD_01
+
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"cavalry group\" division_template = \"cavalry group\" start_manpower_factor = 1"
+						owner = ROOT
+						count = 5
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
 				start_border_war = {
 					change_state_after_war = yes
 					attacker = {
@@ -575,7 +594,7 @@ focus_tree = {
 			focus = STW_slime_fruct
 		}
 		available = {
-			fire > 0.35
+			fire > 0.24
 		}
 		x = 12
 		y = 1
@@ -612,7 +631,7 @@ focus_tree = {
 			focus = STW_slime_fruct
 		}
 		available = {
-			ice > 0.35
+			ice > 0.24
 		}
 		x = 14
 		y = 1
@@ -649,7 +668,7 @@ focus_tree = {
 			focus = STW_fire_fruct
 		}
 		available = {
-			slime > 0.35
+			slime > 0.24
 		}
 		x = 16
 		y = 1

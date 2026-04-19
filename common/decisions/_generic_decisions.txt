@@ -2346,7 +2346,7 @@ economy_decisions = { #Потом доделаю
 		}
 		modifier = {
 			stability_factor = 0.05
-			political_power_daily = 0.1
+			political_power_gain = 0.1
 			consumer_goods_factor = -0.15
 		}
 		ai_will_do = {
@@ -3926,6 +3926,10 @@ change_ideology_category = {
 		}
 		remove_effect = { 
 			add_stability = -0.05
+			add_popularity = {
+				ideology = slime
+				popularity = 0.01
+			}
 		}
 		ai_will_do = {
 			base = 0
@@ -3953,6 +3957,10 @@ change_ideology_category = {
 		}
 		remove_effect = { 
 			add_stability = -0.05
+			add_popularity = {
+				ideology = fire
+				popularity = 0.01
+			}
 		}
 		ai_will_do = {
 			base = 0
@@ -3980,6 +3988,10 @@ change_ideology_category = {
 		}
 		remove_effect = { 
 			add_stability = -0.05
+			add_popularity = {
+				ideology = ice
+				popularity = 0.01
+			}
 		}
 		ai_will_do = {
 			base = 0
@@ -4007,6 +4019,10 @@ change_ideology_category = {
 		}
 		remove_effect = { 
 			add_stability = -0.05
+			add_popularity = {
+				ideology = candy
+				popularity = 0.01
+			}
 		}
 		ai_will_do = {
 			base = 0
@@ -4034,6 +4050,10 @@ change_ideology_category = {
 		}
 		remove_effect = { 
 			add_stability = -0.05
+			add_popularity = {
+				ideology = neutral
+				popularity = 0.01
+			}
 		}
 		ai_will_do = {
 			base = 0

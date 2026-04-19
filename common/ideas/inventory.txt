@@ -219,6 +219,7 @@ ideas = {
 			}
 		}
 	}
+
 	hands = {
 		law = yes
 		use_list_view = yes
@@ -256,10 +257,54 @@ ideas = {
 			
 			modifier = {
 				army_attack_factor = 0.08
-			}
-			
-			
+			}	
 		}
+
+		gun_sword_buff = {
+			removal_cost = -1
+			
+			visible = {
+				has_country_flag = have_gun_sword
+				has_country_leader = {
+                    character = FIK_queen
+                    ruling_only = yes
+                }
+				NOT = { 
+					has_idea = gun_sword_buff2
+				}
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = { 
+				has_hands = yes
+				not_commune = yes
+			}
+			picture = OLD_shovel
+			modifier = {
+				war_support_factor = 0.1
+				army_attack_factor = 0.15
+				breakthrough_factor = 0.1
+				army_defence_factor = 0.05
+				political_power_factor = 0.1
+			}
+			targeted_modifier = {
+                tag = IKK
+                attack_bonus_against = 0.20 
+            	defense_bonus_against = 0.20 
+            }
+			targeted_modifier= {
+                tag = SGL
+                attack_bonus_against = 0.20 
+            	defense_bonus_against = 0.20 
+            }
+			targeted_modifier = {
+                tag = ICL
+                attack_bonus_against = 0.20 # +20% к атаке
+            	defense_bonus_against = 0.20 # +10% к защите (по желанию)
+            }
+		}
+
 		FAJ_sword = {
 			removal_cost = -1
 			
@@ -281,10 +326,9 @@ ideas = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
 				army_attack_against_major_factor = 0.25
-			}
-			
-			
+			}			
 		}
+
 		FAJ_billy_armor = {
 			removal_cost = -1
 			
@@ -309,9 +353,9 @@ ideas = {
 				tag = LIC
 				attack_bonus_against = 0.25
 				#defense_bonus_against = 0.55
-			}
-			
+			}	
 		}
+
 		MOF_pushka = {
 			removal_cost = -1
 			
@@ -331,9 +375,9 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.05
 				breakthrough_factor = 0.1
-			}
-			
+			}	
 		}
+
 		old_shovel = {
 			removal_cost = -1
 			
@@ -359,7 +403,58 @@ ideas = {
 				defense_bonus_against = 0.06
 			}
 		}
+
+		gun_sword = {
+			removal_cost = -1
+			
+			visible = {
+				has_country_flag = have_gun_sword
+				NOT = { 
+					has_idea = gun_sword2 
+					has_country_leader = {
+						character = FIK_queen
+						ruling_only = yes
+					}
+				}
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = { 
+				has_hands = yes
+				not_commune = yes
+			}
+			picture = OLD_shovel
+			modifier = {
+				war_support_factor = 0.1
+				army_attack_factor = 0.15
+				breakthrough_factor = 0.1
+				army_defence_factor = 0.05
+				political_power_factor = 0.1
+				attrition = -0.05
+				stability_factor = -0.05
+				army_org_factor = -0.05
+				army_speed_factor = -0.05
+				resistance_damage_to_garrison = 0.05
+			}
+			targeted_modifier = {
+                tag = IKK
+                attack_bonus_against = 0.10 
+            	defense_bonus_against = 0.10 
+            }
+			targeted_modifier= {
+                tag = SGL
+                attack_bonus_against = 0.10 
+            	defense_bonus_against = 0.10 
+            }
+			targeted_modifier = {
+                tag = ICL
+                attack_bonus_against = 0.10 # +20% к атаке
+            	defense_bonus_against = 0.10 # +10% к защите (по желанию)
+            }
+		}
 	}
+
 	hands2 = {
 		law = yes
 		use_list_view = yes
@@ -401,9 +496,103 @@ ideas = {
 				drift_defence_factor = 0.05
 				breakthrough_factor = 0.1
 			}
-			
 		}
 		
+		gun_sword2 = {
+			removal_cost = -1
+			
+			visible = {
+				has_country_flag = have_gun_sword
+				NOT = { 
+					has_idea = gun_sword
+					has_country_leader = {
+						character = FIK_queen
+						ruling_only = yes
+					}
+				}
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = { 
+				has_hands = yes
+				not_commune = yes
+			}
+			picture = OLD_shovel
+			modifier = {
+				war_support_factor = 0.1
+				army_attack_factor = 0.15
+				breakthrough_factor = 0.1
+				army_defence_factor = 0.05
+				political_power_factor = 0.1
+				attrition = -0.05
+				stability_factor = -0.05
+				army_org_factor = -0.05
+				army_speed_factor = -0.05
+				resistance_damage_to_garrison = 0.05
+			}
+			targeted_modifier = {
+                tag = IKK
+                attack_bonus_against = 0.10 
+            	defense_bonus_against = 0.10 
+            }
+			targeted_modifier= {
+                tag = SGL
+                attack_bonus_against = 0.10 
+            	defense_bonus_against = 0.10 
+            }
+			targeted_modifier = {
+                tag = ICL
+                attack_bonus_against = 0.10 # +20% к атаке
+            	defense_bonus_against = 0.10 # +10% к защите (по желанию)
+            }
+		}
+
+		gun_sword_buff2 = {
+			removal_cost = -1
+			
+			visible = {
+				has_country_flag = have_gun_sword
+				has_country_leader = {
+                    character = FIK_queen
+                    ruling_only = yes
+                }
+				NOT = { 
+					has_idea = gun_sword_buff
+				}
+			}
+			allowed_to_remove = {
+                always = yes 
+            }
+			available = { 
+				has_hands = yes
+				not_commune = yes
+			}
+			picture = OLD_shovel
+			modifier = {
+				war_support_factor = 0.1
+				army_attack_factor = 0.15
+				breakthrough_factor = 0.1
+				army_defence_factor = 0.05
+				political_power_factor = 0.1
+			}
+			targeted_modifier = {
+                tag = IKK
+                attack_bonus_against = 0.20 
+            	defense_bonus_against = 0.20 
+            }
+			targeted_modifier= {
+                tag = SGL
+                attack_bonus_against = 0.20 
+            	defense_bonus_against = 0.20 
+            }
+			targeted_modifier = {
+                tag = ICL
+                attack_bonus_against = 0.20 # +20% к атаке
+            	defense_bonus_against = 0.20 # +10% к защите (по желанию)
+            }
+		}
+
 		cup_sword2 = {
 			removal_cost = -1
 			

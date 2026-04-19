@@ -139,5 +139,5 @@ autonomous_state = {
 	local_building_slots_factor = -0.25
 	state_resources_factor = -0.25
 	state_production_speed_buildings_factor = -0.25
-	
 }
+

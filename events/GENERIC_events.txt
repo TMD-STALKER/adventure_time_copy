@@ -1660,10 +1660,12 @@ country_event = {
 	trigger = {
 		has_civil_war = no
 		is_target_of_coup = no
+		num_of_controlled_states > 1
 		NOT = { 
 			TAG = MOF
 			TAG = PBB
 			TAG = COT
+			has_completed_focus = STW_new_monarcy
 		}
 		OR = {
 			AND = {

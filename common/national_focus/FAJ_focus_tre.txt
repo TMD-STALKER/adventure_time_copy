@@ -2,11 +2,11 @@ focus_tree = {
 	id = GENERI
 	country = {
 		factor = 0
-		modifier = {
-			add = 10
-			is_debug = no
-			tag = FAJ
-		}
+		#modifier = {
+		#	add = 10
+		#	is_debug = no
+		#	tag = FAJ
+		#}
 	}
 	default = no
 	shared_focus = SHARED_investition_in_capital
