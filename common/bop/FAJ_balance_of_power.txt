@@ -11,6 +11,7 @@ FAJ_power_balance = {
 		max = 0.15
 		modifier = {
 			stability_factor = 0.1
+			custom_modifier_tooltip = FAJ_medium_trust_range_tt
 		}
 		
 		on_activate = { 
@@ -58,7 +59,8 @@ FAJ_power_balance = {
 					gfx = "GFX_bop_FAJ_finn_side"
 				}
 				promote_character = FAJ_jake
-		
+				set_country_flag = FAJ_jake_the_god_flag
+				clr_country_flag = FAJ_finn_the_human_flag
 			}
 		}
 		
@@ -183,6 +185,8 @@ FAJ_power_balance = {
 					character = FAJ_finn
 					ideology = adventure
 				}
+				clr_country_flag = FAJ_jake_the_god_flag
+				set_country_flag = FAJ_finn_the_human_flag
 			}
 		}
 		

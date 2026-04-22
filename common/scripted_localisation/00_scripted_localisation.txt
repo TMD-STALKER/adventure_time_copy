@@ -35,3 +35,32 @@ defined_text = { # Country
 		localization_key = worldmajors_category_desc4
 	}
 }
+defined_text = {
+  name = "GetMyFlagCountriesList"
+  text = {
+   trigger = {
+    any_country = {
+     has_country_flag = my_special_flag
+    }
+   }
+   localization_key = "MyFlag_List_Start"
+  }
+  text = {
+   localization_key = "MyFlag_No_Countries"
+  }
+}
+
+defined_text = {
+  name = "MyFlag_Country_List_Builder"
+  text = {
+   trigger = {
+    THIS = {
+     has_country_flag = my_special_flag
+    }
+   }
+   localization_key = "MyFlag_Country_Entry_With_Comma"
+  }
+  text = {
+   localization_key = "MyFlag_Country_Entry_No_Comma"
+  }
+}

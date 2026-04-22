@@ -138,6 +138,10 @@ not_commune = {
 					hidden_trigger = {
 						NOT = {
 							has_country_leader = {
+								name = "Торговая компания"
+								ruling_only = yes
+							}
+							has_country_leader = {
 								name = "Братство алчности"
 								ruling_only = yes
 							}

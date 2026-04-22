@@ -1,0 +1,21 @@
+leader_traits = {
+
+	#################
+	
+	SEK_trade_company = {
+		random = no
+		trade_opinion_factor = 0.4
+		opinion_gain_monthly_factor = 0.85
+		generate_wargoal_tension = 2
+		enemy_declare_war_tension = 2
+		license_production_speed = 0.25
+		lend_lease_tension = -0.5
+		neutral_drift = 0.35
+	}
+	SEK_no_tax = {
+		production_speed_buildings_factor = 0.15
+		global_building_slots = 1
+		consumer_goods_factor = -0.4
+	}
+	
+}

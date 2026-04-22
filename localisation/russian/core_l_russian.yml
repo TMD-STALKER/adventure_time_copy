@@ -24,6 +24,10 @@
  custom_diff_strong_BIL: "ЭТО БИЛЛИ!"
  custom_diff_strong_KEN: "Вода зовёт"
  custom_diff_strong_LIC: "Смерть приближается"
+ MyFlag_List_Start: "Страны с флагом: "
+ MyFlag_No_Countries: "Нет стран с этим флагом."
+ MyFlag_Country_Entry_No_Comma: "§Y[THIS.GetNameWithFlag]§!"
+ MyFlag_Country_Entry_With_Comma: "§Y[THIS.GetNameWithFlag]§!, "
  ##FLAGS
  mof_conquer_south: "Юг был национализирован через решение"
  mafia_tooltip2: "В случайном приграничном регионе выделится новая марионетка, которая будет приносить нам дополнительные ресурсы."

@@ -280,7 +280,7 @@ ideas = {
 				has_hands = yes
 				not_commune = yes
 			}
-			picture = OLD_shovel
+			picture = gun_sword
 			modifier = {
 				war_support_factor = 0.1
 				army_attack_factor = 0.15
@@ -423,8 +423,16 @@ ideas = {
 			available = { 
 				has_hands = yes
 				not_commune = yes
+				hidden_trigger = {
+					NOT = {
+						has_country_leader = {
+							character = FIK_queen
+							ruling_only = yes
+						}
+					}
+				}
 			}
-			picture = OLD_shovel
+			picture = gun_sword
 			modifier = {
 				war_support_factor = 0.1
 				army_attack_factor = 0.15
@@ -518,7 +526,7 @@ ideas = {
 				has_hands = yes
 				not_commune = yes
 			}
-			picture = OLD_shovel
+			picture = gun_sword
 			modifier = {
 				war_support_factor = 0.1
 				army_attack_factor = 0.15
@@ -567,8 +575,14 @@ ideas = {
 			available = { 
 				has_hands = yes
 				not_commune = yes
+				hidden_trigger = {
+					has_country_leader = {
+						character = FIK_queen
+						ruling_only = yes
+					}
+				}
 			}
-			picture = OLD_shovel
+			picture = gun_sword
 			modifier = {
 				war_support_factor = 0.1
 				army_attack_factor = 0.15

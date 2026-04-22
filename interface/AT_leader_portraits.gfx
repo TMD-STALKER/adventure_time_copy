@@ -69,6 +69,28 @@ spriteTypes = {
 		texturefile = "gfx/leaders/PBB/PBB_baby_bonne.dds"
 	}
 	
+	###SEK
+	
+	spriteType = {
+		name = "GFX_portrait_SEK_Blowfish"
+		texturefile = "gfx/leaders/SEK/SEK_Blowfish.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SEK_Octopus"
+		texturefile = "gfx/leaders/SEK/SEK_Octopus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SEK_Porpoise"
+		texturefile = "gfx/leaders/SEK/SEK_Porpoise.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_SEK_soviet"
+		texturefile = "gfx/leaders/SEK/SEK_soviet.dds"
+	}
+	
 	###IKK
 	
 	spriteType = {

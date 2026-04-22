@@ -1,4 +1,4 @@
-version="0.4.1"
+version="0.4.4"
 tags={
 	"Alternative History"
 	"Events"
@@ -70,5 +70,5 @@ replace_path="localisation/russian/state_names_l_russian.yml"
 replace_path="localisation/russian/strategic_region_names_l_russian.yml"
 replace_path="localisation/russian/victory_points_l_russian.yml"
 name="adventure_time_copy"
-supported_version="1.17.*"
+supported_version="1.18.*"
 ## path="C:/Users/user/Documents/Paradox Interactive/Hearts of Iron IV/mod/adventure_time_copy"

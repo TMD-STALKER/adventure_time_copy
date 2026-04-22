@@ -1,0 +1,8 @@
+SEK_new_country = {
+	priority = 100
+	allowed = { TAG = SEK }
+	visible = {
+		owns_state = 784
+	}
+	icon = generic_formable_nations
+}

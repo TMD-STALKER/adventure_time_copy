@@ -6,7 +6,12 @@ debug_decisions = {
 			
 		}
 		complete_effect = {
-			kill_country_leader = yes
+			set_country_flag = my_special_flag
+			custom_effect_tooltip = GetMyFlagCountriesList
+			custom_effect_tooltip = MyFlag_List_Start
+			custom_effect_tooltip = MyFlag_No_Countries
+			custom_effect_tooltip = MyFlag_Country_Entry_No_Comma
+			custom_effect_tooltip = MyFlag_Country_Entry_With_Comma
 		}
 		remove_effect = {
 		}
@@ -220,6 +225,39 @@ debug_decisions = {
 	}
 }
 capture_items = {
+	take_gun_sword = {
+		priority = 100
+		cost = 100
+		icon = generic_construction
+		days_remove = 50
+		visible = {
+			owns_state = 575
+			has_tech = excavation1
+		}
+		available = {
+			has_civil_war = no
+			has_tech = excavation4	
+			num_of_civilian_factories_available_for_projects > 1
+		}
+
+		remove_effect = { 
+			
+			set_country_flag = have_gun_sword
+			add_war_support = 0.01
+			custom_effect_tooltip = have_gun_sword_tt
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			base = 25
+			modifier = {
+				is_historical_focus_on = yes
+				add = -50
+			}
+		}
+	}
+	################################
 	take_icecrown_from_enemy = {
 		priority = 100
 		cost = 100
@@ -342,6 +380,182 @@ capture_items = {
 				clr_country_flag = have_old_shovel
 			}
 			set_country_flag = have_old_shovel
+			add_war_support = 0.01
+		}
+		ai_will_do = {
+			base = 25
+			modifier = {
+				is_historical_focus_on = yes
+				add = -50
+			}
+		}
+	}
+	take_have_FAJ_sviter_from_enemy = {
+		priority = 100
+		cost = 100
+		icon = generic_confiscation
+		visible = {
+			OR = {
+				any_subject_country = {
+					has_country_flag = have_FAJ_sviter
+					has_civil_war = no
+				}
+				AND = {
+					any_war_score > 29
+					any_enemy_country = {
+						surrender_progress > 0.85
+						has_country_flag = have_FAJ_sviter
+						has_civil_war = no
+					}
+				}
+			}
+		}
+		available = {
+			has_civil_war = no
+		}
+
+		complete_effect = { 
+			random_other_country = {
+				limit = {
+					has_country_flag = have_FAJ_sviter
+					has_civil_war = no
+				}
+				add_war_support = -0.01
+				clr_country_flag = have_FAJ_sviter
+			}
+			set_country_flag = have_FAJ_sviter
+			add_war_support = 0.01
+		}
+		ai_will_do = {
+			base = 25
+			modifier = {
+				is_historical_focus_on = yes
+				add = -50
+			}
+		}
+	}
+	take_have_gun_sword_from_enemy = {
+		priority = 100
+		cost = 100
+		icon = generic_confiscation
+		visible = {
+			OR = {
+				any_subject_country = {
+					has_country_flag = have_gun_sword
+					has_civil_war = no
+				}
+				AND = {
+					any_war_score > 29
+					any_enemy_country = {
+						surrender_progress > 0.85
+						has_country_flag = have_gun_sword
+						has_civil_war = no
+					}
+				}
+			}
+		}
+		available = {
+			has_civil_war = no
+		}
+
+		complete_effect = { 
+			random_other_country = {
+				limit = {
+					has_country_flag = have_gun_sword
+					has_civil_war = no
+				}
+				add_war_support = -0.01
+				clr_country_flag = have_gun_sword
+			}
+			set_country_flag = have_gun_sword
+			add_war_support = 0.01
+		}
+		ai_will_do = {
+			base = 25
+			modifier = {
+				is_historical_focus_on = yes
+				add = -50
+			}
+		}
+	}
+	take_have_MOF_pushka_from_enemy = {
+		priority = 100
+		cost = 100
+		icon = generic_confiscation
+		visible = {
+			OR = {
+				any_subject_country = {
+					has_country_flag = have_MOF_pushka
+					has_civil_war = no
+				}
+				AND = {
+					any_war_score > 29
+					any_enemy_country = {
+						surrender_progress > 0.85
+						has_country_flag = have_MOF_pushka
+						has_civil_war = no
+					}
+				}
+			}
+		}
+		available = {
+			has_civil_war = no
+		}
+
+		complete_effect = { 
+			random_other_country = {
+				limit = {
+					has_country_flag = have_MOF_pushka
+					has_civil_war = no
+				}
+				add_war_support = -0.01
+				clr_country_flag = have_MOF_pushka
+			}
+			set_country_flag = have_MOF_pushka
+			add_war_support = 0.01
+		}
+		ai_will_do = {
+			base = 25
+			modifier = {
+				is_historical_focus_on = yes
+				add = -50
+			}
+		}
+	}
+	take_have_FAJ_billy_armor_from_enemy = {
+		priority = 100
+		cost = 100
+		icon = generic_confiscation
+		visible = {
+			OR = {
+				any_subject_country = {
+					has_country_flag = have_MOF_pushka
+					has_civil_war = no
+				}
+				AND = {
+					any_war_score > 29
+					any_enemy_country = {
+						surrender_progress > 0.85
+						has_country_flag = have_MOF_pushka
+						has_civil_war = no
+					}
+				}
+			}
+		}
+		available = {
+			has_civil_war = no
+		}
+
+		complete_effect = { 
+			random_other_country = {
+				limit = {
+					has_country_flag = have_MOF_pushka
+					has_civil_war = no
+				}
+				add_war_support = -0.01
+				clr_country_flag = have_MOF_pushka
+			}
+			set_country_flag = have_MOF_pushka
 			add_war_support = 0.01
 		}
 		ai_will_do = {

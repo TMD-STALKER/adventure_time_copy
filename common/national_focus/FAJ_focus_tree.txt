@@ -23,13 +23,9 @@ focus_tree = {
 				range < FAJ_min_min_finn_trust_range
 			}
 		}
-		#allow_branch = {
-		#	is_power_balance_in_range = {
-		#		id = FAJ_power_balance
-		#		range < FAJ_min_min_finn_trust_range
-		#	}
-		#	#NOT = { has_completed_focus = FAJ_finn_the_human }
-		#}
+		allow_branch = {
+			has_country_flag = FAJ_jake_the_god_flag
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		x = 5
@@ -53,13 +49,9 @@ focus_tree = {
 				range > FAJ_min_min_jake_trust_range
 			}
 		}
-		#allow_branch = {
-		#	is_power_balance_in_range = {
-		#		id = FAJ_power_balance
-		#		range > FAJ_min_min_jake_trust_range
-		#	}
-		#	#NOT = { has_completed_focus = FAJ_jake_the_god }
-		#}
+		allow_branch = {
+			has_country_flag = FAJ_finn_the_human_flag
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		x = 7

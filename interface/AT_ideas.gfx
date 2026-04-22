@@ -45,6 +45,10 @@ spriteTypes = {
 		name = "GFX_idea_cup_sword"
 		texturefile = "gfx/interface/ideas/idea_cup_sword.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_gun_sword"
+		texturefile = "gfx/interface/ideas/idea_gun_sword.dds"
+	}
 	#tep
 	spriteType = {
 		name = "GFX_idea_TEP_rasputie"
