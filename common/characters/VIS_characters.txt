@@ -1,0 +1,15 @@
+characters = {
+	VIS_administrator = {
+		name = VIS_administrator
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/VIS/VIS_administrator.dds"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1940.1.1.1"
+			id = -1
+		}
+	}
+}

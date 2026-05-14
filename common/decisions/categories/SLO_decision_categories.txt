@@ -1,0 +1,10 @@
+SLO_propaganda_category = {
+	priority = 100
+	allowed = { TAG = SLO }
+	visible = {
+		is_debug = yes
+	}
+	icon = border_conflicts
+	visible_when_empty = yes
+	picture = GFX_decision_cat_SLO_women
+}

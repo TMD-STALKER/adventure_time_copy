@@ -114,11 +114,19 @@ worldmajors_category = {
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					NOT = { original_tag = FIS }
+				}
 				has_idea = export_focus1
 			}
 		}
 		visible = {
 			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					NOT = { original_tag = FIS }
+				}
 				has_idea = export_focus1
 			}
 		}
@@ -1434,11 +1442,19 @@ worldmajors_category2 = {
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					NOT = { original_tag = FIS }
+				}
 				has_idea = export_focus1
 			}
 		}
 		visible = {
 			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					NOT = { original_tag = FIS }
+				}
 				has_idea = export_focus1
 			}
 		}
@@ -2763,11 +2779,19 @@ worldmajors_category3 = {
 		target_array = global.countries
 		target_trigger = {
 			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					NOT = { original_tag = FIS }
+				}
 				has_idea = export_focus1
 			}
 		}
 		visible = {
 			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					NOT = { original_tag = FIS }
+				}
 				has_idea = export_focus1
 			}
 		}

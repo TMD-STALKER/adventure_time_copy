@@ -1,6 +1,84 @@
 ideas = {
     country = {
 		
+		MOF_artillery_doctrine = {
+		
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = totaler_krieg_economy
+			
+			modifier = {
+				army_artillery_defence_factor = 0.05
+			}
+			equipment_bonus = {
+                artillery = {
+                    instant = yes
+					soft_attack = 0.05
+					hard_attack = 0.05
+                }
+				anti_air = {
+                    instant = yes
+					soft_attack = 0.05
+					hard_attack = 0.05
+                }
+				anti_tank = {
+                    instant = yes
+					soft_attack = 0.05
+					hard_attack = 0.05
+                }
+            }
+		}
+		
+		MOF_motorization_doctrine = {
+			
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = totaler_krieg_economy
+			
+			modifier = {
+				army_speed_factor = 0.05
+				org_loss_when_moving = -0.05
+				army_attack_speed_factor = 0.05
+			}
+		}
+		
+		MOF_tank_doctrine = {
+		
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = totaler_krieg_economy
+			
+			equipment_bonus = {
+                armor = {
+                    instant = yes
+                    build_cost_ic = -0.05
+					soft_attack = 0.05
+					hard_attack = 0.05
+                }
+            }
+			modifier = {
+				army_armor_speed_factor = 0.05
+			}
+		}
+		
 		MOF_infantry_doctrine = {
 			
 			allowed = {
@@ -11,12 +89,172 @@ ideas = {
 				tag = MOF
 			}
 			
-			picture = MOF_military_power
+			picture = totaler_krieg_economy
 			
 			modifier = {
 				army_morale_factor = 0.05
 				army_org_regain = 0.05
 				army_org_factor = 0.05
+			}
+		}
+		
+		MOF_infantry_doctrine_with_eng = {
+		
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = totaler_krieg_economy
+			
+			modifier = {
+				army_morale_factor = 0.06
+				army_org_regain = 0.06
+				army_org_factor = 0.06
+				winter_attrition_factor = -0.2
+				heat_attrition_factor = -0.2
+			}
+		}
+		
+		MOF_infantry_doctrine_with_stels = {
+		
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = totaler_krieg_economy
+			
+			modifier = {
+				army_morale_factor = 0.06
+				army_org_regain = 0.06
+				army_org_factor = 0.06
+				recon_factor = 0.1
+				enemy_army_bonus_air_superiority_factor = -0.1
+				land_night_attack = 0.1
+			}
+		}
+		
+		MOF_infantry_doctrine_with_storm = {
+		
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = totaler_krieg_economy
+			
+			modifier = {
+				army_morale_factor = 0.06
+				army_org_regain = 0.06
+				army_org_factor = 0.06
+				coordination_bonus = 0.1
+				initiative_factor = 0.1
+				org_loss_at_low_org_factor = -0.1
+			}
+		}
+		
+		MOF_infantry_doctrine_with_stels_and_eng = {
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = totaler_krieg_economy
+			
+			modifier = {
+				army_morale_factor = 0.07
+				army_org_regain = 0.07
+				army_org_factor = 0.07
+				recon_factor = 0.1
+				enemy_army_bonus_air_superiority_factor = -0.1
+				land_night_attack = 0.1
+				winter_attrition_factor = -0.2
+				heat_attrition_factor = -0.2
+			}
+		}
+		
+		MOF_infantry_doctrine_with_storm_and_stels = {
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = totaler_krieg_economy
+			
+			modifier = {
+				army_morale_factor = 0.07
+				army_org_regain = 0.07
+				army_org_factor = 0.07
+				recon_factor = 0.1
+				enemy_army_bonus_air_superiority_factor = -0.1
+				land_night_attack = 0.1
+				coordination_bonus = 0.1
+				initiative_factor = 0.1
+				org_loss_at_low_org_factor = -0.1
+			}
+		}
+		
+		MOF_infantry_doctrine_with_storm_and_eng = {
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = totaler_krieg_economy
+			
+			modifier = {
+				army_morale_factor = 0.07
+				army_org_regain = 0.07
+				army_org_factor = 0.07
+				winter_attrition_factor = -0.2
+				heat_attrition_factor = -0.2
+				coordination_bonus = 0.1
+				initiative_factor = 0.1
+				org_loss_at_low_org_factor = -0.1
+			}
+		}
+		MOF_infantry_doctrine_unite = {
+			allowed = {
+				original_tag = MOF
+			}
+
+			allowed_civil_war = {
+				tag = MOF
+			}
+			
+			picture = totaler_krieg_economy
+			
+			modifier = {
+				army_morale_factor = 0.08
+				army_org_regain = 0.08
+				army_org_factor = 0.08
+				winter_attrition_factor = -0.2
+				heat_attrition_factor = -0.2
+				coordination_bonus = 0.1
+				initiative_factor = 0.1
+				org_loss_at_low_org_factor = -0.1
+				recon_factor = 0.1
+				enemy_army_bonus_air_superiority_factor = -0.1
+				land_night_attack = 0.1
 			}
 		}
 		

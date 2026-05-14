@@ -1,0 +1,50 @@
+ideas = {
+    country = {
+		
+		VIS_virtual_country = {
+			
+			allowed = {
+				original_tag = VIS
+			}
+
+			allowed_civil_war = {
+				tag = VIS
+			}	
+		
+			picture = generic_neglected_military
+			
+			modifier = {
+				political_power_factor = -0.15
+				war_support_factor = -0.15
+				surrender_limit = -0.75
+				production_speed_buildings_factor = -2
+				training_time_factor = 2
+				minimum_training_level = 0.9
+			}
+			rule = {
+				can_create_factions = no
+				can_join_factions = no
+				can_force_government = no
+				can_send_volunteers = no
+			}
+		}
+		VIS_donations = {
+			
+			allowed = {
+				original_tag = VIS
+			}
+
+			allowed_civil_war = {
+				tag = VIS
+			}	
+		
+			picture = EST_exploit_the_banks
+			
+			modifier = {
+				military_factory_donations = 1
+				dockyard_donations = 1
+				industrial_factory_donations = 1
+			}
+		}
+	}
+}

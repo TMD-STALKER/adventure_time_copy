@@ -1,0 +1,5 @@
+VIS_new_country = {
+	priority = 100
+	allowed = { TAG = VIS }
+	icon = generic_formable_nations
+}

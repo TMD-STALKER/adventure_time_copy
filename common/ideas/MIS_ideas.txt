@@ -1,0 +1,26 @@
+ideas = {
+    country = {
+		
+		MIS_strange_weather = {
+			
+			allowed = {
+				original_tag = MIS
+			}
+
+			allowed_civil_war = {
+				tag = MIS
+			}	
+		
+			picture = FIN_sami_pathfinders
+			
+			modifier = {
+				winter_attrition_factor = -0.5
+				heat_attrition_factor = -0.5
+				stability_factor = -0.1
+				production_speed_buildings_factor = -0.15
+			}
+			
+		}
+
+	}
+}

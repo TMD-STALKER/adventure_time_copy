@@ -1,0 +1,30 @@
+VIS_new_country = {
+	VIS_make_real_deal = {
+		priority = 100
+		cost = 300
+		icon = SOV_exiles_state
+		days_remove = 100
+		available = {
+			OR = {
+				has_war = yes
+				has_idea = limited_exports1
+			}
+		}
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+		remove_effect = { 
+			remove_ideas = VIS_virtual_country
+			upgrade_army_law = yes
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+}

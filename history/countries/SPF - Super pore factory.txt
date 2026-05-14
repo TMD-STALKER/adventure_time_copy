@@ -1,7 +1,7 @@
 ﻿
 capital = 374
 
-#oob = "PBB_1936"
+oob = "SPF_3027"
 
 # Starting tech
 set_technology = {
@@ -28,4 +28,4 @@ set_popularities = {
 }
 
 recruit_character = SPF_sheril
-recruit_character = SPF_sheril2
+

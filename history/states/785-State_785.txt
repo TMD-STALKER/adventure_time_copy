@@ -1,0 +1,32 @@
+state={
+	id=785
+	name="STATE_785"
+	provinces={
+		3159 3161 3163 3165 3166 3168 3171 3174 3172 3177 3178 3181 3182 3183 3184 3185 3190 3192 3193 3199 3200 3201 3203 3205 3206 3209 3211 3212 3213 3214 3215 3216 3217 3221  
+	}
+	manpower = 25000
+	state_category = town local_supplies=1.0 
+	history={
+		owner = VIS
+		add_core_of = VIS
+		victory_points = {
+			3213 15 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			3213 = {
+				coastal_bunker = 2
+				naval_base = 3
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				} 
+			}
+		}
+	}
+}

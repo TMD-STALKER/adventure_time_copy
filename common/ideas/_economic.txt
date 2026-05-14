@@ -752,6 +752,8 @@ ideas = {
 				OR = {
 					num_of_factories > 25
 					has_country_flag = already_state_flag
+					has_defensive_war = yes
+					any_owned_state = { NOT = { is_controlled_by = ROOT } }
 				}
 				NOT = { has_idea = free_trade1 }
 			}

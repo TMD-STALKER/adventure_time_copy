@@ -1,0 +1,24 @@
+FIS_break_isolation = {
+	FIS_break_isolation_decision = {
+		priority = 100
+		cost = 25
+		icon = eng_puppet_usa
+		days_remove = 30
+		available = {
+			OR = {
+				has_war = yes
+				has_idea = free_trade1
+			}
+		}
+		complete_effect = {
+			add_war_support = 0.01
+			add_stability = -0.05
+		}
+		remove_effect = { 
+			remove_ideas = FIS_isolation
+		}
+		ai_will_do = {
+			base = 25
+		}
+	}
+}

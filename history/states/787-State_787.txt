@@ -1,0 +1,33 @@
+state={
+	id=787
+	name="STATE_787"
+	provinces={
+		3145 3146 3147 3152 3150 3151
+		3148 3149 3153 3154 3155 3156 3157 3158 3160 3162 3164 3167 3169 3170 3173 3175 3176 3179 3180 3186 3187 3188 3189 3191 3194 3195 3196 3197 3198 3202 3204 3207 3208 3210 3285 
+	}
+	manpower = 115000
+	state_category = metropolis local_supplies=1.0 
+	history={
+		owner = FIS
+		add_core_of = FIS
+		victory_points = {
+			3189 15 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			3189 = {
+				coastal_bunker = 2
+				naval_base = 3
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				} 
+			}
+		}
+	}
+}

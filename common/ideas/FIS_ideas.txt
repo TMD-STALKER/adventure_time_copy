@@ -1,0 +1,48 @@
+ideas = {
+    country = {
+		
+		FIS_guardian = {
+			
+			allowed = {
+				original_tag = FIS
+			}
+
+			allowed_civil_war = {
+				tag = FIS
+			}	
+		
+			picture = SWE_wargames
+			
+			modifier = {
+				stability_factor = 0.4
+				production_factory_start_efficiency_factor = 0.1
+				production_cost_industrial_complex_factor = -0.1
+				experience_gain_army_factor = -0.85
+				experience_gain_navy_factor = -0.85
+				experience_gain_air_factor = -0.85
+			}
+			
+		}
+		
+		FIS_isolation = {
+			allowed = {
+				original_tag = FIS
+			}
+
+			allowed_civil_war = {
+				tag = FIS
+			}	
+		
+			picture = undisturbed_isolation
+			
+			modifier = {
+				
+				generate_wargoal_tension = 2
+				guarantee_tension = 2
+				join_faction_tension = 2
+				lend_lease_tension = 2
+			}
+		}
+
+	}
+}

@@ -4,7 +4,18 @@ spriteTypes = {
 		name = "GFX_decision_cat_PBB_getto"
 		texturefile = "gfx/interface/decisions/decision_cat_PBB_getto.dds"
 	}
+	#FIK
+	spriteType = {
+		name = "GFX_decision_cat_FIK_women"
+		texturefile = "gfx/interface/decisions/decision_cat_FIK_women.dds"
+	}
+	#SLO
+	spriteType = {
+		name = "GFX_decision_cat_SLO_women"
+		texturefile = "gfx/interface/decisions/decision_cat_SLO_women.dds"
+	}
 	#MOF
+	
 	#geneirc
 	spriteType = {
 		name = "GFX_decision_cat_generic_soviet"

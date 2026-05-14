@@ -25,8 +25,8 @@ FAJ_power_balance = {
 				side = FAJ_finn_side
 				gfx = "GFX_bop_FAJ_medium_trust"
 			}
-			
-			
+			clr_country_flag = FAJ_jake_the_god_flag
+			clr_country_flag = FAJ_finn_the_human_flag
 		}
 		on_deactivate = {
 			
@@ -61,6 +61,8 @@ FAJ_power_balance = {
 				promote_character = FAJ_jake
 				set_country_flag = FAJ_jake_the_god_flag
 				clr_country_flag = FAJ_finn_the_human_flag
+				hidden_effect = { load_focus_tree = FAJ_focus_tree }
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 		
@@ -187,6 +189,9 @@ FAJ_power_balance = {
 				}
 				clr_country_flag = FAJ_jake_the_god_flag
 				set_country_flag = FAJ_finn_the_human_flag
+				
+				hidden_effect = { load_focus_tree = FAJ_focus_tree }
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 		

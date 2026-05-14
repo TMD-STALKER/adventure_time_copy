@@ -1,0 +1,5 @@
+FIS_break_isolation = {
+	priority = 100
+	allowed = { TAG = FIS }
+	icon = generic_crisis
+}

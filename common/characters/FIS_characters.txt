@@ -1,0 +1,20 @@
+characters = {
+	FIS_minerva = {
+		name = FIS_minerva
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FIS/FIS_minerva.dds"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			expire = "1940.1.1.1"
+			id = -1
+			traits = {
+				FIS_protector
+				FIS_not_real
+			}
+			desc = FIS_minerva_DESC
+		}
+	}
+}

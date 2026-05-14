@@ -97,7 +97,8 @@ PBB_take_all_power = {
 		}
 		available = {
 			thirty_popularity = yes
-			overlord = {
+			any_other_country = {
+				ROOT = { is_puppet_of = PREV }
 				popularity_50 = no
 			}
 		}
@@ -126,7 +127,8 @@ PBB_take_all_power = {
 		}
 		available = {
 			thirty_popularity = yes
-			overlord = {
+			any_other_country = {
+				ROOT = { is_puppet_of = PREV }
 				popularity_50 = no
 			}
 		}

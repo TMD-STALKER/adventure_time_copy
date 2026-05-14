@@ -16,7 +16,7 @@ every_possible_country = {
 			TAG = LRH
 			TAG = WOI
 			TAG = SGL
-			
+			TAG = MIS
 			TAG = ASH
 			TAG = SMM
 			TAG = PPK
@@ -57,7 +57,7 @@ every_possible_country = {
 			TAG = LRH
 			TAG = WOI
 			TAG = SGL
-			
+			TAG = MIS
 			TAG = ASH
 			TAG = SMM
 			TAG = PPK

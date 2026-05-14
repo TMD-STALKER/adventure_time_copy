@@ -3,6 +3,21 @@ ASH = {
 	color_ui = rgb { 62  44  107 }
 }
 
+FIS = {
+	color = rgb { 50  183  89 }
+	color_ui = rgb { 50  183  89 }
+}
+
+VIS = {
+	color = rgb { 50  85  227 }
+	color_ui = rgb { 50  85  227 }
+}
+
+MIS = {
+	color = rgb { 191  229  60 }
+	color_ui = rgb { 191  229  60 }
+}
+
 ELB = {
 	color = rgb { 102  167  217 }
 	color_ui = rgb { 102  167  217 }

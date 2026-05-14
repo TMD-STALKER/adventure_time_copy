@@ -2143,6 +2143,7 @@ merceneryes_category = {
 		visible = { }
 		available = {
 			political_power_daily > 0.1
+			has_tech = gw_artillery
 		}
 		complete_effect = {
 			up_dept = yes
@@ -2174,6 +2175,7 @@ merceneryes_category = {
 		visible = { }
 		available = {
 			political_power_daily > 0.1
+			has_tech = interwar_antitank
 		}
 		complete_effect = {
 			up_dept = yes

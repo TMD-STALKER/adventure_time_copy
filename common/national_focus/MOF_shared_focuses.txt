@@ -66,6 +66,10 @@
 		cost = 1
 		x = 36
 		y = 0
+		completion_reward = {
+			add_ideas = MOF_artillery_doctrine
+			custom_effect_tooltip = doctrine_focuses_tt
+		}
 
 	}
 	shared_focus = {
@@ -74,6 +78,10 @@
 		cost = 1
 		x = 40
 		y = 0
+		completion_reward = {
+			add_ideas = MOF_motorization_doctrine
+			custom_effect_tooltip = doctrine_focuses_tt
+		}
 
 	}
 	shared_focus = {
@@ -82,6 +90,10 @@
 		cost = 1
 		x = 44
 		y = 0
+		completion_reward = {
+			add_ideas = MOF_tank_doctrine
+			custom_effect_tooltip = doctrine_focuses_tt
+		}
 
 	}
 	shared_focus = {
@@ -93,6 +105,8 @@
 		}
 		x = 21
 		y = 1
+		completion_reward = {
+		}
 
 	}
 	shared_focus = {
@@ -105,6 +119,8 @@
 		}
 		x = 24
 		y = 1
+		completion_reward = {
+		}
 
 	}
 	shared_focus = {
@@ -436,6 +452,42 @@
 		}
 		x = 29
 		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = MOF_stels_brigades
+					has_completed_focus = MOF_storm_brigades
+				}
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine_with_storm_and_stels
+					add_idea = MOF_infantry_doctrine_unite
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = MOF_stels_brigades
+				}
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine_with_stels
+					add_idea = MOF_infantry_doctrine_with_stels_and_eng
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = MOF_storm_brigades
+				}
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine_with_storm
+					add_idea = MOF_infantry_doctrine_with_storm_and_eng
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine
+					add_idea = MOF_infantry_doctrine_with_eng
+				}
+			}
+		}
 
 	}
 	shared_focus = {
@@ -465,6 +517,42 @@
 		}
 		x = 31
 		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = MOF_engineer_brigades
+					has_completed_focus = MOF_storm_brigades
+				}
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine_with_storm_and_eng
+					add_idea = MOF_infantry_doctrine_unite
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = MOF_engineer_brigades
+				}
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine_with_eng
+					add_ideas = MOF_infantry_doctrine_with_stels_and_eng
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = MOF_storm_brigades
+				}
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine_with_storm
+					add_idea = MOF_infantry_doctrine_with_storm_and_stels
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine
+					add_idea = MOF_infantry_doctrine_with_stels
+				}
+			}
+		}
 
 	}
 	shared_focus = {
@@ -506,6 +594,42 @@
 		}
 		x = 33
 		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = MOF_engineer_brigades
+					has_completed_focus = MOF_stels_brigades
+				}
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine_with_stels_and_eng
+					add_idea = MOF_infantry_doctrine_unite
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = MOF_engineer_brigades
+				}
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine_with_eng
+					add_idea = MOF_infantry_doctrine_with_storm_and_eng
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = MOF_stels_brigades
+				}
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine_with_stels
+					add_idea = MOF_infantry_doctrine_with_storm_and_stels
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = MOF_infantry_doctrine
+					add_idea = MOF_infantry_doctrine_with_storm
+				}
+			}
+		}
 
 	}
 	shared_focus = {

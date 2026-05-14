@@ -23,9 +23,18 @@ focus_tree = {
 				range < FAJ_min_min_finn_trust_range
 			}
 		}
-		allow_branch = {
-			has_country_flag = FAJ_jake_the_god_flag
-		}
+		#allow_branch = {
+		#	OR = {
+		#		AND = {
+		#			has_country_flag = FAJ_jake_the_god_flag
+		#			NOT = { has_country_flag = FAJ_finn_the_human_flag }
+		#		}
+		#		AND = {
+		#			NOT = { has_country_flag = FAJ_jake_the_god_flag }
+		#			NOT = { has_country_flag = FAJ_finn_the_human_flag }
+		#		}
+		#	}
+		#}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		x = 5
@@ -35,7 +44,17 @@ focus_tree = {
 				id = FAJ_power_balance
 				value = -0.1
 			}
-				
+			hidden_effect = {
+					if = {
+						limit = {
+							has_game_rule = {
+								rule = obsolete_focus_branches_visibility
+								option = HIDE
+							}
+						}
+						mark_focus_tree_layout_dirty = yes
+					}
+				}	
 		}
 
 	}
@@ -49,9 +68,18 @@ focus_tree = {
 				range > FAJ_min_min_jake_trust_range
 			}
 		}
-		allow_branch = {
-			has_country_flag = FAJ_finn_the_human_flag
-		}
+		#allow_branch = {
+		#	OR = {
+		#		AND = {
+		#			has_country_flag = FAJ_finn_the_human_flag
+		#			NOT = { has_country_flag = FAJ_jake_the_god_flag }
+		#		}
+		#		AND = {
+		#			NOT = { has_country_flag = FAJ_finn_the_human_flag }
+		#			NOT = { has_country_flag = FAJ_jake_the_god_flag }
+		#		}
+		#	}
+		#}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		x = 7
@@ -61,7 +89,17 @@ focus_tree = {
 				id = FAJ_power_balance
 				value = 0.1
 			}
-				
+			hidden_effect = {
+					if = {
+						limit = {
+							has_game_rule = {
+								rule = obsolete_focus_branches_visibility
+								option = HIDE
+							}
+						}
+						mark_focus_tree_layout_dirty = yes
+					}
+				}	
 		}
 
 	}
@@ -197,10 +235,11 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = FAJ_jake_the_god
-		}
-		prerequisite = {
 			focus = FAJ_finn_the_human
 		}
+		#prerequisite = {
+		#	focus = FAJ_finn_the_human
+		#}
 		available = {
 			
 		}
