@@ -1282,11 +1282,713 @@ country_event = {
     id = faj.37
 	title = faj.37.t
 	desc = faj.37.d
-	#picture = GFX_report_event_FAJ_house_on_the_tree
+	picture = GFX_report_event_FAJ_house_on_the_tree
 	is_triggered_only = yes
 	
     option = { 
 		name = faj.37.a
 		add_stability = -0.01
+	}
+}
+country_event = {
+    id = faj.38
+	title = faj.38.t
+	desc = faj.38.d
+	picture = GFX_report_event_LRH_lady
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.38.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 55
+				is_historical_focus_on = yes
+			}
+		}
+		country_event = {
+			id = faj.39
+			days = 8
+			random_hours = 3
+			random_days = 3
+		}
+	}
+	option = { 
+		name = faj.38.b
+		ai_chance = {
+			base = 1
+		}
+		add_stability = -0.08
+		add_political_power = 80
+		add_power_balance_value = {
+			id = FAJ_power_balance
+			value = 0.1
+		}
+		LRH = { country_event = faj.41 }
+		diplomatic_relation = {
+			country = LRH
+			relation = guarantee
+			active = no
+		}
+	}
+	option = { 
+		name = faj.38.c
+		trigger = { is_in_faction = yes }
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = -150
+		add_power_balance_value = {
+			id = FAJ_power_balance
+			value = -0.1
+		}
+		add_ai_strategy = {
+				type = befriend
+				id = LRH
+				value = 50
+			}
+		LRH = {
+			country_event = gener.4
+			add_ai_strategy = {
+				type = befriend
+				id = ROOT
+				value = 50
+			}
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = effect_tooltip_agree
+			faction_leader = { add_to_faction = LRH }
+			LRH = {
+				set_rule = {
+					can_join_opposite_factions = yes
+				}
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.39
+	title = faj.39.t
+	desc = faj.39.d
+	picture = GFX_report_event_LRH_hard_friendship
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.39.a
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = -30
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = FAJ_power_balance
+			value = 0.06
+		}
+		
+	}
+	option = { 
+		name = faj.39.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 55
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -105
+		add_war_support = 0.01
+		country_event = faj.40
+	}
+}
+country_event = {
+    id = faj.40
+	title = faj.40.t
+	desc = faj.40.d
+	picture = GFX_report_event_LRH_friendship
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.40.a
+		random_list = {
+			50 = {
+				add_stability = 0.02
+				add_power_balance_value = {
+					id = FAJ_power_balance
+					value = -0.1
+				}
+			}
+			50 = {
+				add_power_balance_value = {
+					id = FAJ_power_balance
+					value = 0.1
+				}
+				add_political_power = 50
+			}
+		}
+	}
+}
+country_event = {
+    id = faj.41
+	title = faj.41.t
+	desc = faj.41.d
+	picture = GFX_report_event_FAJ_house_on_the_tree
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.41.a
+		add_political_power = -75
+		effect_tooltip = { 
+			FROM = {
+				diplomatic_relation = {
+					country = ROOT
+					relation = guarantee
+					active = no
+				}
+			} 
+		}
+	}
+}
+country_event = {
+    id = faj.42
+	title = faj.42.t
+	desc = faj.42.d
+	picture = GFX_report_event_PPK_home
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.42.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 55
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -100
+		add_war_support = 0.01
+		add_days_mission_timeout = {
+			mission = FAJ_jake_need_healing
+			days = 20
+		}
+		PPK = { add_stability = -0.01 }
+		country_event = faj.43
+	}
+	option = { 
+		name = faj.42.a
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = 25
+		PPK = { add_political_power = 50 }
+		country_event = faj.43
+	}
+}
+country_event = {
+    id = faj.43
+	title = faj.43.t
+	desc = faj.43.d
+	picture = GFX_report_event_PPK_our_world
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.43.a
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 55
+				is_historical_focus_on = yes
+			}
+		}
+		add_stability = -0.01
+		hidden_effect = {
+			COW = {
+				add_ai_strategy = {
+					type = befriend
+					id = ROOT
+					value = 80
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_historical_focus_on = yes
+			}
+			country_event = {
+				id = faj.44
+				days = 5
+				random_hours = 3
+				random_days = 3
+			}
+		}
+		else = {
+			random_list = {
+				75 = {
+					country_event = {
+						id = faj.44
+						days = 5
+						random_hours = 3
+						random_days = 3
+					}
+				}
+				25 = {
+					hidden_effect = {
+						promote_character = {
+							character = FAJ_finn
+							ideology = neutral
+						}
+						
+						kill_country_leader = yes
+					}
+					custom_effect_tooltip = finn_is_die
+				}
+			}
+		}
+	}
+	option = { 
+		name = faj.43.b
+		ai_chance = {
+			base = 2
+		}
+		add_political_power = 30
+		add_stability = -0.15
+		add_power_balance_value = {
+			id = FAJ_power_balance
+			value = -0.05
+		}
+	}
+	option = { 
+		name = faj.43.c
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = -50
+		declare_war_on = {
+            target = PPK
+            type = annex_everything
+        }
+	}
+}
+country_event = {
+    id = faj.44
+	title = faj.44.t
+	desc = faj.44.d
+	picture = GFX_report_event_FAJ_jake_in_pumple_truble
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.44.a
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 55
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -25
+		add_power_balance_value = {
+			id = FAJ_power_balance
+			value = 0.15
+		}
+		set_country_flag = help_jake_flag
+		custom_effect_tooltip = happyend
+	}
+	option = { 
+		name = faj.44.b
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = 60
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = FAJ_power_balance
+			value = -0.1
+		}
+	}
+}
+country_event = {
+    id = faj.45
+	title = faj.45.t
+	desc = faj.45.d
+	picture = GFX_report_event_FAJ_magic_garden
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.45.a
+		ai_chance = {
+			base = 1
+		}
+		random_list = {
+			40 = {
+				add_political_power = -65
+				army_experience = 5
+			}
+			60 = {
+				start_civil_war = {
+					ruling_party = candy
+					ideology = ROOT
+					# Breakaway gets old ideology of ROOT
+					size = 0.5
+					keep_political_leader = yes
+					keep_political_party_members = yes
+				}
+				faction_leader = {
+					add_ai_strategy = {
+						type = alliance
+						id = COW
+						value = 200
+					}
+					add_to_faction = COW
+					hidden_effect = {
+						COW = {
+							add_ai_strategy = {
+								type = alliance
+								id = PREV
+								value = 200
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { 
+		name = faj.45.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 55
+				is_historical_focus_on = yes
+			}
+		}
+		country_event = {
+			id = faj.46
+			days = 4
+			random_hours = 3
+			random_days = 3
+		}
+	}
+}
+country_event = {
+    id = faj.46
+	title = faj.46.t
+	desc = faj.46.d
+	picture = GFX_report_event_FAJ_jakes_shiza
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.46.a
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 55
+				is_historical_focus_on = yes
+			}
+		}
+		add_power_balance_value = {
+			id = FAJ_power_balance
+			value = -0.05
+		}
+		country_event = faj.48
+		COW = { country_event = faj.48 }
+	}
+	option = { 
+		name = faj.46.b
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					character = FAJ_jake
+					ruling_only = yes
+				}
+			}
+			set_country_leader_portrait = {
+				ideology = neutral
+				portrait = GFX_portrait_FAJ_jake_2
+			}
+			add_country_leader_trait = useless
+		}
+		else = {
+			promote_character = FAJ_jake
+			set_country_leader_portrait = {
+				ideology = neutral
+				portrait = GFX_portrait_FAJ_jake_2
+			}
+			add_country_leader_trait = useless
+		}
+		add_power_balance_value = {
+			id = FAJ_power_balance
+			value = 0.3
+		}
+		country_event = faj.49
+		COW = { country_event = faj.49 }
+	}
+}
+country_event = {
+    id = faj.47
+	title = faj.47.t
+	desc = faj.47.d
+	picture = GFX_report_event_FAJ_magic_garden
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.47.a
+		add_political_power = -30
+	}
+}
+country_event = {
+    id = faj.48
+	title = faj.48.t
+	desc = faj.48.d
+	picture = GFX_report_event_FAJ_lazy_jake2
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.48.a
+		if = {
+			limit = {
+				original_tag = FAJ
+			}
+			add_political_power = -130
+		}
+	}
+}
+country_event = {
+    id = faj.49
+	title = faj.49.t
+	desc = faj.49.d
+	picture = GFX_report_event_FAJ_lazy_jake
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.49.a
+		add_stability = 0.02
+	}
+}
+country_event = {
+    id = faj.50
+	title = faj.50.t
+	desc = faj.50.d
+	picture = GFX_report_event_FAJ_fear
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.50.a
+		ai_chance = {
+			base = 1
+		}
+		add_stability = 0.02
+		add_political_power = 70
+		add_ideas = FAJ_ocean_of_fear
+	}
+	option = { 
+		name = faj.50.b
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 55
+				is_historical_focus_on = yes
+			}
+		}
+		add_political_power = -25
+		country_event = {
+			id = faj.51
+			days = 4
+			random_hours = 3
+			random_days = 3
+		}
+	}
+	option = { 
+		name = faj.50.c
+		ai_chance = {
+			base = 2
+		}
+		trigger = {	
+			OR = {
+				is_neighbor_of = SEK
+				is_neighbor_of = DGH
+				any_allied_country = { is_neighbor_of = SEK }
+				any_allied_country = { is_neighbor_of = DGH }
+			}
+		}
+		SEK = {
+			every_owned_state = { add_core_of = ROOT }
+		}
+		DGH = {
+			every_owned_state = { add_core_of = ROOT }
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SEK
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = DGH
+		}
+	}
+}
+country_event = {
+    id = faj.51
+	title = faj.51.t
+	desc = faj.51.d
+	picture = GFX_report_event_FAJ_fear2
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.51.a
+		add_political_power = -35
+		country_event = faj.52
+	}
+}
+country_event = {
+    id = faj.52
+	title = faj.52.t
+	desc = faj.52.d
+	picture = GFX_report_event_FAJ_fear3
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.52.a
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 55
+				is_historical_focus_on = yes
+			}
+		}
+		add_stability = -0.01
+		if = {
+			limit = {
+				is_historical_focus_on = no
+			}
+			random_list = {
+				95 = {
+					country_event = {
+						id = faj.53
+						days = 5
+						random_hours = 3
+						random_days = 3
+					}
+				}
+				5 = {
+					hidden_effect = {
+						promote_character = {
+							character = FAJ_finn
+							ideology = neutral
+						}
+						
+						kill_country_leader = yes
+					}
+					custom_effect_tooltip = finn_is_die
+				}
+			}
+		}
+		else = {
+			country_event = {
+				id = faj.53
+				days = 5
+				random_hours = 3
+				random_days = 3
+			}
+		}
+	}
+	option = { 
+		name = faj.52.b
+		ai_chance = {
+			base = 1
+			
+		}
+		army_experience = 5
+		navy_experience = 10
+		kill_country_leader = yes
+		add_power_balance_value = {
+			id = FAJ_power_balance
+			value = 0.55
+		}
+		add_country_leader_trait = FAJ_eaten_by_fear
+		set_country_leader_portrait = {
+			ideology = neutral
+			portrait = GFX_portrait_FAJ_finn_scared
+		}
+		custom_effect_tooltip = content_not_ready
+		load_focus_tree = generic
+	}
+}
+country_event = {
+    id = faj.53
+	title = faj.53.t
+	desc = faj.53.d
+	picture = GFX_report_event_FAJ_fear4
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.53.a
+		army_experience = 50
+		navy_experience = 50
+		add_political_power = 125
+	}
+}
+country_event = {
+    id = faj.54
+	title = faj.54.t
+	desc = faj.54.d
+	picture = GFX_report_event_WST_jigger
+	is_triggered_only = yes
+	
+    option = { 
+		name = faj.54.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 55
+				is_historical_focus_on = yes
+			}
+		}
+		army_experience = 1
+		country_event = {
+			id = faj.55
+			days = 5
+			random_hours = 3
+			random_days = 3
+		}
+	}
+	option = { 
+		name = faj.54.b
+		ai_chance = {
+			base = 1
+			
+		}
+		add_political_power = 25
+		add_stability = 0.01
+	}
+	option = { 
+		name = faj.54.c
+		trigger = {
+			country_exists = PBB
+			PBB = {
+				has_country_leader = {
+					character = PBB_bonne
+					ruling_only = yes
+				}
+			}
+			OR = {
+				PBB = { is_puppet_of = ROOT }
+				is_in_faction_with = PBB
+				PBB = {
+					has_opinion = {
+						target = ROOT
+						value > 70
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+			
+		}
+		PBB = {
+			
+		}
 	}
 }

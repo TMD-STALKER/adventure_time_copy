@@ -29,7 +29,7 @@ ideas = {
 				tag = ROOT
 			}
 			modifier = {
-				ai_desired_divisions_factor = -0.7
+				ai_desired_divisions_factor = -0.3
 				custom_modifier_tooltip = passive_ai_modifier
 			}
 		}

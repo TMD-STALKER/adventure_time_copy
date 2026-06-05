@@ -762,17 +762,17 @@ PBB_project_leader_forever = {
 						NOT = { has_country_flag = first_great_achivment_flag }
 				}
 				random_list = {
-					10 = {
+					5 = {
 						add_political_power = -50
 					}
-					25 = {
+					15 = {
 						add_political_power = -75
 					}
 					10 = {
 						add_political_power = -100
 						
 					}
-					50 = {
+					65 = {
 						PBB_scientific_breakthrough = yes
 					}
 					5 = {
@@ -786,17 +786,17 @@ PBB_project_leader_forever = {
 					has_country_flag = PBB_contine_researches_flag
 				}
 				random_list = {
-					25 = {
+					15 = {
 						add_political_power = -50
 					}
-					25 = {
+					15 = {
 						add_political_power = -75
 					}
 					20 = {
 						add_political_power = -100
 						
 					}
-					25 = {
+					45 = {
 						PBB_scientific_breakthrough = yes
 					}
 					5 = {
@@ -807,17 +807,17 @@ PBB_project_leader_forever = {
 			}
 			else = {
 				random_list = {
-					50 = {
+					40 = {
 						add_political_power = -50
 					}
-					25 = {
+					15 = {
 						add_political_power = -75
 					}
 					10 = {
 						add_political_power = -100
 						
 					}
-					10 = {
+					30 = {
 						PBB_scientific_breakthrough = yes
 					}
 					5 = {

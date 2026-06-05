@@ -215,13 +215,13 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_completed_focus = PBB_only_one_power
+					has_completed_focus = PBB_we_need_changes
 				}
-				load_focus_tree = PBB_focus_tree_two
+				ustom_effect_tooltip = content_not_ready
+				load_focus_tree = generic
 			}
 			else = {
-				custom_effect_tooltip = content_not_ready
-				load_focus_tree = generic
+				load_focus_tree = PBB_focus_tree_two
 			}
 		}
 	}

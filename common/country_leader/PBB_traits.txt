@@ -142,8 +142,8 @@ leader_traits = {
 	PBB_emreror_of_life = {
 		random = no
 		army_morale_factor = 0.15
-		army_breakthrough_against_major_factor = 0.2
-		army_breakthrough_against_minor_factor = 0.2
+		army_breakthrough_against_major_factor = 0.1
+		army_breakthrough_against_minor_factor = 0.3
 		stability_factor = 0.35
 		political_power_factor = 0.35
 		

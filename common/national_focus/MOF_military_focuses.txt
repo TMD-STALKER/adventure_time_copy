@@ -1,0 +1,332 @@
+focus_tree = {
+	id = MOF_military_focuses
+	country = {
+        factor = 0
+		
+		modifier = {
+			add = 1
+			tag = MOF
+		}
+
+        modifier = {
+			add = 15
+			is_debug = yes
+			tag = MOF
+		}
+    }
+    default = no
+    continuous_focus_position = { x = 1200 y = 6 }
+	shared_focus = MOF_slow_but_right
+	shared_focus = MOF_faster_and_faster
+	shared_focus = MOF_infantry_doctrine
+	shared_focus = MOF_artillery_doctrine
+	shared_focus = MOF_motorization_doctrine
+	shared_focus = MOF_tank_doctrine
+	focus = {
+		id = MOF_big_policy
+		icon = GFX_focus_ARG_defense_and_democracy
+		cost = 3
+		x = 6
+		y = 0
+
+	}
+	focus = {
+		id = MOF_and_small_trouble #Запускает подготовку неминуемого вторжения в страну с севера, но открывает дополнительные способы подчинения территории
+		icon = GFX_focus_BRA_end_the_state_of_emergency
+		cost = 5
+		prerequisite = {
+			focus = MOF_big_policy
+		}
+		mutually_exclusive = {
+			focus = MOF_and_big_deals
+		}
+		x = 5
+		y = 1
+
+	}
+	focus = {
+		id = MOF_order_52 #казнь лидеров мнений, приближающая восстание, но дающая выгоду в моменте
+		icon = GFX_focus_NOR_vote_of_no_confidence
+		cost = 5
+		prerequisite = {
+			focus = MOF_and_small_trouble
+		}
+		x = 2
+		y = 2
+
+	}
+	focus = {
+		id = MOF_and_big_deals #запускает неминуемое восстание слизняков с бандитами, но открывает дополнительные дипл. возможности
+		icon = GFX_focus_RAJ_to_shake_the_world
+		cost = 5
+		prerequisite = {
+			focus = MOF_big_policy
+		}
+		mutually_exclusive = {
+			focus = MOF_and_small_trouble
+		}
+		x = 7
+		y = 1
+
+	}
+	focus = {
+		id = MOF_cyberpunk #вживление кожаным мешкам чипов подчинения
+		icon = GFX_focus_jap_zaibatsu
+		cost = 5
+		prerequisite = {
+			focus = MOF_and_small_trouble
+			focus = MOF_and_big_deals
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = MOF_help_from_pyrats #взаимодействие с пиратскими государствами юга
+		icon = GFX_focus_generic_smugglers
+		cost = 5
+		prerequisite = {
+			focus = MOF_cyberpunk
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = MOF_open_cyber_factories #новые фабрики + трансформация наиболее сговорчивых кожаных мешков в киборгов
+		icon = GFX_focus_CHL_la_corporacion_araucania
+		cost = 5
+		prerequisite = {
+			focus = MOF_cyberpunk
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = MOF_resourses_expansion #увеличение ресурсов
+		icon = GFX_focus_generic_expand_gold_mining
+		cost = 5
+		prerequisite = {
+			focus = MOF_open_cyber_factories
+		}
+		x = 1
+		y = 5
+
+	}
+	focus = {
+		id = MOF_bandits_deal #частичный откуп от бандитов на своей территории
+		icon = GFX_focus_AFG_quami
+		cost = 5
+		prerequisite = {
+			focus = MOF_open_cyber_factories
+		}
+		x = 4
+		y = 6
+
+	}
+	focus = {
+		id = MOF_slime_dialoge #диалог с представителями слизняков с предложением автономии
+		icon = GFX_focus_mex_arrest_general_cedillo
+		cost = 5
+		prerequisite = {
+			focus = MOF_bandits_deal
+		}
+		x = 4
+		y = 7
+
+	}
+	focus = {
+		id = MOF_slavery_law #официальное закрепление положения всех не мо как рабов + ужесточение контроля
+		icon = GFX_focus_RAJ_seven_shackles
+		cost = 5
+		prerequisite = {
+			focus = MOF_open_cyber_factories
+		}
+		mutually_exclusive = {
+			focus = MOF_buy_ally
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = MOF_telegram #телеграмма наиболее сильному союзнику завтрака с предложением сменить сторону и дебафф для него в случае отказа
+		icon = GFX_focus_generic_radio_communication
+		cost = 5
+		prerequisite = {
+			focus = MOF_and_small_trouble
+			focus = MOF_and_big_deals
+		}
+		x = 8
+		y = 2
+
+	}
+	focus = {
+		id = MOF_industry_innovation #развитие захваченных территорий с целью облегчённого контроля, а также демонстрации экономического превосходства соседям
+		icon = GFX_focus_generic_currency_reforms
+		cost = 5
+		prerequisite = {
+			focus = MOF_cyberpunk
+			focus = MOF_telegram
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = MOF_return_amo #возвращение амо в роли советника или генерала
+		icon = GFX_goal_tripartite_pact
+		cost = 5
+		prerequisite = {
+			focus = MOF_industry_innovation
+		}
+		x = 6
+		y = 4
+
+	}
+	focus = {
+		id = MOF_mass_propaganda #пропаганда направленная на дестабилизацию северного альянса
+		icon = GFX_goal_generic_propaganda
+		cost = 5
+		prerequisite = {
+			focus = MOF_telegram
+		}
+		x = 8
+		y = 4
+
+	}
+	focus = {
+		id = MOF_buy_ally #покупка одного из союзников завтрака
+		icon = GFX_focus_generic_monetary_union
+		cost = 5
+		prerequisite = {
+			focus = MOF_mass_propaganda
+		}
+		mutually_exclusive = {
+			focus = MOF_slavery_law
+		}
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = MOF_state_of_new_moankind #становление самопровозглашённым государством с последующим признанием
+		icon = GFX_focus_SWE_institute_of_technology
+		cost = 5
+		prerequisite = {
+			focus = MOF_mass_propaganda
+		}
+		x = 8
+		y = 6
+
+	}
+	focus = {
+		id = MOF_introduce_yourself #взаимодействие с международными организациями
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		cost = 5
+		prerequisite = {
+			focus = MOF_state_of_new_moankind
+		}
+		x = 8
+		y = 7
+
+	}
+	focus = {
+		id = MOF_south_organization #создание своего южного альянса в противовес северному
+		icon = GFX_focus_AFG_contact_rural_loyalists
+		cost = 5
+		prerequisite = {
+			focus = MOF_telegram
+		}
+		x = 9
+		y = 3
+
+	}
+	focus = {
+		id = MOF_ultimatum #требование по территориальным уступкам где-то на границе с северным альянсом. возможно спровоцирует войну раньше времени
+		icon = GFX_focus_TUR_ratify_the_six_arrows
+		cost = 5
+		prerequisite = {
+			focus = MOF_mass_propaganda
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = MOF_unbeliaveble_union #альянс с конфетным королевством с обменом технологиями
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5
+		prerequisite = {
+			focus = MOF_and_big_deals
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = MOF_pressure_breakfast_kingdom #дестабилизация королевства завтрака либо путём диверсий либо путём распространения дезинформации
+		icon = GFX_focus_BRA_repeale_national_security_law
+		cost = 5
+		prerequisite = {
+			focus = MOF_mass_propaganda
+		}
+		x = 11
+		y = 5
+
+	}
+	focus = {
+		id = MOF_fire_pact #сделка или возможный союз с королевством огня для раздела сфер влияния
+		icon = GFX_focus_SWE_attack_landsorganisationen
+		cost = 5
+		prerequisite = {
+			focus = MOF_ultimatum
+		}
+		prerequisite = {
+			focus = MOF_pressure_breakfast_kingdom
+		}
+		x = 10
+		y = 6
+
+	}
+	focus = {
+		id = MOF_mo_arena #взаимодействие с ареной смерти
+		icon = GFX_focus_HABSBURG_offensive_hussars
+		cost = 5
+		prerequisite = {
+			focus = MOF_open_cyber_factories
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = MOF_zombie_experimentations #взаимодействие с токсичными мутантами
+		icon = GFX_focus_AST_squander_bug
+		cost = 5
+		prerequisite = {
+			focus = MOF_resourses_expansion
+		}
+		prerequisite = {
+			focus = MOF_mo_arena
+		}
+		x = 2
+		y = 6
+
+	}
+	focus = {
+		id = MOF_to_the_goal #босс файт за право владеть пустыней
+		icon = GFX_focus_eng_imperial_federation
+		cost = 10
+		prerequisite = {
+			focus = MOF_slime_dialoge
+		}
+		prerequisite = {
+			focus = MOF_introduce_yourself
+		}
+		x = 6
+		y = 8
+
+	}
+}

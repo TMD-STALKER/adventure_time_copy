@@ -157,6 +157,20 @@ focus_tree = {
 		prerequisite = {
 			focus = FAJ_lover_deals
 		}
+		bypass = {
+			OR = {
+				NOT = { country_exists = LRH }
+				has_war_with = LRH
+			}
+		}
+		bypass_effect = {
+			add_stability = -0.08
+			add_political_power = 80
+			add_power_balance_value = {
+				id = FAJ_power_balance
+				value = 0.1
+			}
+		}
 		x = 2
 		y = 3
 		completion_reward = {
@@ -164,27 +178,57 @@ focus_tree = {
 				id = FAJ_power_balance
 				value = -0.08
 			}
+			country_event = faj.38
 		}
 
 	}
 	focus = {
 		id = FAJ_at_the_pumple_kingdom
 		icon = GFX_goal_unknown
-		cost = 3
+		cost = 5
 		available = {
-			
 			is_power_balance_in_range = {
 				id = FAJ_power_balance
 				range < FAJ_min_min_finn_trust_range
+			}
+			PBB = {
+				OR = {
+					has_completed_focus = PBB_tea_tseremony
+					has_completed_focus = PBB_we_need_changes
+				}
 			}
 		}
 		prerequisite = {
 			focus = FAJ_jake_the_god
 		}
+		bypass = {
+			OR = {
+				NOT = { country_exists = PBB }
+				has_country_flag = final_of_purple_adventure_flag
+			}
+		}
+		bypass_effect = {
+			add_political_power = 100
+			PPK = { add_political_power = 100 }
+		}
 		x = 3
 		y = 2
 		completion_reward = {
-			
+			if = {
+				limit = {
+					PBB = {
+						OR = {
+							has_focus_tree = PBB_focus_tree_two
+							has_completed_focus = PBB_only_one_power
+						}
+					}
+				}
+				country_event = faj.42
+			}
+			else = {
+				add_political_power = 100
+				PPK = { add_political_power = 100 }
+			}
 		}
 
 	}
@@ -204,9 +248,19 @@ focus_tree = {
 		prerequisite = {
 			focus = FAJ_hard_friendship
 		}
+		bypass = {
+			NOT = { country_exists = COW }
+		}
+		bypass_effect = {
+			add_political_power = 70
+		}
 		x = 3
 		y = 4
+		select_effect = {
+			COW = { country_event = faj.47 }
+		}
 		completion_reward = {
+			country_event = faj.45
 		}
 
 	}
@@ -226,6 +280,7 @@ focus_tree = {
 		x = 3
 		y = 5
 		completion_reward = {
+			country_event = faj.50
 		}
 
 	}
@@ -243,7 +298,7 @@ focus_tree = {
 		available = {
 			
 		}
-		x = 6
+		x = 6 
 		y = 1
 		completion_reward = {
 			set_country_flag = FAJ_adventure_time_flag
@@ -260,7 +315,79 @@ focus_tree = {
 		}
 		x = 5
 		y = 2
+		bypass = {
+			NOT = { country_exists = IKK }
+		}
+		bypass_effect = {
+			add_war_support = 0.1
+		}
+		available = {
+			IKK = {
+				any_owned_state = {
+					CONTROLLER = {
+						NOT = {
+							tag = ROOT
+						}
+						has_army_size = { size > 0 }
+					}
+					any_neighbor_state = {
+						CONTROLLER = {
+							tag = ROOT
+							has_army_size = { size > 0 }
+						}
+					}
+				}
+            }
+		}
 		completion_reward = {
+			hidden_effect = {
+				IKK = {
+					random_owned_state = {
+						limit = {
+							CONTROLLER = {
+								NOT = {
+									tag = ROOT
+								}
+								has_army_size = { size > 0 }
+							}
+							any_neighbor_state = {
+								CONTROLLER = {
+									tag = ROOT
+									has_army_size = { size > 0 }
+								}
+							}
+						}
+						set_demilitarized_zone = no
+						save_event_target_as = sirius_defender_state
+						random_neighbor_state = {
+							limit = {
+								CONTROLLER = {
+									tag = ROOT
+								}
+							}
+							save_event_target_as = sirius_attacker_state
+						}
+					}
+				}
+			}
+
+            start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = event_target:sirius_attacker_state
+					num_provinces = 1
+                    on_win = at_border.1
+                    on_lose = at_border.2
+					on_cancel = at_border.4
+				}
+				defender = {
+					state = event_target:sirius_defender_state
+					num_provinces = 1
+                    on_win = at_border.3
+                    on_lose = at_border.4
+					on_cancel = at_border.4
+				}
+			}
 		}
 
 	}
@@ -272,8 +399,17 @@ focus_tree = {
 			focus = FAJ_best_apple
 			focus = FAJ_ice_king_troble
 		}
+		bypass = {
+			NOT = { country_exists = WST }
+		}
+		bypass_effect = {
+			add_political_power = 150
+		}
 		x = 6
 		y = 3
+		completion_reward = {
+			country_event = faj.54
+		}
 
 	}
 	focus = {

@@ -1,7 +1,7 @@
 ideas = {
     country = {
 		
-		FAJ_lover_deals = {
+		FAJ_ocean_of_fear = {
 			
 			allowed = {
 				original_tag = FAJ
@@ -9,6 +9,56 @@ ideas = {
 
 			allowed_civil_war = {
 				tag = FAJ
+			}
+			picture = SPR_appropriate_church_riches
+			
+			modifier = {
+				party_popularity_stability_factor = 0.1
+				political_power_factor = -0.1
+				industrial_capacity_dockyard = -0.1
+				coastal_bunker_effectiveness_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = SEK
+				attack_bonus_against = -0.35
+				defense_bonus_against = -0.35
+			}
+			targeted_modifier = {
+				tag = DGH
+				attack_bonus_against = -0.35
+				defense_bonus_against = -0.35
+			}
+		}
+		
+		FAJ_overgold = {
+			
+			allowed = {
+				original_tag = FAJ
+			}
+
+			allowed_civil_war = {
+				tag = FAJ
+			}
+			picture = SPR_appropriate_church_riches
+			
+			modifier = {
+				political_power_factor = 0.2
+				political_advisor_cost_factor = -0.5
+				war_stability_factor = 0.05
+				stability_factor = 0.05
+				consumer_goods_factor = 0.35
+				enemy_justify_war_goal_time = -0.35
+			}
+		}
+		
+		FAJ_lover_deals = {
+			
+			allowed = {
+				original_tag = LRH
+			}
+
+			allowed_civil_war = {
+				tag = LRH
 			}
 			picture = generic_flexible_foreign_policy2
 			
@@ -19,7 +69,7 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = FAJ
-				attack_bonus_against = -0.05
+				attack_bonus_against = -0.1
 				defense_bonus_against = -0.05
 			}
 		}

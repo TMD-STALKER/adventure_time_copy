@@ -106,12 +106,14 @@ focus_tree = {
 					num_provinces = 1
                     on_win = ikk.8
                     on_lose = ikk.9
+					on_cancel = ikk.9
 				}
 				defender = {
 					state = event_target:sirius_defender_state
 					num_provinces = 1
                     on_win = ikk.10
                     on_lose = ikk.11
+					on_cancel = ikk.11
 				}
 			}
 		}

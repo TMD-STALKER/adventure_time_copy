@@ -1,4 +1,16 @@
 leader_traits = {
+	
+	FAJ_eaten_by_fear = {
+		random = no
+		political_power_factor = -0.25
+		send_volunteers_tension = 0.5
+		lend_lease_tension = 0.5
+		guarantee_tension = 0.5
+		join_faction_tension = 0.5
+		generate_wargoal_tension = 0.15
+		enemy_declare_war_tension = -0.25
+	}
+	
 	FAJ_finn_the_human = {
 		random = no
 		stability_factor = 0.07
@@ -33,5 +45,14 @@ leader_traits = {
 	FAJ_jake_balance = {
 		random = no
 		power_balance_daily = -0.005
+	}
+	
+	useless = {
+		random = yes
+		political_power_factor = -0.05
+		war_support_factor = -0.15
+		army_attack_factor = -0.25
+		army_defence_factor = -0.25
+		army_speed_factor = -0.35
 	}
 }

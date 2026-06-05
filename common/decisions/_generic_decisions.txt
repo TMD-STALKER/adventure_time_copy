@@ -6,12 +6,7 @@ debug_decisions = {
 			
 		}
 		complete_effect = {
-			set_country_flag = my_special_flag
-			custom_effect_tooltip = GetMyFlagCountriesList
-			custom_effect_tooltip = MyFlag_List_Start
-			custom_effect_tooltip = MyFlag_No_Countries
-			custom_effect_tooltip = MyFlag_Country_Entry_No_Comma
-			custom_effect_tooltip = MyFlag_Country_Entry_With_Comma
+			kill_country_leader = yes
 		}
 		remove_effect = {
 		}
@@ -1837,12 +1832,14 @@ safe_princess_category = {
 					num_provinces = 1
                     on_win = ikk.15
                     on_lose = ikk.16
+					on_cancel = ikk.16
 				}
 				defender = {
 					state = event_target:sirius_defender_state
 					num_provinces = 1
                     on_win = ikk.17
                     on_lose = ikk.18
+					on_cancel = ikk.18
 				}
 			}
 		}
@@ -2542,6 +2539,89 @@ GENERIC_people_need_it = {
 	}
 }
 economy_decisions = { #Потом доделаю
+	funny_camps = {
+		priority = 95
+		icon = generic_GER_flag
+		cost = 150
+		days_remove = 175
+		fire_only_once = yes
+		allowed = {
+			NOT = {
+				TAG = FAJ
+				TAG = LRH
+			}
+		}
+		visible = {
+			OR = {
+				any_other_country = {
+					is_puppet_of = ROOT
+					has_completed_focus = SHARED_path_of_loyalty
+					compare_autonomy_progress_ratio < 0.5
+				}
+				any_owned_state = {
+					NOT = { is_core_of = ROOT }
+					resistance < 25
+				}
+			}
+		}
+		available = {
+			thirty_popularity = yes
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					any_other_country = {
+						is_puppet_of = ROOT
+						has_completed_focus = SHARED_path_of_loyalty
+						compare_autonomy_progress_ratio < 0.5
+					}
+				}
+				every_other_country = {
+					limit = {	
+						is_puppet_of = ROOT
+						has_completed_focus = SHARED_path_of_loyalty
+					}
+					add_political_power = -100
+					add_stability = -0.15
+					add_popularity = {
+						ideology = ROOT
+						popularity = 0.15
+					}
+					add_autonomy_score = {
+						value = -200
+						localization = funny_camps
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						NOT = { is_core_of = ROOT }
+						resistance < 25
+					}
+				}
+				every_owned_state = {
+					limit = {	
+						NOT = { is_core_of = ROOT }
+						resistance < 25
+					}
+					add_compliance = 5
+					add_resistance = -15
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+		modifier = {
+			stability_factor = -0.05
+			drift_defence_factor = 0.05
+			political_power_gain = 0.1
+			consumer_goods_factor = 0.05
+		}
+		ai_will_do = {
+			base = 5
+			
+		}
+	}
 	family_tradition = {
 		priority = 95
 		icon = POL_looming_peasants_strike
@@ -4517,12 +4597,14 @@ GENERIC_border_war = {
 					num_provinces = 1
                     on_win = at_border.1
                     on_lose = at_border.2
+					on_cancel = at_border.2
 				}
 				defender = {
 					state = event_target:tmd_defender_state
 					num_provinces = 1
                     on_win = at_border.3
                     on_lose = at_border.4
+					on_cancel = at_border.4
 				}
 			}
         }

@@ -135,16 +135,17 @@ FAJ_danger_for_jake = {
  		}
 
 		available = {
-			any_state = {
-				is_capital = yes
-				is_owned_by = PPK
-				ROOT = {
-					divisions_in_state = {
-						size > 0
-						state = PREV
-					}
-				}
-			}
+			#any_state = {
+			#	is_capital = yes
+			#	is_owned_by = PPK
+			#	ROOT = {
+			#		divisions_in_state = {
+			#			size > 0
+			#			state = PREV
+			#		}
+			#	}
+			#}
+			has_country_flag = help_jake_flag
 		}
 
 		is_good = no
@@ -153,7 +154,7 @@ FAJ_danger_for_jake = {
 			army_experience = 10
 			navy_experience = 10
 			air_experience = 10
-			custom_effect_tooltip = waiting_in_future
+			set_country_flag = final_of_purple_adventure_flag
 		}
 
 		timeout_effect = {
@@ -197,6 +198,7 @@ FAJ_danger_for_jake = {
 				}
 				custom_effect_tooltip = jake_purple
 			}
+			set_country_flag = final_of_purple_adventure_flag
 		}
 	}
 

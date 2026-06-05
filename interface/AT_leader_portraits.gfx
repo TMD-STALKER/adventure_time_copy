@@ -152,5 +152,13 @@ spriteTypes = {
 		name = "GFX_portrait_FAJ_jake_purple"
 		texturefile = "gfx/leaders/FAJ/FAJ_jake_purple.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_FAJ_jake_2"
+		texturefile = "gfx/leaders/FAJ/jake2.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_FAJ_finn_scared"
+		texturefile = "gfx/leaders/FAJ/finn_scared.dds"
+	}
 	
 }

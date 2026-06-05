@@ -45,7 +45,7 @@ add_ideas = {
 	###
 	PBB_member_of_tax_deal
 	only_iam
-	
+	FAJ_overgold
 	####
 	strength_five
 	agility_five

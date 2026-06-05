@@ -4,6 +4,15 @@ spriteTypes = {
 		name = "GFX_report_event_debug"
 		texturefile = "gfx/event_pictures/report_event_debug.dds"
 	}
+	#LRH
+	spriteType = {
+		name = "GFX_report_event_LRH_lady"
+		texturefile = "gfx/event_pictures/report_event_LRH_lady.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_LRH_hard_friendship"
+		texturefile = "gfx/event_pictures/report_event_LRH_hard_friendship.dds"
+	}
 	#PBB
 	spriteType = {
 		name = "GFX_report_event_PBB_bonne_night_call"
@@ -542,15 +551,63 @@ spriteTypes = {
 		name = "GFX_report_event_SOK_kingdom"
 		texturefile = "gfx/event_pictures/report_event_SOK_kingdom.dds"
 	}
-	###lrh
+	###WST
 	spriteType = {
-		name = "GFX_report_event_SOK_kingdom"
-		texturefile = "gfx/event_pictures/report_event_SOK_kingdom.dds"
+		name = "GFX_report_event_WST_jigger"
+		texturefile = "gfx/event_pictures/report_event_WST_jigger.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_WST_in_his_house"
+		texturefile = "gfx/event_pictures/report_event_WST_in_his_house.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_WST_in_his_house2"
+		texturefile = "gfx/event_pictures/report_event_WST_in_his_house2.dds"
 	}
 	###faj 
 	spriteType = {
+		name = "GFX_report_event_FAJ_fear"
+		texturefile = "gfx/event_pictures/report_event_FAJ_fear.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_smash_bandits"
+		texturefile = "gfx/event_pictures/GFX_report_event_FAJ_smash_bandits.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_fear2"
+		texturefile = "gfx/event_pictures/report_event_FAJ_fear2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_fear3"
+		texturefile = "gfx/event_pictures/report_event_FAJ_fear3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_fear4"
+		texturefile = "gfx/event_pictures/report_event_FAJ_fear4.dds"
+	}
+	spriteType = {
 		name = "GFX_report_event_FAJ_new_armor"
 		texturefile = "gfx/event_pictures/report_event_FAJ_new_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_magic_garden"
+		texturefile = "gfx/event_pictures/report_event_FAJ_magic_garden.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_jakes_shiza"
+		texturefile = "gfx/event_pictures/report_event_FAJ_jakes_shiza.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_lazy_jake"
+		texturefile = "gfx/event_pictures/report_event_FAJ_lazy_jake.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_lazy_jake2"
+		texturefile = "gfx/event_pictures/report_event_FAJ_lazy_jake2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_house_on_the_tree"
+		texturefile = "gfx/event_pictures/report_event_FAJ_house_on_the_tree.dds"
 	}
 	spriteType = {
 		name = "GFX_report_event_FAJ_house_on_the_tree"
@@ -701,6 +758,19 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_SKE_our_legacy"
 		texturefile = "gfx/event_pictures/report_event_SKE_our_legacy.dds"
+	}
+	###PPK 
+	spriteType = {
+		name = "GFX_report_event_PPK_home"
+		texturefile = "gfx/event_pictures/report_event_PPK_home.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PPK_our_world"
+		texturefile = "gfx/event_pictures/report_event_PPK_our_world.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_FAJ_jake_in_pumple_truble"
+		texturefile = "gfx/event_pictures/report_event_FAJ_jake_in_pumple_truble.dds"
 	}
 	###BRK
 	spriteType = {
