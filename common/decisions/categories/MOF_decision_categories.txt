@@ -3,5 +3,22 @@ war_on_south = {
 	allowed = { TAG = MOF }
 	visible = {
 		has_completed_focus = mfm_purge
+		NOT = {
+			has_country_flag = conquer_of_south
+		}
+	}
+}
+war_on_north = {
+	priority = 100
+	allowed = { TAG = MOF }
+	visible = {
+		has_completed_focus = MOF_and_small_trouble
+	}
+}
+kill_the_scum = {
+	priority = 100
+	allowed = { TAG = MOF }
+	visible = {
+		has_completed_focus = MOF_and_big_deals
 	}
 }

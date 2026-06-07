@@ -438,8 +438,9 @@ country_event = {
         add_ideas = MOF_uzers
         add_ideas = MOF_bandits
 		set_cosmetic_tag = attack_protocol
+        set_country_flag = conquer_of_south
 		BRK = { country_event = brk.1 }
-		load_focus_tree = mmn_focus
+		load_focus_tree = MOF_military_focuses
         every_controlled_state = {
             limit = {
                 OR = {
@@ -478,5 +479,30 @@ country_event = {
             amount = 3
             state = 677
         }
+	}
+}
+
+country_event = {
+    id = mof.13
+	title = mof.12.t
+	desc = mof.12.d
+	
+	picture = GFX_report_event_MOF_error
+
+    is_triggered_only = yes
+    
+    option = { 
+		name = mof.12.a
+		ai_chance = {
+			base = 3
+		}
+        complete_national_focus = MOF_and_small_trouble
+	}
+    option = { 
+		name = mof.10.b
+		ai_chance = {
+			base = 1
+		}
+        complete_national_focus = MOF_and_big_deals
 	}
 }

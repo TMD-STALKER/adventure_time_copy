@@ -200,3 +200,158 @@ war_on_south = {
 		}
 	}
 }
+war_on_north = {
+	kill_the_skini = {
+		priority = 150
+
+		fire_only_once = yes
+
+		days_mission_timeout = 635
+		icon = generic_research
+
+		activation = {
+			always = no
+ 		}
+
+		available = {
+			always = no
+		}
+
+		is_good = no
+
+		complete_effect = { 
+		}
+
+		timeout_effect = {
+			BRK = {
+				declare_war_on = {
+					target = MOF
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+kill_the_scum = {
+	bustards = {
+		priority = 150
+
+		fire_only_once = yes
+
+		days_mission_timeout = 535
+		icon = generic_research
+
+		activation = {
+			always = no
+ 		}
+
+		available = {
+			always = no
+		}
+
+		is_good = no
+
+		complete_effect = { 
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = bustards_tt
+			hidden_effect = {
+				release_on_controlled = SLO
+				release_on_controlled = DTT
+				release_on_controlled = DTV
+				SLO {
+					division_template = {
+						name = "resistance group"
+
+						division_names_group = PBB_MYD_01
+
+						regiments = {
+							irregular_infantry = { x = 0 y = 0 }
+							irregular_infantry = { x = 0 y = 1 }
+							irregular_infantry = { x = 1 y = 0 }
+							irregular_infantry = { x = 1 y = 1 }
+						}
+					}
+					every_owned_state = {
+						create_unit = {
+							division = "name = \"resistance group\" division_template = \"resistance group\" start_manpower_factor = 1"
+							owner = PREV
+							count = 1
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"resistance group\" division_template = \"resistance group\" start_manpower_factor = 1"
+							owner = PREV
+							count = 3
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				DTT {
+					division_template = {
+						name = "resistance group"
+
+						division_names_group = PBB_MYD_01
+
+						regiments = {
+							irregular_infantry = { x = 0 y = 0 }
+							irregular_infantry = { x = 0 y = 1 }
+							irregular_infantry = { x = 1 y = 0 }
+							irregular_infantry = { x = 1 y = 1 }
+						}
+					}
+					every_owned_state = {
+						create_unit = {
+							division = "name = \"resistance group\" division_template = \"resistance group\" start_manpower_factor = 1"
+							owner = PREV
+							count = 1
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"resistance group\" division_template = \"resistance group\" start_manpower_factor = 1"
+							owner = PREV
+							count = 3
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				DTV {
+					division_template = {
+						name = "resistance group"
+
+						division_names_group = PBB_MYD_01
+
+						regiments = {
+							irregular_infantry = { x = 0 y = 0 }
+							irregular_infantry = { x = 0 y = 1 }
+							irregular_infantry = { x = 1 y = 0 }
+							irregular_infantry = { x = 1 y = 1 }
+						}
+					}
+					every_owned_state = {
+						create_unit = {
+							division = "name = \"resistance group\" division_template = \"resistance group\" start_manpower_factor = 1"
+							owner = PREV
+							count = 1
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"resistance group\" division_template = \"resistance group\" start_manpower_factor = 1"
+							owner = PREV
+							count = 3
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}

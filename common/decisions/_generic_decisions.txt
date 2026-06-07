@@ -2539,6 +2539,32 @@ GENERIC_people_need_it = {
 	}
 }
 economy_decisions = { #Потом доделаю
+
+	change_admin = {
+		priority = 100
+
+		days_mission_timeout = 30
+		#icon = generic_assassination
+
+		activation = {
+			TAG = VIS
+ 		}
+
+		available = {
+			always = no
+		}
+
+		is_good = yes
+
+		complete_effect = { 
+			
+		}
+
+		timeout_effect = { #потом надо доделать
+			kill_country_leader = yes
+		}
+	}
+	
 	funny_camps = {
 		priority = 95
 		icon = generic_GER_flag
